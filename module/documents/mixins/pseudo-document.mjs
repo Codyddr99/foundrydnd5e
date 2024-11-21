@@ -270,7 +270,7 @@ export default Base => class extends Base {
     let type = data.type;
 
     if ( !types.includes(type) ) type = types[0];
-    const content = await renderTemplate("systems/dnd5e/templates/apps/document-create.hbs", {
+    const content = await renderTemplate("systems/dnd5etools/templates/apps/document-create.hbs", {
       name, type,
       types: types.reduce((arr, type) => {
         const label = this.documentConfig[type]?.documentClass?.metadata?.title;

@@ -25,7 +25,7 @@ export default class ItemSheet5e2 extends ItemSheetV2Mixin(ItemSheet5e) {
 
   /** @override */
   get template() {
-    return "systems/dnd5e/templates/items/item-sheet-2.hbs";
+    return "systems/dnd5etools/templates/items/item-sheet-2.hbs";
   }
 
   /* -------------------------------------------- */
@@ -199,12 +199,12 @@ export default class ItemSheet5e2 extends ItemSheetV2Mixin(ItemSheet5e) {
     if ( advancement.classRestriction === "primary" ) {
       tags.push({
         label: "DND5E.AdvancementClassRestrictionPrimary",
-        icon: "systems/dnd5e/icons/svg/original-class.svg"
+        icon: "systems/dnd5etools/icons/svg/original-class.svg"
       });
     } else if ( advancement.classRestriction === "secondary" ) {
       tags.push({
         label: "DND5E.AdvancementClassRestrictionSecondary",
-        icon: "systems/dnd5e/icons/svg/multiclass.svg"
+        icon: "systems/dnd5etools/icons/svg/multiclass.svg"
       });
     }
     return tags;

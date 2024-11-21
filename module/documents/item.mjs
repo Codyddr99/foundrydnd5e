@@ -860,7 +860,7 @@ export default class Item5e extends SystemDocumentMixin(Item) {
     const messageConfig = foundry.utils.mergeObject({
       create: message?.createMessage ?? true,
       data: {
-        content: await renderTemplate("systems/dnd5e/templates/chat/item-card.hbs", context),
+        content: await renderTemplate("systems/dnd5etools/templates/chat/item-card.hbs", context),
         flags: {
           "core.canPopout": true,
           "dnd5e.item": { id: this.id, uuid: this.uuid, type: this.type }
@@ -1715,7 +1715,7 @@ export default class Item5e extends SystemDocumentMixin(Item) {
     const name = data.name || game.i18n.format("DOCUMENT.New", { type: label });
     let type = data.type || CONFIG[this.documentName]?.defaultType;
     if ( !types.includes(type) ) type = types[0];
-    const content = await renderTemplate("systems/dnd5e/templates/apps/document-create.hbs", {
+    const content = await renderTemplate("systems/dnd5etools/templates/apps/document-create.hbs", {
       folders, name, type,
       folder: data.folder,
       hasFolders: folders.length > 0,

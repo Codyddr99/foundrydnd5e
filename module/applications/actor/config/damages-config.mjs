@@ -17,7 +17,7 @@ export default class DamagesConfig extends TraitsConfig {
   /** @override */
   static PARTS = {
     traits: {
-      template: "systems/dnd5e/templates/actors/config/damages-config.hbs"
+      template: "systems/dnd5etools/templates/actors/config/damages-config.hbs"
     }
   };
 

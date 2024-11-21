@@ -11,7 +11,7 @@ export default class ItemChoiceConfig extends AdvancementConfig {
       classes: ["dnd5e", "advancement", "item-choice", "three-column"],
       dragDrop: [{ dropSelector: ".drop-target" }],
       dropKeyPath: "pool",
-      template: "systems/dnd5e/templates/advancement/item-choice-config.hbs",
+      template: "systems/dnd5etools/templates/advancement/item-choice-config.hbs",
       width: 780
     });
   }

@@ -18,7 +18,7 @@ export default class ArmorClassConfig extends BaseConfigSheet {
   /** @override */
   static PARTS = {
     config: {
-      template: "systems/dnd5e/templates/actors/config/armor-class-config.hbs"
+      template: "systems/dnd5etools/templates/actors/config/armor-class-config.hbs"
     }
   };
 

@@ -14,7 +14,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "gyRjMuaMG9dstA5N",
       "text": "Jackal",
-      "img": "systems/dnd5e/tokens/beast/Jackal.webp",
+      "img": "systems/dnd5etools/tokens/beast/Jackal.webp",
       "documentId": "MZYCPIVoBs918qGZ",
       "flags": {},
       "_key": "!tables.results!5PTePCTxrk2fIrll.gyRjMuaMG9dstA5N"
@@ -30,7 +30,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "AzjFIjtyw4PdbXxb",
       "text": "Ape",
-      "img": "systems/dnd5e/tokens/beast/Ape.webp",
+      "img": "systems/dnd5etools/tokens/beast/Ape.webp",
       "documentId": "K5cKmPoFkpuOotis",
       "flags": {},
       "_key": "!tables.results!5PTePCTxrk2fIrll.AzjFIjtyw4PdbXxb"
@@ -46,7 +46,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "rw5fz13gHv4smVis",
       "text": "Baboon",
-      "img": "systems/dnd5e/tokens/beast/Baboon.webp",
+      "img": "systems/dnd5etools/tokens/beast/Baboon.webp",
       "documentId": "JW8bXggOMBx1S6tF",
       "flags": {},
       "_key": "!tables.results!5PTePCTxrk2fIrll.rw5fz13gHv4smVis"
@@ -62,7 +62,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "D8wPQit1a8G7GfEQ",
       "text": "Axe Beak",
-      "img": "systems/dnd5e/tokens/beast/AxeBeak.webp",
+      "img": "systems/dnd5etools/tokens/beast/AxeBeak.webp",
       "documentId": "SXXvwaLBNuzBymp3",
       "flags": {},
       "_key": "!tables.results!5PTePCTxrk2fIrll.D8wPQit1a8G7GfEQ"
@@ -78,7 +78,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "ApddzBElcaPOO3Pl",
       "text": "Black Bear",
-      "img": "systems/dnd5e/tokens/beast/BlackBear.webp",
+      "img": "systems/dnd5etools/tokens/beast/BlackBear.webp",
       "documentId": "D5WjGwKskeUT8HXa",
       "flags": {},
       "_key": "!tables.results!5PTePCTxrk2fIrll.ApddzBElcaPOO3Pl"
@@ -94,7 +94,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "RqwIM4OrzSFB4WnC",
       "text": "Giant Weasel",
-      "img": "systems/dnd5e/tokens/beast/GiantWeasel.webp",
+      "img": "systems/dnd5etools/tokens/beast/GiantWeasel.webp",
       "documentId": "8VXxqeBvN54rPh81",
       "flags": {},
       "_key": "!tables.results!5PTePCTxrk2fIrll.RqwIM4OrzSFB4WnC"
@@ -110,7 +110,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "o5YeoXAtmHmEMCNg",
       "text": "Giant Hyena",
-      "img": "systems/dnd5e/tokens/beast/GiantHyena.webp",
+      "img": "systems/dnd5etools/tokens/beast/GiantHyena.webp",
       "documentId": "aAqfEHPiVbhMwZ6j",
       "flags": {},
       "_key": "!tables.results!5PTePCTxrk2fIrll.o5YeoXAtmHmEMCNg"
@@ -126,7 +126,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "IlmvAl876Yed56f2",
       "text": "Tiger",
-      "img": "systems/dnd5e/tokens/beast/Tiger.webp",
+      "img": "systems/dnd5etools/tokens/beast/Tiger.webp",
       "documentId": "FayqbnjBMszO6Pat",
       "flags": {},
       "_key": "!tables.results!5PTePCTxrk2fIrll.IlmvAl876Yed56f2"

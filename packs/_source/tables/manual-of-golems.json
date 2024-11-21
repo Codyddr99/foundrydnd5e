@@ -14,7 +14,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "IiSjf0idEypz8cx5",
       "text": "Clay Golem",
-      "img": "systems/dnd5e/tokens/construct/ClayGolem.webp",
+      "img": "systems/dnd5etools/tokens/construct/ClayGolem.webp",
       "documentId": "YOqhbf8WsX0jH9Fu",
       "flags": {},
       "_key": "!tables.results!htMPUPPABjI6fwck.IiSjf0idEypz8cx5"
@@ -46,7 +46,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "7uSrcciLe3oXFSui",
       "text": "Iron Golem",
-      "img": "systems/dnd5e/tokens/construct/IronGolem.webp",
+      "img": "systems/dnd5etools/tokens/construct/IronGolem.webp",
       "documentId": "h98AuPfomEPcCibP",
       "flags": {},
       "_key": "!tables.results!htMPUPPABjI6fwck.7uSrcciLe3oXFSui"
@@ -62,7 +62,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "sRgHiHl7d3sxL74G",
       "text": "Stone Golem",
-      "img": "systems/dnd5e/tokens/construct/StoneGolem.webp",
+      "img": "systems/dnd5etools/tokens/construct/StoneGolem.webp",
       "documentId": "z3gSIXHHWYaHjfBT",
       "flags": {},
       "_key": "!tables.results!htMPUPPABjI6fwck.sRgHiHl7d3sxL74G"

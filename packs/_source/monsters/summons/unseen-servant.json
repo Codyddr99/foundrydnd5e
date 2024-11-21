@@ -632,7 +632,7 @@
         "modifiedTime": null,
         "lastModifiedBy": null
       },
-      "img": "systems/dnd5e/icons/svg/statuses/invisible.svg",
+      "img": "systems/dnd5etools/icons/svg/statuses/invisible.svg",
       "type": "base",
       "system": {},
       "tint": "#ffffff",

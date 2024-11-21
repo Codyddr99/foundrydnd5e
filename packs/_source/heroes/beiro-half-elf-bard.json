@@ -1,7 +1,7 @@
 {
   "name": "Beiro (Half-Elf Bard)",
   "type": "character",
-  "img": "systems/dnd5e/tokens/heroes/BardLute.webp",
+  "img": "systems/dnd5etools/tokens/heroes/BardLute.webp",
   "system": {
     "abilities": {
       "str": {
@@ -625,7 +625,7 @@
       "priority": 0
     },
     "texture": {
-      "src": "systems/dnd5e/tokens/heroes/BardLute.webp",
+      "src": "systems/dnd5etools/tokens/heroes/BardLute.webp",
       "tint": "#ffffff",
       "scaleX": 1,
       "scaleY": 1,
@@ -4472,7 +4472,7 @@
             },
             "value": {},
             "title": "Bardic Inspiration Die",
-            "icon": "systems/dnd5e/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
             "_id": "kyjFphgByFS4mPlw"
           },
           {
@@ -4508,7 +4508,7 @@
             },
             "value": {},
             "title": "Song of Rest Die",
-            "icon": "systems/dnd5e/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
             "_id": "gdwtEVYkO44OCABo"
           },
           {
@@ -4533,7 +4533,7 @@
             },
             "value": {},
             "title": "Cantrips Known",
-            "icon": "systems/dnd5e/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
             "_id": "Nz0ud8hOAINqJKZ1"
           },
           {
@@ -4597,7 +4597,7 @@
             },
             "value": {},
             "title": "Spells Known",
-            "icon": "systems/dnd5e/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
             "_id": "aJhQOoccPAza9Cuq"
           },
           {
@@ -4620,7 +4620,7 @@
             },
             "level": 4,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "Jy2URg8R3ETmmoFv"
           },
           {
@@ -4643,7 +4643,7 @@
             },
             "level": 8,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "j8sWjSvQ4Gpq0nX0"
           },
           {
@@ -4666,7 +4666,7 @@
             },
             "level": 12,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "VLxmhsFQAlTL0B8S"
           },
           {
@@ -4689,7 +4689,7 @@
             },
             "level": 16,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "z2Caf1jETQT5k0WL"
           },
           {

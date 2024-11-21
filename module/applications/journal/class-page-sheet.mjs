@@ -27,7 +27,7 @@ export default class JournalClassPageSheet extends JournalPageSheet {
 
   /** @inheritDoc */
   get template() {
-    return `systems/dnd5e/templates/journal/page-${this.document.type}-${this.isEditable ? "edit" : "view"}.hbs`;
+    return `systems/dnd5etools/templates/journal/page-${this.document.type}-${this.isEditable ? "edit" : "view"}.hbs`;
   }
 
   /* -------------------------------------------- */

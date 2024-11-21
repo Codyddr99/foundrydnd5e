@@ -8,7 +8,7 @@ export default class SizeFlow extends AdvancementFlow {
   /** @inheritDoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      template: "systems/dnd5e/templates/advancement/size-flow.hbs"
+      template: "systems/dnd5etools/templates/advancement/size-flow.hbs"
     });
   }
 

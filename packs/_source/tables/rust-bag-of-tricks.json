@@ -14,7 +14,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "WovaOgGxcfHHCXCu",
       "text": "Rat",
-      "img": "systems/dnd5e/tokens/beast/Rat.webp",
+      "img": "systems/dnd5etools/tokens/beast/Rat.webp",
       "documentId": "pozQUPTnLZW8epox",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.WovaOgGxcfHHCXCu"
@@ -30,7 +30,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "lLLibUhX766v95aa",
       "text": "Owl",
-      "img": "systems/dnd5e/tokens/beast/Owl.webp",
+      "img": "systems/dnd5etools/tokens/beast/Owl.webp",
       "documentId": "d0prpsGSAorDadec",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.lLLibUhX766v95aa"
@@ -46,7 +46,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "8c41d4R663Slopt6",
       "text": "Mastiff",
-      "img": "systems/dnd5e/tokens/beast/Mastiff.webp",
+      "img": "systems/dnd5etools/tokens/beast/Mastiff.webp",
       "documentId": "YTpL2c3NO4sOn2UA",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.8c41d4R663Slopt6"
@@ -62,7 +62,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "NVkpFhIDdTsGrwrm",
       "text": "Goat",
-      "img": "systems/dnd5e/tokens/beast/Goat.webp",
+      "img": "systems/dnd5etools/tokens/beast/Goat.webp",
       "documentId": "y8sRU8Ks2lcrGsaf",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.NVkpFhIDdTsGrwrm"
@@ -78,7 +78,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "g44x1kM2YztO54L8",
       "text": "Giant Goat",
-      "img": "systems/dnd5e/tokens/beast/GiantGoat.webp",
+      "img": "systems/dnd5etools/tokens/beast/GiantGoat.webp",
       "documentId": "rjqk7ToMD8sGr3n4",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.g44x1kM2YztO54L8"
@@ -94,7 +94,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "3xTzZJeTzSLLxpwW",
       "text": "Giant Boar",
-      "img": "systems/dnd5e/tokens/beast/GiantBoar.webp",
+      "img": "systems/dnd5etools/tokens/beast/GiantBoar.webp",
       "documentId": "SsuCaF2fIEoDdFA3",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.3xTzZJeTzSLLxpwW"
@@ -110,7 +110,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "J6HG6A1Ssb12loTI",
       "text": "Lion",
-      "img": "systems/dnd5e/tokens/beast/Lion.webp",
+      "img": "systems/dnd5etools/tokens/beast/Lion.webp",
       "documentId": "hjhERRzafCiFFVLA",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.J6HG6A1Ssb12loTI"
@@ -126,7 +126,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "ZW7OYeehs2Bf1UJO",
       "text": "Brown Bear",
-      "img": "systems/dnd5e/tokens/beast/BrownBear.webp",
+      "img": "systems/dnd5etools/tokens/beast/BrownBear.webp",
       "documentId": "omcDpBoB69esCXeM",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.ZW7OYeehs2Bf1UJO"

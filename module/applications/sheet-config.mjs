@@ -8,7 +8,7 @@ export default class SheetConfig5e extends DocumentSheetConfig {
   /** @inheritDoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      template: "systems/dnd5e/templates/shared/sheet-config.hbs"
+      template: "systems/dnd5etools/templates/shared/sheet-config.hbs"
     });
   }
 

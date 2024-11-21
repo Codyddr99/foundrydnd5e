@@ -3904,7 +3904,7 @@
             },
             "value": {},
             "title": "Sneak Attack",
-            "icon": "systems/dnd5e/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
             "_id": "81nHtANt6Ffg9M4V"
           },
           {
@@ -3927,7 +3927,7 @@
             },
             "level": 4,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "smghqQkObY4OOg30"
           },
           {
@@ -3950,7 +3950,7 @@
             },
             "level": 8,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "WFAAUfKJA9QR46Bw"
           },
           {
@@ -3973,7 +3973,7 @@
             },
             "level": 12,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "ahuQ3gMqz6sCza0m"
           },
           {
@@ -3996,7 +3996,7 @@
             },
             "level": 16,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "iVq9vmwTow7KielM"
           },
           {

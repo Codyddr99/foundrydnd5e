@@ -1,7 +1,7 @@
 {
   "name": "Randal (Human Fighter)",
   "type": "character",
-  "img": "systems/dnd5e/tokens/heroes/FighterShield.webp",
+  "img": "systems/dnd5etools/tokens/heroes/FighterShield.webp",
   "system": {
     "abilities": {
       "str": {
@@ -589,7 +589,7 @@
       "priority": 0
     },
     "texture": {
-      "src": "systems/dnd5e/tokens/heroes/FighterShield.webp",
+      "src": "systems/dnd5etools/tokens/heroes/FighterShield.webp",
       "tint": "#ffffff",
       "scaleX": 1,
       "scaleY": 1,
@@ -3803,7 +3803,7 @@
             },
             "value": {},
             "title": "Indomitable Uses",
-            "icon": "systems/dnd5e/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
             "_id": "B7YpSu4cVsEbHbrv"
           },
           {
@@ -3825,7 +3825,7 @@
             },
             "value": {},
             "title": "Action Surge Uses",
-            "icon": "systems/dnd5e/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
             "_id": "kxiasN1v8KFm9nse"
           },
           {
@@ -3848,7 +3848,7 @@
             },
             "level": 4,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "rvfuW71lYEeJW7HS"
           },
           {
@@ -3871,7 +3871,7 @@
             },
             "level": 8,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "g49SXigwmpaZW0Hm"
           },
           {
@@ -3894,7 +3894,7 @@
             },
             "level": 12,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "gXVE2mfohi6iErff"
           },
           {
@@ -3917,7 +3917,7 @@
             },
             "level": 16,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "GdBOLIPXmNSWRSmO"
           },
           {

@@ -1,7 +1,7 @@
 {
   "name": "Zanna (Gnome Wizard)",
   "type": "character",
-  "img": "systems/dnd5e/tokens/heroes/WizardTome.webp",
+  "img": "systems/dnd5etools/tokens/heroes/WizardTome.webp",
   "system": {
     "abilities": {
       "str": {
@@ -587,7 +587,7 @@
       "priority": 0
     },
     "texture": {
-      "src": "systems/dnd5e/tokens/heroes/WizardTome.webp",
+      "src": "systems/dnd5etools/tokens/heroes/WizardTome.webp",
       "tint": "#ffffff",
       "scaleX": 0.7,
       "scaleY": 0.7,
@@ -4431,7 +4431,7 @@
             },
             "value": {},
             "title": "Cantrips Known",
-            "icon": "systems/dnd5e/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
             "_id": "tLCuM1cHSnmr1VEu"
           },
           {
@@ -4454,7 +4454,7 @@
             },
             "level": 4,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "EFPSW4WIEveFjZL0"
           },
           {
@@ -4477,7 +4477,7 @@
             },
             "level": 8,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "uytL1QdWhsGgRAGk"
           },
           {
@@ -4500,7 +4500,7 @@
             },
             "level": 12,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "OC4KaX8DSQVZFqli"
           },
           {
@@ -4523,7 +4523,7 @@
             },
             "level": 16,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5e/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
             "_id": "tNdNUznXfjAyXGGQ"
           },
           {

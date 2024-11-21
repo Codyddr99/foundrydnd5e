@@ -16,12 +16,12 @@ export default class DamageSheet extends ActivitySheet {
   static PARTS = {
     ...super.PARTS,
     effect: {
-      template: "systems/dnd5e/templates/activity/damage-effect.hbs",
+      template: "systems/dnd5etools/templates/activity/damage-effect.hbs",
       templates: [
         ...super.PARTS.effect.templates,
-        "systems/dnd5e/templates/activity/parts/damage-damage.hbs",
-        "systems/dnd5e/templates/activity/parts/damage-part.hbs",
-        "systems/dnd5e/templates/activity/parts/damage-parts.hbs"
+        "systems/dnd5etools/templates/activity/parts/damage-damage.hbs",
+        "systems/dnd5etools/templates/activity/parts/damage-part.hbs",
+        "systems/dnd5etools/templates/activity/parts/damage-parts.hbs"
       ]
     }
   };

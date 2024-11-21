@@ -7,9 +7,9 @@
     "minimum": "12.331",
     "verified": "13.332"
   },
-  "url": "https://github.com/foundryvtt/dnd5e/",
-  "manifest": "https://raw.githubusercontent.com/foundryvtt/dnd5e/master/system.json",
-  "download": "https://github.com/foundryvtt/dnd5e/releases/download/release-4.1.1/dnd5e-release-4.1.1.zip",
+  "url": "https://github.com/Codyddr99/foundrydnd5e/",
+  "manifest": "https://raw.githubusercontent.com/Codyddr99/foundrydnd5e/master/system.json",
+  "download": "https://github.com/Codyddr99/foundrydnd5e/releases/download/release-4.1.1/dnd5e-release-4.1.1.zip",
   "authors": [
     {
       "name": "Atropos",
@@ -331,8 +331,8 @@
     },
     {
       "type": "setup",
-      "url": "systems/dnd5e/ui/official/dnd5e-repo.jpg",
-      "thumbnail": "systems/dnd5e/ui/official/dnd5e-thumbnail.jpg"
+      "url": "systems/dnd5etools/ui/official/dnd5e-repo.jpg",
+      "thumbnail": "systems/dnd5etools/ui/official/dnd5e-thumbnail.jpg"
     }
   ],
   "socket": true,
@@ -341,7 +341,7 @@
     "units": "ft"
   },
   "primaryTokenAttribute": "attributes.hp",
-  "background": "systems/dnd5e/ui/official/dnd5e-background.webp",
+  "background": "systems/dnd5etools/ui/official/dnd5e-background.webp",
   "flags": {
     "dnd5e": {
       "sourceBooks": {

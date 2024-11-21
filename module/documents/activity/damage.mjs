@@ -19,7 +19,7 @@ export default class DamageActivity extends ActivityMixin(DamageActivityData) {
   static metadata = Object.freeze(
     foundry.utils.mergeObject(super.metadata, {
       type: "damage",
-      img: "systems/dnd5e/icons/svg/activity/damage.svg",
+      img: "systems/dnd5etools/icons/svg/activity/damage.svg",
       title: "DND5E.DAMAGE.Title",
       sheetClass: DamageSheet,
       usage: {

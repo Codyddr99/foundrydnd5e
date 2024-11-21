@@ -14,7 +14,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "zK3WHv79k3whB5dD",
       "text": "Weasel",
-      "img": "systems/dnd5e/tokens/beast/Weasel.webp",
+      "img": "systems/dnd5etools/tokens/beast/Weasel.webp",
       "documentId": "WOdeacKCYVhgLDuN",
       "flags": {},
       "_key": "!tables.results!VPGP621PW7k03YfB.zK3WHv79k3whB5dD"
@@ -30,7 +30,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "LqVprn6dUqFAAW3M",
       "text": "Giant Rat",
-      "img": "systems/dnd5e/tokens/beast/GiantRat.webp",
+      "img": "systems/dnd5etools/tokens/beast/GiantRat.webp",
       "documentId": "q1YJIeIt6rK8fCKn",
       "flags": {},
       "_key": "!tables.results!VPGP621PW7k03YfB.LqVprn6dUqFAAW3M"
@@ -46,7 +46,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "VMkWW0P2DNVSdC3x",
       "text": "Badger",
-      "img": "systems/dnd5e/tokens/beast/Badger.webp",
+      "img": "systems/dnd5etools/tokens/beast/Badger.webp",
       "documentId": "oQvORD924obyPdCc",
       "flags": {},
       "_key": "!tables.results!VPGP621PW7k03YfB.VMkWW0P2DNVSdC3x"
@@ -62,7 +62,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "jtknIKUrwe6q7BnB",
       "text": "Boar",
-      "img": "systems/dnd5e/tokens/beast/Boar.webp",
+      "img": "systems/dnd5etools/tokens/beast/Boar.webp",
       "documentId": "lZR4lhNmYSf89s4Q",
       "flags": {},
       "_key": "!tables.results!VPGP621PW7k03YfB.jtknIKUrwe6q7BnB"
@@ -78,7 +78,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "Hkb7RfaIvycJyD0g",
       "text": "Panther",
-      "img": "systems/dnd5e/tokens/beast/Panther.webp",
+      "img": "systems/dnd5etools/tokens/beast/Panther.webp",
       "documentId": "AijNdqMurWxDxUSl",
       "flags": {},
       "_key": "!tables.results!VPGP621PW7k03YfB.Hkb7RfaIvycJyD0g"
@@ -94,7 +94,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "PoSPaGFtAlPIUqYf",
       "text": "Giant Badger",
-      "img": "systems/dnd5e/tokens/beast/GiantBadger.webp",
+      "img": "systems/dnd5etools/tokens/beast/GiantBadger.webp",
       "documentId": "cJGY1ZywUOo6heNR",
       "flags": {},
       "_key": "!tables.results!VPGP621PW7k03YfB.PoSPaGFtAlPIUqYf"
@@ -110,7 +110,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "dawZlC1uojkWsi1y",
       "text": "Dire Wolf",
-      "img": "systems/dnd5e/tokens/beast/DireWolf.webp",
+      "img": "systems/dnd5etools/tokens/beast/DireWolf.webp",
       "documentId": "EYiQZ3rFL25fEJY5",
       "flags": {},
       "_key": "!tables.results!VPGP621PW7k03YfB.dawZlC1uojkWsi1y"
@@ -126,7 +126,7 @@
       "documentCollection": "dnd5e.monsters",
       "_id": "RZAsZIES2TNYBrX4",
       "text": "Giant Elk",
-      "img": "systems/dnd5e/tokens/beast/GiantElk.webp",
+      "img": "systems/dnd5etools/tokens/beast/GiantElk.webp",
       "documentId": "hQt3qIahnB1Odb40",
       "flags": {},
       "_key": "!tables.results!VPGP621PW7k03YfB.RZAsZIES2TNYBrX4"

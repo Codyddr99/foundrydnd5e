@@ -225,7 +225,7 @@ export default class InventoryElement extends HTMLElement {
       },
       {
         name: "DND5E.ConcentrationBreak",
-        icon: '<dnd5e-icon src="systems/dnd5e/icons/svg/break-concentration.svg"></dnd5e-icon>',
+        icon: '<dnd5e-icon src="systems/dnd5etools/icons/svg/break-concentration.svg"></dnd5e-icon>',
         condition: () => this.actor?.concentration?.items.has(item),
         callback: () => this.actor?.endConcentration(item),
         group: "state"
@@ -488,7 +488,7 @@ export default class InventoryElement extends HTMLElement {
       this._app._expanded.delete(item.id);
     } else {
       const chatData = await item.getChatData({secrets: this.document.isOwner});
-      const summary = $(await renderTemplate("systems/dnd5e/templates/items/parts/item-summary.hbs", chatData));
+      const summary = $(await renderTemplate("systems/dnd5etools/templates/items/parts/item-summary.hbs", chatData));
       $(li).append(summary.hide());
       summary.slideDown(200);
       this._app._expanded.add(item.id);

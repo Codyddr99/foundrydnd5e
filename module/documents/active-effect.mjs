@@ -805,7 +805,7 @@ export default class ActiveEffect5e extends ActiveEffect {
 
     return {
       content: await renderTemplate(
-        "systems/dnd5e/templates/effects/parts/effect-tooltip.hbs", {
+        "systems/dnd5etools/templates/effects/parts/effect-tooltip.hbs", {
           effect: this,
           description: await TextEditor.enrichHTML(this.description ?? "", { relativeTo: this, ...enrichmentOptions }),
           durationParts: this.duration.remaining ? this.duration.label.split(", ") : [],

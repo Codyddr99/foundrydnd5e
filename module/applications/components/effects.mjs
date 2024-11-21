@@ -187,7 +187,7 @@ export default class EffectsElement extends HTMLElement {
       },
       {
         name: "DND5E.ConcentrationBreak",
-        icon: '<dnd5e-icon src="systems/dnd5e/icons/svg/break-concentration.svg"></dnd5e-icon>',
+        icon: '<dnd5e-icon src="systems/dnd5etools/icons/svg/break-concentration.svg"></dnd5e-icon>',
         condition: () => isConcentrationEffect,
         callback: () => this.document.endConcentration(effect),
         group: "state"

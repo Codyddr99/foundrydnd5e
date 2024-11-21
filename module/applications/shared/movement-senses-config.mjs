@@ -18,7 +18,7 @@ export default class MovementSensesConfig extends BaseConfigSheet {
   /** @override */
   static PARTS = {
     config: {
-      template: "systems/dnd5e/templates/shared/config/movement-senses-config.hbs"
+      template: "systems/dnd5etools/templates/shared/config/movement-senses-config.hbs"
     }
   };
 

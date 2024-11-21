@@ -37,13 +37,13 @@ export default class OrderActivity extends ActivityMixin(OrderActivityData) {
   /** @inheritDoc */
   static metadata = Object.freeze(foundry.utils.mergeObject(super.metadata, {
     type: "order",
-    img: "systems/dnd5e/icons/svg/activity/order.svg",
+    img: "systems/dnd5etools/icons/svg/activity/order.svg",
     title: "DND5E.FACILITY.Order.Issue",
     usage: {
       actions: {
         pay: OrderActivity.#onPayOrder
       },
-      chatCard: "systems/dnd5e/templates/chat/order-activity-card.hbs",
+      chatCard: "systems/dnd5etools/templates/chat/order-activity-card.hbs",
       dialog: OrderUsageDialog
     }
   }, { inplace: false }));

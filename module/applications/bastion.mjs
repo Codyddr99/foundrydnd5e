@@ -20,7 +20,7 @@ export default class BastionConfig extends Application5e {
   /** @override */
   static PARTS = {
     config: {
-      template: "systems/dnd5e/templates/apps/bastion-config.hbs"
+      template: "systems/dnd5etools/templates/apps/bastion-config.hbs"
     },
     footer: {
       template: "templates/generic/form-footer.hbs"
