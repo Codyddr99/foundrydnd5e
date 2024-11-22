@@ -5,7 +5,7 @@
   "img": "icons/weapons/staves/staff-ornate-wood-red.webp",
   "system": {
     "description": {
-      "value": "<p><em>(Requires attunement)</em></p>\n<p>This rod has a flanged head and the following properties.</p>\n<p><strong>Alertness</strong>. While holding the rod, you have advantage on Wisdom (Perception) checks and on rolls for initiative.</p>\n<p><strong>Spells</strong>. While holding the rod, you can use an action to cast one of the following spells from it: @UUID[Compendium.dnd5e.spells.Item.Mzh95utKDPIrjiH8]{Detect Evil and Good}, @UUID[Compendium.dnd5e.spells.Item.ghXTfe7sgCbgf1Q8]{Detect Magic}, @UUID[Compendium.dnd5e.spells.Item.2skfDtglk1mGrb3l]{Detect Poison and Disease}, or @UUID[Compendium.dnd5e.spells.Item.DQzlB5Y3k791W5bH]{See Invisibility}.</p>\n<p><strong>Protective Aura</strong>. As an action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds bright light in a 60-foot radius and dim light for an additional 60 feet. While in that bright light, you and any creature that is friendly to you gain a +1 bonus to AC and saving throws and can sense the location of any invisible hostile creature that is also in the bright light.</p>\n<p>The rod's head stops glowing and the effect ends after 10 minutes, or when a creature uses an action to pull the rod from the ground.. This property can't be used again until the next dawn.</p>",
+      "value": "<p><em>(Requires attunement)</em></p>\n<p>This rod has a flanged head and the following properties.</p>\n<p><strong>Alertness</strong>. While holding the rod, you have advantage on Wisdom (Perception) checks and on rolls for initiative.</p>\n<p><strong>Spells</strong>. While holding the rod, you can use an action to cast one of the following spells from it: @UUID[Compendium.dnd5r.spells.Item.Mzh95utKDPIrjiH8]{Detect Evil and Good}, @UUID[Compendium.dnd5r.spells.Item.ghXTfe7sgCbgf1Q8]{Detect Magic}, @UUID[Compendium.dnd5r.spells.Item.2skfDtglk1mGrb3l]{Detect Poison and Disease}, or @UUID[Compendium.dnd5r.spells.Item.DQzlB5Y3k791W5bH]{See Invisibility}.</p>\n<p><strong>Protective Aura</strong>. As an action, you can plant the haft end of the rod in the ground, whereupon the rod's head sheds bright light in a 60-foot radius and dim light for an additional 60 feet. While in that bright light, you and any creature that is friendly to you gain a +1 bonus to AC and saving throws and can sense the location of any invisible hostile creature that is also in the bright light.</p>\n<p>The rod's head stops glowing and the effect ends after 10 minutes, or when a creature uses an action to pull the rod from the ground.. This property can't be used again until the next dawn.</p>",
       "chat": ""
     },
     "source": {
@@ -67,8 +67,8 @@
     ],
     "magicalBonus": null,
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "action",
@@ -146,7 +146,7 @@
       "oA9zbvC3W4wWhyp8": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.Mzh95utKDPIrjiH8",
+          "uuid": "Compendium.dnd5r.spells.Item.Mzh95utKDPIrjiH8",
           "challenge": {
             "attack": null,
             "save": null,
@@ -201,7 +201,7 @@
       "IHSMR3HySfUImEHj": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.ghXTfe7sgCbgf1Q8",
+          "uuid": "Compendium.dnd5r.spells.Item.ghXTfe7sgCbgf1Q8",
           "challenge": {
             "attack": null,
             "save": null,
@@ -256,7 +256,7 @@
       "5IazOhC4axC53B6B": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.2skfDtglk1mGrb3l",
+          "uuid": "Compendium.dnd5r.spells.Item.2skfDtglk1mGrb3l",
           "challenge": {
             "attack": null,
             "save": null,
@@ -311,7 +311,7 @@
       "fJkRusyWDVH98JZF": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.DQzlB5Y3k791W5bH",
+          "uuid": "Compendium.dnd5r.spells.Item.DQzlB5Y3k791W5bH",
           "challenge": {
             "attack": null,
             "save": null,
@@ -374,7 +374,7 @@
     "default": 0
   },
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "riders": {
         "activity": [],
         "effect": []
@@ -384,11 +384,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037134551,
     "modifiedTime": 1730323612662,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!Do3qeSHtBjUsmfvz"
 }

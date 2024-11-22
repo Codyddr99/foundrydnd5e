@@ -14,7 +14,7 @@ const { ForeignDocumentField, NumberField, SchemaField, StringField } = foundry.
  * @property {object} price
  * @property {number} price.value         Item's cost in the specified denomination.
  * @property {string} price.denomination  Currency denomination used to determine price.
- * @property {string} rarity              Item rarity as defined in `DND5E.itemRarity`.
+ * @property {string} rarity              Item rarity as defined in `DND5R.itemRarity`.
  * @mixin
  */
 export default class PhysicalItemTemplate extends SystemDataModel {
@@ -22,29 +22,29 @@ export default class PhysicalItemTemplate extends SystemDataModel {
   static defineSchema() {
     return {
       container: new ForeignDocumentField(foundry.documents.BaseItem, {
-        idOnly: true, label: "DND5E.Container"
+        idOnly: true, label: "DND5R.Container"
       }),
       quantity: new NumberField({
-        required: true, nullable: false, integer: true, initial: 1, min: 0, label: "DND5E.Quantity"
+        required: true, nullable: false, integer: true, initial: 1, min: 0, label: "DND5R.Quantity"
       }),
       weight: new SchemaField({
         value: new NumberField({
-          required: true, nullable: false, initial: 0, min: 0, label: "DND5E.Weight"
+          required: true, nullable: false, initial: 0, min: 0, label: "DND5R.Weight"
         }),
         units: new StringField({
-          required: true, label: "DND5E.WeightUnit.Label",
-          initial: () => game.settings.get("dnd5e", "metricWeightUnits") ? "kg" : "lb"
+          required: true, label: "DND5R.WeightUnit.Label",
+          initial: () => game.settings.get("dnd5r", "metricWeightUnits") ? "kg" : "lb"
         })
-      }, {label: "DND5E.Weight"}),
+      }, {label: "DND5R.Weight"}),
       price: new SchemaField({
         value: new NumberField({
-          required: true, nullable: false, initial: 0, min: 0, label: "DND5E.Price"
+          required: true, nullable: false, initial: 0, min: 0, label: "DND5R.Price"
         }),
         denomination: new StringField({
-          required: true, blank: false, initial: "gp", label: "DND5E.Currency"
+          required: true, blank: false, initial: "gp", label: "DND5R.Currency"
         })
-      }, {label: "DND5E.Price"}),
-      rarity: new StringField({required: true, blank: true, label: "DND5E.Rarity"})
+      }, {label: "DND5R.Price"}),
+      rarity: new StringField({required: true, blank: true, label: "DND5R.Rarity"})
     };
   }
 
@@ -65,18 +65,18 @@ export default class PhysicalItemTemplate extends SystemDataModel {
   static get compendiumBrowserPhysicalItemFilters() {
     return [
       ["price", {
-        label: "DND5E.Price",
+        label: "DND5R.Price",
         type: "range",
         config: {
           keyPath: "system.price.value"
         }
       }],
       ["rarity", {
-        label: "DND5E.Rarity",
+        label: "DND5R.Rarity",
         type: "set",
         config: {
-          blank: game.i18n.localize("DND5E.ItemRarityMundane").capitalize(),
-          choices: Object.entries(CONFIG.DND5E.itemRarity).reduce((obj, [key, label]) => {
+          blank: game.i18n.localize("DND5R.ItemRarityMundane").capitalize(),
+          choices: Object.entries(CONFIG.DND5R.itemRarity).reduce((obj, [key, label]) => {
             obj[key] = { label: label.capitalize() };
             return obj;
           }, {}),
@@ -96,8 +96,8 @@ export default class PhysicalItemTemplate extends SystemDataModel {
    */
   get priceLabel() {
     const { value, denomination } = this.price;
-    const hasPrice = value && (denomination in CONFIG.DND5E.currencies);
-    return hasPrice ? `${value} ${CONFIG.DND5E.currencies[denomination].label}` : null;
+    const hasPrice = value && (denomination in CONFIG.DND5R.currencies);
+    return hasPrice ? `${value} ${CONFIG.DND5R.currencies[denomination].label}` : null;
   }
 
   /* -------------------------------------------- */
@@ -118,12 +118,12 @@ export default class PhysicalItemTemplate extends SystemDataModel {
    */
   get physicalItemSheetFields() {
     return [{
-      label: CONFIG.DND5E.itemRarity[this.rarity],
+      label: CONFIG.DND5R.itemRarity[this.rarity],
       value: this._source.rarity,
       requiresIdentification: true,
       field: this.schema.getField("rarity"),
-      choices: CONFIG.DND5E.itemRarity,
-      blank: "DND5E.Rarity",
+      choices: CONFIG.DND5R.itemRarity,
+      blank: "DND5R.Rarity",
       classes: "item-rarity"
     }];
   }
@@ -136,10 +136,10 @@ export default class PhysicalItemTemplate extends SystemDataModel {
    * Prepare physical item properties.
    */
   preparePhysicalData() {
-    if ( !("gp" in CONFIG.DND5E.currencies) ) return;
+    if ( !("gp" in CONFIG.DND5R.currencies) ) return;
     const { value, denomination } = this.price;
-    const { conversion } = CONFIG.DND5E.currencies[denomination] ?? {};
-    const { gp } = CONFIG.DND5E.currencies;
+    const { conversion } = CONFIG.DND5R.currencies[denomination] ?? {};
+    const { gp } = CONFIG.DND5R.currencies;
     if ( conversion ) {
       const multiplier = gp.conversion / conversion;
       this.price.valueInGP = Math.floor(value * multiplier);
@@ -179,9 +179,9 @@ export default class PhysicalItemTemplate extends SystemDataModel {
    * @param {object} source  The candidate source data from which the model will be constructed.
    */
   static #migrateRarity(source) {
-    if ( !("rarity" in source) || CONFIG.DND5E.itemRarity[source.rarity] ) return;
-    source.rarity = Object.keys(CONFIG.DND5E.itemRarity).find(key =>
-      CONFIG.DND5E.itemRarity[key].toLowerCase() === source.rarity.toLowerCase()
+    if ( !("rarity" in source) || CONFIG.DND5R.itemRarity[source.rarity] ) return;
+    source.rarity = Object.keys(CONFIG.DND5R.itemRarity).find(key =>
+      CONFIG.DND5R.itemRarity[key].toLowerCase() === source.rarity.toLowerCase()
     ) ?? "";
   }
 
@@ -195,7 +195,7 @@ export default class PhysicalItemTemplate extends SystemDataModel {
     if ( !("weight" in source) || (foundry.utils.getType(source.weight) === "Object") ) return;
     source.weight = {
       value: Number.isNumeric(source.weight) ? Number(source.weight) : 0,
-      units: game.settings.get("dnd5e", "metricWeightUnits") ? "kg" : "lb"
+      units: game.settings.get("dnd5r", "metricWeightUnits") ? "kg" : "lb"
     };
   }
 

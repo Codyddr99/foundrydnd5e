@@ -25,20 +25,20 @@ export default class MountableTemplate extends SystemDataModel {
   static defineSchema() {
     return {
       armor: new SchemaField({
-        value: new NumberField({ required: true, integer: true, min: 0, label: "DND5E.ArmorClass" })
-      }, {label: "DND5E.ArmorClass"}),
-      cover: new NumberField({ min: 0, max: 1, label: "DND5E.Cover" }),
-      crewed: new BooleanField({ label: "DND5E.Crewed" }),
+        value: new NumberField({ required: true, integer: true, min: 0, label: "DND5R.ArmorClass" })
+      }, {label: "DND5R.ArmorClass"}),
+      cover: new NumberField({ min: 0, max: 1, label: "DND5R.Cover" }),
+      crewed: new BooleanField({ label: "DND5R.Crewed" }),
       hp: new SchemaField({
-        value: new NumberField({ required: true, integer: true, min: 0, label: "DND5E.HitPointsCurrent" }),
-        max: new NumberField({ required: true, integer: true, min: 0, label: "DND5E.HitPointsMax" }),
-        dt: new NumberField({ required: true, integer: true, min: 0, label: "DND5E.DamageThreshold" }),
-        conditions: new StringField({required: true, label: "DND5E.HealthConditions"})
-      }, {label: "DND5E.HitPoints"}),
+        value: new NumberField({ required: true, integer: true, min: 0, label: "DND5R.HitPointsCurrent" }),
+        max: new NumberField({ required: true, integer: true, min: 0, label: "DND5R.HitPointsMax" }),
+        dt: new NumberField({ required: true, integer: true, min: 0, label: "DND5R.DamageThreshold" }),
+        conditions: new StringField({required: true, label: "DND5R.HealthConditions"})
+      }, {label: "DND5R.HitPoints"}),
       speed: new SchemaField({
-        value: new NumberField({required: true, min: 0, label: "DND5E.Speed"}),
-        conditions: new StringField({required: true, label: "DND5E.SpeedConditions"})
-      }, {required: false, initial: undefined, label: "DND5E.Speed"})
+        value: new NumberField({required: true, min: 0, label: "DND5R.Speed"}),
+        conditions: new StringField({required: true, label: "DND5R.SpeedConditions"})
+      }, {required: false, initial: undefined, label: "DND5R.Speed"})
     };
   }
 }

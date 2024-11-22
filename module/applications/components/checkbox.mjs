@@ -19,7 +19,7 @@ export default class CheckboxElement extends AdoptedStyleSheetMixin(
   /* -------------------------------------------- */
 
   /** @override */
-  static tagName = "dnd5e-checkbox";
+  static tagName = "dnd5r-checkbox";
 
   /* -------------------------------------------- */
 
@@ -37,7 +37,7 @@ export default class CheckboxElement extends AdoptedStyleSheetMixin(
       width: 100%;
       height: 100%;
       border-radius: var(--checkbox-border-radius, 3px);
-      border: var(--checkbox-border-width, 2px) solid var(--checkbox-border-color, var(--dnd5e-color-gold));
+      border: var(--checkbox-border-width, 2px) solid var(--checkbox-border-color, var(--dnd5r-color-gold));
       background: var(--checkbox-empty-color, transparent);
       box-sizing: border-box;
       position: relative;
@@ -54,7 +54,7 @@ export default class CheckboxElement extends AdoptedStyleSheetMixin(
     }
 
     :host([checked]) :is(.checked, .disabled, .indeterminate) {
-      background: var(--checkbox-fill-color, var(--dnd5e-color-gold));
+      background: var(--checkbox-fill-color, var(--dnd5r-color-gold));
     }
 
     :host([checked]) .checked { display: flex; }

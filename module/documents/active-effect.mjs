@@ -13,9 +13,9 @@ export default class ActiveEffect5e extends ActiveEffect {
    * @type {Record<string, string>}
    */
   static ID = {
-    BLOODIED: staticID("dnd5ebloodied"),
-    ENCUMBERED: staticID("dnd5eencumbered"),
-    EXHAUSTION: staticID("dnd5eexhaustion")
+    BLOODIED: staticID("dnd5rbloodied"),
+    ENCUMBERED: staticID("dnd5rencumbered"),
+    EXHAUSTION: staticID("dnd5rexhaustion")
   };
 
   /* -------------------------------------------- */
@@ -57,7 +57,7 @@ export default class ActiveEffect5e extends ActiveEffect {
     if ( this.target?.testUserPermission(game.user, "OBSERVER") ) return false;
 
     // Hide bloodied status effect from players unless the token is friendly
-    if ( (this.id === this.constructor.ID.BLOODIED) && (game.settings.get("dnd5e", "bloodied") === "player") ) {
+    if ( (this.id === this.constructor.ID.BLOODIED) && (game.settings.get("dnd5r", "bloodied") === "player") ) {
       return this.target?.token?.disposition !== foundry.CONST.TOKEN_DISPOSITIONS.FRIENDLY;
     }
 
@@ -86,7 +86,7 @@ export default class ActiveEffect5e extends ActiveEffect {
    * @returns {Promise<Actor5e|Item5e|null>}
    */
   async getSource() {
-    if ( (this.target instanceof dnd5e.documents.Actor5e) && (this.parent instanceof dnd5e.documents.Item5e) ) {
+    if ( (this.target instanceof dnd5r.documents.Actor5e) && (this.parent instanceof dnd5r.documents.Item5e) ) {
       return this.parent;
     }
     return fromUuid(this.origin);
@@ -106,9 +106,9 @@ export default class ActiveEffect5e extends ActiveEffect {
 
   /** @inheritDoc */
   _initializeSource(data, options={}) {
-    if ( data.flags?.dnd5e?.type === "enchantment" ) {
+    if ( data.flags?.dnd5r?.type === "enchantment" ) {
       data.type = "enchantment";
-      delete data.flags.dnd5e.type;
+      delete data.flags.dnd5r.type;
     }
 
     return super._initializeSource(data, options);
@@ -121,7 +121,7 @@ export default class ActiveEffect5e extends ActiveEffect {
   /** @inheritDoc */
   apply(doc, change) {
     // Ensure changes targeting flags use the proper types
-    if ( change.key.startsWith("flags.dnd5e.") ) change = this._prepareFlagChange(doc, change);
+    if ( change.key.startsWith("flags.dnd5r.") ) change = this._prepareFlagChange(doc, change);
 
     // Properly handle formulas that don't exist as part of the data model
     if ( ActiveEffect5e.FORMULA_FIELDS.has(change.key) ) {
@@ -253,7 +253,7 @@ export default class ActiveEffect5e extends ActiveEffect {
    */
   _prepareFlagChange(actor, change) {
     const { key, value } = change;
-    const data = CONFIG.DND5E.characterFlags[key.replace("flags.dnd5e.", "")];
+    const data = CONFIG.DND5R.characterFlags[key.replace("flags.dnd5r.", "")];
     if ( !data ) return change;
 
     // Set flag to initial value if it isn't present
@@ -282,7 +282,7 @@ export default class ActiveEffect5e extends ActiveEffect {
   determineSuppression() {
     this.isSuppressed = false;
     if ( this.type === "enchantment" ) return;
-    if ( this.parent instanceof dnd5e.documents.Item5e ) this.isSuppressed = this.parent.areEffectsSuppressed;
+    if ( this.parent instanceof dnd5r.documents.Item5e ) this.isSuppressed = this.parent.areEffectsSuppressed;
   }
 
   /* -------------------------------------------- */
@@ -293,7 +293,7 @@ export default class ActiveEffect5e extends ActiveEffect {
   prepareDerivedData() {
     super.prepareDerivedData();
     if ( this.id === this.constructor.ID.EXHAUSTION ) this._prepareExhaustionLevel();
-    if ( this.isAppliedEnchantment ) dnd5e.registry.enchantments.track(this.origin, this.uuid);
+    if ( this.isAppliedEnchantment ) dnd5r.registry.enchantments.track(this.origin, this.uuid);
   }
 
   /* -------------------------------------------- */
@@ -303,14 +303,14 @@ export default class ActiveEffect5e extends ActiveEffect {
    * @protected
    */
   _prepareExhaustionLevel() {
-    const config = CONFIG.DND5E.conditionTypes.exhaustion;
-    let level = this.getFlag("dnd5e", "exhaustionLevel");
+    const config = CONFIG.DND5R.conditionTypes.exhaustion;
+    let level = this.getFlag("dnd5r", "exhaustionLevel");
     if ( !Number.isFinite(level) ) level = 1;
     this.img = this.constructor._getExhaustionImage(level);
-    this.name = `${game.i18n.localize("DND5E.Exhaustion")} ${level}`;
+    this.name = `${game.i18n.localize("DND5R.Exhaustion")} ${level}`;
     if ( level >= config.levels ) {
       this.statuses.add("dead");
-      CONFIG.DND5E.statusEffects.dead.statuses?.forEach(s => this.statuses.add(s));
+      CONFIG.DND5R.statusEffects.dead.statuses?.forEach(s => this.statuses.add(s));
     }
   }
 
@@ -344,7 +344,7 @@ export default class ActiveEffect5e extends ActiveEffect {
     if ( !riders.size ) return;
 
     const createRider = async id => {
-      const existing = this.parent.effects.get(staticID(`dnd5e${id}`));
+      const existing = this.parent.effects.get(staticID(`dnd5r${id}`));
       if ( existing ) return;
       const effect = await ActiveEffect.implementation.fromStatusEffect(id);
       return ActiveEffect.implementation.create(effect, { parent: this.parent, keepId: true });
@@ -363,17 +363,17 @@ export default class ActiveEffect5e extends ActiveEffect {
     let item;
     let profile;
     const { chatMessageOrigin } = options;
-    const { enchantmentProfile, activityId } = options.dnd5e ?? {};
+    const { enchantmentProfile, activityId } = options.dnd5r ?? {};
 
     if ( chatMessageOrigin ) {
       const message = game.messages.get(options?.chatMessageOrigin);
       item = message?.getAssociatedItem();
       const activity = message?.getAssociatedActivity();
-      profile = activity?.effects.find(e => e._id === message?.getFlag("dnd5e", "use.enchantmentProfile"));
+      profile = activity?.effects.find(e => e._id === message?.getFlag("dnd5r", "use.enchantmentProfile"));
     } else if ( enchantmentProfile && activityId ) {
       let activity;
       const origin = await fromUuid(this.origin);
-      if ( origin instanceof dnd5e.documents.activity.EnchantActivity ) {
+      if ( origin instanceof dnd5r.documents.activity.EnchantActivity ) {
         activity = origin;
         item = activity.item;
       } else if ( origin instanceof Item ) {
@@ -408,7 +408,7 @@ export default class ActiveEffect5e extends ActiveEffect {
       const effectData = item.effects.get(id)?.toObject();
       if ( effectData ) {
         delete effectData._id;
-        delete effectData.flags?.dnd5e?.rider;
+        delete effectData.flags?.dnd5r?.rider;
         effectData.origin = this.origin;
       }
       return effectData;
@@ -423,7 +423,7 @@ export default class ActiveEffect5e extends ActiveEffect {
         const itemData = (await fromUuid(uuid))?.toObject();
         if ( itemData ) {
           delete itemData._id;
-          foundry.utils.setProperty(itemData, "flags.dnd5e.enchantment", { origin: this.uuid });
+          foundry.utils.setProperty(itemData, "flags.dnd5r.enchantment", { origin: this.uuid });
         }
         return itemData;
       }));
@@ -458,7 +458,7 @@ export default class ActiveEffect5e extends ActiveEffect {
 
     // Enchantments cannot be added directly to actors
     if ( (this.type === "enchantment") && (this.parent instanceof Actor) ) {
-      ui.notifications.error("DND5E.ENCHANTMENT.Warning.NotOnActor", { localize: true });
+      ui.notifications.error("DND5R.ENCHANTMENT.Warning.NotOnActor", { localize: true });
       return false;
     }
 
@@ -493,9 +493,9 @@ export default class ActiveEffect5e extends ActiveEffect {
   /** @inheritDoc */
   _onUpdate(data, options, userId) {
     super._onUpdate(data, options, userId);
-    const originalLevel = foundry.utils.getProperty(options, "dnd5e.originalExhaustion");
-    const newLevel = foundry.utils.getProperty(data, "flags.dnd5e.exhaustionLevel");
-    const originalEncumbrance = foundry.utils.getProperty(options, "dnd5e.originalEncumbrance");
+    const originalLevel = foundry.utils.getProperty(options, "dnd5r.originalExhaustion");
+    const newLevel = foundry.utils.getProperty(data, "flags.dnd5r.exhaustionLevel");
+    const originalEncumbrance = foundry.utils.getProperty(options, "dnd5r.originalEncumbrance");
     const newEncumbrance = data.statuses?.[0];
     const name = this.name;
 
@@ -514,7 +514,7 @@ export default class ActiveEffect5e extends ActiveEffect {
       if ( newEncumbrance === originalEncumbrance ) return;
       const increase = !originalEncumbrance || ((originalEncumbrance === "encumbered") && newEncumbrance)
         || (newEncumbrance === "exceedingCarryingCapacity");
-      if ( !increase ) this.name = CONFIG.DND5E.encumbrance.effects[originalEncumbrance].name;
+      if ( !increase ) this.name = CONFIG.DND5R.encumbrance.effects[originalEncumbrance].name;
       this._displayScrollingStatus(increase);
       this.name = name;
     }
@@ -526,7 +526,7 @@ export default class ActiveEffect5e extends ActiveEffect {
   async _preDelete(options, user) {
     const dependents = this.getDependents();
     if ( dependents.length && !game.users.activeGM ) {
-      ui.notifications.warn("DND5E.ConcentrationBreakWarning", { localize: true });
+      ui.notifications.warn("DND5R.ConcentrationBreakWarning", { localize: true });
       return false;
     }
     return super._preDelete(options, user);
@@ -538,7 +538,7 @@ export default class ActiveEffect5e extends ActiveEffect {
   _onDelete(options, userId) {
     super._onDelete(options, userId);
     if ( game.user === game.users.activeGM ) this.getDependents().forEach(e => e.delete());
-    if ( this.isAppliedEnchantment ) dnd5e.registry.enchantments.untrack(this.origin, this.uuid);
+    if ( this.isAppliedEnchantment ) dnd5r.registry.enchantments.untrack(this.origin, this.uuid);
     document.body.querySelectorAll(`enchantment-application:has([data-enchantment-uuid="${this.uuid}"]`)
       .forEach(element => element.buildItemList());
   }
@@ -565,7 +565,7 @@ export default class ActiveEffect5e extends ActiveEffect {
     if ( activity instanceof Item ) {
       foundry.utils.logCompatibilityWarning(
         "The `createConcentrationEffectData` method on ActiveEffect5e now takes an Activity, rather than an Item.",
-        { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+        { since: "DnD5r 4.0", until: "DnD5r 4.4" }
       );
       activity = activity.system.activities?.contents[0];
     }
@@ -578,13 +578,13 @@ export default class ActiveEffect5e extends ActiveEffect {
     const statusEffect = CONFIG.statusEffects.find(e => e.id === CONFIG.specialStatusEffects.CONCENTRATING);
     const effectData = foundry.utils.mergeObject({
       ...statusEffect,
-      name: `${game.i18n.localize("EFFECT.DND5E.StatusConcentrating")}: ${item.name}`,
-      description: `<p>${game.i18n.format("DND5E.ConcentratingOn", {
+      name: `${game.i18n.localize("EFFECT.DND5R.StatusConcentrating")}: ${item.name}`,
+      description: `<p>${game.i18n.format("DND5R.ConcentratingOn", {
         name: item.name,
         type: game.i18n.localize(`TYPES.Item.${item.type}`)
       })}</p><hr><p>@Embed[${item.uuid} inline]</p>`,
       duration: activity.duration.getEffectData(),
-      "flags.dnd5e": {
+      "flags.dnd5r": {
         activity: {
           type: activity.type, id: activity.id, uuid: activity.uuid
         },
@@ -597,7 +597,7 @@ export default class ActiveEffect5e extends ActiveEffect {
       statuses: [statusEffect.id].concat(statusEffect.statuses ?? [])
     }, data, {inplace: false});
     delete effectData.id;
-    if ( item.type === "spell" ) effectData["flags.dnd5e.spellLevel"] = item.system.level;
+    if ( item.type === "spell" ) effectData["flags.dnd5r.spellLevel"] = item.system.level;
 
     return effectData;
   }
@@ -640,7 +640,7 @@ export default class ActiveEffect5e extends ActiveEffect {
    * @returns {string}
    */
   static _getExhaustionImage(level) {
-    const split = CONFIG.DND5E.conditionTypes.exhaustion.icon.split(".");
+    const split = CONFIG.DND5R.conditionTypes.exhaustion.icon.split(".");
     const ext = split.pop();
     const path = split.join(".");
     return `${path}-${level}.${ext}`;
@@ -656,7 +656,7 @@ export default class ActiveEffect5e extends ActiveEffect {
   static getEffectDurationFromItem(item) {
     foundry.utils.logCompatibilityWarning(
       "The `getEffectDurationFromItem` method on ActiveEffect5e has been deprecated and replaced with `getEffectData` within Item or Activity duration.",
-      { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+      { since: "DnD5r 4.0", until: "DnD5r 4.4" }
     );
     return item.system.duration?.getEffectData?.() ?? {};
   }
@@ -693,7 +693,7 @@ export default class ActiveEffect5e extends ActiveEffect {
     event.stopPropagation();
     if ( event.button === 0 ) level++;
     else level--;
-    const max = CONFIG.DND5E.conditionTypes.exhaustion.levels;
+    const max = CONFIG.DND5R.conditionTypes.exhaustion.levels;
     actor.update({ "system.attributes.exhaustion": Math.clamp(level, 0, max) });
   }
 
@@ -714,16 +714,16 @@ export default class ActiveEffect5e extends ActiveEffect {
       return;
     }
     const choices = effects.reduce((acc, effect) => {
-      const data = effect.getFlag("dnd5e", "item.data");
-      acc[effect.id] = data?.name ?? actor.items.get(data)?.name ?? game.i18n.localize("DND5E.ConcentratingItemless");
+      const data = effect.getFlag("dnd5r", "item.data");
+      acc[effect.id] = data?.name ?? actor.items.get(data)?.name ?? game.i18n.localize("DND5R.ConcentratingItemless");
       return acc;
     }, {});
     const options = HandlebarsHelpers.selectOptions(choices, { hash: { sort: true } });
     const content = `
-    <form class="dnd5e">
-      <p>${game.i18n.localize("DND5E.ConcentratingEndChoice")}</p>
+    <form class="dnd5r">
+      <p>${game.i18n.localize("DND5R.ConcentratingEndChoice")}</p>
       <div class="form-group">
-        <label>${game.i18n.localize("DND5E.SOURCE.FIELDS.source.label")}</label>
+        <label>${game.i18n.localize("DND5R.SOURCE.FIELDS.source.label")}</label>
         <div class="form-fields">
           <select name="source">${options}</select>
         </div>
@@ -736,8 +736,8 @@ export default class ActiveEffect5e extends ActiveEffect {
         if ( source ) actor.endConcentration(source);
       },
       rejectClose: false,
-      title: game.i18n.localize("DND5E.Concentration"),
-      label: game.i18n.localize("DND5E.Confirm")
+      title: game.i18n.localize("DND5R.Concentration"),
+      label: game.i18n.localize("DND5R.Confirm")
     });
   }
 
@@ -749,9 +749,9 @@ export default class ActiveEffect5e extends ActiveEffect {
    * @returns {Promise<ActiveEffect5e>}
    */
   addDependent(...dependent) {
-    const dependents = this.getFlag("dnd5e", "dependents") ?? [];
+    const dependents = this.getFlag("dnd5r", "dependents") ?? [];
     dependents.push(...dependent.map(d => ({ uuid: d.uuid })));
-    return this.setFlag("dnd5e", "dependents", dependents);
+    return this.setFlag("dnd5r", "dependents", dependents);
   }
 
   /* -------------------------------------------- */
@@ -761,7 +761,7 @@ export default class ActiveEffect5e extends ActiveEffect {
    * @returns {Array<ActiveEffect5e|Item5e>}
    */
   getDependents() {
-    return (this.getFlag("dnd5e", "dependents") || []).reduce((arr, { uuid }) => {
+    return (this.getFlag("dnd5r", "dependents") || []).reduce((arr, { uuid }) => {
       const effect = fromUuidSync(uuid);
       if ( effect ) arr.push(effect);
       return arr;
@@ -797,22 +797,22 @@ export default class ActiveEffect5e extends ActiveEffect {
    */
   async richTooltip(enrichmentOptions={}) {
     const properties = [];
-    if ( this.isSuppressed ) properties.push("DND5E.EffectType.Unavailable");
-    else if ( this.disabled ) properties.push("DND5E.EffectType.Inactive");
-    else if ( this.isTemporary ) properties.push("DND5E.EffectType.Temporary");
-    else properties.push("DND5E.EffectType.Passive");
-    if ( this.type === "enchantment" ) properties.push("DND5E.ENCHANTMENT.Label");
+    if ( this.isSuppressed ) properties.push("DND5R.EffectType.Unavailable");
+    else if ( this.disabled ) properties.push("DND5R.EffectType.Inactive");
+    else if ( this.isTemporary ) properties.push("DND5R.EffectType.Temporary");
+    else properties.push("DND5R.EffectType.Passive");
+    if ( this.type === "enchantment" ) properties.push("DND5R.ENCHANTMENT.Label");
 
     return {
       content: await renderTemplate(
-        "systems/dnd5etools/templates/effects/parts/effect-tooltip.hbs", {
+        "systems/dnd5r/templates/effects/parts/effect-tooltip.hbs", {
           effect: this,
           description: await TextEditor.enrichHTML(this.description ?? "", { relativeTo: this, ...enrichmentOptions }),
           durationParts: this.duration.remaining ? this.duration.label.split(", ") : [],
           properties: properties.map(p => game.i18n.localize(p))
         }
       ),
-      classes: ["dnd5e2", "dnd5e-tooltip", "effect-tooltip"]
+      classes: ["dnd5r2", "dnd5r-tooltip", "effect-tooltip"]
     };
   }
 

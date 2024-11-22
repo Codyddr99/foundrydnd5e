@@ -68,7 +68,7 @@ export default class EffectApplicationElement extends TargetedApplicationMixin(C
       div.innerHTML = `
         <label class="roboto-upper">
           <i class="fa-solid fa-bolt"></i>
-          <span>${game.i18n.localize("DND5E.Effects")}</span>
+          <span>${game.i18n.localize("DND5R.Effects")}</span>
           <i class="fa-solid fa-caret-down"></i>
         </label>
         <div class="collapsible-content">
@@ -106,8 +106,8 @@ export default class EffectApplicationElement extends TargetedApplicationMixin(C
           <span class="subtitle">${effect.duration.label}</span>
         </div>
         <button class="apply-effect" type="button" data-action="applyEffect"
-                data-tooltip="DND5E.EffectsApplyTokens"
-                aria-label="${game.i18n.localize("DND5E.EffectsApplyTokens")}">
+                data-tooltip="DND5R.EffectsApplyTokens"
+                aria-label="${game.i18n.localize("DND5R.EffectsApplyTokens")}">
           <i class="fas fa-reply-all fa-flip-horizontal" inert></i>
         </button>
       `;
@@ -135,7 +135,7 @@ export default class EffectApplicationElement extends TargetedApplicationMixin(C
         <span class="title">${name}</span>
       </div>
       <div class="checkbox">
-        <dnd5e-checkbox name="${uuid}"${checked}${disabled}></dnd5e-checkbox>
+        <dnd5r-checkbox name="${uuid}"${checked}${disabled}></dnd5r-checkbox>
       </div>
     `;
 
@@ -156,17 +156,17 @@ export default class EffectApplicationElement extends TargetedApplicationMixin(C
    */
   async _applyEffectToActor(effect, actor) {
     const concentration = this.chatMessage.getAssociatedActor()?.effects
-      .get(this.chatMessage.getFlag("dnd5e", "use.concentrationId"));
+      .get(this.chatMessage.getFlag("dnd5r", "use.concentrationId"));
     const origin = concentration ?? effect;
     if ( !game.user.isGM && !actor.isOwner ) {
-      throw new Error(game.i18n.localize("DND5E.EffectApplyWarningOwnership"));
+      throw new Error(game.i18n.localize("DND5R.EffectApplyWarningOwnership"));
     }
 
     const effectFlags = {
       flags: {
-        dnd5e: {
-          scaling: this.chatMessage.getFlag("dnd5e", "scaling"),
-          spellLevel: this.chatMessage.getFlag("dnd5e", "use.spellLevel")
+        dnd5r: {
+          scaling: this.chatMessage.getFlag("dnd5r", "scaling"),
+          spellLevel: this.chatMessage.getFlag("dnd5r", "use.spellLevel")
         }
       }
     };
@@ -181,7 +181,7 @@ export default class EffectApplicationElement extends TargetedApplicationMixin(C
     }
 
     if ( !game.user.isGM && concentration && !concentration.actor?.isOwner ) {
-      throw new Error(game.i18n.localize("DND5E.EffectApplyWarningConcentration"));
+      throw new Error(game.i18n.localize("DND5R.EffectApplyWarningConcentration"));
     }
 
     // Otherwise, create a new effect on the target
@@ -208,7 +208,7 @@ export default class EffectApplicationElement extends TargetedApplicationMixin(C
     if ( !effect ) return;
     for ( const target of this.targetList.querySelectorAll("[data-target-uuid]") ) {
       const actor = fromUuidSync(target.dataset.targetUuid);
-      if ( !actor || !target.querySelector("dnd5e-checkbox")?.checked ) continue;
+      if ( !actor || !target.querySelector("dnd5r-checkbox")?.checked ) continue;
       try {
         await this._applyEffectToActor(effect, actor);
       } catch(err) {

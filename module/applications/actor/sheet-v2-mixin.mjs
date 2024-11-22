@@ -12,7 +12,7 @@ export default function ActorSheetV2Mixin(Base) {
   return class ActorSheetV2 extends DocumentSheetV2Mixin(Base) {
     constructor(object, options={}) {
       const key = `${object.type}${object.limited ? ":limited" : ""}`;
-      const { width, height } = game.user.getFlag("dnd5e", `sheetPrefs.${key}`) ?? {};
+      const { width, height } = game.user.getFlag("dnd5r", `sheetPrefs.${key}`) ?? {};
       if ( width && !("width" in options) ) options.width = width;
       if ( height && !("height" in options) ) options.height = height;
       super(object, options);
@@ -56,7 +56,7 @@ export default function ActorSheetV2Mixin(Base) {
         item.dataset.tooltip = label;
         item.setAttribute("aria-label", label);
         if ( icon ) item.innerHTML = `<i class="${icon}"></i>`;
-        else if ( svg ) item.innerHTML = `<dnd5e-icon src="systems/dnd5etools/icons/svg/${svg}.svg"></dnd5e-icon>`;
+        else if ( svg ) item.innerHTML = `<dnd5r-icon src="systems/dnd5r/icons/svg/${svg}.svg"></dnd5r-icon>`;
         return item;
       }));
       html[0].insertAdjacentElement("afterbegin", nav);
@@ -99,12 +99,12 @@ export default function ActorSheetV2Mixin(Base) {
         : "biography";
       const sheetPrefs = `sheetPrefs.${this.actor.type}.tabs.${activeTab}`;
       context.cssClass += ` tab-${activeTab}`;
-      context.sidebarCollapsed = !!game.user.getFlag("dnd5e", `${sheetPrefs}.collapseSidebar`);
+      context.sidebarCollapsed = !!game.user.getFlag("dnd5r", `${sheetPrefs}.collapseSidebar`);
       if ( context.sidebarCollapsed ) context.cssClass += " collapsed";
       const { attributes } = this.actor.system;
 
       // Portrait
-      const showTokenPortrait = this.actor.getFlag("dnd5e", "showTokenPortrait") === true;
+      const showTokenPortrait = this.actor.getFlag("dnd5r", "showTokenPortrait") === true;
       const token = this.actor.isToken ? this.actor.token : this.actor.prototypeToken;
       const defaultArtwork = Actor.implementation.getDefaultArtwork(context.source)?.img;
       context.portrait = {
@@ -121,7 +121,7 @@ export default function ActorSheetV2Mixin(Base) {
         context.death[deathSave] = [];
         for ( let i = 1; i < 4; i++ ) {
           const n = deathSave === "failure" ? i : 4 - i;
-          const i18nKey = `DND5E.DeathSave${deathSave.titleCase()}Label`;
+          const i18nKey = `DND5R.DeathSave${deathSave.titleCase()}Label`;
           const filled = attributes.death[deathSave] >= n;
           const classes = ["pip"];
           if ( filled ) classes.push("filled");
@@ -136,7 +136,7 @@ export default function ActorSheetV2Mixin(Base) {
       });
 
       // Senses
-      context.senses = Object.entries(CONFIG.DND5E.senses).reduce((obj, [k, label]) => {
+      context.senses = Object.entries(CONFIG.DND5R.senses).reduce((obj, [k, label]) => {
         const value = attributes.senses[k];
         if ( value ) obj[k] = { label, value };
         return obj;
@@ -155,10 +155,10 @@ export default function ActorSheetV2Mixin(Base) {
 
       // Effects & Conditions
       const conditionIds = new Set();
-      context.conditions = Object.entries(CONFIG.DND5E.conditionTypes).reduce((arr, [k, c]) => {
+      context.conditions = Object.entries(CONFIG.DND5R.conditionTypes).reduce((arr, [k, c]) => {
         if ( c.pseudo ) return arr; // Filter out pseudo-conditions.
         const { label: name, icon, reference } = c;
-        const id = staticID(`dnd5e${k}`);
+        const id = staticID(`dnd5r${k}`);
         conditionIds.add(id);
         const existing = this.actor.effects.get(id);
         const { disabled, img } = existing ?? {};
@@ -179,7 +179,7 @@ export default function ActorSheetV2Mixin(Base) {
           const toggleable = !this._concentration?.effects.has(effect);
           let source = await effect.getSource();
           // If the source is an ActiveEffect from another Actor, note the source as that Actor instead.
-          if ( (source instanceof dnd5e.documents.ActiveEffect5e) && (source.target !== this.object) ) {
+          if ( (source instanceof dnd5r.documents.ActiveEffect5e) && (source.target !== this.object) ) {
             source = source.target;
           }
           arr = await arr;
@@ -187,7 +187,7 @@ export default function ActorSheetV2Mixin(Base) {
             id, name, img, disabled, duration, source, toggleable,
             parentId: effect.target === effect.parent ? null : effect.parent.id,
             durationParts: duration.remaining ? duration.label.split(", ") : [],
-            hasTooltip: source instanceof dnd5e.documents.Item5e
+            hasTooltip: source instanceof dnd5r.documents.Item5e
           });
           return arr;
         }, []);
@@ -204,7 +204,7 @@ export default function ActorSheetV2Mixin(Base) {
     /** @override */
     _prepareTraits() {
       const traits = {};
-      for ( const [trait, config] of Object.entries(CONFIG.DND5E.traits) ) {
+      for ( const [trait, config] of Object.entries(CONFIG.DND5R.traits) ) {
         if ( trait === "dm" ) continue;
         const key = config.actorKeyPath ?? `system.traits.${trait}`;
         const data = foundry.utils.deepClone(foundry.utils.getProperty(this.actor, key));
@@ -216,9 +216,9 @@ export default function ActorSheetV2Mixin(Base) {
         values = values.map(key => {
           const value = { key, label: Trait.keyLabel(key, { trait }) ?? key };
           const icons = value.icons = [];
-          if ( data.bypasses?.size && CONFIG.DND5E.damageTypes[key]?.isPhysical ) icons.push(...data.bypasses.map(p => {
-            const type = CONFIG.DND5E.itemProperties[p]?.label;
-            return { icon: p, label: game.i18n.format("DND5E.DamagePhysicalBypassesShort", { type }) };
+          if ( data.bypasses?.size && CONFIG.DND5R.damageTypes[key]?.isPhysical ) icons.push(...data.bypasses.map(p => {
+            const type = CONFIG.DND5R.itemProperties[p]?.label;
+            return { icon: p, label: game.i18n.format("DND5R.DamagePhysicalBypassesShort", { type }) };
           }));
           return value;
         });
@@ -228,7 +228,7 @@ export default function ActorSheetV2Mixin(Base) {
 
       // If petrified, display "All Damage" instead of all damage types separately
       if ( this.document.hasConditionEffect("petrification") ) {
-        traits.dr = [{ label: game.i18n.localize("DND5E.DamageAll") }];
+        traits.dr = [{ label: game.i18n.localize("DND5R.DamageAll") }];
       }
 
       // Combine damage & condition immunities in play mode.
@@ -246,13 +246,13 @@ export default function ActorSheetV2Mixin(Base) {
           const total = simplifyBonus(v, rollData);
           if ( !total ) return null;
           const value = {
-            label: `${CONFIG.DND5E.damageTypes[k]?.label ?? k} ${formatNumber(total, { signDisplay: "always" })}`,
+            label: `${CONFIG.DND5R.damageTypes[k]?.label ?? k} ${formatNumber(total, { signDisplay: "always" })}`,
             color: total > 0 ? "maroon" : "green"
           };
           const icons = value.icons = [];
-          if ( dm.bypasses.size && CONFIG.DND5E.damageTypes[k]?.isPhysical ) icons.push(...dm.bypasses.map(p => {
-            const type = CONFIG.DND5E.itemProperties[p]?.label;
-            return { icon: p, label: game.i18n.format("DND5E.DamagePhysicalBypassesShort", { type }) };
+          if ( dm.bypasses.size && CONFIG.DND5R.damageTypes[k]?.isPhysical ) icons.push(...dm.bypasses.map(p => {
+            const type = CONFIG.DND5R.itemProperties[p]?.label;
+            return { icon: p, label: game.i18n.format("DND5R.DamagePhysicalBypassesShort", { type }) };
           }));
           return value;
         }).filter(f => f);
@@ -267,7 +267,7 @@ export default function ActorSheetV2Mixin(Base) {
           traits.weapon ??= [];
           traits.weapon.push(value);
         }
-        value.icons.push({ icon: "mastery", label: game.i18n.format("DND5E.WEAPON.Mastery.Label") });
+        value.icons.push({ icon: "mastery", label: game.i18n.format("DND5R.WEAPON.Mastery.Label") });
       }
 
       return traits;
@@ -283,14 +283,14 @@ export default function ActorSheetV2Mixin(Base) {
       const plurals = new Intl.PluralRules(game.i18n.lang, { type: "ordinal" });
       context.spellbook.forEach(section => {
         section.categories = [
-          { activityPartial: "dnd5e.activity-column-school" },
-          { activityPartial: "dnd5e.activity-column-time" },
-          { activityPartial: "dnd5e.activity-column-range" },
-          { activityPartial: "dnd5e.activity-column-target" },
-          { activityPartial: "dnd5e.activity-column-roll" },
-          { activityPartial: "dnd5e.activity-column-uses" },
-          { activityPartial: "dnd5e.activity-column-formula" },
-          { activityPartial: "dnd5e.activity-column-controls" }
+          { activityPartial: "dnd5r.activity-column-school" },
+          { activityPartial: "dnd5r.activity-column-time" },
+          { activityPartial: "dnd5r.activity-column-range" },
+          { activityPartial: "dnd5r.activity-column-target" },
+          { activityPartial: "dnd5r.activity-column-roll" },
+          { activityPartial: "dnd5r.activity-column-uses" },
+          { activityPartial: "dnd5r.activity-column-formula" },
+          { activityPartial: "dnd5r.activity-column-controls" }
         ];
         if ( !section.usesSlots ) return;
         const spells = foundry.utils.getProperty(this.actor.system.spells, section.prop);
@@ -298,8 +298,8 @@ export default function ActorSheetV2Mixin(Base) {
         section.pips = Array.fromRange(max, 1).map(n => {
           const filled = spells.value >= n;
           const label = filled
-            ? game.i18n.format(`DND5E.SpellSlotN.${plurals.select(n)}`, { n })
-            : game.i18n.localize("DND5E.SpellSlotExpended");
+            ? game.i18n.format(`DND5R.SpellSlotN.${plurals.select(n)}`, { n })
+            : game.i18n.localize("DND5R.SpellSlotExpended");
           const classes = ["pip"];
           if ( filled ) classes.push("filled");
           return { n, label, filled, tooltip: label, classes: classes.join(" ") };
@@ -320,23 +320,23 @@ export default function ActorSheetV2Mixin(Base) {
         // Activation
         const cost = system.activation?.value ?? "";
         const abbr = {
-          action: "DND5E.ActionAbbr",
-          bonus: "DND5E.BonusActionAbbr",
-          reaction: "DND5E.ReactionAbbr",
-          minute: "DND5E.TimeMinuteAbbr",
-          hour: "DND5E.TimeHourAbbr",
-          day: "DND5E.TimeDayAbbr"
+          action: "DND5R.ActionAbbr",
+          bonus: "DND5R.BonusActionAbbr",
+          reaction: "DND5R.ReactionAbbr",
+          minute: "DND5R.TimeMinuteAbbr",
+          hour: "DND5R.TimeHourAbbr",
+          day: "DND5R.TimeDayAbbr"
         }[system.activation.type];
         ctx.activation = abbr ? `${cost}${game.i18n.localize(abbr)}` : item.labels.activation;
 
         // Range
         const units = system.range?.units;
         if ( units && (units !== "none") ) {
-          if ( units in CONFIG.DND5E.movementUnits ) {
+          if ( units in CONFIG.DND5R.movementUnits ) {
             ctx.range = {
               distance: true,
               value: system.range.value,
-              unit: game.i18n.localize(`DND5E.Dist${units.capitalize()}Abbr`)
+              unit: game.i18n.localize(`DND5R.Dist${units.capitalize()}Abbr`)
             };
           }
           else ctx.range = { distance: false };
@@ -344,7 +344,7 @@ export default function ActorSheetV2Mixin(Base) {
 
         // Prepared
         const mode = system.preparation?.mode;
-        const config = CONFIG.DND5E.spellPreparationModes[mode] ?? {};
+        const config = CONFIG.DND5R.spellPreparationModes[mode] ?? {};
         if ( config.prepares && !linked ) {
           const isAlways = mode === "always";
           const prepared = isAlways || system.preparation.prepared;
@@ -354,10 +354,10 @@ export default function ActorSheetV2Mixin(Base) {
             cls: prepared ? "active" : "",
             icon: `<i class="fa-${prepared ? "solid" : "regular"} fa-${isAlways ? "certificate" : "sun"}"></i>`,
             title: isAlways
-              ? CONFIG.DND5E.spellPreparationModes.always.label
+              ? CONFIG.DND5R.spellPreparationModes.always.label
               : prepared
-                ? CONFIG.DND5E.spellPreparationModes.prepared.label
-                : game.i18n.localize("DND5E.SpellUnprepared")
+                ? CONFIG.DND5R.spellPreparationModes.prepared.label
+                : game.i18n.localize("DND5R.SpellUnprepared")
           };
         }
         else ctx.preparation = { applicable: false };
@@ -394,7 +394,7 @@ export default function ActorSheetV2Mixin(Base) {
           ctx.equip = {
             applicable: true,
             cls: system.equipped ? "active" : "",
-            title: `DND5E.${system.equipped ? "Equipped" : "Unequipped"}`,
+            title: `DND5R.${system.equipped ? "Equipped" : "Unequipped"}`,
             disabled: !item.isOwner
           };
         }
@@ -414,12 +414,12 @@ export default function ActorSheetV2Mixin(Base) {
       // Save
       ctx.save = { ...item.system.activities?.getByType("save")[0]?.save };
       ctx.save.ability = ctx.save.ability?.size ? ctx.save.ability.size === 1
-        ? CONFIG.DND5E.abilities[ctx.save.ability.first()]?.abbreviation
-        : game.i18n.localize("DND5E.AbbreviationDC") : null;
+        ? CONFIG.DND5R.abilities[ctx.save.ability.first()]?.abbreviation
+        : game.i18n.localize("DND5R.AbbreviationDC") : null;
 
       // Activities
       ctx.activities = item.system.activities
-        ?.filter(a => !item.getFlag("dnd5e", "riders.activity")?.includes(a.id))
+        ?.filter(a => !item.getFlag("dnd5r", "riders.activity")?.includes(a.id))
         ?.map(this._prepareActivity.bind(this));
     }
 
@@ -439,12 +439,12 @@ export default function ActorSheetV2Mixin(Base) {
 
       // Activation
       const activationAbbr = {
-        action: "DND5E.ActionAbbr",
-        bonus: "DND5E.BonusActionAbbr",
-        reaction: "DND5E.ReactionAbbr",
-        minute: "DND5E.TimeMinuteAbbr",
-        hour: "DND5E.TimeHourAbbr",
-        day: "DND5E.TimeDayAbbr"
+        action: "DND5R.ActionAbbr",
+        bonus: "DND5R.BonusActionAbbr",
+        reaction: "DND5R.ReactionAbbr",
+        minute: "DND5R.TimeMinuteAbbr",
+        hour: "DND5R.TimeHourAbbr",
+        day: "DND5R.TimeDayAbbr"
       }[activation?.type || ""];
 
       // Limited Uses
@@ -466,8 +466,8 @@ export default function ActorSheetV2Mixin(Base) {
           ...save,
           ability: save.ability?.size
             ? save.ability.size === 1
-              ? CONFIG.DND5E.abilities[save.ability.first()]?.abbreviation
-              : game.i18n.localize("DND5E.AbbreviationDC")
+              ? CONFIG.DND5R.abilities[save.ability.first()]?.abbreviation
+              : game.i18n.localize("DND5R.AbbreviationDC")
             : null
         } : null,
         toHit: isNaN(toHit) ? null : toHit
@@ -479,7 +479,7 @@ export default function ActorSheetV2Mixin(Base) {
     /** @inheritDoc */
     _getLabels() {
       const labels = super._getLabels();
-      labels.damageAndHealing = { ...CONFIG.DND5E.damageTypes, ...CONFIG.DND5E.healingTypes };
+      labels.damageAndHealing = { ...CONFIG.DND5R.damageTypes, ...CONFIG.DND5R.healingTypes };
       return labels;
     }
 
@@ -522,7 +522,7 @@ export default function ActorSheetV2Mixin(Base) {
     _onChangeTab(event, tabs, active) {
       super._onChangeTab(event, tabs, active);
       const sheetPrefs = `sheetPrefs.${this.actor.type}.tabs.${active}`;
-      const sidebarCollapsed = game.user.getFlag("dnd5e", `${sheetPrefs}.collapseSidebar`);
+      const sidebarCollapsed = game.user.getFlag("dnd5r", `${sheetPrefs}.collapseSidebar`);
       if ( sidebarCollapsed !== undefined ) this._toggleSidebar(sidebarCollapsed);
       const createChild = this.form.querySelector(".create-child");
       createChild.setAttribute("aria-label", game.i18n.format("SIDEBAR.Create", {
@@ -549,7 +549,7 @@ export default function ActorSheetV2Mixin(Base) {
       const activeTab = this._tabs?.[0]?.active ?? this.options.tabs[0].initial;
 
       if ( activeTab === "effects" ) return ActiveEffect.implementation.create({
-        name: game.i18n.localize("DND5E.EffectNew"),
+        name: game.i18n.localize("DND5R.EffectNew"),
         icon: "icons/svg/aura.svg"
       }, { parent: this.actor, renderSheet: true });
 
@@ -638,7 +638,7 @@ export default function ActorSheetV2Mixin(Base) {
       super._onResize(event);
       const { width, height } = this.position;
       const key = `${this.actor.type}${this.actor.limited ? ":limited": ""}`;
-      game.user.setFlag("dnd5e", `sheetPrefs.${key}`, { width, height });
+      game.user.setFlag("dnd5r", `sheetPrefs.${key}`, { width, height });
     }
 
     /* -------------------------------------------- */
@@ -648,7 +648,7 @@ export default function ActorSheetV2Mixin(Base) {
      * @protected
      */
     _onShowPortrait() {
-      const showTokenPortrait = this.actor.getFlag("dnd5e", "showTokenPortrait") === true;
+      const showTokenPortrait = this.actor.getFlag("dnd5r", "showTokenPortrait") === true;
       const token = this.actor.isToken ? this.actor.token : this.actor.prototypeToken;
       const img = showTokenPortrait ? token.texture.src : this.actor.img;
       new ImagePopout(img, { title: this.actor.name, uuid: this.actor.uuid }).render(true);
@@ -681,7 +681,7 @@ export default function ActorSheetV2Mixin(Base) {
     _onToggleSidebar() {
       const collapsed = this._toggleSidebar();
       const activeTab = this._tabs?.[0]?.active ?? "details";
-      game.user.setFlag("dnd5e", `sheetPrefs.${this.actor.type}.tabs.${activeTab}.collapseSidebar`, collapsed);
+      game.user.setFlag("dnd5r", `sheetPrefs.${this.actor.type}.tabs.${activeTab}.collapseSidebar`, collapsed);
     }
 
     /* -------------------------------------------- */

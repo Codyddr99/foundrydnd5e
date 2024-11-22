@@ -11,7 +11,7 @@ export default class UtilityActivity extends ActivityMixin(UtilityActivityData) 
   /* -------------------------------------------- */
 
   /** @inheritDoc */
-  static LOCALIZATION_PREFIXES = [...super.LOCALIZATION_PREFIXES, "DND5E.UTILITY"];
+  static LOCALIZATION_PREFIXES = [...super.LOCALIZATION_PREFIXES, "DND5R.UTILITY"];
 
   /* -------------------------------------------- */
 
@@ -19,8 +19,8 @@ export default class UtilityActivity extends ActivityMixin(UtilityActivityData) 
   static metadata = Object.freeze(
     foundry.utils.mergeObject(super.metadata, {
       type: "utility",
-      img: "systems/dnd5etools/icons/svg/activity/utility.svg",
-      title: "DND5E.UTILITY.Title",
+      img: "systems/dnd5r/icons/svg/activity/utility.svg",
+      title: "DND5R.UTILITY.Title",
       sheetClass: UtilitySheet,
       usage: {
         actions: {
@@ -38,7 +38,7 @@ export default class UtilityActivity extends ActivityMixin(UtilityActivityData) 
   _usageChatButtons(message) {
     if ( !this.roll.formula ) return super._usageChatButtons(message);
     return [{
-      label: this.roll.name || game.i18n.localize("DND5E.Roll"),
+      label: this.roll.name || game.i18n.localize("DND5R.Roll"),
       icon: '<i class="fa-solid fa-dice" inert></i>',
       dataset: {
         action: "rollFormula",
@@ -74,7 +74,7 @@ export default class UtilityActivity extends ActivityMixin(UtilityActivityData) 
       options: {
         window: {
           title: this.item.name,
-          subtitle: "DND5E.RollConfiguration.Title",
+          subtitle: "DND5R.RollConfiguration.Title",
           icon: this.item.img
         }
       }
@@ -83,9 +83,9 @@ export default class UtilityActivity extends ActivityMixin(UtilityActivityData) 
     const messageConfig = foundry.utils.mergeObject({
       create: true,
       data: {
-        flavor: `${this.item.name} - ${this.roll.label || game.i18n.localize("DND5E.OtherFormula")}`,
+        flavor: `${this.item.name} - ${this.roll.label || game.i18n.localize("DND5R.OtherFormula")}`,
         flags: {
-          dnd5e: {
+          dnd5r: {
             ...this.messageFlags,
             messageType: "roll",
             roll: { type: "generic" }
@@ -94,15 +94,15 @@ export default class UtilityActivity extends ActivityMixin(UtilityActivityData) 
       }
     }, message);
 
-    if ( "dnd5e.preRollFormula" in Hooks.events ) {
+    if ( "dnd5r.preRollFormula" in Hooks.events ) {
       foundry.utils.logCompatibilityWarning(
-        "The `dnd5e.preRollFormula` hook has been deprecated and replaced with `dnd5e.preRollFormulaV2`.",
-        { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+        "The `dnd5r.preRollFormula` hook has been deprecated and replaced with `dnd5r.preRollFormulaV2`.",
+        { since: "DnD5r 4.0", until: "DnD5r 4.4" }
       );
       const hookData = {
         formula: rollConfig.rolls[0].parts[0], data: rollConfig.rolls[0].data, chatMessage: messageConfig.create
       };
-      if ( Hooks.call("dnd5e.preRollFormula", this.item, hookData) === false ) return;
+      if ( Hooks.call("dnd5r.preRollFormula", this.item, hookData) === false ) return;
       rollConfig.rolls[0].parts[0] = hookData.formula;
       rollConfig.rolls[0].data = hookData.data;
       messageConfig.create = hookData.chatMessage;
@@ -113,20 +113,20 @@ export default class UtilityActivity extends ActivityMixin(UtilityActivityData) 
 
     /**
      * A hook event that fires after a formula has been rolled for a Utility activity.
-     * @function dnd5e.rollFormulaV2
+     * @function dnd5r.rollFormulaV2
      * @memberof hookEvents
      * @param {BasicRoll[]} rolls             The resulting rolls.
      * @param {object} data
      * @param {UtilityActivity} data.subject  The Activity that performed the roll.
      */
-    Hooks.callAll("dnd5e.rollFormulaV2", rolls, { subject: this });
+    Hooks.callAll("dnd5r.rollFormulaV2", rolls, { subject: this });
 
-    if ( "dnd5e.rollFormula" in Hooks.events ) {
+    if ( "dnd5r.rollFormula" in Hooks.events ) {
       foundry.utils.logCompatibilityWarning(
-        "The `dnd5e.rollFormula` hook has been deprecated and replaced with `dnd5e.rollFormulaV2`.",
-        { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+        "The `dnd5r.rollFormula` hook has been deprecated and replaced with `dnd5r.rollFormulaV2`.",
+        { since: "DnD5r 4.0", until: "DnD5r 4.4" }
       );
-      Hooks.callAll("dnd5e.rollFormula", this.item, rolls[0]);
+      Hooks.callAll("dnd5r.rollFormula", this.item, rolls[0]);
     }
 
     return rolls;

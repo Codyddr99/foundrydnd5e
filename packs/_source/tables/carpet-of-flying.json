@@ -11,7 +11,7 @@
         20
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.items",
+      "documentCollection": "dnd5r.items",
       "_id": "osZQr5LcSXncPcUY",
       "text": "Carpet of Flying (3x5)",
       "img": "icons/commodities/cloth/cloth-bolt-embroidered-pink.webp",
@@ -27,7 +27,7 @@
         55
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.items",
+      "documentCollection": "dnd5r.items",
       "_id": "3TOWgE7uAD22vNqt",
       "text": "Carpet of Flying (4x6)",
       "img": "icons/commodities/cloth/cloth-bolt-embroidered-pink.webp",
@@ -43,7 +43,7 @@
         80
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.items",
+      "documentCollection": "dnd5r.items",
       "_id": "k9CfpC5ed04OPa8u",
       "text": "Carpet of Flying (5x7)",
       "img": "icons/commodities/cloth/cloth-bolt-embroidered-pink.webp",
@@ -59,7 +59,7 @@
         100
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.items",
+      "documentCollection": "dnd5r.items",
       "_id": "YHa2MFeIX8PGMKmX",
       "text": "Carpet of Flying (6x9)",
       "img": "icons/commodities/cloth/cloth-bolt-embroidered-pink.webp",
@@ -76,11 +76,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037419376,
     "modifiedTime": 1725037419376,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "sort": 0,
   "folder": null,

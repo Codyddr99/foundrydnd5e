@@ -42,7 +42,7 @@
       "_id": "vMMZHZQ0qT7MT4I4",
       "changes": [
         {
-          "key": "flags.dnd5e.reliableTalent",
+          "key": "flags.dnd5r.reliableTalent",
           "mode": 5,
           "value": "true",
           "priority": null
@@ -69,7 +69,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -87,11 +87,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037385020,
     "modifiedTime": 1725992288690,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!YN9xm6MCvse4Y60u"
 }

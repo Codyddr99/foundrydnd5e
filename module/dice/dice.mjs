@@ -65,7 +65,7 @@ export async function d20Roll({
 }={}) {
   foundry.utils.logCompatibilityWarning(
     "The `d20Roll` standalone method has been deprecated and replaced with `CONFIG.Dice.D20Roll.build`.",
-    { since: "DnD5e 4.1", until: "DnD5e 4.5" }
+    { since: "DnD5r 4.1", until: "DnD5r 4.5" }
   );
 
   const rollConfig = {
@@ -172,7 +172,7 @@ export async function damageRoll({
 }={}) {
   foundry.utils.logCompatibilityWarning(
     "The `damageRoll` standalone method has been deprecated and replaced with `CONFIG.Dice.DamageRoll.build`.",
-    { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+    { since: "DnD5r 4.0", until: "DnD5r 4.4" }
   );
 
   const rollConfig = {
@@ -180,8 +180,8 @@ export async function damageRoll({
     critical: {
       allow: allowCritical,
       multiplier: criticalMultiplier,
-      multiplyNumeric: multiplyNumeric ?? game.settings.get("dnd5e", "criticalDamageModifiers"),
-      powerfulCritical: powerfulCritical ?? game.settings.get("dnd5e", "criticalDamageMaxDice")
+      multiplyNumeric: multiplyNumeric ?? game.settings.get("dnd5r", "criticalDamageModifiers"),
+      powerfulCritical: powerfulCritical ?? game.settings.get("dnd5r", "criticalDamageMaxDice")
     },
     rolls: rollConfigs.map(r => ({
       data,

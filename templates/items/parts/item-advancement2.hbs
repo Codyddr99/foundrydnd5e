@@ -8,33 +8,33 @@
 
                 <h3 class="item-name">
                     {{#if (eq @key "0")}}
-                    {{ localize "DND5E.AdvancementLevelAnyHeader" }}
+                    {{ localize "DND5R.AdvancementLevelAnyHeader" }}
                     {{else if (eq @key "unconfigured")}}
-                    {{ localize "DND5E.AdvancementLevelNoneHeader" }}
+                    {{ localize "DND5R.AdvancementLevelNoneHeader" }}
                     {{else}}
-                    {{ localize "DND5E.AdvancementLevelHeader" level=@key }}
+                    {{ localize "DND5R.AdvancementLevelHeader" level=@key }}
                     {{/if}}
                 </h3>
 
-                <div class="item-header advancement-value">{{ localize "DND5E.Value" }}</div>
+                <div class="item-header advancement-value">{{ localize "DND5R.Value" }}</div>
 
                 <div class="item-header item-controls">
                     {{#if (and @root.editable configured (ne @key "unconfigured"))}}
                     <a class="item-control config-button" data-action="modify-choices"
-                       data-tooltip="DND5E.AdvancementModifyChoices"
-                       aria-label="{{ localize "DND5E.AdvancementModifyChoices" }}">
+                       data-tooltip="DND5R.AdvancementModifyChoices"
+                       aria-label="{{ localize "DND5R.AdvancementModifyChoices" }}">
                         <i class="fas fa-cog"></i>
                     </a>
                     {{else}}
 
                     {{#if (eq configured "full")}}
-                    <a class="info-control" data-tooltip="DND5E.AdvancementConfiguredComplete"
-                       aria-label="{{ localize "DND5E.AdvancementConfiguredComplete" }}">
+                    <a class="info-control" data-tooltip="DND5R.AdvancementConfiguredComplete"
+                       aria-label="{{ localize "DND5R.AdvancementConfiguredComplete" }}">
                         <i class="fas fa-check-circle"></i>
                     </a>
                     {{else if (eq configured "partial")}}
-                    <a class="info-control" data-tooltip="DND5E.AdvancementConfiguredIncomplete"
-                       aria-label="{{ localize "DND5E.AdvancementConfiguredIncomplete" }}">
+                    <a class="info-control" data-tooltip="DND5R.AdvancementConfiguredIncomplete"
+                       aria-label="{{ localize "DND5R.AdvancementConfiguredIncomplete" }}">
                         <i class="fas fa-exclamation-triangle"></i>
                     </a>
                     {{/if}}
@@ -61,7 +61,7 @@
                             <div class="tags">
                                 {{#each tags}}
                                 <span data-tooltip="{{ label }}" aria-label="{{ localize label }}">
-                                    <dnd5e-icon src="{{ icon }}"></dnd5e-icon>
+                                    <dnd5r-icon src="{{ icon }}"></dnd5r-icon>
                                 </span>
                                 {{/each}}
                             </div>
@@ -78,22 +78,22 @@
                             {{#if @root.editable}}
                             {{!-- Editing --}}
                             <a class="item-control item-action" data-action="edit"
-                               data-tooltip="DND5E.AdvancementControlEdit"
-                               aria-label="{{ localize "DND5E.AdvancementControlEdit" }}">
+                               data-tooltip="DND5R.AdvancementControlEdit"
+                               aria-label="{{ localize "DND5R.AdvancementControlEdit" }}">
                                 <i class="fas fa-pen-to-square"></i>
                             </a>
 
                             {{!-- Deleting --}}
                             <a class="item-control item-action" data-action="delete"
-                               data-tooltip="DND5E.AdvancementControlDelete"
-                               aria-label="{{ localize "DND5E.AdvancementControlDelete" }}">
+                               data-tooltip="DND5R.AdvancementControlDelete"
+                               aria-label="{{ localize "DND5R.AdvancementControlDelete" }}">
                                 <i class="fas fa-trash"></i>
                             </a>
                             {{/if}}
 
                             {{!-- Context Menu --}}
                             <a class="item-control interface-only" data-context-menu
-                               aria-label="{{ localize "DND5E.AdditionalControls" }}">
+                               aria-label="{{ localize "DND5R.AdditionalControls" }}">
                                 <i class="fas fa-ellipsis-vertical"></i>
                             </a>
 

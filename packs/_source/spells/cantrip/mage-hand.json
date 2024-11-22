@@ -64,8 +64,8 @@
       "mgc"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "summon",
         "activation": {
           "type": "action",
@@ -120,7 +120,7 @@
           {
             "name": "",
             "_id": "H4LmY7OuwtEQFipO",
-            "uuid": "Compendium.dnd5e.monsters.Actor.zwT2WjWo7cTm2631",
+            "uuid": "Compendium.dnd5r.monsters.Actor.zwT2WjWo7cTm2631",
             "level": {
               "min": null,
               "max": null
@@ -150,11 +150,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037357436,
     "modifiedTime": 1725992720244,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!Utk1OQRwYkMkFRD3"
 }

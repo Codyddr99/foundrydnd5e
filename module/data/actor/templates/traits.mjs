@@ -47,17 +47,17 @@ export default class TraitsField {
    */
   static get common() {
     return {
-      size: new StringField({required: true, initial: "med", label: "DND5E.Size"}),
-      di: this.makeDamageTrait({label: "DND5E.DamImm"}),
-      dr: this.makeDamageTrait({label: "DND5E.DamRes"}),
-      dv: this.makeDamageTrait({label: "DND5E.DamVuln"}),
+      size: new StringField({required: true, initial: "med", label: "DND5R.Size"}),
+      di: this.makeDamageTrait({label: "DND5R.DamImm"}),
+      dr: this.makeDamageTrait({label: "DND5R.DamRes"}),
+      dv: this.makeDamageTrait({label: "DND5R.DamVuln"}),
       dm: new SchemaField({
-        amount: new MappingField(new FormulaField({deterministic: true}), {label: "DND5E.DamMod"}),
+        amount: new MappingField(new FormulaField({deterministic: true}), {label: "DND5R.DamMod"}),
         bypasses: new SetField(new StringField(), {
-          label: "DND5E.DamagePhysicalBypass", hint: "DND5E.DamagePhysicalBypassHint"
+          label: "DND5R.DamagePhysicalBypass", hint: "DND5R.DamagePhysicalBypassHint"
         })
       }),
-      ci: this.makeSimpleTrait({label: "DND5E.ConImm"})
+      ci: this.makeSimpleTrait({label: "DND5R.ConImm"})
     };
   }
 
@@ -71,7 +71,7 @@ export default class TraitsField {
    */
   static get creature() {
     return {
-      languages: this.makeSimpleTrait({label: "DND5E.Languages"})
+      languages: this.makeSimpleTrait({label: "DND5R.Languages"})
     };
   }
 
@@ -89,9 +89,9 @@ export default class TraitsField {
     return new SchemaField({
       ...extraFields,
       value: new SetField(
-        new StringField(), {label: "DND5E.TraitsChosen", initial}
+        new StringField(), {label: "DND5R.TraitsChosen", initial}
       ),
-      custom: new StringField({required: true, label: "DND5E.Special"})
+      custom: new StringField({required: true, label: "DND5R.Special"})
     }, schemaOptions);
   }
 
@@ -109,7 +109,7 @@ export default class TraitsField {
     return this.makeSimpleTrait(schemaOptions, {initial, extraFields: {
       ...extraFields,
       bypasses: new SetField(new StringField(), {
-        label: "DND5E.DamagePhysicalBypass", hint: "DND5E.DamagePhysicalBypassHint", initial: initialBypasses
+        label: "DND5R.DamagePhysicalBypass", hint: "DND5R.DamagePhysicalBypassHint", initial: initialBypasses
       })
     }});
   }
@@ -124,8 +124,8 @@ export default class TraitsField {
    */
   static prepareResistImmune() {
     if ( this.parent.hasConditionEffect("petrification") ) {
-      this.traits.dr.custom = game.i18n.localize("DND5E.DamageAll");
-      Object.keys(CONFIG.DND5E.damageTypes).forEach(type => this.traits.dr.value.add(type));
+      this.traits.dr.custom = game.i18n.localize("DND5R.DamageAll");
+      Object.keys(CONFIG.DND5R.damageTypes).forEach(type => this.traits.dr.value.add(type));
       this.traits.dr.bypasses.clear();
       this.traits.di.value.add("poison");
       this.traits.ci.value.add("poisoned");

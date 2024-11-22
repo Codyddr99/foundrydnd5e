@@ -5,7 +5,7 @@
   "img": "icons/equipment/head/hat-belted-simple.webp",
   "system": {
     "description": {
-      "value": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>While wearing this hat, you can use an action to cast the @UUID[Compendium.dnd5e.spells.Item.A3q2gTNqG6fvNGrv]{Disguise Self} spell from it at will. The spell ends if the hat is removed.</p>",
+      "value": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>While wearing this hat, you can use an action to cast the @UUID[Compendium.dnd5r.spells.Item.A3q2gTNqG6fvNGrv]{Disguise Self} spell from it at will. The spell ends if the hat is removed.</p>",
       "chat": ""
     },
     "source": {
@@ -67,7 +67,7 @@
       "wRay1ZVWKBGtk9mL": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.A3q2gTNqG6fvNGrv",
+          "uuid": "Compendium.dnd5r.spells.Item.A3q2gTNqG6fvNGrv",
           "challenge": {
             "attack": null,
             "save": null,
@@ -130,7 +130,7 @@
     "default": 0
   },
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "riders": {
         "activity": [],
         "effect": []
@@ -140,11 +140,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037234437,
     "modifiedTime": 1729015322129,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!dQxqcjDm0IxYusCV"
 }

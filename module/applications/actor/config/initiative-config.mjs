@@ -19,7 +19,7 @@ export default class InitiativeConfig extends BaseConfigSheet {
   /** @override */
   static PARTS = {
     config: {
-      template: "systems/dnd5etools/templates/actors/config/initiative-config.hbs"
+      template: "systems/dnd5r/templates/actors/config/initiative-config.hbs"
     }
   };
 
@@ -29,7 +29,7 @@ export default class InitiativeConfig extends BaseConfigSheet {
 
   /** @override */
   get title() {
-    return game.i18n.localize("DND5E.Initiative");
+    return game.i18n.localize("DND5R.Initiative");
   }
 
   /* -------------------------------------------- */
@@ -41,19 +41,19 @@ export default class InitiativeConfig extends BaseConfigSheet {
     context = await super._preparePartContext(partId, context, options);
     const source = this.document._source;
 
-    const defaultAbility = CONFIG.DND5E.abilities[CONFIG.DND5E.defaultAbilities.initiative];
+    const defaultAbility = CONFIG.DND5R.abilities[CONFIG.DND5R.defaultAbilities.initiative];
     context.abilityOptions = [
-      { value: "", label: game.i18n.format("DND5E.DefaultSpecific", { default: defaultAbility.label.toLowerCase() }) },
+      { value: "", label: game.i18n.format("DND5R.DefaultSpecific", { default: defaultAbility.label.toLowerCase() }) },
       { rule: true },
-      ...Object.entries(CONFIG.DND5E.abilities).map(([value, { label }]) => ({ value, label }))
+      ...Object.entries(CONFIG.DND5R.abilities).map(([value, { label }]) => ({ value, label }))
     ];
     context.data = source.system.attributes.init;
     context.fields = this.document.system.schema.fields.attributes.fields.init.fields;
 
-    const ability = this.document.system.attributes.init.ability || CONFIG.DND5E.defaultAbilities.initiative;
-    const abilityConfig = CONFIG.DND5E.abilities[ability];
+    const ability = this.document.system.attributes.init.ability || CONFIG.DND5R.defaultAbilities.initiative;
+    const abilityConfig = CONFIG.DND5R.abilities[ability];
     context.ability = {
-      label: game.i18n.format("DND5E.AbilityCheckConfigure", { ability: abilityConfig.label }),
+      label: game.i18n.format("DND5R.AbilityCheckConfigure", { ability: abilityConfig.label }),
       global: {
         field: this.document.system.schema.fields.bonuses.fields.abilities.fields.check,
         name: "system.bonuses.abilities.check",
@@ -68,14 +68,14 @@ export default class InitiativeConfig extends BaseConfigSheet {
 
     context.flags = {
       alert: {
-        field: new BooleanField({ label: game.i18n.localize("DND5E.FlagsAlert") }),
-        name: "flags.dnd5e.initiativeAlert",
-        value: source.flags.dnd5e?.initiativeAlert
+        field: new BooleanField({ label: game.i18n.localize("DND5R.FlagsAlert") }),
+        name: "flags.dnd5r.initiativeAlert",
+        value: source.flags.dnd5r?.initiativeAlert
       },
       advantage: {
-        field: new BooleanField({ label: game.i18n.localize("DND5E.FlagsInitiativeAdv") }),
-        name: "flags.dnd5e.initiativeAdv",
-        value: source.flags.dnd5e?.initiativeAdv
+        field: new BooleanField({ label: game.i18n.localize("DND5R.FlagsInitiativeAdv") }),
+        name: "flags.dnd5r.initiativeAdv",
+        value: source.flags.dnd5r?.initiativeAdv
       }
     };
 

@@ -29,8 +29,8 @@
     "requirements": "Oath of Devotion 3",
     "properties": [],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "save",
         "activation": {
           "type": "action",
@@ -42,7 +42,7 @@
           "targets": [
             {
               "type": "itemUses",
-              "target": "Compendium.dnd5e.classfeatures.Item.8M7uOPhbTxoxxJSo",
+              "target": "Compendium.dnd5r.classfeatures.Item.8M7uOPhbTxoxxJSo",
               "value": "1",
               "scaling": {
                 "mode": "",
@@ -124,11 +124,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037385286,
     "modifiedTime": 1725992288749,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!ZdwGlsJNtc7pGFCd"
 }

@@ -728,8 +728,8 @@
         "container": null,
         "properties": [],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "",
@@ -799,7 +799,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.3OXueEpvDDCVfGFA"
+          "sourceId": "Compendium.dnd5r.items.3OXueEpvDDCVfGFA"
         }
       },
       "img": "icons/equipment/back/cloak-heavy-fur-blue.webp",
@@ -809,10 +809,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.3OXueEpvDDCVfGFA",
+        "compendiumSource": "Compendium.dnd5r.items.3OXueEpvDDCVfGFA",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -918,8 +918,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "action",
@@ -1005,7 +1005,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.Tobce1hexTnDk4sV"
+          "sourceId": "Compendium.dnd5r.items.Tobce1hexTnDk4sV"
         }
       },
       "img": "icons/weapons/swords/sword-guard-brown.webp",
@@ -1015,10 +1015,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.Tobce1hexTnDk4sV",
+        "compendiumSource": "Compendium.dnd5r.items.Tobce1hexTnDk4sV",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1091,8 +1091,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "action",
@@ -1186,7 +1186,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1293,8 +1293,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "action",
@@ -1380,7 +1380,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.GJv6WkD7D2J6rP6M"
+          "sourceId": "Compendium.dnd5r.items.GJv6WkD7D2J6rP6M"
         }
       },
       "img": "icons/weapons/bows/shortbow-recurve.webp",
@@ -1390,10 +1390,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.GJv6WkD7D2J6rP6M",
+        "compendiumSource": "Compendium.dnd5r.items.GJv6WkD7D2J6rP6M",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1501,8 +1501,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "action",
@@ -1588,7 +1588,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.0E565kQUBmndJ1a2"
+          "sourceId": "Compendium.dnd5r.items.0E565kQUBmndJ1a2"
         }
       },
       "img": "icons/weapons/daggers/dagger-jeweled-purple.webp",
@@ -1598,10 +1598,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.0E565kQUBmndJ1a2",
+        "compendiumSource": "Compendium.dnd5r.items.0E565kQUBmndJ1a2",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1678,7 +1678,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.WwdpHLXGX5r8uZu5"
+          "sourceId": "Compendium.dnd5r.items.WwdpHLXGX5r8uZu5"
         }
       },
       "img": "icons/equipment/chest/breastplate-quilted-brown.webp",
@@ -1688,10 +1688,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.WwdpHLXGX5r8uZu5",
+        "compendiumSource": "Compendium.dnd5r.items.WwdpHLXGX5r8uZu5",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1742,8 +1742,8 @@
         "container": null,
         "properties": [],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "check",
             "activation": {
               "type": "",
@@ -1814,7 +1814,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.woWZ1sO5IUVGzo58"
+          "sourceId": "Compendium.dnd5r.items.woWZ1sO5IUVGzo58"
         }
       },
       "img": "icons/tools/hand/lockpicks-steel-grey.webp",
@@ -1824,10 +1824,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.woWZ1sO5IUVGzo58",
+        "compendiumSource": "Compendium.dnd5r.items.woWZ1sO5IUVGzo58",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1886,7 +1886,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.H8YCd689ezlD26aT"
+          "sourceId": "Compendium.dnd5r.items.H8YCd689ezlD26aT"
         }
       },
       "img": "icons/containers/bags/pack-simple-leather.webp",
@@ -1896,10 +1896,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.H8YCd689ezlD26aT",
+        "compendiumSource": "Compendium.dnd5r.items.H8YCd689ezlD26aT",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1958,7 +1958,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.9bWTRRDym06PzSAf"
+          "sourceId": "Compendium.dnd5r.items.9bWTRRDym06PzSAf"
         }
       },
       "img": "icons/containers/bags/coinpouch-simple-tan.webp",
@@ -1968,10 +1968,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.9bWTRRDym06PzSAf",
+        "compendiumSource": "Compendium.dnd5r.items.9bWTRRDym06PzSAf",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -2030,7 +2030,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.4MtQKPn9qMWCFjDA"
+          "sourceId": "Compendium.dnd5r.items.4MtQKPn9qMWCFjDA"
         }
       },
       "img": "icons/containers/ammunition/arrows-quiver-black.webp",
@@ -2040,10 +2040,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.4MtQKPn9qMWCFjDA",
+        "compendiumSource": "Compendium.dnd5r.items.4MtQKPn9qMWCFjDA",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -2092,7 +2092,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.14pNRT4sZy9rgvhb"
+          "sourceId": "Compendium.dnd5r.items.14pNRT4sZy9rgvhb"
         }
       },
       "img": "icons/tools/smithing/hammer-sledge-steel-grey.webp",
@@ -2102,10 +2102,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.14pNRT4sZy9rgvhb",
+        "compendiumSource": "Compendium.dnd5r.items.14pNRT4sZy9rgvhb",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -2173,8 +2173,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "check",
             "activation": {
               "type": "action",
@@ -2246,8 +2246,8 @@
             },
             "sort": 0
           },
-          "dnd5eactivity100": {
-            "_id": "dnd5eactivity100",
+          "dnd5ractivity100": {
+            "_id": "dnd5ractivity100",
             "type": "save",
             "activation": {
               "type": "action",
@@ -2333,7 +2333,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.QXmaarJ4X8P0C1HV"
+          "sourceId": "Compendium.dnd5r.items.QXmaarJ4X8P0C1HV"
         }
       },
       "img": "icons/sundries/survival/rope-wrapped-brown.webp",
@@ -2343,10 +2343,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.QXmaarJ4X8P0C1HV",
+        "compendiumSource": "Compendium.dnd5r.items.QXmaarJ4X8P0C1HV",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -2414,8 +2414,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -2497,7 +2497,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.TqyvIglHDj5kfohR"
+          "sourceId": "Compendium.dnd5r.items.TqyvIglHDj5kfohR"
         }
       },
       "img": "icons/sundries/survival/stake-rough-simple-brown.webp",
@@ -2507,10 +2507,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.TqyvIglHDj5kfohR",
+        "compendiumSource": "Compendium.dnd5r.items.TqyvIglHDj5kfohR",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -2578,8 +2578,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -2660,7 +2660,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.f4w4GxBi0nYXmhX4"
+          "sourceId": "Compendium.dnd5r.items.f4w4GxBi0nYXmhX4"
         }
       },
       "img": "icons/consumables/meat/hock-leg-pink-brown.webp",
@@ -2670,10 +2670,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.f4w4GxBi0nYXmhX4",
+        "compendiumSource": "Compendium.dnd5r.items.f4w4GxBi0nYXmhX4",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -2722,7 +2722,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.DNOSEAvF4Oh1DlWy"
+          "sourceId": "Compendium.dnd5r.items.DNOSEAvF4Oh1DlWy"
         }
       },
       "img": "icons/sundries/lights/torch-black.webp",
@@ -2732,10 +2732,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.DNOSEAvF4Oh1DlWy",
+        "compendiumSource": "Compendium.dnd5r.items.DNOSEAvF4Oh1DlWy",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -2809,8 +2809,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "action",
@@ -2922,7 +2922,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.BnOCLuNWhVvzHLjl"
+          "sourceId": "Compendium.dnd5r.items.BnOCLuNWhVvzHLjl"
         }
       },
       "img": "icons/sundries/lights/torch-black.webp",
@@ -2932,10 +2932,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.BnOCLuNWhVvzHLjl",
+        "compendiumSource": "Compendium.dnd5r.items.BnOCLuNWhVvzHLjl",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -3003,8 +3003,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -3085,7 +3085,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.Uv0ilmzbWvqmlCVH"
+          "sourceId": "Compendium.dnd5r.items.Uv0ilmzbWvqmlCVH"
         }
       },
       "img": "icons/sundries/survival/wetskin-leather-purple.webp",
@@ -3095,10 +3095,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.Uv0ilmzbWvqmlCVH",
+        "compendiumSource": "Compendium.dnd5r.items.Uv0ilmzbWvqmlCVH",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -3147,7 +3147,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.V13fjV5oSmvbRdgP"
+          "sourceId": "Compendium.dnd5r.items.V13fjV5oSmvbRdgP"
         }
       },
       "img": "icons/tools/cooking/fork-steel-grey.webp",
@@ -3157,10 +3157,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.V13fjV5oSmvbRdgP",
+        "compendiumSource": "Compendium.dnd5r.items.V13fjV5oSmvbRdgP",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -3209,7 +3209,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.DVXmyetZuvxbzAwW"
+          "sourceId": "Compendium.dnd5r.items.DVXmyetZuvxbzAwW"
         }
       },
       "img": "icons/sundries/flags/banner-worn-blue.webp",
@@ -3219,10 +3219,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.DVXmyetZuvxbzAwW",
+        "compendiumSource": "Compendium.dnd5r.items.DVXmyetZuvxbzAwW",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -3330,8 +3330,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "action",
@@ -3426,7 +3426,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -3475,7 +3475,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.V5UAjT3ed6sDNtgm"
+          "sourceId": "Compendium.dnd5r.items.V5UAjT3ed6sDNtgm"
         }
       },
       "img": "icons/tools/hand/pickaxe-steel-white.webp",
@@ -3485,10 +3485,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.V5UAjT3ed6sDNtgm",
+        "compendiumSource": "Compendium.dnd5r.items.V5UAjT3ed6sDNtgm",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -3527,7 +3527,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -3543,7 +3543,7 @@
       "img": "icons/skills/melee/strike-sword-stabbed-brown.webp",
       "system": {
         "description": {
-          "value": "<p>As a rogue, you have the following class features.</p>\n<h3>Hit Points</h3>\n<p><strong>Hit Dice:</strong> 1d8 per rogue level<br /><strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier<br /><strong>Hit Points at Higher Levels:</strong> 1d8 (or 5) + your Constitution modifier per rogue level after 1st</p>\n<h3>Proficiencies</h3>\n<p><strong>Armor:</strong> Light armor<br /><strong>Weapons:</strong> Simple weapons, hand crossbows, longswords, rapiers, shortswords<br /><strong>Tools:</strong> Thieves' tools<br /><strong>Saving Throws:</strong> Dexterity, Intelligence<br /><strong>Skills:</strong> Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth</p>\n<h3>Equipment</h3>\n<p>You start with the following equipment, in addition to the equipment granted by your background:</p>\n<ul>\n<li>(a) a rapier or (b) a shortsword</li>\n<li>(a) a shortbow and quiver of 20 arrows or (b) a shortsword</li>\n<li>(a) a burglar's pack, (b) a dungeoneer's pack, or (c) an explorer's pack</li>\n<li>(a) Leather armor, two daggers, and thieves' tools</li>\n</ul>\n<h1>Rogue Advancement</h1>\n<table>\n<thead>\n<tr>\n<td>Level</td>\n<td>Proficiency Bonus</td>\n<td>Sneak Attack</td>\n<td>Features</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1st</td>\n<td>+2</td>\n<td>1d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.3sYPftQKnbbVnHrh]{Expertise}, @UUID[Compendium.dnd5e.classfeatures.Item.DPN2Gfk8yi1Z5wp7]{Sneak Attack}, @UUID[Compendium.dnd5e.classfeatures.Item.ohwfuwnvuoBWlSQr]{Thieves' Cant}</td>\n</tr>\n<tr>\n<td>2nd</td>\n<td>+2</td>\n<td>1d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.01pcLg6PRu5zGrsb]{Cunning Action}</td>\n</tr>\n<tr>\n<td>3rd</td>\n<td>+2</td>\n<td>2d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.80USV8ZFPIahpLd0]{Roguish Archetype}</td>\n</tr>\n<tr>\n<td>4th</td>\n<td>+2</td>\n<td>2d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>5th</td>\n<td>+3</td>\n<td>3d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.Mm64SKAHJWYecgXS]{Uncanny Dodge}</td>\n</tr>\n<tr>\n<td>6th</td>\n<td>+3</td>\n<td>3d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.3sYPftQKnbbVnHrh]{Expertise improvement}</td>\n</tr>\n<tr>\n<td>7th</td>\n<td>+3</td>\n<td>4d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.a4P4DNMmH8CqSNkC]{Evasion}</td>\n</tr>\n<tr>\n<td>8th</td>\n<td>+3</td>\n<td>4d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>9th</td>\n<td>+4</td>\n<td>5d6</td>\n<td>Roguish Archetype feature</td>\n</tr>\n<tr>\n<td>10th</td>\n<td>+4</td>\n<td>5d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>11th</td>\n<td>+4</td>\n<td>6d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.YN9xm6MCvse4Y60u]{Reliable Talent}</td>\n</tr>\n<tr>\n<td>12th</td>\n<td>+4</td>\n<td>6d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>13th</td>\n<td>+5</td>\n<td>7d6</td>\n<td>Roguish Archetype feature</td>\n</tr>\n<tr>\n<td>14th</td>\n<td>+5</td>\n<td>7d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.fjsBk7zxoAbLf8ZI]{Blindsense}</td>\n</tr>\n<tr>\n<td>15th</td>\n<td>+5</td>\n<td>8d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.V4pwFxlwHtNeB4w9]{Slippery Mind}</td>\n</tr>\n<tr>\n<td>16th</td>\n<td>+5</td>\n<td>8d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>17th</td>\n<td>+6</td>\n<td>9d6</td>\n<td>Roguish Archetype feature</td>\n</tr>\n<tr>\n<td>18th</td>\n<td>+6</td>\n<td>9d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.L7nJSRosos8sHJH9]{Elusive}</td>\n</tr>\n<tr>\n<td>19th</td>\n<td>+6</td>\n<td>10d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>20th</td>\n<td>+6</td>\n<td>10d6</td>\n<td>@UUID[Compendium.dnd5e.classfeatures.Item.rQhWDaMHMn7iU4f2]{Stroke of Luck}</td>\n</tr>\n</tbody>\n</table>\n<h1>Roguish Archetypes</h1>\n<p>Rogues have many features in common, including their emphasis on perfecting their skills, their precise and deadly approach to combat, and their increasingly quick reflexes. But different rogues steer those talents in varying directions, embodied by the rogue archetypes. Your choice of archetype is a reflection of your focus—not necessarily an indication of your chosen profession, but a description of your preferred techniques.</p>\n<p>@UUID[Compendium.dnd5e.subclasses.Item.k8iuefRorWOjb9gR]{Thief}</p>",
+          "value": "<p>As a rogue, you have the following class features.</p>\n<h3>Hit Points</h3>\n<p><strong>Hit Dice:</strong> 1d8 per rogue level<br /><strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier<br /><strong>Hit Points at Higher Levels:</strong> 1d8 (or 5) + your Constitution modifier per rogue level after 1st</p>\n<h3>Proficiencies</h3>\n<p><strong>Armor:</strong> Light armor<br /><strong>Weapons:</strong> Simple weapons, hand crossbows, longswords, rapiers, shortswords<br /><strong>Tools:</strong> Thieves' tools<br /><strong>Saving Throws:</strong> Dexterity, Intelligence<br /><strong>Skills:</strong> Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth</p>\n<h3>Equipment</h3>\n<p>You start with the following equipment, in addition to the equipment granted by your background:</p>\n<ul>\n<li>(a) a rapier or (b) a shortsword</li>\n<li>(a) a shortbow and quiver of 20 arrows or (b) a shortsword</li>\n<li>(a) a burglar's pack, (b) a dungeoneer's pack, or (c) an explorer's pack</li>\n<li>(a) Leather armor, two daggers, and thieves' tools</li>\n</ul>\n<h1>Rogue Advancement</h1>\n<table>\n<thead>\n<tr>\n<td>Level</td>\n<td>Proficiency Bonus</td>\n<td>Sneak Attack</td>\n<td>Features</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1st</td>\n<td>+2</td>\n<td>1d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.3sYPftQKnbbVnHrh]{Expertise}, @UUID[Compendium.dnd5r.classfeatures.Item.DPN2Gfk8yi1Z5wp7]{Sneak Attack}, @UUID[Compendium.dnd5r.classfeatures.Item.ohwfuwnvuoBWlSQr]{Thieves' Cant}</td>\n</tr>\n<tr>\n<td>2nd</td>\n<td>+2</td>\n<td>1d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.01pcLg6PRu5zGrsb]{Cunning Action}</td>\n</tr>\n<tr>\n<td>3rd</td>\n<td>+2</td>\n<td>2d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.80USV8ZFPIahpLd0]{Roguish Archetype}</td>\n</tr>\n<tr>\n<td>4th</td>\n<td>+2</td>\n<td>2d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>5th</td>\n<td>+3</td>\n<td>3d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.Mm64SKAHJWYecgXS]{Uncanny Dodge}</td>\n</tr>\n<tr>\n<td>6th</td>\n<td>+3</td>\n<td>3d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.3sYPftQKnbbVnHrh]{Expertise improvement}</td>\n</tr>\n<tr>\n<td>7th</td>\n<td>+3</td>\n<td>4d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.a4P4DNMmH8CqSNkC]{Evasion}</td>\n</tr>\n<tr>\n<td>8th</td>\n<td>+3</td>\n<td>4d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>9th</td>\n<td>+4</td>\n<td>5d6</td>\n<td>Roguish Archetype feature</td>\n</tr>\n<tr>\n<td>10th</td>\n<td>+4</td>\n<td>5d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>11th</td>\n<td>+4</td>\n<td>6d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.YN9xm6MCvse4Y60u]{Reliable Talent}</td>\n</tr>\n<tr>\n<td>12th</td>\n<td>+4</td>\n<td>6d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>13th</td>\n<td>+5</td>\n<td>7d6</td>\n<td>Roguish Archetype feature</td>\n</tr>\n<tr>\n<td>14th</td>\n<td>+5</td>\n<td>7d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.fjsBk7zxoAbLf8ZI]{Blindsense}</td>\n</tr>\n<tr>\n<td>15th</td>\n<td>+5</td>\n<td>8d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.V4pwFxlwHtNeB4w9]{Slippery Mind}</td>\n</tr>\n<tr>\n<td>16th</td>\n<td>+5</td>\n<td>8d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>17th</td>\n<td>+6</td>\n<td>9d6</td>\n<td>Roguish Archetype feature</td>\n</tr>\n<tr>\n<td>18th</td>\n<td>+6</td>\n<td>9d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.L7nJSRosos8sHJH9]{Elusive}</td>\n</tr>\n<tr>\n<td>19th</td>\n<td>+6</td>\n<td>10d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>20th</td>\n<td>+6</td>\n<td>10d6</td>\n<td>@UUID[Compendium.dnd5r.classfeatures.Item.rQhWDaMHMn7iU4f2]{Stroke of Luck}</td>\n</tr>\n</tbody>\n</table>\n<h1>Roguish Archetypes</h1>\n<p>Rogues have many features in common, including their emphasis on perfecting their skills, their precise and deadly approach to combat, and their increasingly quick reflexes. But different rogues steer those talents in varying directions, embodied by the rogue archetypes. Your choice of archetype is a reflection of your focus—not necessarily an indication of your chosen profession, but a description of your preferred techniques.</p>\n<p>@UUID[Compendium.dnd5r.subclasses.Item.k8iuefRorWOjb9gR]{Thief}</p>",
           "chat": ""
         },
         "source": {
@@ -3572,15 +3572,15 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.3sYPftQKnbbVnHrh",
+                  "uuid": "Compendium.dnd5r.classfeatures.3sYPftQKnbbVnHrh",
                   "optional": false
                 },
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.DPN2Gfk8yi1Z5wp7",
+                  "uuid": "Compendium.dnd5r.classfeatures.DPN2Gfk8yi1Z5wp7",
                   "optional": false
                 },
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.ohwfuwnvuoBWlSQr",
+                  "uuid": "Compendium.dnd5r.classfeatures.ohwfuwnvuoBWlSQr",
                   "optional": false
                 }
               ],
@@ -3598,9 +3598,9 @@
             },
             "value": {
               "added": {
-                "GcRC4ZItJPqsIrsm": "Compendium.dnd5e.classfeatures.3sYPftQKnbbVnHrh",
-                "vRhjcnnlifZYB4dy": "Compendium.dnd5e.classfeatures.DPN2Gfk8yi1Z5wp7",
-                "eHh5dHiq9wss2Vq0": "Compendium.dnd5e.classfeatures.ohwfuwnvuoBWlSQr"
+                "GcRC4ZItJPqsIrsm": "Compendium.dnd5r.classfeatures.3sYPftQKnbbVnHrh",
+                "vRhjcnnlifZYB4dy": "Compendium.dnd5r.classfeatures.DPN2Gfk8yi1Z5wp7",
+                "eHh5dHiq9wss2Vq0": "Compendium.dnd5r.classfeatures.ohwfuwnvuoBWlSQr"
               }
             },
             "level": 1,
@@ -3612,7 +3612,7 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.01pcLg6PRu5zGrsb",
+                  "uuid": "Compendium.dnd5r.classfeatures.01pcLg6PRu5zGrsb",
                   "optional": false
                 }
               ],
@@ -3638,7 +3638,7 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.80USV8ZFPIahpLd0",
+                  "uuid": "Compendium.dnd5r.classfeatures.80USV8ZFPIahpLd0",
                   "optional": false
                 }
               ],
@@ -3664,7 +3664,7 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.Mm64SKAHJWYecgXS",
+                  "uuid": "Compendium.dnd5r.classfeatures.Mm64SKAHJWYecgXS",
                   "optional": false
                 }
               ],
@@ -3690,7 +3690,7 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.a4P4DNMmH8CqSNkC",
+                  "uuid": "Compendium.dnd5r.classfeatures.a4P4DNMmH8CqSNkC",
                   "optional": false
                 }
               ],
@@ -3716,7 +3716,7 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.YN9xm6MCvse4Y60u",
+                  "uuid": "Compendium.dnd5r.classfeatures.YN9xm6MCvse4Y60u",
                   "optional": false
                 }
               ],
@@ -3742,7 +3742,7 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.fjsBk7zxoAbLf8ZI",
+                  "uuid": "Compendium.dnd5r.classfeatures.fjsBk7zxoAbLf8ZI",
                   "optional": false
                 }
               ],
@@ -3768,7 +3768,7 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.V4pwFxlwHtNeB4w9",
+                  "uuid": "Compendium.dnd5r.classfeatures.V4pwFxlwHtNeB4w9",
                   "optional": false
                 }
               ],
@@ -3794,7 +3794,7 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.L7nJSRosos8sHJH9",
+                  "uuid": "Compendium.dnd5r.classfeatures.L7nJSRosos8sHJH9",
                   "optional": false
                 }
               ],
@@ -3820,7 +3820,7 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.rQhWDaMHMn7iU4f2",
+                  "uuid": "Compendium.dnd5r.classfeatures.rQhWDaMHMn7iU4f2",
                   "optional": false
                 }
               ],
@@ -3904,7 +3904,7 @@
             },
             "value": {},
             "title": "Sneak Attack",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "81nHtANt6Ffg9M4V"
           },
           {
@@ -3927,7 +3927,7 @@
             },
             "level": 4,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "smghqQkObY4OOg30"
           },
           {
@@ -3950,7 +3950,7 @@
             },
             "level": 8,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "WFAAUfKJA9QR46Bw"
           },
           {
@@ -3973,7 +3973,7 @@
             },
             "level": 12,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "ahuQ3gMqz6sCza0m"
           },
           {
@@ -3996,7 +3996,7 @@
             },
             "level": 16,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "iVq9vmwTow7KielM"
           },
           {
@@ -4290,14 +4290,14 @@
       },
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.classes.Item.xEb8jmA5HlNs7xTF"
+          "sourceId": "Compendium.dnd5r.classes.Item.xEb8jmA5HlNs7xTF"
         }
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.classes.Item.xEb8jmA5HlNs7xTF",
+        "compendiumSource": "Compendium.dnd5r.classes.Item.xEb8jmA5HlNs7xTF",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -4343,8 +4343,8 @@
         "identifier": "expertise-rogue"
       },
       "flags": {
-        "dnd5e": {
-          "sourceId": "Compendium.dnd5e.classfeatures.3sYPftQKnbbVnHrh",
+        "dnd5r": {
+          "sourceId": "Compendium.dnd5r.classfeatures.3sYPftQKnbbVnHrh",
           "advancementOrigin": "POlGoMp1xwT02K3S.13XHsx4Z3vQ2XYkJ"
         }
       },
@@ -4356,7 +4356,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -4395,8 +4395,8 @@
         "requirements": "Rogue 1",
         "properties": [],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "damage",
             "activation": {
               "type": "",
@@ -4484,8 +4484,8 @@
         "identifier": "sneak-attack"
       },
       "flags": {
-        "dnd5e": {
-          "sourceId": "Compendium.dnd5e.classfeatures.DPN2Gfk8yi1Z5wp7",
+        "dnd5r": {
+          "sourceId": "Compendium.dnd5r.classfeatures.DPN2Gfk8yi1Z5wp7",
           "advancementOrigin": "POlGoMp1xwT02K3S.13XHsx4Z3vQ2XYkJ"
         }
       },
@@ -4497,7 +4497,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -4543,8 +4543,8 @@
         "identifier": "thieves-cant"
       },
       "flags": {
-        "dnd5e": {
-          "sourceId": "Compendium.dnd5e.classfeatures.ohwfuwnvuoBWlSQr",
+        "dnd5r": {
+          "sourceId": "Compendium.dnd5r.classfeatures.ohwfuwnvuoBWlSQr",
           "advancementOrigin": "POlGoMp1xwT02K3S.13XHsx4Z3vQ2XYkJ"
         }
       },
@@ -4581,7 +4581,7 @@
             "compendiumSource": null,
             "duplicateSource": null,
             "coreVersion": "12.331",
-            "systemId": "dnd5e",
+            "systemId": "dnd5r",
             "systemVersion": "4.0.0",
             "createdTime": null,
             "modifiedTime": null,
@@ -4600,7 +4600,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -4633,11 +4633,11 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.races.ufysTkqet2Ctmtyi",
+                  "uuid": "Compendium.dnd5r.races.ufysTkqet2Ctmtyi",
                   "optional": false
                 },
                 {
-                  "uuid": "Compendium.dnd5e.races.mQPZDRbUhgYTbXKa",
+                  "uuid": "Compendium.dnd5r.races.mQPZDRbUhgYTbXKa",
                   "optional": false
                 }
               ],
@@ -4655,8 +4655,8 @@
             },
             "value": {
               "added": {
-                "yeAdyhHhZGgcb7if": "Compendium.dnd5e.races.ufysTkqet2Ctmtyi",
-                "VtJK5sQ1pHMMWGQ4": "Compendium.dnd5e.races.mQPZDRbUhgYTbXKa"
+                "yeAdyhHhZGgcb7if": "Compendium.dnd5r.races.ufysTkqet2Ctmtyi",
+                "VtJK5sQ1pHMMWGQ4": "Compendium.dnd5r.races.mQPZDRbUhgYTbXKa"
               }
             },
             "level": 0,
@@ -4824,14 +4824,14 @@
       },
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.races.UQiRQUTBcsz8gZU1"
+          "sourceId": "Compendium.dnd5r.races.UQiRQUTBcsz8gZU1"
         }
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.races.UQiRQUTBcsz8gZU1",
+        "compendiumSource": "Compendium.dnd5r.races.UQiRQUTBcsz8gZU1",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -4879,8 +4879,8 @@
         "identifier": "dwarven-resilience"
       },
       "flags": {
-        "dnd5e": {
-          "sourceId": "Compendium.dnd5e.races.ufysTkqet2Ctmtyi",
+        "dnd5r": {
+          "sourceId": "Compendium.dnd5r.races.ufysTkqet2Ctmtyi",
           "advancementOrigin": "JtKfV5srBn6zBNVt.tNfLTuoHfvAxg2FC"
         }
       },
@@ -4917,7 +4917,7 @@
             "compendiumSource": null,
             "duplicateSource": null,
             "coreVersion": "12.331",
-            "systemId": "dnd5e",
+            "systemId": "dnd5r",
             "systemVersion": "4.0.0",
             "createdTime": null,
             "modifiedTime": null,
@@ -4936,7 +4936,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -4982,8 +4982,8 @@
         "identifier": "stonecunning"
       },
       "flags": {
-        "dnd5e": {
-          "sourceId": "Compendium.dnd5e.races.mQPZDRbUhgYTbXKa",
+        "dnd5r": {
+          "sourceId": "Compendium.dnd5r.races.mQPZDRbUhgYTbXKa",
           "advancementOrigin": "JtKfV5srBn6zBNVt.tNfLTuoHfvAxg2FC"
         }
       },
@@ -4995,7 +4995,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -5015,11 +5015,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725036841160,
     "modifiedTime": 1730842342830,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!actors!bzlxBO5km3zCQA8G"
 }

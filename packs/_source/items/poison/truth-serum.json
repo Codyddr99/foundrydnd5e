@@ -4,7 +4,7 @@
   "img": "icons/consumables/potions/bottle-bulb-corked-labeled-blue.webp",
   "system": {
     "description": {
-      "value": "<p><em>(ingested)</em></p>\n<p>A creature subjected to this poison must succeed on a <strong>DC 11 Constitution saving throw</strong> or become @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.lq3TRI6ZlED8ABMx]{Poisoned} for <strong>1 hour</strong>. The @UUID[Compendium.dnd5e.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.lq3TRI6ZlED8ABMx]{Poisoned} creature can't knowingly speak a lie, as if under the effect of a @UUID[Compendium.dnd5e.spells.Item.CylBa7jR8DSbo8Z3]{Zone of Truth} spell.</p>",
+      "value": "<p><em>(ingested)</em></p>\n<p>A creature subjected to this poison must succeed on a <strong>DC 11 Constitution saving throw</strong> or become @UUID[Compendium.dnd5r.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.lq3TRI6ZlED8ABMx]{Poisoned} for <strong>1 hour</strong>. The @UUID[Compendium.dnd5r.rules.JournalEntry.w7eitkpD7QQTB6j0.JournalEntryPage.lq3TRI6ZlED8ABMx]{Poisoned} creature can't knowingly speak a lie, as if under the effect of a @UUID[Compendium.dnd5r.spells.Item.CylBa7jR8DSbo8Z3]{Zone of Truth} spell.</p>",
       "chat": ""
     },
     "source": {
@@ -138,11 +138,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037220965,
     "modifiedTime": 1725992524337,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!a86F565Pjdzym1jH"
 }

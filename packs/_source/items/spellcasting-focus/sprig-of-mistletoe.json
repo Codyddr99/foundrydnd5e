@@ -103,7 +103,7 @@
     "default": 0
   },
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "riders": {
         "activity": [],
         "effect": []
@@ -113,11 +113,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037322071,
     "modifiedTime": 1730324896046,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!xDK9GQd2iqOGH8Sd"
 }

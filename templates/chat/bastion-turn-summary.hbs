@@ -1,14 +1,14 @@
-<div class="dnd5e2 chat-card bastion-card">
+<div class="dnd5r2 chat-card bastion-card">
 
     {{!-- Orders --}}
     {{#if orders.length}}
     <ul class="unlist order-summary">
         {{#each orders}}
-        <li>{{{ localize "DND5E.Bastion.Summary.Order" link=contentLink order=order }}}</li>
+        <li>{{{ localize "DND5R.Bastion.Summary.Order" link=contentLink order=order }}}</li>
         {{/each}}
     </ul>
     {{else}}
-    <p class="order-description">{{ localize "DND5E.Bastion.Summary.NoOrders" }}</p>
+    <p class="order-description">{{ localize "DND5R.Bastion.Summary.NoOrders" }}</p>
     {{/if}}
 
     {{!-- Items --}}
@@ -32,7 +32,7 @@
     {{#if buttons.length}}
     <div class="card-buttons">
         {{#each buttons}}
-        <button type="button" {{ dnd5e-dataset dataset }}>
+        <button type="button" {{ dnd5r-dataset dataset }}>
             {{{ icon }}} <span>{{{ label }}}</span>
         </button>
         {{/each}}

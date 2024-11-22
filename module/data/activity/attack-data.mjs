@@ -59,7 +59,7 @@ export default class AttackActivityData extends BaseActivityData {
   get ability() {
     if ( this.attack.ability === "none" ) return null;
     if ( this.attack.ability === "spellcasting" ) return this.spellcastingAbility;
-    if ( this.attack.ability in CONFIG.DND5E.abilities ) return this.attack.ability;
+    if ( this.attack.ability in CONFIG.DND5R.abilities ) return this.attack.ability;
 
     const availableAbilities = this.availableAbilities;
     if ( !availableAbilities?.size ) return null;
@@ -108,8 +108,8 @@ export default class AttackActivityData extends BaseActivityData {
     );
 
     // Weapon & unarmed attacks uses melee or ranged ability depending on type, or both if actor is an NPC
-    const melee = CONFIG.DND5E.defaultAbilities.meleeAttack;
-    const ranged = CONFIG.DND5E.defaultAbilities.rangedAttack;
+    const melee = CONFIG.DND5R.defaultAbilities.meleeAttack;
+    const ranged = CONFIG.DND5R.defaultAbilities.rangedAttack;
     return new Set([this.attack.type.value === "melee" ? melee : ranged]);
   }
 
@@ -215,22 +215,22 @@ export default class AttackActivityData extends BaseActivityData {
     let attackModeLabel;
     if ( attackMode ) {
       const key = attackMode.split("-").map(s => s.capitalize()).join("");
-      attackModeLabel = game.i18n.localize(`DND5E.ATTACK.Mode.${key}`);
+      attackModeLabel = game.i18n.localize(`DND5R.ATTACK.Mode.${key}`);
     }
     let actionType = this.actionType;
     if ( (actionType === "mwak") && (attackMode?.startsWith("thrown")) ) actionType = "rwak";
-    let actionTypeLabel = game.i18n.localize(`DND5E.Action${actionType.toUpperCase()}`);
-    const isLegacy = game.settings.get("dnd5e", "rulesVersion") === "legacy";
+    let actionTypeLabel = game.i18n.localize(`DND5R.Action${actionType.toUpperCase()}`);
+    const isLegacy = game.settings.get("dnd5r", "rulesVersion") === "legacy";
     const isUnarmed = this.attack.type.classification === "unarmed";
-    if ( isUnarmed ) attackModeLabel = game.i18n.localize("DND5E.ATTACK.Classification.Unarmed");
+    if ( isUnarmed ) attackModeLabel = game.i18n.localize("DND5R.ATTACK.Classification.Unarmed");
     const isSpell = (actionType === "rsak") || (actionType === "msak");
     if ( isLegacy || isSpell ) return [actionTypeLabel, attackModeLabel].filterJoin(" &bull; ");
-    actionTypeLabel = game.i18n.localize(`DND5E.ATTACK.Attack.${actionType}`);
+    actionTypeLabel = game.i18n.localize(`DND5R.ATTACK.Attack.${actionType}`);
     if ( isUnarmed ) return [actionTypeLabel, attackModeLabel].filterJoin(" &bull; ");
-    const weaponType = CONFIG.DND5E.weaponTypeMap[this.item.system.type?.value];
+    const weaponType = CONFIG.DND5R.weaponTypeMap[this.item.system.type?.value];
     const weaponTypeLabel = weaponType
-      ? game.i18n.localize(`DND5E.ATTACK.Weapon.${weaponType.capitalize()}`)
-      : CONFIG.DND5E.weaponTypes[this.item.system.type?.value];
+      ? game.i18n.localize(`DND5R.ATTACK.Weapon.${weaponType.capitalize()}`)
+      : CONFIG.DND5R.weaponTypes[this.item.system.type?.value];
     return [actionTypeLabel, weaponTypeLabel, attackModeLabel].filterJoin(" &bull; ");
   }
 
@@ -288,7 +288,7 @@ export default class AttackActivityData extends BaseActivityData {
     // Handle ammunition
     const ammo = config.ammunition?.system;
     if ( ammo ) {
-      const properties = Array.from(ammo.properties).filter(p => CONFIG.DND5E.itemProperties[p]?.isPhysical);
+      const properties = Array.from(ammo.properties).filter(p => CONFIG.DND5R.itemProperties[p]?.isPhysical);
       if ( this.item.system.properties?.has("mgc") && !properties.includes("mgc") ) properties.push("mgc");
 
       // Add any new physical properties from the ammunition to the damage properties
@@ -366,7 +366,7 @@ export default class AttackActivityData extends BaseActivityData {
       }
     }
 
-    const criticalBonusDice = this.actor?.getFlag("dnd5e", "meleeCriticalDamageDice") ?? 0;
+    const criticalBonusDice = this.actor?.getFlag("dnd5r", "meleeCriticalDamageDice") ?? 0;
     if ( (this.actionType === "mwak") && (parseInt(criticalBonusDice) !== 0) ) {
       foundry.utils.setProperty(roll, "options.critical.bonusDice", criticalBonusDice);
     }

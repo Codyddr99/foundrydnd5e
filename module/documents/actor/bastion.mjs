@@ -22,13 +22,13 @@ export default class Bastion {
    * The template for the chat card summary of a bastion attack.
    * @type {string}
    */
-  static ATTACK_TEMPLATE = "systems/dnd5etools/templates/chat/bastion-attack-summary.hbs";
+  static ATTACK_TEMPLATE = "systems/dnd5r/templates/chat/bastion-attack-summary.hbs";
 
   /**
    * The template for the chat card summary of a bastion turn.
    * @type {string}
    */
-  static TURN_TEMPLATE = "systems/dnd5etools/templates/chat/bastion-turn-summary.hbs";
+  static TURN_TEMPLATE = "systems/dnd5r/templates/chat/bastion-turn-summary.hbs";
 
   /* -------------------------------------------- */
   /*  Public API                                  */
@@ -40,7 +40,7 @@ export default class Bastion {
    */
   async advanceAllBastions() {
     // TODO: Should this advance game.time?
-    const { duration } = game.settings.get("dnd5e", "bastionConfiguration");
+    const { duration } = game.settings.get("dnd5r", "bastionConfiguration");
     const haveBastions = game.actors.filter(a => (a.type === "character") && a.itemTypes.facility.length);
     for ( const actor of haveBastions ) await this.advanceAllFacilities(actor, { duration });
   }
@@ -71,7 +71,7 @@ export default class Bastion {
       await ChatMessage.implementation.create({
         content,
         speaker: ChatMessage.implementation.getSpeaker({ actor }),
-        flags: { dnd5e: { bastion: results } }
+        flags: { dnd5r: { bastion: results } }
       });
     }
   }
@@ -136,7 +136,7 @@ export default class Bastion {
         content,
         speaker: ChatMessage.implementation.getSpeaker({ actor }),
         rolls: [roll],
-        flags: { dnd5e: { bastion: results } }
+        flags: { dnd5r: { bastion: results } }
       });
     }
   }
@@ -231,7 +231,7 @@ export default class Bastion {
    */
   #evaluateEnlargeOrder(facility, updates) {
     const { size } = facility.system;
-    const sizes = Object.entries(CONFIG.DND5E.facilities.sizes).sort((a, b) => a.value - b.value);
+    const sizes = Object.entries(CONFIG.DND5R.facilities.sizes).sort((a, b) => a.value - b.value);
     const index = sizes.findIndex(([key]) => key === size);
     const [next] = sizes[index + 1];
     updates["system.size"] = next;
@@ -345,7 +345,7 @@ export default class Bastion {
    * @returns {Promise<ChatMessage5e|void>}
    */
   async #onClaimGold(message) {
-    const results = message.getFlag("dnd5e", "bastion");
+    const results = message.getFlag("dnd5r", "bastion");
     const { gold } = results;
     const actor = message.getAssociatedActor();
     const { gp } = actor?.system?.currency ?? {};
@@ -353,7 +353,7 @@ export default class Bastion {
     await actor.update({ "system.currency.gp": gp + gold.value });
     gold.claimed = true;
     const content = await this.#renderTurnSummary(actor, results);
-    return message.update({ content, flags: { dnd5e: { bastion: results } } });
+    return message.update({ content, flags: { dnd5r: { bastion: results } } });
   }
 
   /* -------------------------------------------- */
@@ -378,7 +378,7 @@ export default class Bastion {
    * @returns {Promise<ChatMessage5e|void>}
    */
   async #onResolveAttack(message) {
-    const results = message.getFlag("dnd5e", "bastion") ?? {};
+    const results = message.getFlag("dnd5r", "bastion") ?? {};
     const { deaths, undefended } = results;
     const actor = message.getAssociatedActor();
     if ( (!deaths && !undefended) || !actor ) return;
@@ -416,7 +416,7 @@ export default class Bastion {
     if ( damaged ) results.damaged = damaged.id;
     results.resolved = true;
     const content = await this.#renderAttackSummary(actor, message.rolls[0], results);
-    return message.update({ content, flags: { dnd5e: { bastion: results } } });
+    return message.update({ content, flags: { dnd5r: { bastion: results } } });
   }
 
   /* -------------------------------------------- */
@@ -449,19 +449,19 @@ export default class Bastion {
     const context = {};
     const plurals = new Intl.PluralRules(game.i18n.lang);
     const key = undefended ? "Undefended" : deaths ? `Deaths.${plurals.select(deaths)}` : "NoDeaths";
-    context.description = game.i18n.format(`DND5E.Bastion.Attack.Result.${key}`, { deaths });
+    context.description = game.i18n.format(`DND5R.Bastion.Attack.Result.${key}`, { deaths });
     context.roll = await roll.render();
     context.buttons = [];
     if ( !resolved && (deaths || undefended) ) {
       context.buttons.push({
-        label: game.i18n.localize("DND5E.Bastion.Attack.Automatic"),
+        label: game.i18n.localize("DND5R.Bastion.Attack.Automatic"),
         icon: '<i class="fas fa-bolt"></i>',
         dataset: { action: "resolve" }
       });
     }
     if ( damaged ) {
       const facility = actor.items.get(damaged);
-      if ( facility ) context.damaged = game.i18n.format("DND5E.Bastion.Attack.Result.Damaged", {
+      if ( facility ) context.damaged = game.i18n.format("DND5R.Bastion.Attack.Result.Damaged", {
         link: facility.toAnchor().outerHTML
       });
     }
@@ -492,21 +492,21 @@ export default class Bastion {
       return {
         name: facility.name,
         contentLink: facility.toAnchor().outerHTML,
-        order: CONFIG.DND5E.facilities.orders[order]?.label
+        order: CONFIG.DND5R.facilities.orders[order]?.label
       };
     });
     context.supplements = [];
     if ( results.gold.value ) {
       context.supplements.push(`
-        <strong>${game.i18n.localize("DND5E.CurrencyGP")}</strong>
+        <strong>${game.i18n.localize("DND5R.CurrencyGP")}</strong>
         ${formatNumber(results.gold.value)}
-        (${game.i18n.localize(`DND5E.Bastion.Gold.${results.gold.claimed ? "Claimed" : "Unclaimed"}`)})
+        (${game.i18n.localize(`DND5R.Bastion.Gold.${results.gold.claimed ? "Claimed" : "Unclaimed"}`)})
       `);
     }
     context.buttons = [];
     if ( results.gold.value && !results.gold.claimed ) {
       context.buttons.push({
-        label: game.i18n.localize("DND5E.Bastion.Gold.Claim"),
+        label: game.i18n.localize("DND5R.Bastion.Gold.Claim"),
         icon: '<i class="fas fa-coins"></i>',
         dataset: { action: "claim" }
       });
@@ -525,7 +525,7 @@ export default class Bastion {
   async confirmAdvance() {
     if ( !game.user.isGM ) return;
     const proceed = await foundry.applications.api.DialogV2.confirm({
-      content: game.i18n.localize("DND5E.Bastion.Confirm"),
+      content: game.i18n.localize("DND5R.Bastion.Confirm"),
       rejectClose: false
     });
     if ( proceed ) return this.advanceAllBastions();
@@ -538,7 +538,7 @@ export default class Bastion {
    */
   initializeUI() {
     const turnButton = document.getElementById("bastion-turn");
-    const { button, enabled } = game.settings.get("dnd5e", "bastionConfiguration");
+    const { button, enabled } = game.settings.get("dnd5r", "bastionConfiguration");
 
     if ( !enabled || !button || !game.user.isGM) {
       turnButton?.remove();
@@ -547,9 +547,9 @@ export default class Bastion {
 
     if ( !turnButton ) {
       document.getElementById("controls")?.insertAdjacentHTML("afterend", `
-        <button type="button" id="bastion-turn" data-action="bastionTurn" class="dnd5e2">
+        <button type="button" id="bastion-turn" data-action="bastionTurn" class="dnd5r2">
           <i class="fas fa-chess-rook"></i>
-          <span>${game.i18n.localize("DND5E.Bastion.Action.BastionTurn")}</span>
+          <span>${game.i18n.localize("DND5R.Bastion.Action.BastionTurn")}</span>
         </button>
       `);
       document.getElementById("bastion-turn")?.addEventListener("click", this.confirmAdvance.bind(this));
@@ -576,7 +576,7 @@ export default class Bastion {
     if ( !actor && (ui.activeWindow instanceof ActorSheet) ) actor = ui.activeWindow.actor;
 
     if ( !actor ) {
-      ui.notifications.warn("DND5E.Bastion.Attack.NoActorWarning", { localize: true });
+      ui.notifications.warn("DND5R.Bastion.Attack.NoActorWarning", { localize: true });
       return;
     }
 
@@ -602,7 +602,7 @@ class BastionAttackDialog extends Dialog5e {
   static DEFAULT_OPTIONS = {
     classes: ["bastion-attack"],
     window: {
-      title: "DND5E.Bastion.Attack.Title",
+      title: "DND5R.Bastion.Attack.Title",
       icon: "fas fa-chess-rook"
     },
     form: {
@@ -613,7 +613,7 @@ class BastionAttackDialog extends Dialog5e {
     },
     buttons: [{
       action: "resolve",
-      label: "DND5E.Bastion.Attack.Resolve",
+      label: "DND5R.Bastion.Attack.Resolve",
       icon: "fas fa-dice",
       default: true
     }]
@@ -623,7 +623,7 @@ class BastionAttackDialog extends Dialog5e {
   static PARTS = {
     ...super.PARTS,
     content: {
-      template: "systems/dnd5etools/templates/apps/bastion-attack-dialog.hbs"
+      template: "systems/dnd5r/templates/apps/bastion-attack-dialog.hbs"
     }
   };
 
@@ -660,7 +660,7 @@ class BastionAttackDialog extends Dialog5e {
   async _prepareContentContext(context, options) {
     context = await super._prepareContentContext(context, options);
     context.formula = {
-      field: new StringField({ initial: "", label: "DND5E.Formula" }),
+      field: new StringField({ initial: "", label: "DND5R.Formula" }),
       name: "formula"
     };
     return context;
@@ -680,14 +680,14 @@ class BastionAttackDialog extends Dialog5e {
    */
   static #handleFormSubmission(event, form, formData) {
     this.#formula = formData.object.formula;
-    return this.close({ dnd5e: { submitted: true } });
+    return this.close({ dnd5r: { submitted: true } });
   }
 
   /* -------------------------------------------- */
 
   /** @override */
   _onClose(options={}) {
-    if ( !options.dnd5e?.submitted ) this.#formula = null;
+    if ( !options.dnd5r?.submitted ) this.#formula = null;
   }
 
   /* -------------------------------------------- */

@@ -57,7 +57,7 @@ export default class NPCData extends CreatureTemplate {
   /* -------------------------------------------- */
 
   /** @override */
-  static LOCALIZATION_PREFIXES = ["DND5E.SOURCE"];
+  static LOCALIZATION_PREFIXES = ["DND5R.SOURCE"];
 
   /* -------------------------------------------- */
 
@@ -80,76 +80,76 @@ export default class NPCData extends CreatureTemplate {
         ...AttributesFields.common,
         ...AttributesFields.creature,
         ac: new SchemaField({
-          flat: new NumberField({integer: true, min: 0, label: "DND5E.ArmorClassFlat"}),
-          calc: new StringField({initial: "default", label: "DND5E.ArmorClassCalculation"}),
-          formula: new FormulaField({deterministic: true, label: "DND5E.ArmorClassFormula"})
-        }, {label: "DND5E.ArmorClass"}),
+          flat: new NumberField({integer: true, min: 0, label: "DND5R.ArmorClassFlat"}),
+          calc: new StringField({initial: "default", label: "DND5R.ArmorClassCalculation"}),
+          formula: new FormulaField({deterministic: true, label: "DND5R.ArmorClassFormula"})
+        }, {label: "DND5R.ArmorClass"}),
         hd: new SchemaField({
           spent: new NumberField({integer: true, min: 0, initial: 0})
-        }, {label: "DND5E.HitDice"}),
+        }, {label: "DND5R.HitDice"}),
         hp: new SchemaField({
           value: new NumberField({
-            nullable: false, integer: true, min: 0, initial: 10, label: "DND5E.HitPointsCurrent"
+            nullable: false, integer: true, min: 0, initial: 10, label: "DND5R.HitPointsCurrent"
           }),
           max: new NumberField({
-            nullable: false, integer: true, min: 0, initial: 10, label: "DND5E.HitPointsMax"
+            nullable: false, integer: true, min: 0, initial: 10, label: "DND5R.HitPointsMax"
           }),
-          temp: new NumberField({integer: true, initial: 0, min: 0, label: "DND5E.HitPointsTemp"}),
+          temp: new NumberField({integer: true, initial: 0, min: 0, label: "DND5R.HitPointsTemp"}),
           tempmax: new NumberField({
-            integer: true, initial: 0, label: "DND5E.HitPointsTempMax", hint: "DND5E.HitPointsTempMaxHint"
+            integer: true, initial: 0, label: "DND5R.HitPointsTempMax", hint: "DND5R.HitPointsTempMaxHint"
           }),
-          formula: new FormulaField({required: true, label: "DND5E.HPFormula"})
-        }, {label: "DND5E.HitPoints"}),
+          formula: new FormulaField({required: true, label: "DND5R.HPFormula"})
+        }, {label: "DND5R.HitPoints"}),
         death: new RollConfigField({
           success: new NumberField({
-            required: true, nullable: false, integer: true, min: 0, initial: 0, label: "DND5E.DeathSaveSuccesses"
+            required: true, nullable: false, integer: true, min: 0, initial: 0, label: "DND5R.DeathSaveSuccesses"
           }),
           failure: new NumberField({
-            required: true, nullable: false, integer: true, min: 0, initial: 0, label: "DND5E.DeathSaveFailures"
+            required: true, nullable: false, integer: true, min: 0, initial: 0, label: "DND5R.DeathSaveFailures"
           })
-        }, {label: "DND5E.DeathSave"})
-      }, {label: "DND5E.Attributes"}),
+        }, {label: "DND5R.DeathSave"})
+      }, {label: "DND5R.Attributes"}),
       details: new SchemaField({
         ...DetailsFields.common,
         ...DetailsFields.creature,
         type: new CreatureTypeField(),
-        environment: new StringField({required: true, label: "DND5E.Environment"}),
+        environment: new StringField({required: true, label: "DND5R.Environment"}),
         cr: new NumberField({
-          required: true, nullable: true, min: 0, initial: 1, label: "DND5E.ChallengeRating"
+          required: true, nullable: true, min: 0, initial: 1, label: "DND5R.ChallengeRating"
         }),
         spellLevel: new NumberField({
-          required: true, nullable: false, integer: true, min: 0, initial: 0, label: "DND5E.SpellcasterLevel"
+          required: true, nullable: false, integer: true, min: 0, initial: 0, label: "DND5R.SpellcasterLevel"
         })
-      }, {label: "DND5E.Details"}),
+      }, {label: "DND5R.Details"}),
       resources: new SchemaField({
         legact: new SchemaField({
           value: new NumberField({
-            required: true, nullable: false, integer: true, min: 0, initial: 0, label: "DND5E.LegActRemaining"
+            required: true, nullable: false, integer: true, min: 0, initial: 0, label: "DND5R.LegActRemaining"
           }),
           max: new NumberField({
-            required: true, nullable: false, integer: true, min: 0, initial: 0, label: "DND5E.LegActMax"
+            required: true, nullable: false, integer: true, min: 0, initial: 0, label: "DND5R.LegActMax"
           })
-        }, {label: "DND5E.LegAct"}),
+        }, {label: "DND5R.LegAct"}),
         legres: new SchemaField({
           value: new NumberField({
-            required: true, nullable: false, integer: true, min: 0, initial: 0, label: "DND5E.LegResRemaining"
+            required: true, nullable: false, integer: true, min: 0, initial: 0, label: "DND5R.LegResRemaining"
           }),
           max: new NumberField({
-            required: true, nullable: false, integer: true, min: 0, initial: 0, label: "DND5E.LegResMax"
+            required: true, nullable: false, integer: true, min: 0, initial: 0, label: "DND5R.LegResMax"
           })
-        }, {label: "DND5E.LegRes"}),
+        }, {label: "DND5R.LegRes"}),
         lair: new SchemaField({
-          value: new BooleanField({required: true, label: "DND5E.LairAct"}),
+          value: new BooleanField({required: true, label: "DND5R.LairAct"}),
           initiative: new NumberField({
-            required: true, integer: true, label: "DND5E.LairActionInitiative"
+            required: true, integer: true, label: "DND5R.LairActionInitiative"
           })
-        }, {label: "DND5E.LairActionLabel"})
-      }, {label: "DND5E.Resources"}),
+        }, {label: "DND5R.LairActionLabel"})
+      }, {label: "DND5R.Resources"}),
       source: new SourceField(),
       traits: new SchemaField({
         ...TraitsFields.common,
         ...TraitsFields.creature
-      }, {label: "DND5E.Traits"})
+      }, {label: "DND5R.Traits"})
     });
   }
 
@@ -159,23 +159,23 @@ export default class NPCData extends CreatureTemplate {
   static get compendiumBrowserFilters() {
     return new Map([
       ["size", {
-        label: "DND5E.Size",
+        label: "DND5R.Size",
         type: "set",
         config: {
-          choices: CONFIG.DND5E.actorSizes,
+          choices: CONFIG.DND5R.actorSizes,
           keyPath: "system.traits.size"
         }
       }],
       ["type", {
-        label: "DND5E.CreatureType",
+        label: "DND5R.CreatureType",
         type: "set",
         config: {
-          choices: CONFIG.DND5E.creatureTypes,
+          choices: CONFIG.DND5R.creatureTypes,
           keyPath: "system.details.type.value"
         }
       }],
       ["cr", {
-        label: "DND5E.ChallengeRating",
+        label: "DND5R.ChallengeRating",
         type: "range",
         config: {
           keyPath: "system.details.cr",
@@ -184,10 +184,10 @@ export default class NPCData extends CreatureTemplate {
         }
       }],
       ["movement", {
-        label: "DND5E.Movement",
+        label: "DND5R.Movement",
         type: "set",
         config: {
-          choices: CONFIG.DND5E.movementTypes
+          choices: CONFIG.DND5R.movementTypes
         },
         createFilter: (filters, value, def) => {
           for ( const [k, v] of Object.entries(value ?? {}) ) {
@@ -250,7 +250,7 @@ export default class NPCData extends CreatureTemplate {
 
       // Match a known creature type
       const typeLc = match.groups.type.trim().toLowerCase();
-      const typeMatch = Object.entries(CONFIG.DND5E.creatureTypes).find(([k, v]) => {
+      const typeMatch = Object.entries(CONFIG.DND5R.creatureTypes).find(([k, v]) => {
         return (typeLc === k)
           || (typeLc === game.i18n.localize(v.label).toLowerCase())
           || (typeLc === game.i18n.localize(`${v.label}Pl`).toLowerCase());
@@ -265,7 +265,7 @@ export default class NPCData extends CreatureTemplate {
       // Match a swarm
       if ( match.groups.size ) {
         const sizeLc = match.groups.size ? match.groups.size.trim().toLowerCase() : "tiny";
-        const sizeMatch = Object.entries(CONFIG.DND5E.actorSizes).find(([k, v]) => {
+        const sizeMatch = Object.entries(CONFIG.DND5R.actorSizes).find(([k, v]) => {
           return (sizeLc === k) || (sizeLc === game.i18n.localize(v.label).toLowerCase());
         });
         source.type.swarm = sizeMatch ? sizeMatch[0] : "tiny";
@@ -292,7 +292,7 @@ export default class NPCData extends CreatureTemplate {
     // Determine hit dice denomination & max from hit points formula
     const [, max, denomination] = this.attributes.hp.formula?.match(/(\d*)d(\d+)/i) ?? [];
     this.attributes.hd.max = Number(max ?? 0);
-    this.attributes.hd.denomination = Number(denomination ?? CONFIG.DND5E.actorSizes[this.traits.size]?.hitDie ?? 4);
+    this.attributes.hd.denomination = Number(denomination ?? CONFIG.DND5R.actorSizes[this.traits.size]?.hitDie ?? 4);
 
     for ( const item of this.parent.items ) {
       // Class levels & hit dice
@@ -334,10 +334,10 @@ export default class NPCData extends CreatureTemplate {
       AttributesFields.prepareRace.call(this, this.details.race, { force: true });
       this.details.type = this.details.race.system.type;
     }
-    for ( const key of Object.keys(CONFIG.DND5E.movementTypes) ) this.attributes.movement[key] ??= 0;
-    for ( const key of Object.keys(CONFIG.DND5E.senses) ) this.attributes.senses[key] ??= 0;
-    this.attributes.movement.units ??= Object.keys(CONFIG.DND5E.movementUnits)[0];
-    this.attributes.senses.units ??= Object.keys(CONFIG.DND5E.movementUnits)[0];
+    for ( const key of Object.keys(CONFIG.DND5R.movementTypes) ) this.attributes.movement[key] ??= 0;
+    for ( const key of Object.keys(CONFIG.DND5R.senses) ) this.attributes.senses[key] ??= 0;
+    this.attributes.movement.units ??= Object.keys(CONFIG.DND5R.movementUnits)[0];
+    this.attributes.senses.units ??= Object.keys(CONFIG.DND5R.movementUnits)[0];
   }
 
   /* -------------------------------------------- */
@@ -363,7 +363,7 @@ export default class NPCData extends CreatureTemplate {
     // Hit Points
     const hpOptions = {
       advancement: Object.values(this.parent.classes).map(c => c.advancement.byType.HitPoints?.[0]).filter(a => a),
-      mod: this.abilities[CONFIG.DND5E.defaultAbilities.hitPoints ?? "con"]?.mod ?? 0
+      mod: this.abilities[CONFIG.DND5R.defaultAbilities.hitPoints ?? "con"]?.mod ?? 0
     };
     AttributesFields.prepareHitPoints.call(this, this.attributes.hp, hpOptions);
   }

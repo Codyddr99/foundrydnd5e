@@ -706,8 +706,8 @@
         "container": null,
         "crewed": false,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "action",
@@ -785,8 +785,8 @@
             },
             "sort": 0
           },
-          "dnd5eactivity100": {
-            "_id": "dnd5eactivity100",
+          "dnd5ractivity100": {
+            "_id": "dnd5ractivity100",
             "type": "save",
             "activation": {
               "type": "action",
@@ -874,8 +874,8 @@
             },
             "sort": 0
           },
-          "dnd5eactivity300": {
-            "_id": "dnd5eactivity300",
+          "dnd5ractivity300": {
+            "_id": "dnd5ractivity300",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -957,7 +957,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -976,11 +976,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1726171237862,
     "modifiedTime": 1726171445955,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!actors!Y0vxQVF7w2P38FK2"
 }

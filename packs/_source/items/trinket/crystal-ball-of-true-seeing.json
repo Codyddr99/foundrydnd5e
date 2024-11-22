@@ -5,7 +5,7 @@
   "img": "icons/commodities/gems/pearl-fire-swirl.webp",
   "system": {
     "description": {
-      "value": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>The Crystal Ball is about 6 inches in diameter. While touching it, you can cast the @UUID[Compendium.dnd5e.spells.Item.fVbCxFRaORalHB20]{Scrying} spell (save DC 17) with it.</p>\n<p>While Scrying with the Crystal Ball, you have Truesight with a radius of 120 feet centered on the spell's sensor.</p>",
+      "value": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>The Crystal Ball is about 6 inches in diameter. While touching it, you can cast the @UUID[Compendium.dnd5r.spells.Item.fVbCxFRaORalHB20]{Scrying} spell (save DC 17) with it.</p>\n<p>While Scrying with the Crystal Ball, you have Truesight with a radius of 120 feet centered on the spell's sensor.</p>",
       "chat": ""
     },
     "source": {
@@ -64,7 +64,7 @@
       "bUNsvbS9nKpNy3ER": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.fVbCxFRaORalHB20",
+          "uuid": "Compendium.dnd5r.spells.Item.fVbCxFRaORalHB20",
           "challenge": {
             "attack": null,
             "save": 17,
@@ -132,7 +132,7 @@
     "default": 0
   },
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "riders": {
         "activity": [],
         "effect": []
@@ -142,11 +142,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037122058,
     "modifiedTime": 1729014715400,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!ADH0UZ8bf7Op0dgf"
 }

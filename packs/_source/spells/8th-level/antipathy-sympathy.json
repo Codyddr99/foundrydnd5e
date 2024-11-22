@@ -64,8 +64,8 @@
       "material"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "save",
         "activation": {
           "type": "action",
@@ -134,7 +134,7 @@
   "effects": [
     {
       "name": "Antipathy",
-      "origin": "Compendium.dnd5e.spells.Item.GJ2WYm3SQFR0winH",
+      "origin": "Compendium.dnd5r.spells.Item.GJ2WYm3SQFR0winH",
       "duration": {
         "startTime": null,
         "seconds": null,
@@ -158,7 +158,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -175,11 +175,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037351931,
     "modifiedTime": 1725992718400,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!GJ2WYm3SQFR0winH"
 }

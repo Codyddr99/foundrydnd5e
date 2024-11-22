@@ -667,7 +667,7 @@
             ],
             "custom": {
               "enabled": true,
-              "formula": "(4 + 2 * (@flags.dnd5e.summon.level - 5))d8"
+              "formula": "(4 + 2 * (@flags.dnd5r.summon.level - 5))d8"
             },
             "scaling": {
               "mode": "",
@@ -689,8 +689,8 @@
         "properties": [],
         "proficient": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "bonus",
@@ -773,7 +773,7 @@
         "identifier": "clenched-fist"
       },
       "_id": "flSMgvK8J2USFtGo",
-      "img": "systems/dnd5etools/icons/svg/items/weapon.svg",
+      "img": "systems/dnd5r/icons/svg/items/weapon.svg",
       "effects": [],
       "folder": null,
       "sort": 0,
@@ -785,7 +785,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -820,8 +820,8 @@
         "properties": [],
         "requirements": "",
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "check",
             "activation": {
               "type": "bonus",
@@ -890,7 +890,7 @@
         "identifier": "forceful-hand"
       },
       "_id": "kKg1WU7qO2fLSB0e",
-      "img": "systems/dnd5etools/icons/svg/items/feature.svg",
+      "img": "systems/dnd5r/icons/svg/items/feature.svg",
       "effects": [],
       "folder": null,
       "sort": 0,
@@ -902,7 +902,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -937,8 +937,8 @@
         "properties": [],
         "requirements": "",
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "damage",
             "activation": {
               "type": "bonus",
@@ -1010,7 +1010,7 @@
                   ],
                   "custom": {
                     "enabled": true,
-                    "formula": "(2 + 2 * (@flags.dnd5e.summon.level - 5))d6"
+                    "formula": "(2 + 2 * (@flags.dnd5r.summon.level - 5))d6"
                   },
                   "scaling": {
                     "mode": "whole",
@@ -1027,7 +1027,7 @@
         "identifier": "grasping-hand"
       },
       "_id": "rne03sCadusyP3Yg",
-      "img": "systems/dnd5etools/icons/svg/items/feature.svg",
+      "img": "systems/dnd5r/icons/svg/items/feature.svg",
       "effects": [],
       "folder": null,
       "sort": 0,
@@ -1039,7 +1039,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1074,8 +1074,8 @@
         "properties": [],
         "requirements": "",
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "bonus",
@@ -1144,7 +1144,7 @@
         "identifier": "interposing-hand"
       },
       "_id": "vgK74YR1Lv2WrGCx",
-      "img": "systems/dnd5etools/icons/svg/items/feature.svg",
+      "img": "systems/dnd5r/icons/svg/items/feature.svg",
       "effects": [],
       "folder": null,
       "sort": 0,
@@ -1156,7 +1156,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1174,11 +1174,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1726171250692,
     "modifiedTime": 1726171448499,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!actors!iHj5Tkm6HRgXuaWP"
 }

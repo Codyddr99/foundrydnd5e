@@ -2,14 +2,14 @@
   "scripts": {
     "build": "npm run build:code && npm run build:css && npm run build:db",
     "build:clean": "node ./utils/packs.mjs package clean",
-    "build:code": "rollup dnd5e.mjs -f es -o dnd5e-compiled.mjs -p node-resolve -m --sourcemapFile dnd5e.mjs",
-    "build:css": "lessc less/dnd5e.less dnd5e.css",
+    "build:code": "rollup dnd5r.mjs -f es -o dnd5r-compiled.mjs -p node-resolve -m --sourcemapFile dnd5r.mjs",
+    "build:css": "lessc less/dnd5r.less dnd5r.css",
     "build:db": "node ./utils/packs.mjs package pack",
     "build:json": "node ./utils/packs.mjs package unpack",
     "lint": "eslint --ext .mjs --ignore-path .gitignore ./",
     "lint:fix": "eslint --ext .mjs --ignore-path .gitignore ./ --fix",
     "postinstall": "npm run build:css && npm run build:db",
-    "watch": "less-watch-compiler less/ ./ dnd5e.less"
+    "watch": "less-watch-compiler less/ ./ dnd5r.less"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.15",

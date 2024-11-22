@@ -5,7 +5,7 @@
   "img": "icons/commodities/gems/gem-rough-cushion-green.webp",
   "system": {
     "description": {
-      "value": "<p><em>Wondrous item</em></p>\n<p>This emerald contains a mote of elemental energy. When you use an action to break the gem, a @UUID[Compendium.dnd5e.monsters.Actor.namJz755U1EhvEJa]{Water Elemental} is summoned as if you had cast the @UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental} spell, and the gem's magic is lost.</p>",
+      "value": "<p><em>Wondrous item</em></p>\n<p>This emerald contains a mote of elemental energy. When you use an action to break the gem, a @UUID[Compendium.dnd5r.monsters.Actor.namJz755U1EhvEJa]{Water Elemental} is summoned as if you had cast the @UUID[Compendium.dnd5r.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental} spell, and the gem's magic is lost.</p>",
       "chat": ""
     },
     "source": {
@@ -61,8 +61,8 @@
     ],
     "magicalBonus": null,
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "action",
@@ -150,11 +150,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037149770,
     "modifiedTime": 1725992500425,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!HLEhnzLbpRbYdAHo"
 }

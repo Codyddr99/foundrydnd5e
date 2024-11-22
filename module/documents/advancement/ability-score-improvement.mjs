@@ -20,9 +20,9 @@ export default class AbilityScoreImprovementAdvancement extends Advancement {
       },
       order: 20,
       icon: "icons/magic/symbols/star-solid-gold.webp",
-      typeIcon: "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
-      title: game.i18n.localize("DND5E.ADVANCEMENT.AbilityScoreImprovement.Title"),
-      hint: game.i18n.localize("DND5E.ADVANCEMENT.AbilityScoreImprovement.Hint"),
+      typeIcon: "systems/dnd5r/icons/svg/ability-score-improvement.svg",
+      title: game.i18n.localize("DND5R.ADVANCEMENT.AbilityScoreImprovement.Title"),
+      hint: game.i18n.localize("DND5R.ADVANCEMENT.AbilityScoreImprovement.Hint"),
       apps: {
         config: AbilityScoreImprovementConfig,
         flow: AbilityScoreImprovementFlow
@@ -50,7 +50,7 @@ export default class AbilityScoreImprovementAdvancement extends Advancement {
    * @type {boolean}
    */
   get allowFeat() {
-    return (this.item.type === "class") && game.settings.get("dnd5e", "allowFeats");
+    return (this.item.type === "class") && game.settings.get("dnd5r", "allowFeats");
   }
 
   /* -------------------------------------------- */
@@ -82,7 +82,7 @@ export default class AbilityScoreImprovementAdvancement extends Advancement {
    * @returns {boolean}
    */
   canImprove(ability) {
-    return CONFIG.DND5E.abilities[ability]?.improvement !== false;
+    return CONFIG.DND5R.abilities[ability]?.improvement !== false;
   }
 
   /* -------------------------------------------- */
@@ -92,7 +92,7 @@ export default class AbilityScoreImprovementAdvancement extends Advancement {
   /** @inheritDoc */
   titleForLevel(level, { configMode=false }={}) {
     if ( this.value.selected !== "feat" ) return this.title;
-    return game.i18n.localize("DND5E.Feature.Feat");
+    return game.i18n.localize("DND5R.Feature.Feat");
   }
 
   /* -------------------------------------------- */
@@ -103,11 +103,11 @@ export default class AbilityScoreImprovementAdvancement extends Advancement {
     if ( configMode ) {
       const entries = Object.entries(this.configuration.fixed).map(([key, value]) => {
         if ( !value ) return null;
-        const name = CONFIG.DND5E.abilities[key]?.label ?? key;
+        const name = CONFIG.DND5R.abilities[key]?.label ?? key;
         return `<span class="tag">${name} <strong>${formatter.format(value)}</strong></span>`;
       });
       if ( this.configuration.points ) entries.push(`<span class="tag">${
-        game.i18n.localize("DND5E.ADVANCEMENT.AbilityScoreImprovement.FIELDS.points.label")}: <strong>${
+        game.i18n.localize("DND5R.ADVANCEMENT.AbilityScoreImprovement.FIELDS.points.label")}: <strong>${
         this.configuration.points}</strong></span>`
       );
       return entries.filterJoin("\n");
@@ -121,7 +121,7 @@ export default class AbilityScoreImprovementAdvancement extends Advancement {
 
     else if ( (this.value.type === "asi") && this.value.assignments ) {
       return Object.entries(this.value.assignments).reduce((html, [key, value]) => {
-        const name = CONFIG.DND5E.abilities[key]?.label ?? key;
+        const name = CONFIG.DND5R.abilities[key]?.label ?? key;
         html += `<span class="tag">${name} <strong>${formatter.format(value)}</strong></span>\n`;
         return html;
       }, "");
@@ -137,7 +137,7 @@ export default class AbilityScoreImprovementAdvancement extends Advancement {
   /** @inheritDoc */
   async apply(level, data) {
     if ( data.type === "asi" ) {
-      const assignments = Object.keys(CONFIG.DND5E.abilities).reduce((obj, key) => {
+      const assignments = Object.keys(CONFIG.DND5R.abilities).reduce((obj, key) => {
         obj[key] = (this.configuration.fixed[key] ?? 0) + (data.assignments[key] ?? 0);
         return obj;
       }, {});

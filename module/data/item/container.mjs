@@ -17,7 +17,7 @@ const { NumberField, SchemaField, SetField, StringField } = foundry.data.fields;
  *
  * @property {Set<string>} properties       Container properties.
  * @property {object} capacity              Information on container's carrying capacity.
- * @property {string} capacity.type         Method for tracking max capacity as defined in `DND5E.itemCapacityTypes`.
+ * @property {string} capacity.type         Method for tracking max capacity as defined in `DND5R.itemCapacityTypes`.
  * @property {number} capacity.value        Total amount of the type this container can carry.
  */
 export default class ContainerData extends ItemDataModel.mixin(
@@ -29,7 +29,7 @@ export default class ContainerData extends ItemDataModel.mixin(
   /* -------------------------------------------- */
 
   /** @override */
-  static LOCALIZATION_PREFIXES = ["DND5E.SOURCE"];
+  static LOCALIZATION_PREFIXES = ["DND5R.SOURCE"];
 
   /* -------------------------------------------- */
 
@@ -37,13 +37,13 @@ export default class ContainerData extends ItemDataModel.mixin(
   static defineSchema() {
     return this.mergeSchema(super.defineSchema(), {
       quantity: new NumberField({ min: 1, max: 1 }),
-      properties: new SetField(new StringField(), { label: "DND5E.ItemContainerProperties" }),
+      properties: new SetField(new StringField(), { label: "DND5R.ItemContainerProperties" }),
       capacity: new SchemaField({
         type: new StringField({
-          required: true, initial: "weight", blank: false, label: "DND5E.ItemContainerCapacityType"
+          required: true, initial: "weight", blank: false, label: "DND5R.ItemContainerCapacityType"
         }),
-        value: new NumberField({ required: true, min: 0, label: "DND5E.ItemContainerCapacityMax" })
-      }, { label: "DND5E.ItemContainerCapacity" })
+        value: new NumberField({ required: true, min: 0, label: "DND5R.ItemContainerCapacityMax" })
+      }, { label: "DND5R.ItemContainerCapacity" })
     });
   }
 
@@ -85,7 +85,7 @@ export default class ContainerData extends ItemDataModel.mixin(
    */
   static _migrateWeightlessData(source) {
     if ( foundry.utils.getProperty(source, "system.capacity.weightless") === true ) {
-      foundry.utils.setProperty(source, "flags.dnd5e.migratedProperties", ["weightlessContents"]);
+      foundry.utils.setProperty(source, "flags.dnd5r.migratedProperties", ["weightlessContents"]);
     }
   }
 
@@ -136,7 +136,7 @@ export default class ContainerData extends ItemDataModel.mixin(
       { label: context.itemType },
       ...this.physicalItemSheetFields
     ];
-    context.parts = ["dnd5e.details-container"];
+    context.parts = ["dnd5r.details-container"];
   }
 
   /* -------------------------------------------- */
@@ -279,10 +279,10 @@ export default class ContainerData extends ItemDataModel.mixin(
     const context = { max: value ?? Infinity };
     if ( type === "weight" ) {
       context.value = await this.contentsWeight;
-      context.units = game.i18n.localize("DND5E.AbbreviationLbs");
+      context.units = game.i18n.localize("DND5R.AbbreviationLbs");
     } else {
       context.value = await this.contentsCount;
-      context.units = game.i18n.localize("DND5E.ItemContainerCapacityItems");
+      context.units = game.i18n.localize("DND5R.ItemContainerCapacityItems");
     }
     context.value = context.value.toNearest(0.1);
     context.pct = Math.clamp(context.max ? (context.value / context.max) * 100 : 0, 0, 100);

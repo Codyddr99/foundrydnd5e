@@ -5,7 +5,7 @@
  * @returns {HTMLElement}
  */
 export function createCheckboxInput(field, config) {
-  const input = document.createElement("dnd5e-checkbox");
+  const input = document.createElement("dnd5r-checkbox");
   input.name = config.name;
   if ( config.value ) input.checked = true;
   foundry.applications.fields.setInputAttributes(input, config);
@@ -29,7 +29,7 @@ export function createMultiCheckboxInput(field, config) {
     const element = document.createElement("label");
     element.classList.add("checkbox");
     element.innerHTML = `
-      <dnd5e-checkbox name="${config.name}.${value}" ${selected ? "checked" : ""}></dnd5e-checkbox>
+      <dnd5r-checkbox name="${config.name}.${value}" ${selected ? "checked" : ""}></dnd5r-checkbox>
       <span>${label}</span>
     `;
     template.content.append(element);

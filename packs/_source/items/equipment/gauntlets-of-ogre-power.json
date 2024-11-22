@@ -68,7 +68,7 @@
   },
   "effects": [
     {
-      "origin": "Compendium.dnd5e.items.3TWT5bv3z5zGUZCe",
+      "origin": "Compendium.dnd5r.items.3TWT5bv3z5zGUZCe",
       "duration": {
         "startTime": null,
         "seconds": null,
@@ -98,7 +98,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -118,11 +118,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037093565,
     "modifiedTime": 1725992481610,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "folder": "aJgMxnZED9XdoN2W",
   "sort": 0,

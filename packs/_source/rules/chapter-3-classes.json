@@ -10,7 +10,7 @@
       },
       "text": {
         "format": 1,
-        "content": "<table><caption>Classes Summary</caption>\n<thead>\n<tr>\n<th>Class</th>\n<th>Hit Die</th>\n<th>Primary Ability</th>\n<th>Saving Throw Proficiencies</th>\n<th>Armor and Weapon Proficiencies</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>@UUID[Compendium.dnd5e.classes.Item.pvEzGSv71zBhaolc]{Barbarian}</td>\n<td>d12</td>\n<td>Strength</td>\n<td>Strength &amp; Constitution</td>\n<td>Light and medium armor, shields, simple and martial weapons</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.classes.Item.ILvRZGEx3aXqSVUt]{Bard}</td>\n<td>d8</td>\n<td>Charisma</td>\n<td>Dexterity &amp; Charisma</td>\n<td>Light armor, simple weapons, hand crossbows, longswords, rapiers, shortswords</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.classes.Item.tlwBnN8GmqJcTgub]{Cleric}</td>\n<td>d8</td>\n<td>Wisdom</td>\n<td>Wisdom &amp; Charisma</td>\n<td>Light and medium armor, shields, simple weapons</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.classes.Item.ygVYgPbJkaH0tH1N]{Druid}</td>\n<td>d8</td>\n<td>Wisdom</td>\n<td>Intelligence &amp; Wisdom</td>\n<td>Light and medium armor (nonmetal), shields (nonmetal), clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.classes.Item.ABEBgWyRhVlDUIfq]{Fighter}</td>\n<td>d10</td>\n<td>Strength or Dexterity</td>\n<td>Strength &amp; Constitution</td>\n<td>All armor, shields, simple and martial weapons</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.classes.Item.6VoZrWxhOEKGYhnq]{Monk}</td>\n<td>d8</td>\n<td>Dexterity &amp; Wisdom</td>\n<td>Strength &amp; Dexterity</td>\n<td>Simple weapons, shortswords</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.classes.Item.gZiUvbXWLs0pOp0c]{Paladin}</td>\n<td>d10</td>\n<td>Strength &amp; Charisma</td>\n<td>Wisdom &amp; Charisma</td>\n<td>All armor, shields, simple and martial weapons</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.classes.Item.VkRQ7glQvTWWiOCS]{Ranger}</td>\n<td>d10</td>\n<td>Dexterity &amp; Wisdom</td>\n<td>Strength &amp; Dexterity</td>\n<td>Light and medium armor, shields, simple and martial weapons</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.classes.Item.xEb8jmA5HlNs7xTF]{Rogue}</td>\n<td>d8</td>\n<td>Dexterity</td>\n<td>Dexterity &amp; Intelligence</td>\n<td>Light armor, simple weapons, hand crossbows, longswords, rapiers, shortswords</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.classes.Item.6T08zzKtmmpVwlXU]{Sorcerer}</td>\n<td>d6</td>\n<td>Charisma</td>\n<td>Constitution &amp; Charisma</td>\n<td>Daggers, darts, slings, quarterstaffs, light crossbows</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.classes.Item.7WJp9vhi6F6SlAFa]{Warlock}</td>\n<td>d8</td>\n<td>Charisma</td>\n<td>Wisdom &amp; Charisma</td>\n<td>Light armor, simple weapons</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5e.classes.Item.wZK2Q0rXB0AQo8h3]{Wizard}</td>\n<td>d6</td>\n<td>Intelligence</td>\n<td>Intelligence &amp; Wisdom</td>\n<td>Daggers, darts, slings, quarterstaffs, light crossbows</td>\n</tr>\n</tbody>\n</table>"
+        "content": "<table><caption>Classes Summary</caption>\n<thead>\n<tr>\n<th>Class</th>\n<th>Hit Die</th>\n<th>Primary Ability</th>\n<th>Saving Throw Proficiencies</th>\n<th>Armor and Weapon Proficiencies</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>@UUID[Compendium.dnd5r.classes.Item.pvEzGSv71zBhaolc]{Barbarian}</td>\n<td>d12</td>\n<td>Strength</td>\n<td>Strength &amp; Constitution</td>\n<td>Light and medium armor, shields, simple and martial weapons</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5r.classes.Item.ILvRZGEx3aXqSVUt]{Bard}</td>\n<td>d8</td>\n<td>Charisma</td>\n<td>Dexterity &amp; Charisma</td>\n<td>Light armor, simple weapons, hand crossbows, longswords, rapiers, shortswords</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5r.classes.Item.tlwBnN8GmqJcTgub]{Cleric}</td>\n<td>d8</td>\n<td>Wisdom</td>\n<td>Wisdom &amp; Charisma</td>\n<td>Light and medium armor, shields, simple weapons</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5r.classes.Item.ygVYgPbJkaH0tH1N]{Druid}</td>\n<td>d8</td>\n<td>Wisdom</td>\n<td>Intelligence &amp; Wisdom</td>\n<td>Light and medium armor (nonmetal), shields (nonmetal), clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5r.classes.Item.ABEBgWyRhVlDUIfq]{Fighter}</td>\n<td>d10</td>\n<td>Strength or Dexterity</td>\n<td>Strength &amp; Constitution</td>\n<td>All armor, shields, simple and martial weapons</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5r.classes.Item.6VoZrWxhOEKGYhnq]{Monk}</td>\n<td>d8</td>\n<td>Dexterity &amp; Wisdom</td>\n<td>Strength &amp; Dexterity</td>\n<td>Simple weapons, shortswords</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5r.classes.Item.gZiUvbXWLs0pOp0c]{Paladin}</td>\n<td>d10</td>\n<td>Strength &amp; Charisma</td>\n<td>Wisdom &amp; Charisma</td>\n<td>All armor, shields, simple and martial weapons</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5r.classes.Item.VkRQ7glQvTWWiOCS]{Ranger}</td>\n<td>d10</td>\n<td>Dexterity &amp; Wisdom</td>\n<td>Strength &amp; Dexterity</td>\n<td>Light and medium armor, shields, simple and martial weapons</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5r.classes.Item.xEb8jmA5HlNs7xTF]{Rogue}</td>\n<td>d8</td>\n<td>Dexterity</td>\n<td>Dexterity &amp; Intelligence</td>\n<td>Light armor, simple weapons, hand crossbows, longswords, rapiers, shortswords</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5r.classes.Item.6T08zzKtmmpVwlXU]{Sorcerer}</td>\n<td>d6</td>\n<td>Charisma</td>\n<td>Constitution &amp; Charisma</td>\n<td>Daggers, darts, slings, quarterstaffs, light crossbows</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5r.classes.Item.7WJp9vhi6F6SlAFa]{Warlock}</td>\n<td>d8</td>\n<td>Charisma</td>\n<td>Wisdom &amp; Charisma</td>\n<td>Light armor, simple weapons</td>\n</tr>\n<tr>\n<td>@UUID[Compendium.dnd5r.classes.Item.wZK2Q0rXB0AQo8h3]{Wizard}</td>\n<td>d6</td>\n<td>Intelligence</td>\n<td>Intelligence &amp; Wisdom</td>\n<td>Daggers, darts, slings, quarterstaffs, light crossbows</td>\n</tr>\n</tbody>\n</table>"
       },
       "_id": "8jxEuy0PV2HNySQC",
       "image": {},
@@ -28,7 +28,7 @@
       "_stats": {
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -54,7 +54,7 @@
       },
       "src": null,
       "system": {
-        "item": "Compendium.dnd5e.classes.Item.pvEzGSv71zBhaolc",
+        "item": "Compendium.dnd5r.classes.Item.pvEzGSv71zBhaolc",
         "description": {
           "value": "",
           "additionalHitPoints": "",
@@ -64,7 +64,7 @@
         },
         "subclassHeader": "Primal Paths",
         "subclassItems": [
-          "Compendium.dnd5e.subclasses.Item.uGuDQX9Mz3oHNHkU"
+          "Compendium.dnd5r.subclasses.Item.uGuDQX9Mz3oHNHkU"
         ]
       },
       "sort": 0,
@@ -75,7 +75,7 @@
       "_stats": {
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -101,7 +101,7 @@
       },
       "src": null,
       "system": {
-        "item": "Compendium.dnd5e.classes.Item.ILvRZGEx3aXqSVUt",
+        "item": "Compendium.dnd5r.classes.Item.ILvRZGEx3aXqSVUt",
         "description": {
           "value": "",
           "additionalHitPoints": "",
@@ -111,7 +111,7 @@
         },
         "subclassHeader": "Bard Colleges",
         "subclassItems": [
-          "Compendium.dnd5e.subclasses.Item.MNvsEc4D2ccX7dQT"
+          "Compendium.dnd5r.subclasses.Item.MNvsEc4D2ccX7dQT"
         ]
       },
       "sort": 0,
@@ -122,7 +122,7 @@
       "_stats": {
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -148,7 +148,7 @@
       },
       "src": null,
       "system": {
-        "item": "Compendium.dnd5e.classes.Item.tlwBnN8GmqJcTgub",
+        "item": "Compendium.dnd5r.classes.Item.tlwBnN8GmqJcTgub",
         "description": {
           "value": "",
           "additionalHitPoints": "",
@@ -158,7 +158,7 @@
         },
         "subclassHeader": "Divine Domains",
         "subclassItems": [
-          "Compendium.dnd5e.subclasses.Item.H3RYLGqCiqm8BP3q"
+          "Compendium.dnd5r.subclasses.Item.H3RYLGqCiqm8BP3q"
         ]
       },
       "sort": 0,
@@ -169,7 +169,7 @@
       "_stats": {
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -195,7 +195,7 @@
       },
       "src": null,
       "system": {
-        "item": "Compendium.dnd5e.classes.Item.ygVYgPbJkaH0tH1N",
+        "item": "Compendium.dnd5r.classes.Item.ygVYgPbJkaH0tH1N",
         "description": {
           "value": "",
           "additionalHitPoints": "",
@@ -205,7 +205,7 @@
         },
         "subclassHeader": "Druid Circles",
         "subclassItems": [
-          "Compendium.dnd5e.subclasses.Item.4Ae2SPZRXEVbVs0M"
+          "Compendium.dnd5r.subclasses.Item.4Ae2SPZRXEVbVs0M"
         ]
       },
       "sort": 0,
@@ -216,7 +216,7 @@
       "_stats": {
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -242,7 +242,7 @@
       },
       "src": null,
       "system": {
-        "item": "Compendium.dnd5e.classes.Item.ABEBgWyRhVlDUIfq",
+        "item": "Compendium.dnd5r.classes.Item.ABEBgWyRhVlDUIfq",
         "description": {
           "value": "",
           "additionalHitPoints": "",
@@ -252,7 +252,7 @@
         },
         "subclassHeader": "Martial Archetypes",
         "subclassItems": [
-          "Compendium.dnd5e.subclasses.Item.sprHbe7cRg9osTzf"
+          "Compendium.dnd5r.subclasses.Item.sprHbe7cRg9osTzf"
         ]
       },
       "sort": 0,
@@ -263,7 +263,7 @@
       "_stats": {
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -289,7 +289,7 @@
       },
       "src": null,
       "system": {
-        "item": "Compendium.dnd5e.classes.Item.6VoZrWxhOEKGYhnq",
+        "item": "Compendium.dnd5r.classes.Item.6VoZrWxhOEKGYhnq",
         "description": {
           "value": "",
           "additionalHitPoints": "",
@@ -299,7 +299,7 @@
         },
         "subclassHeader": "Monastic Traditions",
         "subclassItems": [
-          "Compendium.dnd5e.subclasses.Item.IvlpKMXX3PmW1NY2"
+          "Compendium.dnd5r.subclasses.Item.IvlpKMXX3PmW1NY2"
         ]
       },
       "sort": 0,
@@ -310,7 +310,7 @@
       "_stats": {
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -336,7 +336,7 @@
       },
       "src": null,
       "system": {
-        "item": "Compendium.dnd5e.classes.Item.gZiUvbXWLs0pOp0c",
+        "item": "Compendium.dnd5r.classes.Item.gZiUvbXWLs0pOp0c",
         "description": {
           "value": "",
           "additionalHitPoints": "",
@@ -346,7 +346,7 @@
         },
         "subclassHeader": "Sacred Oaths",
         "subclassItems": [
-          "Compendium.dnd5e.subclasses.Item.sZ86mbX8D5PfYuhl"
+          "Compendium.dnd5r.subclasses.Item.sZ86mbX8D5PfYuhl"
         ]
       },
       "sort": 0,
@@ -357,7 +357,7 @@
       "_stats": {
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -383,7 +383,7 @@
       },
       "src": null,
       "system": {
-        "item": "Compendium.dnd5e.classes.Item.VkRQ7glQvTWWiOCS",
+        "item": "Compendium.dnd5r.classes.Item.VkRQ7glQvTWWiOCS",
         "description": {
           "value": "",
           "additionalHitPoints": "",
@@ -393,7 +393,7 @@
         },
         "subclassHeader": "Ranger Archetypes",
         "subclassItems": [
-          "Compendium.dnd5e.subclasses.Item.uqd2q6WjVfcsaaGb"
+          "Compendium.dnd5r.subclasses.Item.uqd2q6WjVfcsaaGb"
         ]
       },
       "sort": 0,
@@ -404,7 +404,7 @@
       "_stats": {
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -430,7 +430,7 @@
       },
       "src": null,
       "system": {
-        "item": "Compendium.dnd5e.classes.Item.xEb8jmA5HlNs7xTF",
+        "item": "Compendium.dnd5r.classes.Item.xEb8jmA5HlNs7xTF",
         "description": {
           "value": "",
           "additionalHitPoints": "",
@@ -440,7 +440,7 @@
         },
         "subclassHeader": "Roguish Archetypes",
         "subclassItems": [
-          "Compendium.dnd5e.subclasses.Item.k8iuefRorWOjb9gR"
+          "Compendium.dnd5r.subclasses.Item.k8iuefRorWOjb9gR"
         ]
       },
       "sort": 0,
@@ -451,7 +451,7 @@
       "_stats": {
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -477,7 +477,7 @@
       },
       "src": null,
       "system": {
-        "item": "Compendium.dnd5e.classes.Item.6T08zzKtmmpVwlXU",
+        "item": "Compendium.dnd5r.classes.Item.6T08zzKtmmpVwlXU",
         "description": {
           "value": "",
           "additionalHitPoints": "",
@@ -487,7 +487,7 @@
         },
         "subclassHeader": "Sorcerous Origins",
         "subclassItems": [
-          "Compendium.dnd5e.subclasses.Item.2nadB2MBSHTQ0kcl"
+          "Compendium.dnd5r.subclasses.Item.2nadB2MBSHTQ0kcl"
         ]
       },
       "sort": 0,
@@ -498,7 +498,7 @@
       "_stats": {
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -524,7 +524,7 @@
       },
       "src": null,
       "system": {
-        "item": "Compendium.dnd5e.classes.Item.7WJp9vhi6F6SlAFa",
+        "item": "Compendium.dnd5r.classes.Item.7WJp9vhi6F6SlAFa",
         "description": {
           "value": "",
           "additionalHitPoints": "",
@@ -534,7 +534,7 @@
         },
         "subclassHeader": "Otherworldly Patrons",
         "subclassItems": [
-          "Compendium.dnd5e.subclasses.Item.WPFVBg589uI8iOMH"
+          "Compendium.dnd5r.subclasses.Item.WPFVBg589uI8iOMH"
         ]
       },
       "sort": 0,
@@ -545,7 +545,7 @@
       "_stats": {
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -571,7 +571,7 @@
       },
       "src": null,
       "system": {
-        "item": "Compendium.dnd5e.classes.Item.wZK2Q0rXB0AQo8h3",
+        "item": "Compendium.dnd5r.classes.Item.wZK2Q0rXB0AQo8h3",
         "description": {
           "value": "",
           "additionalHitPoints": "",
@@ -581,7 +581,7 @@
         },
         "subclassHeader": "Arcane Traditions",
         "subclassItems": [
-          "Compendium.dnd5e.subclasses.Item.Ye5f3FReEnuXfi0y"
+          "Compendium.dnd5r.subclasses.Item.Ye5f3FReEnuXfi0y"
         ]
       },
       "sort": 0,
@@ -592,7 +592,7 @@
       "_stats": {
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -605,7 +605,7 @@
     "default": 0
   },
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "type": "chapter",
       "position": 3
     }
@@ -613,11 +613,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037417708,
     "modifiedTime": 1725037417708,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "folder": null,
   "sort": 0,

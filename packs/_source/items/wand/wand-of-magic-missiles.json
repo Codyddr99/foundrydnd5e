@@ -5,7 +5,7 @@
   "img": "icons/weapons/wands/wand-gem-pink.webp",
   "system": {
     "description": {
-      "value": "<p>This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the @UUID[Compendium.dnd5e.spells.Item.41JIhpDyM9Anm7cs]{Magic Missile} spell from it. For 1 charge, you cast the 1st-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.</p>\n<p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>",
+      "value": "<p>This wand has 7 charges. While holding it, you can use an action to expend 1 or more of its charges to cast the @UUID[Compendium.dnd5r.spells.Item.41JIhpDyM9Anm7cs]{Magic Missile} spell from it. For 1 charge, you cast the 1st-level version of the spell. You can increase the spell slot level by one for each additional charge you expend.</p>\n<p>The wand regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>",
       "chat": ""
     },
     "source": {
@@ -77,7 +77,7 @@
       "TdKi7kwKecDnJ77E": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.41JIhpDyM9Anm7cs",
+          "uuid": "Compendium.dnd5r.spells.Item.41JIhpDyM9Anm7cs",
           "challenge": {
             "attack": null,
             "save": null,
@@ -155,7 +155,7 @@
     "default": 0
   },
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "riders": {
         "activity": [],
         "effect": []
@@ -165,11 +165,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037087123,
     "modifiedTime": 1731015902317,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!1taRIMF9w7jpnonN"
 }

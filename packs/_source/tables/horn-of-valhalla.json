@@ -11,7 +11,7 @@
         40
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.items",
+      "documentCollection": "dnd5r.items",
       "_id": "yf2SqGw0p8zRky64",
       "text": "Silver Horn of Valhalla",
       "img": "icons/tools/instruments/flute-simple-wood.webp",
@@ -27,7 +27,7 @@
         75
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.items",
+      "documentCollection": "dnd5r.items",
       "_id": "SYzXgNRPBETdCrVx",
       "text": "Brass Horn of Valhalla",
       "img": "icons/tools/instruments/flute-simple-wood.webp",
@@ -43,7 +43,7 @@
         90
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.items",
+      "documentCollection": "dnd5r.items",
       "_id": "pr5BUIkviD7Q4o9M",
       "text": "Bronze Horn of Valhalla",
       "img": "icons/tools/instruments/flute-simple-wood.webp",
@@ -59,7 +59,7 @@
         100
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.items",
+      "documentCollection": "dnd5r.items",
       "_id": "if6vpb2dv1ccbukq",
       "text": "Iron Horn of Valhalla",
       "img": "icons/tools/instruments/flute-simple-wood.webp",
@@ -76,11 +76,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037419189,
     "modifiedTime": 1725037419189,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "sort": 0,
   "folder": null,

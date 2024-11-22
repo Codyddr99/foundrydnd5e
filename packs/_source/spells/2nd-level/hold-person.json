@@ -65,8 +65,8 @@
       "concentration"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "save",
         "activation": {
           "type": "action",
@@ -135,7 +135,7 @@
   "effects": [
     {
       "name": "Hold Person",
-      "origin": "Compendium.dnd5e.spells.Item.3Lo9boi7P2ro6QV4",
+      "origin": "Compendium.dnd5r.spells.Item.3Lo9boi7P2ro6QV4",
       "duration": {
         "startTime": null,
         "seconds": 60,
@@ -160,7 +160,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -177,11 +177,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037346550,
     "modifiedTime": 1725992716765,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!3Lo9boi7P2ro6QV4"
 }

@@ -1,13 +1,13 @@
-.dnd5e2.sheet.item {
+.dnd5r2.sheet.item {
 
   /* ---------------------------------- */
   /*  Outer Window                      */
   /* ---------------------------------- */
 
-  --dnd5e-sheet-header-height: 170px;
-  border: var(--dnd5e-border-gold);
+  --dnd5r-sheet-header-height: 170px;
+  border: var(--dnd5r-border-gold);
 
-  > header slide-toggle { --slide-toggle-track-color-unchecked: var(--dnd5e-background-25); }
+  > header slide-toggle { --slide-toggle-track-color-unchecked: var(--dnd5r-background-25); }
 
   .window-header { flex-wrap: nowrap; }
 
@@ -15,7 +15,7 @@
     display: contents;
     flex: none;
     color: var(--color-text-dark-primary);
-    font-family: var(--dnd5e-font-roboto-condensed);
+    font-family: var(--dnd5r-font-roboto-condensed);
     line-height: 1;
 
     > * { margin-top: 4px; }
@@ -45,7 +45,7 @@
   .window-content {
     background: url("ui/texture-gray1.webp") no-repeat top left,
       url("ui/texture-gray2.webp") no-repeat bottom right,
-      var(--dnd5e-color-parchment);
+      var(--dnd5r-color-parchment);
 
     > form {
       display: flex;
@@ -79,7 +79,7 @@
     align-items: stretch;
     gap: 8px;
 
-    input, select { background: var(--dnd5e-background-5); }
+    input, select { background: var(--dnd5r-background-5); }
 
     > .left { flex: none; }
 
@@ -105,10 +105,10 @@
       width: 96px;
       height: 96px;
       border-radius: 100%;
-      border: 4px solid var(--dnd5e-color-gold);
-      box-shadow: 0 0 4px var(--dnd5e-shadow-45);
+      border: 4px solid var(--dnd5r-color-gold);
+      box-shadow: 0 0 4px var(--dnd5r-shadow-45);
       object-fit: cover;
-      background: var(--dnd5e-color-light-gray);
+      background: var(--dnd5r-color-light-gray);
       margin: 0;
 
       color: var(--color-light-1);
@@ -120,7 +120,7 @@
     .document-name {
       text-align: center;
       font-size: var(--font-size-32);
-      font-family: var(--dnd5e-font-modesto);
+      font-family: var(--dnd5r-font-modesto);
       font-weight: bold;
     }
 
@@ -132,7 +132,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 4px;
-      font-family: var(--dnd5e-font-roboto-condensed);
+      font-family: var(--dnd5r-font-roboto-condensed);
       font-size: var(--font-size-14);
       height: 32px;
 
@@ -167,7 +167,7 @@
     /* Spell School */
     .school {
       --icon-size: 48px;
-      --icon-fill: var(--dnd5e-color-gold);
+      --icon-fill: var(--dnd5r-color-gold);
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -207,7 +207,7 @@
 
   nav.tabs {
     justify-content: space-evenly;
-    font-family: var(--dnd5e-font-roboto);
+    font-family: var(--dnd5r-font-roboto);
     text-transform: uppercase;
     font-size: var(--font-size-13);
     font-weight: bold;
@@ -224,7 +224,7 @@
       &.active {
         color: var(--color-text-dark-primary);
         text-shadow: none;
-        > span { border-bottom: 3px solid var(--dnd5e-color-gold); }
+        > span { border-bottom: 3px solid var(--dnd5r-color-gold); }
       }
     }
   }
@@ -237,7 +237,7 @@
 
   .sheet-body {
     .tab {
-      max-height: ~"calc(min(max(70vh, 1000px), 95vh) - var(--dnd5e-sheet-header-height))";
+      max-height: ~"calc(min(max(70vh, 1000px), 95vh) - var(--dnd5r-sheet-header-height))";
       overflow: auto;
       display: flex;
       flex-direction: column;
@@ -245,7 +245,7 @@
       margin: -6px -11px -6px -6px;
       padding: 6px 2px 6px 6px;
       scrollbar-width: thin;
-      scrollbar-color: var(--dnd5e-color-scrollbar) transparent;
+      scrollbar-color: var(--dnd5r-color-scrollbar) transparent;
       scrollbar-gutter: stable;
 
       &:not(.active) { display: none; }
@@ -264,7 +264,7 @@
         > .editor {
           padding-right: 6px;
           scrollbar-width: thin;
-          scrollbar-color: var(--dnd5e-color-scrollbar) transparent;
+          scrollbar-color: var(--dnd5r-color-scrollbar) transparent;
         }
       }
     }
@@ -287,7 +287,7 @@
         align-items: center;
 
         .label {
-          font-family: var(--dnd5e-font-roboto-condensed);
+          font-family: var(--dnd5r-font-roboto-condensed);
           font-size: var(--font-size-11);
           color: var(--color-text-dark-5);
           text-transform: uppercase;
@@ -297,7 +297,7 @@
 
         div.value {
           font-size: var(--font-size-14);
-          font-family: var(--dnd5e-font-roboto);
+          font-family: var(--dnd5r-font-roboto);
         }
 
         &.info-sm div.value {
@@ -306,7 +306,7 @@
         }
 
         &.info-lg div.value {
-          font-family: var(--dnd5e-font-roboto-slab);
+          font-family: var(--dnd5r-font-roboto-slab);
           font-weight: bold;
           font-size: var(--font-size-24);
         }
@@ -337,8 +337,8 @@
 
       .description {
         padding: 8px;
-        font-family: var(--dnd5e-font-roboto-condensed);
-        box-shadow: 0 0 6px var(--dnd5e-shadow-15);
+        font-family: var(--dnd5r-font-roboto-condensed);
+        box-shadow: 0 0 6px var(--dnd5r-shadow-15);
 
         > .header {
           background: none;
@@ -350,7 +350,7 @@
 
           > span {
             flex: 1;
-            font-family: var(--dnd5e-font-roboto-slab);
+            font-family: var(--dnd5r-font-roboto-slab);
             font-weight: bold;
             text-align: center;
             font-size: var(--font-size-14);
@@ -430,9 +430,9 @@
         bottom: -6px;
 
         .encumbrance {
-          border: var(--dnd5e-border-gold);
+          border: var(--dnd5r-border-gold);
           border-radius: 3px;
-          box-shadow: 0 0 6px var(--dnd5e-shadow-45);
+          box-shadow: 0 0 6px var(--dnd5r-shadow-45);
           width: unset;
 
           .meter {
@@ -457,7 +457,7 @@
 
         .info-control, .item-control {
           position: unset;
-          color: var(--dnd5e-color-gold);
+          color: var(--dnd5r-color-gold);
         }
       }
 
@@ -471,7 +471,7 @@
         .tags { --icon-size: 18px; }
 
         .title {
-          font-family: var(--dnd5e-font-roboto-slab);
+          font-family: var(--dnd5r-font-roboto-slab);
           font-size: var(--font-size-13);
           font-weight: bold;
         }
@@ -509,7 +509,7 @@
     /* Details */
     .tab.details {
       .starting-equipment {
-        font-family: var(--dnd5e-font-roboto-condensed);
+        font-family: var(--dnd5r-font-roboto-condensed);
 
         &.empty {
           padding: 8px;
@@ -535,7 +535,7 @@
       display: flex;
       gap: 8px;
       align-items: center;
-      box-shadow: 0 0 6px var(--dnd5e-shadow-15);
+      box-shadow: 0 0 6px var(--dnd5r-shadow-15);
 
       > .icon {
         --icon-size: 24px;
@@ -551,7 +551,7 @@
       }
 
       > .name {
-        font-family: var(--dnd5e-font-roboto-slab);
+        font-family: var(--dnd5r-font-roboto-slab);
         font-weight: bold;
         flex: 1;
         font-size: var(--font-size-14);

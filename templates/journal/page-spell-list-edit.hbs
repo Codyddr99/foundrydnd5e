@@ -3,7 +3,7 @@
         {{> journalEntryPageHeader }}
 
         <div class="form-group">
-            <label>{{ localize "JOURNALENTRYPAGE.DND5E.SpellList.Type.Label" }}</label>
+            <label>{{ localize "JOURNALENTRYPAGE.DND5R.SpellList.Type.Label" }}</label>
             <div class="form-fields">
                 <select name="system.type">
                     {{ selectOptions CONFIG.spellListTypes selected=system.type }}
@@ -12,27 +12,27 @@
         </div>
 
         <div class="form-group">
-            <label>{{ localize "DND5E.Identifier" }}</label>
+            <label>{{ localize "DND5R.Identifier" }}</label>
             <div class="form-fields">
                 <input type="text" name="system.identifier" value="{{system.identifier}}">
             </div>
-            <p class="hint">{{ localize "JOURNALENTRYPAGE.DND5E.SpellList.IdentifierHint" }}
+            <p class="hint">{{ localize "JOURNALENTRYPAGE.DND5R.SpellList.IdentifierHint" }}
         </div>
 
         <div class="form-group">
-            <label>{{ localize "JOURNALENTRYPAGE.DND5E.SpellList.Grouping.Label" }}</label>
+            <label>{{ localize "JOURNALENTRYPAGE.DND5R.SpellList.Grouping.Label" }}</label>
             <div class="form-fields">
                 <select name="system.grouping">
                     {{ selectOptions GROUPING_MODES selected=system.grouping localize=true }}
                 </select>
             </div>
             <p class="hint">
-                {{ localize "JOURNALENTRYPAGE.DND5E.SpellList.Grouping.Hint" }}
+                {{ localize "JOURNALENTRYPAGE.DND5R.SpellList.Grouping.Hint" }}
             </p>
         </div>
 
         <div class="form-group">
-            <label>{{ localize "DND5E.Description" }}</label>
+            <label>{{ localize "DND5R.Description" }}</label>
         </div>
 
         {{ editor description target="system.description.value" button=false editable=editable
@@ -42,8 +42,8 @@
     <div class="right spell-list">
         <h3 class="flexrow">
             {{ localize "TYPES.Item.spellPl" }}
-            <a data-action="add-unlinked" data-tooltip="JOURNALENTRYPAGE.DND5E.SpellList.UnlinkedSpells.Add"
-               aria-label="{{ localize 'JOURNALENTRYPAGE.DND5E.SpellList.UnlinkedSpells.Add' }}">
+            <a data-action="add-unlinked" data-tooltip="JOURNALENTRYPAGE.DND5R.SpellList.UnlinkedSpells.Add"
+               aria-label="{{ localize 'JOURNALENTRYPAGE.DND5R.SpellList.UnlinkedSpells.Add' }}">
                 <i class="fa-solid fa-plus" inert></i>
             </a>
         </h3>
@@ -54,20 +54,20 @@
                 <div class="item-controls flexrow">
                     {{#if unlinked}}
                     <a class="item-control" data-action="edit-unlinked"
-                       data-tooltip="JOURNALENTRYPAGE.DND5E.SpellList.UnlinkedSpells.Edit"
-                       aria-label="{{ localize 'JOURNALENTRYPAGE.DND5E.SpellList.UnlinkedSpells.Edit' }}">
+                       data-tooltip="JOURNALENTRYPAGE.DND5R.SpellList.UnlinkedSpells.Edit"
+                       aria-label="{{ localize 'JOURNALENTRYPAGE.DND5R.SpellList.UnlinkedSpells.Edit' }}">
                         <i class="fa-solid fa-cog" inert></i>
                     </a>
                     {{/if}}
-                    <a class="item-control" data-action="delete" data-tooltip="DND5E.ItemDelete"
-                       aria-label="{{ localize 'DND5E.ItemDelete' }}">
+                    <a class="item-control" data-action="delete" data-tooltip="DND5R.ItemDelete"
+                       aria-label="{{ localize 'DND5R.ItemDelete' }}">
                         <i class="fa-solid fa-trash" inert></i>
                     </a>
                 </div>
             </li>
             {{else}}
             <li class="empty">
-                {{ localize "JOURNALENTRYPAGE.DND5E.SpellList.DropHint" }}
+                {{ localize "JOURNALENTRYPAGE.DND5R.SpellList.DropHint" }}
             </li>
             {{/each}}
         </ol>

@@ -668,14 +668,14 @@
       },
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.monsterfeatures.hkmTEk6klT6QL4K4"
+          "sourceId": "Compendium.dnd5r.monsterfeatures.hkmTEk6klT6QL4K4"
         }
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.monsterfeatures.hkmTEk6klT6QL4K4",
+        "compendiumSource": "Compendium.dnd5r.monsterfeatures.hkmTEk6klT6QL4K4",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -751,8 +751,8 @@
           "somatic"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "action",
@@ -826,8 +826,8 @@
             },
             "sort": 0
           },
-          "dnd5eactivity100": {
-            "_id": "dnd5eactivity100",
+          "dnd5ractivity100": {
+            "_id": "dnd5ractivity100",
             "type": "save",
             "activation": {
               "type": "action",
@@ -904,14 +904,14 @@
       },
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.J6Jpw5XzB5aTeqnz"
+          "sourceId": "Compendium.dnd5r.spells.J6Jpw5XzB5aTeqnz"
         }
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.J6Jpw5XzB5aTeqnz",
+        "compendiumSource": "Compendium.dnd5r.spells.J6Jpw5XzB5aTeqnz",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -963,14 +963,14 @@
       },
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.monsterfeatures.Hc6MqLQhPTI1KOvm"
+          "sourceId": "Compendium.dnd5r.monsterfeatures.Hc6MqLQhPTI1KOvm"
         }
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.monsterfeatures.Hc6MqLQhPTI1KOvm",
+        "compendiumSource": "Compendium.dnd5r.monsterfeatures.Hc6MqLQhPTI1KOvm",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1076,8 +1076,8 @@
         "container": null,
         "crewed": false,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "action",
@@ -1172,7 +1172,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1210,8 +1210,8 @@
         "requirements": "",
         "properties": [],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -1290,14 +1290,14 @@
       },
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.monsterfeatures.JsAys4RSGi4lN5Jy"
+          "sourceId": "Compendium.dnd5r.monsterfeatures.JsAys4RSGi4lN5Jy"
         }
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.monsterfeatures.JsAys4RSGi4lN5Jy",
+        "compendiumSource": "Compendium.dnd5r.monsterfeatures.JsAys4RSGi4lN5Jy",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1335,8 +1335,8 @@
         "requirements": "",
         "properties": [],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -1415,14 +1415,14 @@
       },
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.monsterfeatures.rDoNJnKdY47x8MD4"
+          "sourceId": "Compendium.dnd5r.monsterfeatures.rDoNJnKdY47x8MD4"
         }
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.monsterfeatures.rDoNJnKdY47x8MD4",
+        "compendiumSource": "Compendium.dnd5r.monsterfeatures.rDoNJnKdY47x8MD4",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1465,8 +1465,8 @@
         "requirements": "",
         "properties": [],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -1555,14 +1555,14 @@
       },
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.monsterfeatures.VbBHypDc0eLWbsNE"
+          "sourceId": "Compendium.dnd5r.monsterfeatures.VbBHypDc0eLWbsNE"
         }
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.monsterfeatures.VbBHypDc0eLWbsNE",
+        "compendiumSource": "Compendium.dnd5r.monsterfeatures.VbBHypDc0eLWbsNE",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1637,8 +1637,8 @@
           "concentration"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -1695,17 +1695,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.ghXTfe7sgCbgf1Q8"
+          "sourceId": "Compendium.dnd5r.spells.ghXTfe7sgCbgf1Q8"
         }
       },
       "img": "icons/magic/light/explosion-star-blue.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.ghXTfe7sgCbgf1Q8",
+        "compendiumSource": "Compendium.dnd5r.spells.ghXTfe7sgCbgf1Q8",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1779,8 +1779,8 @@
           "somatic"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "damage",
             "activation": {
               "type": "action",
@@ -1856,17 +1856,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.41JIhpDyM9Anm7cs"
+          "sourceId": "Compendium.dnd5r.spells.41JIhpDyM9Anm7cs"
         }
       },
       "img": "icons/magic/fire/projectile-meteor-salvo-light-pink.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.41JIhpDyM9Anm7cs",
+        "compendiumSource": "Compendium.dnd5r.spells.41JIhpDyM9Anm7cs",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1946,8 +1946,8 @@
           "concentration"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "action",
@@ -2021,8 +2021,8 @@
             },
             "sort": 0
           },
-          "dnd5eactivity100": {
-            "_id": "dnd5eactivity100",
+          "dnd5ractivity100": {
+            "_id": "dnd5ractivity100",
             "type": "save",
             "activation": {
               "type": "action",
@@ -2094,17 +2094,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.ODhLKBxLnvvLOnw1"
+          "sourceId": "Compendium.dnd5r.spells.ODhLKBxLnvvLOnw1"
         }
       },
       "img": "icons/magic/light/beam-rays-teal.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.ODhLKBxLnvvLOnw1",
+        "compendiumSource": "Compendium.dnd5r.spells.ODhLKBxLnvvLOnw1",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -2182,8 +2182,8 @@
           "material"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "damage",
             "activation": {
               "type": "action",
@@ -2272,14 +2272,14 @@
       },
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.KhwiSi9fwVfUPtku"
+          "sourceId": "Compendium.dnd5r.spells.KhwiSi9fwVfUPtku"
         }
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.KhwiSi9fwVfUPtku",
+        "compendiumSource": "Compendium.dnd5r.spells.KhwiSi9fwVfUPtku",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -2298,11 +2298,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1726171266109,
     "modifiedTime": 1726171451880,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!actors!xvh2UOKv1bh03Gih"
 }

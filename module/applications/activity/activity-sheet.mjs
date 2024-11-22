@@ -52,23 +52,23 @@ export default class ActivitySheet extends Application5e {
       template: "templates/generic/tab-navigation.hbs"
     },
     identity: {
-      template: "systems/dnd5etools/templates/activity/identity.hbs",
+      template: "systems/dnd5r/templates/activity/identity.hbs",
       templates: [
-        "systems/dnd5etools/templates/activity/parts/activity-identity.hbs"
+        "systems/dnd5r/templates/activity/parts/activity-identity.hbs"
       ]
     },
     activation: {
-      template: "systems/dnd5etools/templates/activity/activation.hbs",
+      template: "systems/dnd5r/templates/activity/activation.hbs",
       templates: [
-        "systems/dnd5etools/templates/activity/parts/activity-time.hbs",
-        "systems/dnd5etools/templates/activity/parts/activity-targeting.hbs",
-        "systems/dnd5etools/templates/activity/parts/activity-consumption.hbs"
+        "systems/dnd5r/templates/activity/parts/activity-time.hbs",
+        "systems/dnd5r/templates/activity/parts/activity-targeting.hbs",
+        "systems/dnd5r/templates/activity/parts/activity-consumption.hbs"
       ]
     },
     effect: {
-      template: "systems/dnd5etools/templates/activity/effect.hbs",
+      template: "systems/dnd5r/templates/activity/effect.hbs",
       templates: [
-        "systems/dnd5etools/templates/activity/parts/activity-effects.hbs"
+        "systems/dnd5r/templates/activity/parts/activity-effects.hbs"
       ]
     }
   };
@@ -208,30 +208,30 @@ export default class ActivitySheet extends Application5e {
     }
 
     context.activationTypes = [
-      ...Object.entries(CONFIG.DND5E.activityActivationTypes).map(([value, config]) => ({
+      ...Object.entries(CONFIG.DND5R.activityActivationTypes).map(([value, config]) => ({
         value,
         label: game.i18n.localize(config.label),
         group: game.i18n.localize(config.group)
       })),
-      { value: "", label: game.i18n.localize("DND5E.NoneActionLabel") }
+      { value: "", label: game.i18n.localize("DND5R.NoneActionLabel") }
     ];
     context.affectsPlaceholder = game.i18n.localize(
-      `DND5E.Target${context.data.target?.template?.type ? "Every" : "Any"}`
+      `DND5R.Target${context.data.target?.template?.type ? "Every" : "Any"}`
     );
     context.durationUnits = [
-      { value: "inst", label: game.i18n.localize("DND5E.TimeInst") },
-      ...Object.entries(CONFIG.DND5E.scalarTimePeriods).map(([value, label]) => ({
-        value, label, group: game.i18n.localize("DND5E.DurationTime")
+      { value: "inst", label: game.i18n.localize("DND5R.TimeInst") },
+      ...Object.entries(CONFIG.DND5R.scalarTimePeriods).map(([value, label]) => ({
+        value, label, group: game.i18n.localize("DND5R.DurationTime")
       })),
-      ...Object.entries(CONFIG.DND5E.permanentTimePeriods).map(([value, label]) => ({
-        value, label, group: game.i18n.localize("DND5E.DurationPermanent")
+      ...Object.entries(CONFIG.DND5R.permanentTimePeriods).map(([value, label]) => ({
+        value, label, group: game.i18n.localize("DND5R.DurationPermanent")
       })),
-      { value: "spec", label: game.i18n.localize("DND5E.Special") }
+      { value: "spec", label: game.i18n.localize("DND5R.Special") }
     ];
     context.rangeUnits = [
-      ...Object.entries(CONFIG.DND5E.rangeTypes).map(([value, label]) => ({ value, label })),
-      ...Object.entries(CONFIG.DND5E.movementUnits).map(([value, label]) => ({
-        value, label, group: game.i18n.localize("DND5E.RangeDistance")
+      ...Object.entries(CONFIG.DND5R.rangeTypes).map(([value, label]) => ({ value, label })),
+      ...Object.entries(CONFIG.DND5R.movementUnits).map(([value, label]) => ({
+        value, label, group: game.i18n.localize("DND5R.RangeDistance")
       }))
     ];
 
@@ -239,10 +239,10 @@ export default class ActivitySheet extends Application5e {
     const canScale = this.activity.canConfigureScaling;
     const consumptionTypeOptions = Array.from(this.activity.validConsumptionTypes).map(value => ({
       value,
-      label: CONFIG.DND5E.activityConsumptionTypes[value].label
+      label: CONFIG.DND5R.activityConsumptionTypes[value].label
     }));
     context.consumptionTargets = context.activity.consumption.targets.map((data, index) => {
-      const typeConfig = CONFIG.DND5E.activityConsumptionTypes[data.type] ?? {};
+      const typeConfig = CONFIG.DND5R.activityConsumptionTypes[data.type] ?? {};
       const showTextTarget = typeConfig.targetRequiresEmbedded && !this.item.isEmbedded;
       return {
         data,
@@ -251,12 +251,12 @@ export default class ActivitySheet extends Application5e {
         source: context.source.consumption.targets[index] ?? data,
         typeOptions: consumptionTypeOptions,
         scalingModes: canScale ? [
-          { value: "", label: game.i18n.localize("DND5E.CONSUMPTION.Scaling.None") },
-          { value: "amount", label: game.i18n.localize("DND5E.CONSUMPTION.Scaling.Amount") },
+          { value: "", label: game.i18n.localize("DND5R.CONSUMPTION.Scaling.None") },
+          { value: "amount", label: game.i18n.localize("DND5R.CONSUMPTION.Scaling.Amount") },
           ...(typeConfig.scalingModes ?? []).map(({ value, label }) => ({ value, label: game.i18n.localize(label) }))
         ] : null,
         showTargets: "validTargets" in typeConfig,
-        targetPlaceholder: data.type === "itemUses" ? game.i18n.localize("DND5E.CONSUMPTION.Target.ThisItem") : null,
+        targetPlaceholder: data.type === "itemUses" ? game.i18n.localize("DND5R.CONSUMPTION.Target.ThisItem") : null,
         validTargets: showTextTarget ? null : data.validTargets
       };
     });
@@ -265,17 +265,17 @@ export default class ActivitySheet extends Application5e {
 
     // Uses recovery
     context.recoveryPeriods = [
-      ...Object.entries(CONFIG.DND5E.limitedUsePeriods)
+      ...Object.entries(CONFIG.DND5R.limitedUsePeriods)
         .filter(([, config]) => !config.deprecated)
         .map(([value, config]) => ({
-          value, label: config.label, group: game.i18n.localize("DND5E.DurationTime")
+          value, label: config.label, group: game.i18n.localize("DND5R.DurationTime")
         })),
-      { value: "recharge", label: game.i18n.localize("DND5E.USES.Recovery.Recharge.Label") }
+      { value: "recharge", label: game.i18n.localize("DND5R.USES.Recovery.Recharge.Label") }
     ];
     context.recoveryTypes = [
-      { value: "recoverAll", label: game.i18n.localize("DND5E.USES.Recovery.Type.RecoverAll") },
-      { value: "loseAll", label: game.i18n.localize("DND5E.USES.Recovery.Type.LoseAll") },
-      { value: "formula", label: game.i18n.localize("DND5E.USES.Recovery.Type.Formula") }
+      { value: "recoverAll", label: game.i18n.localize("DND5R.USES.Recovery.Type.RecoverAll") },
+      { value: "loseAll", label: game.i18n.localize("DND5R.USES.Recovery.Type.LoseAll") },
+      { value: "formula", label: game.i18n.localize("DND5R.USES.Recovery.Type.Formula") }
     ];
     context.usesRecovery = context.activity.uses.recovery.map((data, index) => ({
       data,
@@ -354,12 +354,12 @@ export default class ActivitySheet extends Application5e {
 
     context.denominationOptions = [
       { value: "", label: "" },
-      ...CONFIG.DND5E.dieSteps.map(value => ({ value, label: `d${value}` }))
+      ...CONFIG.DND5R.dieSteps.map(value => ({ value, label: `d${value}` }))
     ];
     if ( context.activity.damage?.parts ) {
       const scalingOptions = [
-        { value: "", label: game.i18n.localize("DND5E.DAMAGE.Scaling.None") },
-        ...Object.entries(CONFIG.DND5E.damageScalingModes).map(([value, config]) => ({ value, label: config.label }))
+        { value: "", label: game.i18n.localize("DND5R.DAMAGE.Scaling.None") },
+        ...Object.entries(CONFIG.DND5R.damageScalingModes).map(([value, config]) => ({ value, label: config.label }))
       ];
       let indexOffset = 0;
       context.damageParts = context.activity.damage.parts.map((data, index) => {
@@ -372,7 +372,7 @@ export default class ActivitySheet extends Application5e {
           source: context.source.damage.parts[index + indexOffset] ?? data,
           canScale: this.activity.canScaleDamage,
           scalingOptions,
-          typeOptions: Object.entries(CONFIG.DND5E.damageTypes).map(([value, config]) => ({
+          typeOptions: Object.entries(CONFIG.DND5R.damageTypes).map(([value, config]) => ({
             value, label: config.label, selected: data.types.has(value)
           }))
         };
@@ -411,29 +411,29 @@ export default class ActivitySheet extends Application5e {
     return this._markTabs({
       identity: {
         id: "identity", group: "sheet", icon: "fa-solid fa-tag",
-        label: "DND5E.ACTIVITY.SECTIONS.Identity"
+        label: "DND5R.ACTIVITY.SECTIONS.Identity"
       },
       activation: {
         id: "activation", group: "sheet", icon: "fa-solid fa-clapperboard",
-        label: "DND5E.ACTIVITY.SECTIONS.Activation",
+        label: "DND5R.ACTIVITY.SECTIONS.Activation",
         tabs: {
           time: {
             id: "time", group: "activation", icon: "fa-solid fa-clock",
-            label: "DND5E.ACTIVITY.SECTIONS.Time"
+            label: "DND5R.ACTIVITY.SECTIONS.Time"
           },
           consumption: {
             id: "consumption", group: "activation", icon: "fa-solid fa-boxes-stacked",
-            label: "DND5E.CONSUMPTION.FIELDS.consumption.label"
+            label: "DND5R.CONSUMPTION.FIELDS.consumption.label"
           },
           targeting: {
             id: "activation-targeting", group: "activation", icon: "fa-solid fa-bullseye",
-            label: "DND5E.TARGET.FIELDS.target.label"
+            label: "DND5R.TARGET.FIELDS.target.label"
           }
         }
       },
       effect: {
         id: "effect", group: "sheet", icon: "fa-solid fa-sun",
-        label: "DND5E.ACTIVITY.SECTIONS.Effect"
+        label: "DND5R.ACTIVITY.SECTIONS.Effect"
       }
     });
   }
@@ -462,7 +462,7 @@ export default class ActivitySheet extends Application5e {
   /** @override */
   _canRender(options) {
     if ( !this.isVisible ) throw new Error(game.i18n.format("SHEETS.DocumentSheetPrivate", {
-      type: game.i18n.localize("DND5E.ACTIVITY.Title.one")
+      type: game.i18n.localize("DND5R.ACTIVITY.Title.one")
     }));
   }
 
@@ -602,7 +602,7 @@ export default class ActivitySheet extends Application5e {
    */
   static #addRecovery(event, target) {
     const periods = new Set(
-      Object.entries(CONFIG.DND5E.limitedUsePeriods).filter(([, config]) => !config.deprecated).map(([k]) => k)
+      Object.entries(CONFIG.DND5R.limitedUsePeriods).filter(([, config]) => !config.deprecated).map(([k]) => k)
     );
     const existingPeriods = new Set(this.activity.uses.recovery.map(t => t.period));
     const filteredPeriods = periods.difference(existingPeriods);
@@ -745,7 +745,7 @@ export default class ActivitySheet extends Application5e {
       }
     }
     // Workaround for https://github.com/foundryvtt/foundryvtt/issues/11610
-    this.element.querySelectorAll("fieldset legend :is(input, select, dnd5e-checkbox)").forEach(input => {
+    this.element.querySelectorAll("fieldset legend :is(input, select, dnd5r-checkbox)").forEach(input => {
       foundry.utils.setProperty(submitData, input.name, input.value);
     });
     return submitData;

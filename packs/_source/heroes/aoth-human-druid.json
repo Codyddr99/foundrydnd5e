@@ -1,7 +1,7 @@
 {
   "name": "Aoth (Human Druid)",
   "type": "character",
-  "img": "systems/dnd5etools/tokens/heroes/DruidStaff.webp",
+  "img": "systems/dnd5r/tokens/heroes/DruidStaff.webp",
   "system": {
     "abilities": {
       "str": {
@@ -608,7 +608,7 @@
       "priority": 0
     },
     "texture": {
-      "src": "systems/dnd5etools/tokens/heroes/DruidStaff.webp",
+      "src": "systems/dnd5r/tokens/heroes/DruidStaff.webp",
       "tint": "#ffffff",
       "scaleX": 1,
       "scaleY": 1,
@@ -702,7 +702,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -751,7 +751,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.419eNv7xp2p7Xlo5"
+          "sourceId": "Compendium.dnd5r.items.419eNv7xp2p7Xlo5"
         }
       },
       "img": "icons/sundries/flags/banner-worn-green.webp",
@@ -761,10 +761,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.419eNv7xp2p7Xlo5",
+        "compendiumSource": "Compendium.dnd5r.items.419eNv7xp2p7Xlo5",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -832,7 +832,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -903,8 +903,8 @@
         "container": null,
         "properties": [],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "",
@@ -974,7 +974,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.8RXjiddJ6VGyE7vB"
+          "sourceId": "Compendium.dnd5r.items.8RXjiddJ6VGyE7vB"
         }
       },
       "img": "icons/equipment/chest/shirt-collared-brown.webp",
@@ -984,10 +984,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.8RXjiddJ6VGyE7vB",
+        "compendiumSource": "Compendium.dnd5r.items.8RXjiddJ6VGyE7vB",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1038,8 +1038,8 @@
         "container": null,
         "properties": [],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "check",
             "activation": {
               "type": "",
@@ -1110,7 +1110,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.i89okN7GFTWHsvPy"
+          "sourceId": "Compendium.dnd5r.items.i89okN7GFTWHsvPy"
         }
       },
       "img": "icons/containers/bags/pouch-leather-green.webp",
@@ -1120,10 +1120,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.i89okN7GFTWHsvPy",
+        "compendiumSource": "Compendium.dnd5r.items.i89okN7GFTWHsvPy",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1200,7 +1200,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.WwdpHLXGX5r8uZu5"
+          "sourceId": "Compendium.dnd5r.items.WwdpHLXGX5r8uZu5"
         }
       },
       "img": "icons/equipment/chest/breastplate-quilted-brown.webp",
@@ -1210,10 +1210,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.WwdpHLXGX5r8uZu5",
+        "compendiumSource": "Compendium.dnd5r.items.WwdpHLXGX5r8uZu5",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1319,8 +1319,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "action",
@@ -1406,7 +1406,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.g2dWN7PQiMRYWzyk"
+          "sourceId": "Compendium.dnd5r.items.g2dWN7PQiMRYWzyk"
         }
       },
       "img": "icons/weapons/staves/staff-simple-gold.webp",
@@ -1416,10 +1416,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.g2dWN7PQiMRYWzyk",
+        "compendiumSource": "Compendium.dnd5r.items.g2dWN7PQiMRYWzyk",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1525,8 +1525,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "action",
@@ -1612,7 +1612,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.nfIRTECQIG81CvM4"
+          "sourceId": "Compendium.dnd5r.items.nfIRTECQIG81CvM4"
         }
       },
       "img": "icons/weapons/clubs/club-simple-barbed.webp",
@@ -1622,10 +1622,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.nfIRTECQIG81CvM4",
+        "compendiumSource": "Compendium.dnd5r.items.nfIRTECQIG81CvM4",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1684,7 +1684,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.H8YCd689ezlD26aT"
+          "sourceId": "Compendium.dnd5r.items.H8YCd689ezlD26aT"
         }
       },
       "img": "icons/containers/bags/pack-simple-leather.webp",
@@ -1694,10 +1694,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.H8YCd689ezlD26aT",
+        "compendiumSource": "Compendium.dnd5r.items.H8YCd689ezlD26aT",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1746,7 +1746,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.DVXmyetZuvxbzAwW"
+          "sourceId": "Compendium.dnd5r.items.DVXmyetZuvxbzAwW"
         }
       },
       "img": "icons/sundries/flags/banner-worn-blue.webp",
@@ -1756,10 +1756,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.DVXmyetZuvxbzAwW",
+        "compendiumSource": "Compendium.dnd5r.items.DVXmyetZuvxbzAwW",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1808,7 +1808,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.V13fjV5oSmvbRdgP"
+          "sourceId": "Compendium.dnd5r.items.V13fjV5oSmvbRdgP"
         }
       },
       "img": "icons/tools/cooking/fork-steel-grey.webp",
@@ -1818,10 +1818,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.V13fjV5oSmvbRdgP",
+        "compendiumSource": "Compendium.dnd5r.items.V13fjV5oSmvbRdgP",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1870,7 +1870,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.DNOSEAvF4Oh1DlWy"
+          "sourceId": "Compendium.dnd5r.items.DNOSEAvF4Oh1DlWy"
         }
       },
       "img": "icons/sundries/lights/torch-black.webp",
@@ -1880,10 +1880,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.DNOSEAvF4Oh1DlWy",
+        "compendiumSource": "Compendium.dnd5r.items.DNOSEAvF4Oh1DlWy",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -1951,8 +1951,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "check",
             "activation": {
               "type": "action",
@@ -2024,8 +2024,8 @@
             },
             "sort": 0
           },
-          "dnd5eactivity100": {
-            "_id": "dnd5eactivity100",
+          "dnd5ractivity100": {
+            "_id": "dnd5ractivity100",
             "type": "save",
             "activation": {
               "type": "action",
@@ -2111,7 +2111,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.QXmaarJ4X8P0C1HV"
+          "sourceId": "Compendium.dnd5r.items.QXmaarJ4X8P0C1HV"
         }
       },
       "img": "icons/sundries/survival/rope-wrapped-brown.webp",
@@ -2121,10 +2121,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.QXmaarJ4X8P0C1HV",
+        "compendiumSource": "Compendium.dnd5r.items.QXmaarJ4X8P0C1HV",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -2192,8 +2192,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -2274,7 +2274,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.Uv0ilmzbWvqmlCVH"
+          "sourceId": "Compendium.dnd5r.items.Uv0ilmzbWvqmlCVH"
         }
       },
       "img": "icons/sundries/survival/wetskin-leather-purple.webp",
@@ -2284,10 +2284,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.Uv0ilmzbWvqmlCVH",
+        "compendiumSource": "Compendium.dnd5r.items.Uv0ilmzbWvqmlCVH",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -2361,8 +2361,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "action",
@@ -2474,7 +2474,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.BnOCLuNWhVvzHLjl"
+          "sourceId": "Compendium.dnd5r.items.BnOCLuNWhVvzHLjl"
         }
       },
       "img": "icons/sundries/lights/torch-black.webp",
@@ -2484,10 +2484,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.BnOCLuNWhVvzHLjl",
+        "compendiumSource": "Compendium.dnd5r.items.BnOCLuNWhVvzHLjl",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -2555,8 +2555,8 @@
         },
         "container": null,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -2637,7 +2637,7 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.f4w4GxBi0nYXmhX4"
+          "sourceId": "Compendium.dnd5r.items.f4w4GxBi0nYXmhX4"
         }
       },
       "img": "icons/consumables/meat/hock-leg-pink-brown.webp",
@@ -2647,10 +2647,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.f4w4GxBi0nYXmhX4",
+        "compendiumSource": "Compendium.dnd5r.items.f4w4GxBi0nYXmhX4",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -2721,8 +2721,8 @@
           "somatic"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -2778,17 +2778,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.SbSvZKkJASyk8jKo"
+          "sourceId": "Compendium.dnd5r.spells.SbSvZKkJASyk8jKo"
         }
       },
       "img": "icons/magic/nature/vines-thorned-glow-teal.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.SbSvZKkJASyk8jKo",
+        "compendiumSource": "Compendium.dnd5r.spells.SbSvZKkJASyk8jKo",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -2861,8 +2861,8 @@
           "material"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "damage",
             "activation": {
               "type": "action",
@@ -2937,17 +2937,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.VzgFzcmocr1X1cp4"
+          "sourceId": "Compendium.dnd5r.spells.VzgFzcmocr1X1cp4"
         }
       },
       "img": "icons/magic/fire/dagger-rune-enchant-teal.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.VzgFzcmocr1X1cp4",
+        "compendiumSource": "Compendium.dnd5r.spells.VzgFzcmocr1X1cp4",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -3021,8 +3021,8 @@
           "material"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "save",
             "activation": {
               "type": "action",
@@ -3083,17 +3083,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.hDOENzjuj5WpLq7B"
+          "sourceId": "Compendium.dnd5r.spells.hDOENzjuj5WpLq7B"
         }
       },
       "img": "icons/magic/nature/wolf-paw-glow-teal-blue.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.hDOENzjuj5WpLq7B",
+        "compendiumSource": "Compendium.dnd5r.spells.hDOENzjuj5WpLq7B",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -3166,8 +3166,8 @@
           "somatic"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "save",
             "activation": {
               "type": "action",
@@ -3228,17 +3228,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.eS7XnnApoxRxYXPs"
+          "sourceId": "Compendium.dnd5r.spells.eS7XnnApoxRxYXPs"
         }
       },
       "img": "icons/magic/fire/explosion-fireball-medium-purple-pink.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.eS7XnnApoxRxYXPs",
+        "compendiumSource": "Compendium.dnd5r.spells.eS7XnnApoxRxYXPs",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -3312,8 +3312,8 @@
           "material"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -3369,17 +3369,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.a3XtAO5n2GrqiAh5"
+          "sourceId": "Compendium.dnd5r.spells.a3XtAO5n2GrqiAh5"
         }
       },
       "img": "icons/magic/air/wind-swirl-purple-blue.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.a3XtAO5n2GrqiAh5",
+        "compendiumSource": "Compendium.dnd5r.spells.a3XtAO5n2GrqiAh5",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -3451,8 +3451,8 @@
           "somatic"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "heal",
             "activation": {
               "type": "action",
@@ -3519,17 +3519,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.uUWb1wZgtMou0TVP"
+          "sourceId": "Compendium.dnd5r.spells.uUWb1wZgtMou0TVP"
         }
       },
       "img": "icons/magic/life/heart-cross-green.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.uUWb1wZgtMou0TVP",
+        "compendiumSource": "Compendium.dnd5r.spells.uUWb1wZgtMou0TVP",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -3603,8 +3603,8 @@
           "concentration"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -3660,17 +3660,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.ghXTfe7sgCbgf1Q8"
+          "sourceId": "Compendium.dnd5r.spells.ghXTfe7sgCbgf1Q8"
         }
       },
       "img": "icons/magic/light/explosion-star-blue.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.ghXTfe7sgCbgf1Q8",
+        "compendiumSource": "Compendium.dnd5r.spells.ghXTfe7sgCbgf1Q8",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -3744,8 +3744,8 @@
           "concentration"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -3801,17 +3801,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.2skfDtglk1mGrb3l"
+          "sourceId": "Compendium.dnd5r.spells.2skfDtglk1mGrb3l"
         }
       },
       "img": "icons/magic/air/air-burst-spiral-teal-green.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.2skfDtglk1mGrb3l",
+        "compendiumSource": "Compendium.dnd5r.spells.2skfDtglk1mGrb3l",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -3882,8 +3882,8 @@
           "concentration"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "save",
             "activation": {
               "type": "action",
@@ -3944,7 +3944,7 @@
       "effects": [],
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.gMrWeG8fMDPRFiVe"
+          "sourceId": "Compendium.dnd5r.spells.gMrWeG8fMDPRFiVe"
         }
       },
       "_id": "gMrWeG8fMDPRFiVe",
@@ -3954,10 +3954,10 @@
         "default": 0
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.gMrWeG8fMDPRFiVe",
+        "compendiumSource": "Compendium.dnd5r.spells.gMrWeG8fMDPRFiVe",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -4030,8 +4030,8 @@
           "concentration"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "save",
             "activation": {
               "type": "action",
@@ -4092,17 +4092,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.nqBDWkVOfcGZt4YU"
+          "sourceId": "Compendium.dnd5r.spells.nqBDWkVOfcGZt4YU"
         }
       },
       "img": "icons/magic/fire/projectile-meteor-salvo-strong-teal.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.nqBDWkVOfcGZt4YU",
+        "compendiumSource": "Compendium.dnd5r.spells.nqBDWkVOfcGZt4YU",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -4176,8 +4176,8 @@
           "concentration"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -4233,17 +4233,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.IBJmWjzbQGu7M4UX"
+          "sourceId": "Compendium.dnd5r.spells.IBJmWjzbQGu7M4UX"
         }
       },
       "img": "icons/magic/air/fog-gas-smoke-dense-gray.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.IBJmWjzbQGu7M4UX",
+        "compendiumSource": "Compendium.dnd5r.spells.IBJmWjzbQGu7M4UX",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -4314,8 +4314,8 @@
           "material"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "heal",
             "activation": {
               "type": "action",
@@ -4382,17 +4382,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.Qf6CAZkc7ms4ZY3e"
+          "sourceId": "Compendium.dnd5r.spells.Qf6CAZkc7ms4ZY3e"
         }
       },
       "img": "icons/magic/nature/leaf-glow-green.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.Qf6CAZkc7ms4ZY3e",
+        "compendiumSource": "Compendium.dnd5r.spells.Qf6CAZkc7ms4ZY3e",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -4464,8 +4464,8 @@
           "vocal"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "heal",
             "activation": {
               "type": "action",
@@ -4532,17 +4532,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.o8Dh7fblk1d16tnO"
+          "sourceId": "Compendium.dnd5r.spells.o8Dh7fblk1d16tnO"
         }
       },
       "img": "icons/magic/life/heart-cross-green.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.o8Dh7fblk1d16tnO",
+        "compendiumSource": "Compendium.dnd5r.spells.o8Dh7fblk1d16tnO",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -4615,8 +4615,8 @@
           "material"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -4672,17 +4672,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.ZrTc23tToJ0JpH2h"
+          "sourceId": "Compendium.dnd5r.spells.ZrTc23tToJ0JpH2h"
         }
       },
       "img": "icons/magic/control/debuff-energy-hold-blue-yellow.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.ZrTc23tToJ0JpH2h",
+        "compendiumSource": "Compendium.dnd5r.spells.ZrTc23tToJ0JpH2h",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -4755,8 +4755,8 @@
           "material"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -4812,17 +4812,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.B0pnIcc52O6G8hi8"
+          "sourceId": "Compendium.dnd5r.spells.B0pnIcc52O6G8hi8"
         }
       },
       "img": "icons/magic/air/wind-stream-blue-gray.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.B0pnIcc52O6G8hi8",
+        "compendiumSource": "Compendium.dnd5r.spells.B0pnIcc52O6G8hi8",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -4896,8 +4896,8 @@
           "ritual"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -4953,17 +4953,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.Kn7K5PtYUJAKZTTp"
+          "sourceId": "Compendium.dnd5r.spells.Kn7K5PtYUJAKZTTp"
         }
       },
       "img": "icons/magic/light/explosion-star-small-teal.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.Kn7K5PtYUJAKZTTp",
+        "compendiumSource": "Compendium.dnd5r.spells.Kn7K5PtYUJAKZTTp",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -5035,8 +5035,8 @@
           "ritual"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "utility",
             "activation": {
               "type": "action",
@@ -5092,17 +5092,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.aL1F8fvYLtNzUbKu"
+          "sourceId": "Compendium.dnd5r.spells.aL1F8fvYLtNzUbKu"
         }
       },
       "img": "icons/magic/nature/wolf-paw-glow-small-teal-blue.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.aL1F8fvYLtNzUbKu",
+        "compendiumSource": "Compendium.dnd5r.spells.aL1F8fvYLtNzUbKu",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -5174,8 +5174,8 @@
           "somatic"
         ],
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "save",
             "activation": {
               "type": "action",
@@ -5254,17 +5254,17 @@
       "sort": 0,
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.spells.WTbOQBsarsL1LuXJ"
+          "sourceId": "Compendium.dnd5r.spells.WTbOQBsarsL1LuXJ"
         }
       },
       "img": "icons/magic/lightning/bolt-forked-teal.webp",
       "effects": [],
       "folder": null,
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.spells.WTbOQBsarsL1LuXJ",
+        "compendiumSource": "Compendium.dnd5r.spells.WTbOQBsarsL1LuXJ",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -5303,7 +5303,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -5319,7 +5319,7 @@
       "img": "icons/creatures/mammals/elk-moose-marked-green.webp",
       "system": {
         "description": {
-          "value": "<p>As a druid, you gain the following class features.</p><h3>Hit Points</h3><p><strong>Hit Dice:</strong> 1d8 per druid level<br /><strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier<br /><strong>Hit Points at Higher Levels:</strong> 1d8 (or 5) + your Constitution modifier per druid level after 1st</p><h3>Proficiencies</h3><p><strong>Armor:</strong> Light armor, medium armor, shields (druids will not wear armor or use shields made of metal)<br /><strong>Weapons:</strong> Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears<br /><strong>Tools:</strong> Herbalism kit<br /><strong>Saving Throws:</strong> Intelligence, Wisdom<br /><strong>Skills:</strong> Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival</p><h3>Equipment</h3><p>You start with the following equipment, in addition to the equipment granted by your background:</p><ul><li>(a) a wooden shield or (b) any simple weapon</li><li>(a) a scimitar or (b) any simple melee weapon</li><li>Leather armor, an explorer's pack, and a druidic focus</li></ul><h1>Druid Advancement</h1><table><thead><tr><td>Level</td><td>Proficiency Bonus</td><td>Features</td></tr></thead><tbody><tr><td>1st</td><td>+2</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.LzJ5ayHt0OlSVGxi]{Druidic}, @UUID[Compendium.dnd5e.classfeatures.Item.i6tPm3FNK13Ftc9v]{Spellcasting}</td></tr><tr><td>2nd</td><td>+2</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.swK0r5TOIxredxWS]{Wild Shape (Max CR ¼)}, @UUID[Compendium.dnd5e.classfeatures.Item.u6Du2P9s81SWuGbi]{Druid Circle}</td></tr><tr><td>3rd</td><td>+2</td><td>2nd Level Spell Slot</td></tr><tr><td>4th</td><td>+2</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.swK0r5TOIxredxWS]{Wild Shape (Max CR ½)}, @UUID[Compendium.dnd5e.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>5th</td><td>+3</td><td>3rd Level Spell Slot</td></tr><tr><td>6th</td><td>+3</td><td>Druid Circle feature</td></tr><tr><td>7th</td><td>+3</td><td>4th Level Spell Slot</td></tr><tr><td>8th</td><td>+3</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.swK0r5TOIxredxWS]{Wild Shape (Max CR 1)}, @UUID[Compendium.dnd5e.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>9th</td><td>+4</td><td>5th Level Spell Slot</td></tr><tr><td>10th</td><td>+4</td><td>Druid Circle feature</td></tr><tr><td>11th</td><td>+4</td><td>6th Level Spell Slot</td></tr><tr><td>12th</td><td>+4</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>13th</td><td>+5</td><td>7th Level Spell Slot</td></tr><tr><td>14th</td><td>+5</td><td>Druid Circle feature</td></tr><tr><td>15th</td><td>+5</td><td>8th Level Spell Slot</td></tr><tr><td>16th</td><td>+5</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>17th</td><td>+6</td><td>9th Level Spell Slot</td></tr><tr><td>18th</td><td>+6</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.cVDEQo0ow1WJT7Wl]{Timeless Body}, @UUID[Compendium.dnd5e.classfeatures.Item.xvgPu1O57DgXCM86]{Beast Spells}</td></tr><tr><td>19th</td><td>+6</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>20th</td><td>+6</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.ip4bvmGoz3qkoqes]{Archdruid}</td></tr></tbody></table><h3>Sacred Plants and Wood</h3><p>A druid holds certain plants to be sacred, particularly alder, ash, birch, elder, hazel, holly, juniper, mistletoe, oak, rowan, willow, and yew. Druids often use such plants as part of a spellcasting focus, incorporating lengths of oak or yew or sprigs of mistletoe.</p><p>Similarly, a druid uses such woods to make other objects, such as weapons and shields. Yew is associated with death and rebirth, so weapon handles for scimitars or sickles might be fashioned from it. Ash is associated with life and oak with strength. These woods make excellent hafts or whole weapons, such as clubs or quarterstaffs, as well as shields. Alder is associated with air, and it might be used for thrown weapons, such as darts or javelins.</p><p>Druids from regions that lack the plants described here have chosen other plants to take on similar uses. For instance, a druid of a desert region might value the yucca tree and cactus plants.</p><h3>Druids and the Gods</h3><p>Some druids venerate the forces of nature themselves, but most druids are devoted to one of the many nature deities worshiped in the multiverse (the lists of gods in @UUID[Compendium.dnd5e.rules.JournalEntry.udVPA9JW5wy5t3G5]{Appendix B} include many such deities). The worship of these deities is often considered a more ancient tradition than the faiths of clerics and urbanized peoples.</p><h1>Druid Circles</h1><p>@UUID[Compendium.dnd5e.subclasses.Item.4Ae2SPZRXEVbVs0M]{Circle of the Land}</p>",
+          "value": "<p>As a druid, you gain the following class features.</p><h3>Hit Points</h3><p><strong>Hit Dice:</strong> 1d8 per druid level<br /><strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier<br /><strong>Hit Points at Higher Levels:</strong> 1d8 (or 5) + your Constitution modifier per druid level after 1st</p><h3>Proficiencies</h3><p><strong>Armor:</strong> Light armor, medium armor, shields (druids will not wear armor or use shields made of metal)<br /><strong>Weapons:</strong> Clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears<br /><strong>Tools:</strong> Herbalism kit<br /><strong>Saving Throws:</strong> Intelligence, Wisdom<br /><strong>Skills:</strong> Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival</p><h3>Equipment</h3><p>You start with the following equipment, in addition to the equipment granted by your background:</p><ul><li>(a) a wooden shield or (b) any simple weapon</li><li>(a) a scimitar or (b) any simple melee weapon</li><li>Leather armor, an explorer's pack, and a druidic focus</li></ul><h1>Druid Advancement</h1><table><thead><tr><td>Level</td><td>Proficiency Bonus</td><td>Features</td></tr></thead><tbody><tr><td>1st</td><td>+2</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.LzJ5ayHt0OlSVGxi]{Druidic}, @UUID[Compendium.dnd5r.classfeatures.Item.i6tPm3FNK13Ftc9v]{Spellcasting}</td></tr><tr><td>2nd</td><td>+2</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.swK0r5TOIxredxWS]{Wild Shape (Max CR ¼)}, @UUID[Compendium.dnd5r.classfeatures.Item.u6Du2P9s81SWuGbi]{Druid Circle}</td></tr><tr><td>3rd</td><td>+2</td><td>2nd Level Spell Slot</td></tr><tr><td>4th</td><td>+2</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.swK0r5TOIxredxWS]{Wild Shape (Max CR ½)}, @UUID[Compendium.dnd5r.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>5th</td><td>+3</td><td>3rd Level Spell Slot</td></tr><tr><td>6th</td><td>+3</td><td>Druid Circle feature</td></tr><tr><td>7th</td><td>+3</td><td>4th Level Spell Slot</td></tr><tr><td>8th</td><td>+3</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.swK0r5TOIxredxWS]{Wild Shape (Max CR 1)}, @UUID[Compendium.dnd5r.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>9th</td><td>+4</td><td>5th Level Spell Slot</td></tr><tr><td>10th</td><td>+4</td><td>Druid Circle feature</td></tr><tr><td>11th</td><td>+4</td><td>6th Level Spell Slot</td></tr><tr><td>12th</td><td>+4</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>13th</td><td>+5</td><td>7th Level Spell Slot</td></tr><tr><td>14th</td><td>+5</td><td>Druid Circle feature</td></tr><tr><td>15th</td><td>+5</td><td>8th Level Spell Slot</td></tr><tr><td>16th</td><td>+5</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>17th</td><td>+6</td><td>9th Level Spell Slot</td></tr><tr><td>18th</td><td>+6</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.cVDEQo0ow1WJT7Wl]{Timeless Body}, @UUID[Compendium.dnd5r.classfeatures.Item.xvgPu1O57DgXCM86]{Beast Spells}</td></tr><tr><td>19th</td><td>+6</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>20th</td><td>+6</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.ip4bvmGoz3qkoqes]{Archdruid}</td></tr></tbody></table><h3>Sacred Plants and Wood</h3><p>A druid holds certain plants to be sacred, particularly alder, ash, birch, elder, hazel, holly, juniper, mistletoe, oak, rowan, willow, and yew. Druids often use such plants as part of a spellcasting focus, incorporating lengths of oak or yew or sprigs of mistletoe.</p><p>Similarly, a druid uses such woods to make other objects, such as weapons and shields. Yew is associated with death and rebirth, so weapon handles for scimitars or sickles might be fashioned from it. Ash is associated with life and oak with strength. These woods make excellent hafts or whole weapons, such as clubs or quarterstaffs, as well as shields. Alder is associated with air, and it might be used for thrown weapons, such as darts or javelins.</p><p>Druids from regions that lack the plants described here have chosen other plants to take on similar uses. For instance, a druid of a desert region might value the yucca tree and cactus plants.</p><h3>Druids and the Gods</h3><p>Some druids venerate the forces of nature themselves, but most druids are devoted to one of the many nature deities worshiped in the multiverse (the lists of gods in @UUID[Compendium.dnd5r.rules.JournalEntry.udVPA9JW5wy5t3G5]{Appendix B} include many such deities). The worship of these deities is often considered a more ancient tradition than the faiths of clerics and urbanized peoples.</p><h1>Druid Circles</h1><p>@UUID[Compendium.dnd5r.subclasses.Item.4Ae2SPZRXEVbVs0M]{Circle of the Land}</p>",
           "chat": ""
         },
         "source": {
@@ -5348,11 +5348,11 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.LzJ5ayHt0OlSVGxi",
+                  "uuid": "Compendium.dnd5r.classfeatures.LzJ5ayHt0OlSVGxi",
                   "optional": false
                 },
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.i6tPm3FNK13Ftc9v",
+                  "uuid": "Compendium.dnd5r.classfeatures.i6tPm3FNK13Ftc9v",
                   "optional": false
                 }
               ],
@@ -5370,8 +5370,8 @@
             },
             "value": {
               "added": {
-                "njUMNaCbBHpZswoL": "Compendium.dnd5e.classfeatures.LzJ5ayHt0OlSVGxi",
-                "HK6uFl7S3Mahvw9o": "Compendium.dnd5e.classfeatures.i6tPm3FNK13Ftc9v"
+                "njUMNaCbBHpZswoL": "Compendium.dnd5r.classfeatures.LzJ5ayHt0OlSVGxi",
+                "HK6uFl7S3Mahvw9o": "Compendium.dnd5r.classfeatures.i6tPm3FNK13Ftc9v"
               }
             },
             "level": 1,
@@ -5383,11 +5383,11 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.swK0r5TOIxredxWS",
+                  "uuid": "Compendium.dnd5r.classfeatures.swK0r5TOIxredxWS",
                   "optional": false
                 },
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.u6Du2P9s81SWuGbi",
+                  "uuid": "Compendium.dnd5r.classfeatures.u6Du2P9s81SWuGbi",
                   "optional": false
                 }
               ],
@@ -5413,11 +5413,11 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.cVDEQo0ow1WJT7Wl",
+                  "uuid": "Compendium.dnd5r.classfeatures.cVDEQo0ow1WJT7Wl",
                   "optional": false
                 },
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.xvgPu1O57DgXCM86",
+                  "uuid": "Compendium.dnd5r.classfeatures.xvgPu1O57DgXCM86",
                   "optional": false
                 }
               ],
@@ -5443,7 +5443,7 @@
             "configuration": {
               "items": [
                 {
-                  "uuid": "Compendium.dnd5e.classfeatures.ip4bvmGoz3qkoqes",
+                  "uuid": "Compendium.dnd5r.classfeatures.ip4bvmGoz3qkoqes",
                   "optional": false
                 }
               ],
@@ -5486,7 +5486,7 @@
             },
             "value": {},
             "title": "Wild Shape CR",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "1QhHZI6jSvld160r"
           },
           {
@@ -5511,7 +5511,7 @@
             },
             "value": {},
             "title": "Cantrips Known",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "YNXUUmku0b96ssgn"
           },
           {
@@ -5534,7 +5534,7 @@
             },
             "level": 4,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "IpPkoQHqKQLHlUU3"
           },
           {
@@ -5557,7 +5557,7 @@
             },
             "level": 8,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "rJFXsnndXMZWrHvk"
           },
           {
@@ -5580,7 +5580,7 @@
             },
             "level": 12,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "qNTlxRMRAOdeUFJs"
           },
           {
@@ -5603,7 +5603,7 @@
             },
             "level": 16,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "9NliZ0Lrp32zOjQc"
           },
           {
@@ -5802,14 +5802,14 @@
       },
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.classes.Item.ygVYgPbJkaH0tH1N"
+          "sourceId": "Compendium.dnd5r.classes.Item.ygVYgPbJkaH0tH1N"
         }
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.classes.Item.ygVYgPbJkaH0tH1N",
+        "compendiumSource": "Compendium.dnd5r.classes.Item.ygVYgPbJkaH0tH1N",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -5855,8 +5855,8 @@
         "identifier": "druidic"
       },
       "flags": {
-        "dnd5e": {
-          "sourceId": "Compendium.dnd5e.classfeatures.LzJ5ayHt0OlSVGxi",
+        "dnd5r": {
+          "sourceId": "Compendium.dnd5r.classfeatures.LzJ5ayHt0OlSVGxi",
           "advancementOrigin": "mwtiHpkH8Gglxr3u.0b5DhiMraHtwZOfm"
         }
       },
@@ -5893,7 +5893,7 @@
             "compendiumSource": null,
             "duplicateSource": null,
             "coreVersion": "12.331",
-            "systemId": "dnd5e",
+            "systemId": "dnd5r",
             "systemVersion": "4.0.0",
             "createdTime": null,
             "modifiedTime": null,
@@ -5912,7 +5912,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -5929,7 +5929,7 @@
       "type": "feat",
       "system": {
         "description": {
-          "value": "<p>Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will.</p>\n<h5>Cantrips</h5>\n<p>At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table.</p>\n<h5>Preparing and Casting Spells</h5>\n<p>The Druid table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these druid spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.</p>\n<p>You prepare the list of druid spells that are available for you to cast, choosing from the druid spell list. When you do so, choose a number of druid spells equal to your Wisdom modifier + your druid level (minimum of one spell). The spells must be of a level for which you have spell slots.</p>\n<p>For example, if you are a 3rd-level druid, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.</p>\n<p>You can also change your list of prepared spells when you finish a long rest. Preparing a new list of druid spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list.</p>\n<h5>Spellcasting Ability</h5>\n<p>Wisdom is your spellcasting ability for your druid spells, since your magic draws upon your devotion and attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a druid spell you cast and when making an attack roll with one.</p>\n<p><strong>Spell save DC</strong> = 8 + your proficiency bonus + your Wisdom modifier</p>\n<p><strong>Spell attack modifier</strong> = your proficiency bonus + your Wisdom modifier</p>\n<h5>Ritual Casting</h5>\n<p>You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared.</p>\n<h5>Spellcasting Focus</h5>\n<p>You can use a druidic focus (see @UUID[Compendium.dnd5e.rules.JournalEntry.BYFd9hiJGo9L5aOM.JournalEntryPage.AjavRU4yPfI9hfaI]{Adventuring Gear}) as a spellcasting focus for your druid spells.</p>",
+          "value": "<p>Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will.</p>\n<h5>Cantrips</h5>\n<p>At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table.</p>\n<h5>Preparing and Casting Spells</h5>\n<p>The Druid table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these druid spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.</p>\n<p>You prepare the list of druid spells that are available for you to cast, choosing from the druid spell list. When you do so, choose a number of druid spells equal to your Wisdom modifier + your druid level (minimum of one spell). The spells must be of a level for which you have spell slots.</p>\n<p>For example, if you are a 3rd-level druid, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell cure wounds, you can cast it using a 1st-level or 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.</p>\n<p>You can also change your list of prepared spells when you finish a long rest. Preparing a new list of druid spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list.</p>\n<h5>Spellcasting Ability</h5>\n<p>Wisdom is your spellcasting ability for your druid spells, since your magic draws upon your devotion and attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a druid spell you cast and when making an attack roll with one.</p>\n<p><strong>Spell save DC</strong> = 8 + your proficiency bonus + your Wisdom modifier</p>\n<p><strong>Spell attack modifier</strong> = your proficiency bonus + your Wisdom modifier</p>\n<h5>Ritual Casting</h5>\n<p>You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared.</p>\n<h5>Spellcasting Focus</h5>\n<p>You can use a druidic focus (see @UUID[Compendium.dnd5r.rules.JournalEntry.BYFd9hiJGo9L5aOM.JournalEntryPage.AjavRU4yPfI9hfaI]{Adventuring Gear}) as a spellcasting focus for your druid spells.</p>",
           "chat": ""
         },
         "source": {
@@ -5958,8 +5958,8 @@
         "identifier": "spellcasting-druid"
       },
       "flags": {
-        "dnd5e": {
-          "sourceId": "Compendium.dnd5e.classfeatures.i6tPm3FNK13Ftc9v",
+        "dnd5r": {
+          "sourceId": "Compendium.dnd5r.classfeatures.i6tPm3FNK13Ftc9v",
           "advancementOrigin": "mwtiHpkH8Gglxr3u.0b5DhiMraHtwZOfm"
         }
       },
@@ -5971,7 +5971,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -6100,14 +6100,14 @@
       },
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.races.ydP3QzCmur55mtY2"
+          "sourceId": "Compendium.dnd5r.races.ydP3QzCmur55mtY2"
         }
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.races.ydP3QzCmur55mtY2",
+        "compendiumSource": "Compendium.dnd5r.races.ydP3QzCmur55mtY2",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -6129,11 +6129,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725036840508,
     "modifiedTime": 1725992448110,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!actors!ZGDys30OS76uYaIO"
 }

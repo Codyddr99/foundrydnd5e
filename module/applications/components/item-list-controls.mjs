@@ -138,7 +138,7 @@ export default class ItemListControlsElement extends HTMLElement {
    * @type {TabPreferences5e}
    */
   get prefs() {
-    return game.user.getFlag("dnd5e", `sheetPrefs.${this.app.object.type}.tabs.${this.tab}`);
+    return game.user.getFlag("dnd5r", `sheetPrefs.${this.app.object.type}.tabs.${this.tab}`);
   }
 
   /**
@@ -181,7 +181,7 @@ export default class ItemListControlsElement extends HTMLElement {
       <ul class="unlist controls">
         <li>
           <button type="button" class="unbutton filter-control interface-only" data-action="clear"
-                  data-tooltip="DND5E.FilterClear" aria-label="${game.i18n.localize("DND5E.FilterClear")}">
+                  data-tooltip="DND5R.FilterClear" aria-label="${game.i18n.localize("DND5R.FilterClear")}">
             <i class="fas fa-xmark"></i>
           </button>
         </li>
@@ -196,7 +196,7 @@ export default class ItemListControlsElement extends HTMLElement {
       item.classList.add("dropdown");
       item.innerHTML = `
         <button type="button" class="unbutton filter-control filter interface-only" data-action="filter"
-                aria-label="${game.i18n.localize("DND5E.Filter")}">
+                aria-label="${game.i18n.localize("DND5R.Filter")}">
           <i class="fas fa-filter"></i>
         </button>
         <ul class="filter-list unlist"></ul>
@@ -388,7 +388,7 @@ export default class ItemListControlsElement extends HTMLElement {
   async _onToggleMode(event) {
     const { action } = event.currentTarget.dataset;
     const flag = `sheetPrefs.${this.app.object.type}.tabs.${this.tab}.${action}`;
-    const current = game.user.getFlag("dnd5e", flag);
+    const current = game.user.getFlag("dnd5r", flag);
     let value;
     if ( action === "group" ) value = current === false;
     else if ( action === "sort" ) {
@@ -396,7 +396,7 @@ export default class ItemListControlsElement extends HTMLElement {
       const index = values.indexOf(current);
       value = values[index + 1] ?? values[0];
     }
-    await game.user.setFlag("dnd5e", flag, value);
+    await game.user.setFlag("dnd5r", flag, value);
     if ( action === "group" ) {
       this._initGrouping();
       this._applyGrouping();

@@ -25,7 +25,7 @@ export default class SourceField extends SchemaField {
       ...fields
     };
     Object.entries(fields).forEach(([k, v]) => !v ? delete fields[k] : null);
-    super(fields, { label: "DND5E.SOURCE.FIELDS.source.label", ...options });
+    super(fields, { label: "DND5R.SOURCE.FIELDS.source.label", ...options });
   }
 
   /* -------------------------------------------- */
@@ -45,8 +45,8 @@ export default class SourceField extends SchemaField {
     if ( this.custom ) this.label = this.custom;
     else {
       const page = Number.isNumeric(this.page)
-        ? game.i18n.format("DND5E.SOURCE.Display.Page", { page: this.page }) : (this.page ?? "");
-      this.label = game.i18n.format("DND5E.SOURCE.Display.Full", { book: this.book, page }).trim();
+        ? game.i18n.format("DND5R.SOURCE.Display.Page", { page: this.page }) : (this.page ?? "");
+      this.label = game.i18n.format("DND5R.SOURCE.Display.Full", { book: this.book, page }).trim();
     }
 
     this.value = this.book || (pkg?.title ?? "");
@@ -69,7 +69,7 @@ export default class SourceField extends SchemaField {
    */
   static getModuleBook(pkg) {
     if ( !pkg ) return null;
-    const sourceBooks = pkg.flags?.dnd5e?.sourceBooks;
+    const sourceBooks = pkg.flags?.dnd5r?.sourceBooks;
     const keys = Object.keys(sourceBooks ?? {});
     if ( keys.length !== 1 ) return null;
     return keys[0];
@@ -106,7 +106,7 @@ export default class SourceField extends SchemaField {
       get() {
         foundry.utils.logCompatibilityWarning(
           "The source data for actors has been moved to `system.source`.",
-          { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+          { since: "DnD5r 4.0", until: "DnD5r 4.4" }
         );
         return source;
       }

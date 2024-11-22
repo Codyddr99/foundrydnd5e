@@ -100,8 +100,8 @@
     "crewed": false,
     "magicalBonus": null,
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "attack",
         "activation": {
           "type": "bonus",
@@ -203,11 +203,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037106819,
     "modifiedTime": 1725992486139,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!6n8J07mFo8xs11vS"
 }

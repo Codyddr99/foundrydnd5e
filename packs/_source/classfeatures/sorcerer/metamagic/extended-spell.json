@@ -29,8 +29,8 @@
     "requirements": "Sorcerer 3",
     "properties": [],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "special",
@@ -42,7 +42,7 @@
           "targets": [
             {
               "type": "itemUses",
-              "target": "Compendium.dnd5e.classfeatures.Item.LBKChJY5n02Afhnq",
+              "target": "Compendium.dnd5r.classfeatures.Item.LBKChJY5n02Afhnq",
               "value": "1",
               "scaling": {
                 "mode": "",
@@ -118,11 +118,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037389565,
     "modifiedTime": 1725992290299,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!tQxlKyAx9sgPrbgj"
 }

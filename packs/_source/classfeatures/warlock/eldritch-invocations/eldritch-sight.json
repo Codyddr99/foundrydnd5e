@@ -7,7 +7,7 @@
   "type": "feat",
   "system": {
     "description": {
-      "value": "<p>You can cast @UUID[Compendium.dnd5e.spells.Item.ghXTfe7sgCbgf1Q8]{Detect Magic} at will, without expending a spell slot.</p>",
+      "value": "<p>You can cast @UUID[Compendium.dnd5r.spells.Item.ghXTfe7sgCbgf1Q8]{Detect Magic} at will, without expending a spell slot.</p>",
       "chat": ""
     },
     "source": {
@@ -29,8 +29,8 @@
     "requirements": "Warlock 2",
     "properties": [],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "action",
@@ -108,11 +108,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037385772,
     "modifiedTime": 1725992288918,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!bbUEsCPTLzbbwK6o"
 }

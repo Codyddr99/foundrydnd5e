@@ -29,12 +29,12 @@ export default class ActivationField extends SchemaField {
    * @param {object} [labels]  Object in which to insert generated labels.
    */
   static prepareData(rollData, labels) {
-    this.activation.scalar = CONFIG.DND5E.activityActivationTypes[this.activation.type]?.scalar ?? false;
+    this.activation.scalar = CONFIG.DND5R.activityActivationTypes[this.activation.type]?.scalar ?? false;
     if ( !this.activation.scalar ) this.activation.value = null;
 
     if ( labels && this.activation.type ) {
       labels.activation = [
-        this.activation.value, CONFIG.DND5E.activityActivationTypes[this.activation.type]?.label
+        this.activation.value, CONFIG.DND5R.activityActivationTypes[this.activation.type]?.label
       ].filterJoin(" ");
     }
   }

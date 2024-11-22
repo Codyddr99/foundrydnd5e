@@ -106,8 +106,8 @@
     "crewed": false,
     "magicalBonus": 1,
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "attack",
         "activation": {
           "type": "action",
@@ -188,8 +188,8 @@
         "img": "",
         "appliedEffects": []
       },
-      "dnd5eactivity100": {
-        "_id": "dnd5eactivity100",
+      "dnd5ractivity100": {
+        "_id": "dnd5ractivity100",
         "type": "save",
         "activation": {
           "type": "special",
@@ -460,11 +460,11 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.1.0",
         "createdTime": 1727820504791,
         "modifiedTime": 1727820574644,
-        "lastModifiedBy": "dnd5ebuilder0000"
+        "lastModifiedBy": "dnd5rbuilder0000"
       },
       "_key": "!items.effects!wGDDt17DpBcXPuUD.95tYhecAl2D69Gtv"
     }
@@ -475,7 +475,7 @@
     "default": 0
   },
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "riders": {
         "activity": [],
         "effect": []
@@ -485,11 +485,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037317730,
     "modifiedTime": 1730938414461,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!wGDDt17DpBcXPuUD"
 }

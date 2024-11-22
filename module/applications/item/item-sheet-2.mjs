@@ -8,12 +8,12 @@ import ContextMenu5e from "../context-menu.mjs";
 export default class ItemSheet5e2 extends ItemSheetV2Mixin(ItemSheet5e) {
   static get defaultOptions() {
     const options = foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["dnd5e2", "sheet", "item"],
+      classes: ["dnd5r2", "sheet", "item"],
       width: 500,
       height: "auto",
       resizable: false,
       scrollY: [".tab.active"],
-      elements: { effects: "dnd5e-effects" },
+      elements: { effects: "dnd5r-effects" },
       legacyDisplay: false,
       contextMenu: ContextMenu5e
     });
@@ -25,7 +25,7 @@ export default class ItemSheet5e2 extends ItemSheetV2Mixin(ItemSheet5e) {
 
   /** @override */
   get template() {
-    return "systems/dnd5etools/templates/items/item-sheet-2.hbs";
+    return "systems/dnd5r/templates/items/item-sheet-2.hbs";
   }
 
   /* -------------------------------------------- */
@@ -56,50 +56,50 @@ export default class ItemSheet5e2 extends ItemSheetV2Mixin(ItemSheet5e) {
     }
 
     // Hit Dice
-    context.hitDieTypes = CONFIG.DND5E.hitDieTypes.map(d => ({ label: d, value: d }));
+    context.hitDieTypes = CONFIG.DND5R.hitDieTypes.map(d => ({ label: d, value: d }));
 
     // If using modern rules, do not show redundant artificer progression unless it is already selected.
-    context.spellProgression = { ...CONFIG.DND5E.spellProgression };
-    if ( (game.settings.get("dnd5e", "rulesVersion") === "modern") && (spellcasting?.progression !== "artificer") ) {
+    context.spellProgression = { ...CONFIG.DND5R.spellProgression };
+    if ( (game.settings.get("dnd5r", "rulesVersion") === "modern") && (spellcasting?.progression !== "artificer") ) {
       delete context.spellProgression.artificer;
     }
 
     // Activation
     context.activationTypes = [
-      ...Object.entries(CONFIG.DND5E.activityActivationTypes).map(([value, { label, group }]) => {
+      ...Object.entries(CONFIG.DND5R.activityActivationTypes).map(([value, { label, group }]) => {
         return { value, label, group };
       }),
-      { value: "", label: "DND5E.NoneActionLabel" }
+      { value: "", label: "DND5R.NoneActionLabel" }
     ];
 
     // Targets
     context.targetTypes = [
-      ...Object.entries(CONFIG.DND5E.individualTargetTypes).map(([value, label]) => {
-        return { value, label, group: "DND5E.TargetTypeIndividual" };
+      ...Object.entries(CONFIG.DND5R.individualTargetTypes).map(([value, label]) => {
+        return { value, label, group: "DND5R.TargetTypeIndividual" };
       }),
-      ...Object.entries(CONFIG.DND5E.areaTargetTypes).map(([value, { label }]) => {
-        return { value, label, group: "DND5E.TargetTypeArea" };
+      ...Object.entries(CONFIG.DND5R.areaTargetTypes).map(([value, { label }]) => {
+        return { value, label, group: "DND5R.TargetTypeArea" };
       })
     ];
     context.scalarTarget = !["", "self", "any"].includes(target?.affects?.type);
-    context.affectsPlaceholder = game.i18n.localize(`DND5E.Target${target?.template?.type ? "Every" : "Any"}`);
+    context.affectsPlaceholder = game.i18n.localize(`DND5R.Target${target?.template?.type ? "Every" : "Any"}`);
 
     // Range
     context.rangeTypes = [
-      ...Object.entries(CONFIG.DND5E.rangeTypes).map(([value, label]) => ({ value, label })),
-      ...Object.entries(CONFIG.DND5E.movementUnits).map(([value, label]) => {
-        return { value, label, group: "DND5E.RangeDistance" };
+      ...Object.entries(CONFIG.DND5R.rangeTypes).map(([value, label]) => ({ value, label })),
+      ...Object.entries(CONFIG.DND5R.movementUnits).map(([value, label]) => {
+        return { value, label, group: "DND5R.RangeDistance" };
       })
     ];
 
     // Duration
     context.durationUnits = [
-      ...Object.entries(CONFIG.DND5E.specialTimePeriods).map(([value, label]) => ({ value, label })),
-      ...Object.entries(CONFIG.DND5E.scalarTimePeriods).map(([value, label]) => {
-        return { value, label, group: "DND5E.DurationTime" };
+      ...Object.entries(CONFIG.DND5R.specialTimePeriods).map(([value, label]) => ({ value, label })),
+      ...Object.entries(CONFIG.DND5R.scalarTimePeriods).map(([value, label]) => {
+        return { value, label, group: "DND5R.DurationTime" };
       }),
-      ...Object.entries(CONFIG.DND5E.permanentTimePeriods).map(([value, label]) => {
-        return { value, label, group: "DND5E.DurationPermanent" };
+      ...Object.entries(CONFIG.DND5R.permanentTimePeriods).map(([value, label]) => {
+        return { value, label, group: "DND5R.DurationPermanent" };
       })
     ];
 
@@ -108,23 +108,23 @@ export default class ItemSheet5e2 extends ItemSheetV2Mixin(ItemSheet5e) {
 
     // Equipment
     context.equipmentTypes = [
-      ...Object.entries(CONFIG.DND5E.miscEquipmentTypes).map(([value, label]) => ({ value, label })),
-      ...Object.entries(CONFIG.DND5E.armorTypes).map(([value, label]) => ({ value, label, group: "DND5E.Armor" }))
+      ...Object.entries(CONFIG.DND5R.miscEquipmentTypes).map(([value, label]) => ({ value, label })),
+      ...Object.entries(CONFIG.DND5R.armorTypes).map(([value, label]) => ({ value, label, group: "DND5R.Armor" }))
     ];
 
     // Limited Uses
     context.data = { uses: context.source.uses };
     context.hasLimitedUses = this.item.system.hasLimitedUses;
     context.recoveryPeriods = [
-      ...Object.entries(CONFIG.DND5E.limitedUsePeriods)
+      ...Object.entries(CONFIG.DND5R.limitedUsePeriods)
         .filter(([, { deprecated }]) => !deprecated)
-        .map(([value, { label }]) => ({ value, label, group: "DND5E.DurationTime" })),
-      { value: "recharge", label: "DND5E.USES.Recovery.Recharge.Label" }
+        .map(([value, { label }]) => ({ value, label, group: "DND5R.DurationTime" })),
+      { value: "recharge", label: "DND5R.USES.Recovery.Recharge.Label" }
     ];
     context.recoveryTypes = [
-      { value: "recoverAll", label: "DND5E.USES.Recovery.Type.RecoverAll" },
-      { value: "loseAll", label: "DND5E.USES.Recovery.Type.LoseAll" },
-      { value: "formula", label: "DND5E.USES.Recovery.Type.Formula" }
+      { value: "recoverAll", label: "DND5R.USES.Recovery.Type.RecoverAll" },
+      { value: "loseAll", label: "DND5R.USES.Recovery.Type.LoseAll" },
+      { value: "formula", label: "DND5R.USES.Recovery.Type.Formula" }
     ];
     context.usesRecovery = (context.system.uses?.recovery ?? []).map((data, index) => ({
       data,
@@ -136,7 +136,7 @@ export default class ItemSheet5e2 extends ItemSheetV2Mixin(ItemSheet5e) {
 
     // Activities
     context.activities = (activities ?? []).filter(a => {
-      return CONFIG.DND5E.activityTypes[a.type]?.configurable !== false;
+      return CONFIG.DND5R.activityTypes[a.type]?.configurable !== false;
     }).map(({ _id: id, name, img, sort }) => ({
       id, name, sort,
       img: { src: img, svg: img?.endsWith(".svg") }
@@ -144,7 +144,7 @@ export default class ItemSheet5e2 extends ItemSheetV2Mixin(ItemSheet5e) {
 
     // Facilities
     if ( this.item.type === "facility" ) {
-      context.orders = Object.entries(CONFIG.DND5E.facilities.orders).reduce((obj, [value, config]) => {
+      context.orders = Object.entries(CONFIG.DND5R.facilities.orders).reduce((obj, [value, config]) => {
         const { label, basic, hidden } = config;
         if ( hidden ) return obj;
         // TODO: More hard-coding that we can potentially avoid.
@@ -198,13 +198,13 @@ export default class ItemSheet5e2 extends ItemSheetV2Mixin(ItemSheet5e) {
     const tags = [];
     if ( advancement.classRestriction === "primary" ) {
       tags.push({
-        label: "DND5E.AdvancementClassRestrictionPrimary",
-        icon: "systems/dnd5etools/icons/svg/original-class.svg"
+        label: "DND5R.AdvancementClassRestrictionPrimary",
+        icon: "systems/dnd5r/icons/svg/original-class.svg"
       });
     } else if ( advancement.classRestriction === "secondary" ) {
       tags.push({
-        label: "DND5E.AdvancementClassRestrictionSecondary",
-        icon: "systems/dnd5etools/icons/svg/multiclass.svg"
+        label: "DND5R.AdvancementClassRestrictionSecondary",
+        icon: "systems/dnd5r/icons/svg/multiclass.svg"
       });
     }
     return tags;
@@ -236,7 +236,7 @@ export default class ItemSheet5e2 extends ItemSheetV2Mixin(ItemSheet5e) {
     }
 
     new ContextMenu5e(html, ".activity[data-activity-id]", [], {
-      onOpen: target => dnd5e.documents.activity.UtilityActivity.onContextMenu(this.item, target)
+      onOpen: target => dnd5r.documents.activity.UtilityActivity.onContextMenu(this.item, target)
     });
   }
 

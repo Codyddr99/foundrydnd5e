@@ -62,8 +62,8 @@
       "material"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "action",
@@ -126,7 +126,7 @@
   "effects": [
     {
       "name": "Heroes' Feast",
-      "origin": "Compendium.dnd5e.spells.Item.mgFqi0ev8f7Ut19y",
+      "origin": "Compendium.dnd5r.spells.Item.mgFqi0ev8f7Ut19y",
       "duration": {
         "startTime": null,
         "seconds": 86400,
@@ -167,7 +167,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -184,11 +184,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037364507,
     "modifiedTime": 1725992722545,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!mgFqi0ev8f7Ut19y"
 }

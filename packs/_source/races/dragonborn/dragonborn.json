@@ -31,34 +31,34 @@
           "type": "feat",
           "pool": [
             {
-              "uuid": "Compendium.dnd5e.races.NnSZlrsHCFeH3cCq"
+              "uuid": "Compendium.dnd5r.races.NnSZlrsHCFeH3cCq"
             },
             {
-              "uuid": "Compendium.dnd5e.races.KVgvW5yhKcmQUanz"
+              "uuid": "Compendium.dnd5r.races.KVgvW5yhKcmQUanz"
             },
             {
-              "uuid": "Compendium.dnd5e.races.JrUcwLR2aQC09iUM"
+              "uuid": "Compendium.dnd5r.races.JrUcwLR2aQC09iUM"
             },
             {
-              "uuid": "Compendium.dnd5e.races.pJzMSk9qYywYy65w"
+              "uuid": "Compendium.dnd5r.races.pJzMSk9qYywYy65w"
             },
             {
-              "uuid": "Compendium.dnd5e.races.bFpLM0N3uTeHLdzu"
+              "uuid": "Compendium.dnd5r.races.bFpLM0N3uTeHLdzu"
             },
             {
-              "uuid": "Compendium.dnd5e.races.YPQQBZAuRiSwuBfh"
+              "uuid": "Compendium.dnd5r.races.YPQQBZAuRiSwuBfh"
             },
             {
-              "uuid": "Compendium.dnd5e.races.lXIxndsBaQglHBtO"
+              "uuid": "Compendium.dnd5r.races.lXIxndsBaQglHBtO"
             },
             {
-              "uuid": "Compendium.dnd5e.races.kB61JPKQrDBbSNU7"
+              "uuid": "Compendium.dnd5r.races.kB61JPKQrDBbSNU7"
             },
             {
-              "uuid": "Compendium.dnd5e.races.pAYTdRGftNr8AitK"
+              "uuid": "Compendium.dnd5r.races.pAYTdRGftNr8AitK"
             },
             {
-              "uuid": "Compendium.dnd5e.races.KL7wx9Q8XNJQir0k"
+              "uuid": "Compendium.dnd5r.races.KL7wx9Q8XNJQir0k"
             }
           ],
           "spell": {
@@ -231,11 +231,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037392732,
     "modifiedTime": 1725992703354,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "sort": 0,
   "folder": "gpuhARM4UqdXSEto",

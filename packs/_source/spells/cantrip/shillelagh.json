@@ -66,8 +66,8 @@
       "material"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "enchant",
         "sort": 0,
         "activation": {
@@ -226,7 +226,7 @@
   },
   "sort": 0,
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "riders": {
         "activity": [
           "ONVab5lmTqJwwMBC"
@@ -290,11 +290,11 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": 1725554262842,
         "modifiedTime": 1730833877207,
-        "lastModifiedBy": "dnd5ebuilder0000"
+        "lastModifiedBy": "dnd5rbuilder0000"
       },
       "_key": "!items.effects!VzgFzcmocr1X1cp4.QPsqj6jfS0iXSrTs"
     }
@@ -303,11 +303,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037357582,
     "modifiedTime": 1730833889711,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!VzgFzcmocr1X1cp4"
 }

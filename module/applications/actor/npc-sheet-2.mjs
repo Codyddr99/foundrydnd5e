@@ -9,7 +9,7 @@ import { simplifyBonus } from "../../utils.mjs";
 export default class ActorSheet5eNPC2 extends ActorSheetV2Mixin(ActorSheet5eNPC) {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["dnd5e2", "sheet", "actor", "npc", "vertical-tabs"],
+      classes: ["dnd5r2", "sheet", "actor", "npc", "vertical-tabs"],
       width: 700,
       height: 700,
       resizable: true,
@@ -20,11 +20,11 @@ export default class ActorSheet5eNPC2 extends ActorSheetV2Mixin(ActorSheet5eNPC)
 
   /** @override */
   static TABS = [
-    { tab: "features", label: "DND5E.Features", icon: "fas fa-list" },
-    { tab: "inventory", label: "DND5E.Inventory", svg: "backpack" },
+    { tab: "features", label: "DND5R.Features", icon: "fas fa-list" },
+    { tab: "inventory", label: "DND5R.Inventory", svg: "backpack" },
     { tab: "spells", label: "TYPES.Item.spellPl", icon: "fas fa-book" },
-    { tab: "effects", label: "DND5E.Effects", icon: "fas fa-bolt" },
-    { tab: "biography", label: "DND5E.Biography", icon: "fas fa-feather" }
+    { tab: "effects", label: "DND5R.Effects", icon: "fas fa-bolt" },
+    { tab: "biography", label: "DND5R.Biography", icon: "fas fa-feather" }
   ];
 
   /**
@@ -37,8 +37,8 @@ export default class ActorSheet5eNPC2 extends ActorSheetV2Mixin(ActorSheet5eNPC)
 
   /** @override */
   get template() {
-    if ( !game.user.isGM && this.actor.limited ) return "systems/dnd5etools/templates/actors/limited-sheet-2.hbs";
-    return "systems/dnd5etools/templates/actors/npc-sheet-2.hbs";
+    if ( !game.user.isGM && this.actor.limited ) return "systems/dnd5r/templates/actors/limited-sheet-2.hbs";
+    return "systems/dnd5r/templates/actors/npc-sheet-2.hbs";
   }
 
   /* -------------------------------------------- */
@@ -63,7 +63,7 @@ export default class ActorSheet5eNPC2 extends ActorSheetV2Mixin(ActorSheet5eNPC)
     const [elements] = this.element.find(".header-elements");
     if ( !elements || this.actor.limited ) return;
     const xp = this.actor.system.details.xp.value;
-    elements.querySelector(".cr-xp").innerHTML = xp === null ? "" : game.i18n.format("DND5E.ExperiencePointsFormat", {
+    elements.querySelector(".cr-xp").innerHTML = xp === null ? "" : game.i18n.format("DND5R.ExperiencePointsFormat", {
       value: new Intl.NumberFormat(game.i18n.lang).format(xp)
     });
   }
@@ -79,29 +79,29 @@ export default class ActorSheet5eNPC2 extends ActorSheetV2Mixin(ActorSheet5eNPC)
     // Ability Scores
     Object.entries(context.abilities).forEach(([k, ability]) => {
       ability.key = k;
-      ability.abbr = CONFIG.DND5E.abilities[k]?.abbreviation ?? "";
+      ability.abbr = CONFIG.DND5R.abilities[k]?.abbreviation ?? "";
       ability.baseValue = context.source.abilities[k]?.value ?? 0;
-      ability.icon = CONFIG.DND5E.abilities[k]?.icon;
+      ability.icon = CONFIG.DND5R.abilities[k]?.icon;
     });
 
     // Show Death Saves
     context.showDeathSaves = !foundry.utils.isEmpty(this.actor.classes)
-      || this.actor.getFlag("dnd5e", "showDeathSaves");
+      || this.actor.getFlag("dnd5r", "showDeathSaves");
 
     // Speed
-    context.speed = Object.entries(CONFIG.DND5E.movementTypes).reduce((obj, [k, label]) => {
+    context.speed = Object.entries(CONFIG.DND5R.movementTypes).reduce((obj, [k, label]) => {
       const value = attributes.movement[k];
       if ( value ) {
         obj[k] = { label, value };
         if ( (k === "fly") && attributes.movement.hover ) obj.fly.icons = [{
-          icon: "fas fa-cloud", label: game.i18n.localize("DND5E.MovementHover")
+          icon: "fas fa-cloud", label: game.i18n.localize("DND5R.MovementHover")
         }];
       }
       return obj;
     }, {});
 
     // Skills & Tools
-    const skillSetting = new Set(game.settings.get("dnd5e", "defaultSkills"));
+    const skillSetting = new Set(game.settings.get("dnd5r", "defaultSkills"));
     context.skills = Object.fromEntries(Object.entries(context.skills).filter(([k, v]) => {
       return v.value || skillSetting.has(k) || v.bonuses.check || v.bonuses.passive;
     }));
@@ -109,7 +109,7 @@ export default class ActorSheet5eNPC2 extends ActorSheetV2Mixin(ActorSheet5eNPC)
     // Senses
     if ( this.actor.system.skills.prc ) {
       context.senses.passivePerception = {
-        label: game.i18n.localize("DND5E.PassivePerception"), value: this.actor.system.skills.prc.passive
+        label: game.i18n.localize("DND5R.PassivePerception"), value: this.actor.system.skills.prc.passive
       };
     }
 
@@ -124,8 +124,8 @@ export default class ActorSheet5eNPC2 extends ActorSheetV2Mixin(ActorSheet5eNPC)
         if ( filled ) classes.push("filled");
         return {
           n, filled,
-          tooltip: `DND5E.${i18n}`,
-          label: game.i18n.format(`DND5E.${i18n}N.${plurals.select(n)}`, { n }),
+          tooltip: `DND5R.${i18n}`,
+          label: game.i18n.format(`DND5R.${i18n}N.${plurals.select(n)}`, { n }),
           classes: classes.join(" ")
         };
       });
@@ -189,47 +189,47 @@ export default class ActorSheet5eNPC2 extends ActorSheetV2Mixin(ActorSheet5eNPC)
       return true;
     });
     // TODO: These labels should be pluralised.
-    Object.entries(CONFIG.DND5E.abilityActivationTypes).forEach(([type, label]) => features.push({
+    Object.entries(CONFIG.DND5R.abilityActivationTypes).forEach(([type, label]) => features.push({
       label, items: [], hasActions: true, dataset: { type }
     }));
     context.features = {
       sections: features,
       filters: [
-        { key: "action", label: "DND5E.Action" },
-        { key: "bonus", label: "DND5E.BonusAction" },
-        { key: "reaction", label: "DND5E.Reaction" },
-        { key: "legendary", label: "DND5E.LegendaryActionLabel" },
-        { key: "lair", label: "DND5E.LairActionLabel" }
+        { key: "action", label: "DND5R.Action" },
+        { key: "bonus", label: "DND5R.BonusAction" },
+        { key: "reaction", label: "DND5R.Reaction" },
+        { key: "legendary", label: "DND5R.LegendaryActionLabel" },
+        { key: "lair", label: "DND5R.LairActionLabel" }
       ]
     };
     features.forEach(section => {
       section.categories = [
         {
-          classes: "item-uses", label: "DND5E.Uses", itemPartial: "dnd5e.column-uses",
-          activityPartial: "dnd5e.activity-column-uses"
+          classes: "item-uses", label: "DND5R.Uses", itemPartial: "dnd5r.column-uses",
+          activityPartial: "dnd5r.activity-column-uses"
         },
         {
-          classes: "item-roll", label: "DND5E.SpellHeader.Roll", itemPartial: "dnd5e.column-roll",
-          activityPartial: "dnd5e.activity-column-roll"
+          classes: "item-roll", label: "DND5R.SpellHeader.Roll", itemPartial: "dnd5r.column-roll",
+          activityPartial: "dnd5r.activity-column-roll"
         },
         {
-          classes: "item-formula", label: "DND5E.SpellHeader.Formula", itemPartial: "dnd5e.column-formula",
-          activityPartial: "dnd5e.activity-column-formula"
+          classes: "item-formula", label: "DND5R.SpellHeader.Formula", itemPartial: "dnd5r.column-formula",
+          activityPartial: "dnd5r.activity-column-formula"
         },
         {
-          classes: "item-controls", itemPartial: "dnd5e.column-feature-controls",
-          activityPartial: "dnd5e.activity-column-controls"
+          classes: "item-controls", itemPartial: "dnd5r.column-feature-controls",
+          activityPartial: "dnd5r.activity-column-controls"
         }
       ];
     });
     context.inventory = Object.values(inventory);
-    context.inventory.push({ label: "DND5E.Contents", items: [], dataset: { type: "all" } });
+    context.inventory.push({ label: "DND5R.Contents", items: [], dataset: { type: "all" } });
     context.inventory.forEach(section => {
       section.categories = [
-        { activityPartial: "dnd5e.activity-column-price" },
-        { activityPartial: "dnd5e.activity-column-weight" },
-        { activityPartial: "dnd5e.activity-column-quantity" },
-        { activityPartial: "dnd5e.activity-column-uses" }
+        { activityPartial: "dnd5r.activity-column-price" },
+        { activityPartial: "dnd5r.activity-column-weight" },
+        { activityPartial: "dnd5r.activity-column-quantity" },
+        { activityPartial: "dnd5r.activity-column-uses" }
       ];
     });
     context.classes = classes;
@@ -255,18 +255,18 @@ export default class ActorSheet5eNPC2 extends ActorSheetV2Mixin(ActorSheet5eNPC)
     const mod = spellAbility?.mod ?? 0;
     const attackBonus = msak === rsak ? msak : 0;
     context.spellcasting.push({
-      label: game.i18n.format("DND5E.SpellcastingClass", { class: spellcaster?.name ?? game.i18n.format("DND5E.NPC") }),
+      label: game.i18n.format("DND5R.SpellcastingClass", { class: spellcaster?.name ?? game.i18n.format("DND5R.NPC") }),
       level: spellcaster?.system.levels ?? details.spellLevel,
       ability: {
         ability, mod,
-        label: CONFIG.DND5E.abilities[ability]?.abbreviation
+        label: CONFIG.DND5R.abilities[ability]?.abbreviation
       },
       attack: mod + attributes.prof + attackBonus,
       save: spellAbility?.dc ?? 0,
       noSpellcaster: !spellcaster,
       concentration: {
         mod: attributes.concentration.save,
-        tooltip: game.i18n.format("DND5E.AbilityConfigure", { ability: game.i18n.localize("DND5E.Concentration") })
+        tooltip: game.i18n.format("DND5R.AbilityConfigure", { ability: game.i18n.localize("DND5R.Concentration") })
       }
     });
   }

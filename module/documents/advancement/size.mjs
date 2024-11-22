@@ -17,9 +17,9 @@ export default class SizeAdvancement extends Advancement {
       },
       order: 25,
       icon: "icons/environment/wilderness/tree-ash.webp",
-      typeIcon: "systems/dnd5etools/icons/svg/size.svg",
-      title: game.i18n.localize("DND5E.AdvancementSizeTitle"),
-      hint: game.i18n.localize("DND5E.AdvancementSizeHint"),
+      typeIcon: "systems/dnd5r/icons/svg/size.svg",
+      title: game.i18n.localize("DND5R.AdvancementSizeTitle"),
+      hint: game.i18n.localize("DND5R.AdvancementSizeHint"),
       apps: {
         config: SizeConfig,
         flow: SizeFlow
@@ -37,13 +37,13 @@ export default class SizeAdvancement extends Advancement {
    */
   get automaticHint() {
     if ( !this.configuration.sizes.size ) return "";
-    if ( this.configuration.sizes.size === 1 ) return game.i18n.format("DND5E.AdvancementSizeFlowHintSingle", {
-      size: CONFIG.DND5E.actorSizes[this.configuration.sizes.first()].label
+    if ( this.configuration.sizes.size === 1 ) return game.i18n.format("DND5R.AdvancementSizeFlowHintSingle", {
+      size: CONFIG.DND5R.actorSizes[this.configuration.sizes.first()].label
     });
 
     const listFormatter = new Intl.ListFormat(game.i18n.lang, { type: "disjunction" });
-    return game.i18n.format("DND5E.AdvancementSizeflowHintMultiple", {
-      sizes: listFormatter.format(this.configuration.sizes.map(s => CONFIG.DND5E.actorSizes[s].label))
+    return game.i18n.format("DND5R.AdvancementSizeflowHintMultiple", {
+      sizes: listFormatter.format(this.configuration.sizes.map(s => CONFIG.DND5R.actorSizes[s].label))
     });
   }
 
@@ -61,7 +61,7 @@ export default class SizeAdvancement extends Advancement {
   /** @inheritDoc */
   summaryForLevel(level, { configMode=false }={}) {
     const sizes = configMode ? Array.from(this.configuration.sizes) : this.value.size ? [this.value.size] : [];
-    return sizes.map(s => `<span class="tag">${CONFIG.DND5E.actorSizes[s].label}</span>`).join("");
+    return sizes.map(s => `<span class="tag">${CONFIG.DND5R.actorSizes[s].label}</span>`).join("");
   }
 
   /* -------------------------------------------- */

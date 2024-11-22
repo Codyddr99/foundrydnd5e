@@ -63,8 +63,8 @@
       "material"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "action",
@@ -127,7 +127,7 @@
   "effects": [
     {
       "name": "Freedom of Movement",
-      "origin": "Compendium.dnd5e.spells.Item.da0a1t2FqaTjRZGT",
+      "origin": "Compendium.dnd5r.spells.Item.da0a1t2FqaTjRZGT",
       "duration": {
         "startTime": null,
         "seconds": null,
@@ -162,7 +162,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -179,11 +179,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037361182,
     "modifiedTime": 1725992721490,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!da0a1t2FqaTjRZGT"
 }

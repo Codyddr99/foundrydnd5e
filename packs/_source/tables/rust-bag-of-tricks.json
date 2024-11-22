@@ -11,10 +11,10 @@
         1
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.monsters",
+      "documentCollection": "dnd5r.monsters",
       "_id": "WovaOgGxcfHHCXCu",
       "text": "Rat",
-      "img": "systems/dnd5etools/tokens/beast/Rat.webp",
+      "img": "systems/dnd5r/tokens/beast/Rat.webp",
       "documentId": "pozQUPTnLZW8epox",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.WovaOgGxcfHHCXCu"
@@ -27,10 +27,10 @@
         2
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.monsters",
+      "documentCollection": "dnd5r.monsters",
       "_id": "lLLibUhX766v95aa",
       "text": "Owl",
-      "img": "systems/dnd5etools/tokens/beast/Owl.webp",
+      "img": "systems/dnd5r/tokens/beast/Owl.webp",
       "documentId": "d0prpsGSAorDadec",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.lLLibUhX766v95aa"
@@ -43,10 +43,10 @@
         3
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.monsters",
+      "documentCollection": "dnd5r.monsters",
       "_id": "8c41d4R663Slopt6",
       "text": "Mastiff",
-      "img": "systems/dnd5etools/tokens/beast/Mastiff.webp",
+      "img": "systems/dnd5r/tokens/beast/Mastiff.webp",
       "documentId": "YTpL2c3NO4sOn2UA",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.8c41d4R663Slopt6"
@@ -59,10 +59,10 @@
         4
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.monsters",
+      "documentCollection": "dnd5r.monsters",
       "_id": "NVkpFhIDdTsGrwrm",
       "text": "Goat",
-      "img": "systems/dnd5etools/tokens/beast/Goat.webp",
+      "img": "systems/dnd5r/tokens/beast/Goat.webp",
       "documentId": "y8sRU8Ks2lcrGsaf",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.NVkpFhIDdTsGrwrm"
@@ -75,10 +75,10 @@
         5
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.monsters",
+      "documentCollection": "dnd5r.monsters",
       "_id": "g44x1kM2YztO54L8",
       "text": "Giant Goat",
-      "img": "systems/dnd5etools/tokens/beast/GiantGoat.webp",
+      "img": "systems/dnd5r/tokens/beast/GiantGoat.webp",
       "documentId": "rjqk7ToMD8sGr3n4",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.g44x1kM2YztO54L8"
@@ -91,10 +91,10 @@
         6
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.monsters",
+      "documentCollection": "dnd5r.monsters",
       "_id": "3xTzZJeTzSLLxpwW",
       "text": "Giant Boar",
-      "img": "systems/dnd5etools/tokens/beast/GiantBoar.webp",
+      "img": "systems/dnd5r/tokens/beast/GiantBoar.webp",
       "documentId": "SsuCaF2fIEoDdFA3",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.3xTzZJeTzSLLxpwW"
@@ -107,10 +107,10 @@
         7
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.monsters",
+      "documentCollection": "dnd5r.monsters",
       "_id": "J6HG6A1Ssb12loTI",
       "text": "Lion",
-      "img": "systems/dnd5etools/tokens/beast/Lion.webp",
+      "img": "systems/dnd5r/tokens/beast/Lion.webp",
       "documentId": "hjhERRzafCiFFVLA",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.J6HG6A1Ssb12loTI"
@@ -123,10 +123,10 @@
         8
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.monsters",
+      "documentCollection": "dnd5r.monsters",
       "_id": "ZW7OYeehs2Bf1UJO",
       "text": "Brown Bear",
-      "img": "systems/dnd5etools/tokens/beast/BrownBear.webp",
+      "img": "systems/dnd5r/tokens/beast/BrownBear.webp",
       "documentId": "omcDpBoB69esCXeM",
       "flags": {},
       "_key": "!tables.results!PLHwT9dC6fCZqkeo.ZW7OYeehs2Bf1UJO"
@@ -140,11 +140,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037419153,
     "modifiedTime": 1725037419153,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "sort": 0,
   "folder": null,

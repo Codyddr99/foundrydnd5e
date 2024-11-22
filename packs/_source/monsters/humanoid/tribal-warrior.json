@@ -684,14 +684,14 @@
       },
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.n1V07puo0RQxPGuF"
+          "sourceId": "Compendium.dnd5r.items.n1V07puo0RQxPGuF"
         }
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.n1V07puo0RQxPGuF",
+        "compendiumSource": "Compendium.dnd5r.items.n1V07puo0RQxPGuF",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -743,14 +743,14 @@
       },
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.monsterfeatures.V1lW1vnrTpVTDr6o"
+          "sourceId": "Compendium.dnd5r.monsterfeatures.V1lW1vnrTpVTDr6o"
         }
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.monsterfeatures.V1lW1vnrTpVTDr6o",
+        "compendiumSource": "Compendium.dnd5r.monsterfeatures.V1lW1vnrTpVTDr6o",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -859,8 +859,8 @@
         "container": null,
         "crewed": false,
         "activities": {
-          "dnd5eactivity000": {
-            "_id": "dnd5eactivity000",
+          "dnd5ractivity000": {
+            "_id": "dnd5ractivity000",
             "type": "attack",
             "activation": {
               "type": "action",
@@ -952,14 +952,14 @@
       },
       "flags": {
         "core": {
-          "sourceId": "Compendium.dnd5e.items.OG4nBBydvmfWYXIk"
+          "sourceId": "Compendium.dnd5r.items.OG4nBBydvmfWYXIk"
         }
       },
       "_stats": {
-        "compendiumSource": "Compendium.dnd5e.items.OG4nBBydvmfWYXIk",
+        "compendiumSource": "Compendium.dnd5r.items.OG4nBBydvmfWYXIk",
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -978,11 +978,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1726171256011,
     "modifiedTime": 1726171449505,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!actors!nREPw9g94Bsb9sIl"
 }

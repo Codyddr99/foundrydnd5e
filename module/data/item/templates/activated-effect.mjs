@@ -13,38 +13,38 @@ export default class ActivatedEffectTemplate extends SystemDataModel {
   static defineSchema() {
     foundry.utils.logCompatibilityWarning(
       "The `ActivatedEffectTemplate` data model has been deprecated in favor of `ActivitiesTemplate`.",
-      { since: "DnD5e 4.0", until: "DnD5e 4.4", once: true }
+      { since: "DnD5r 4.0", until: "DnD5r 4.4", once: true }
     );
     return {
       activation: new SchemaField({
-        type: new StringField({required: true, blank: true, label: "DND5E.ItemActivationType"}),
-        cost: new NumberField({required: true, label: "DND5E.ItemActivationCost"}),
-        condition: new StringField({required: true, label: "DND5E.ItemActivationCondition"})
-      }, {label: "DND5E.ItemActivation"}),
+        type: new StringField({required: true, blank: true, label: "DND5R.ItemActivationType"}),
+        cost: new NumberField({required: true, label: "DND5R.ItemActivationCost"}),
+        condition: new StringField({required: true, label: "DND5R.ItemActivationCondition"})
+      }, {label: "DND5R.ItemActivation"}),
       duration: new SchemaField({
-        value: new FormulaField({required: true, deterministic: true, label: "DND5E.Duration"}),
-        units: new StringField({required: true, blank: true, label: "DND5E.DurationType"})
-      }, {label: "DND5E.Duration"}),
+        value: new FormulaField({required: true, deterministic: true, label: "DND5R.Duration"}),
+        units: new StringField({required: true, blank: true, label: "DND5R.DurationType"})
+      }, {label: "DND5R.Duration"}),
       target: new SchemaField({
-        value: new FormulaField({required: true, deterministic: true, label: "DND5E.TargetValue"}),
-        width: new NumberField({required: true, min: 0, label: "DND5E.TargetWidth"}),
-        units: new StringField({required: true, blank: true, label: "DND5E.TargetUnits"}),
-        type: new StringField({required: true, blank: true, label: "DND5E.TargetType"}),
-        prompt: new BooleanField({initial: true, label: "DND5E.TemplatePrompt"})
-      }, {label: "DND5E.Target"}),
+        value: new FormulaField({required: true, deterministic: true, label: "DND5R.TargetValue"}),
+        width: new NumberField({required: true, min: 0, label: "DND5R.TargetWidth"}),
+        units: new StringField({required: true, blank: true, label: "DND5R.TargetUnits"}),
+        type: new StringField({required: true, blank: true, label: "DND5R.TargetType"}),
+        prompt: new BooleanField({initial: true, label: "DND5R.TemplatePrompt"})
+      }, {label: "DND5R.Target"}),
       range: new SchemaField({
-        value: new NumberField({required: true, min: 0, label: "DND5E.RangeNormal"}),
-        long: new NumberField({required: true, min: 0, label: "DND5E.RangeLong"}),
-        units: new StringField({required: true, blank: true, label: "DND5E.RangeUnits"})
-      }, {label: "DND5E.Range"}),
+        value: new NumberField({required: true, min: 0, label: "DND5R.RangeNormal"}),
+        long: new NumberField({required: true, min: 0, label: "DND5R.RangeLong"}),
+        units: new StringField({required: true, blank: true, label: "DND5R.RangeUnits"})
+      }, {label: "DND5R.Range"}),
       consume: new SchemaField({
-        type: new StringField({required: true, blank: true, label: "DND5E.ConsumeType"}),
+        type: new StringField({required: true, blank: true, label: "DND5R.ConsumeType"}),
         target: new StringField({
-          required: true, nullable: true, initial: null, label: "DND5E.ConsumeTarget"
+          required: true, nullable: true, initial: null, label: "DND5R.ConsumeTarget"
         }),
-        amount: new NumberField({required: true, integer: true, label: "DND5E.ConsumeAmount"}),
-        scale: new BooleanField({label: "DND5E.ConsumeScaling"})
-      }, {label: "DND5E.ConsumeTitle"})
+        amount: new NumberField({required: true, integer: true, label: "DND5R.ConsumeAmount"}),
+        scale: new BooleanField({label: "DND5R.ConsumeScaling"})
+      }, {label: "DND5R.ConsumeTitle"})
     };
   }
 
@@ -58,14 +58,14 @@ export default class ActivatedEffectTemplate extends SystemDataModel {
     constructor(extraSchema, options) {
       super(SystemDataModel.mergeSchema({
         value: new NumberField({
-          required: true, min: 0, integer: true, label: "DND5E.LimitedUsesAvailable"
+          required: true, min: 0, integer: true, label: "DND5R.LimitedUsesAvailable"
         }),
-        max: new FormulaField({required: true, deterministic: true, label: "DND5E.LimitedUsesMax"}),
+        max: new FormulaField({required: true, deterministic: true, label: "DND5R.LimitedUsesMax"}),
         per: new StringField({
-          required: true, nullable: true, blank: false, initial: null, label: "DND5E.LimitedUsesPer"
+          required: true, nullable: true, blank: false, initial: null, label: "DND5R.LimitedUsesPer"
         }),
-        recovery: new FormulaField({required: true, label: "DND5E.RecoveryFormula"}),
-        prompt: new BooleanField({initial: true, label: "DND5E.LimitedUsesPrompt"})
+        recovery: new FormulaField({required: true, label: "DND5R.RecoveryFormula"}),
+        prompt: new BooleanField({initial: true, label: "DND5R.LimitedUsesPrompt"})
       }, extraSchema), options);
     }
   };
@@ -96,44 +96,44 @@ export default class ActivatedEffectTemplate extends SystemDataModel {
 
     // Prepare duration, targets, and max uses formulas
     const rollData = this.getRollData({ deterministic: true });
-    this._prepareFinalFormula("duration.value", { label: "DND5E.Duration", rollData });
-    this._prepareFinalFormula("target.value", { label: "DND5E.TargetValue", rollData });
-    this._prepareFinalFormula("uses.max", { label: "DND5E.UsesMax", rollData });
+    this._prepareFinalFormula("duration.value", { label: "DND5R.Duration", rollData });
+    this._prepareFinalFormula("target.value", { label: "DND5R.TargetValue", rollData });
+    this._prepareFinalFormula("uses.max", { label: "DND5R.UsesMax", rollData });
 
     // Prepare labels
     this.parent.labels ??= {};
-    this.parent.labels.duration = [this.duration.value, CONFIG.DND5E.timePeriods[this.duration.units]].filterJoin(" ");
+    this.parent.labels.duration = [this.duration.value, CONFIG.DND5R.timePeriods[this.duration.units]].filterJoin(" ");
     this.parent.labels.concentrationDuration = this.properties?.has("concentration")
-      ? game.i18n.format("DND5E.ConcentrationDuration", {
+      ? game.i18n.format("DND5R.ConcentrationDuration", {
           duration: this.parent.labels.duration.toLocaleLowerCase(game.i18n.lang)
       }) : this.parent.labels.duration;
     this.parent.labels.activation = this.activation.type ? [
-      (this.activation.type in CONFIG.DND5E.staticAbilityActivationTypes) ? null : this.activation.cost,
-      CONFIG.DND5E.abilityActivationTypes[this.activation.type]
+      (this.activation.type in CONFIG.DND5R.staticAbilityActivationTypes) ? null : this.activation.cost,
+      CONFIG.DND5R.abilityActivationTypes[this.activation.type]
     ].filterJoin(" ") : "";
 
     if ( this.hasTarget ) {
       const target = [this.target.value];
       if ( this.hasAreaTarget ) {
-        if ( this.target.units in CONFIG.DND5E.movementUnits ) {
-          target.push(game.i18n.localize(`DND5E.Dist${this.target.units.capitalize()}Abbr`));
+        if ( this.target.units in CONFIG.DND5R.movementUnits ) {
+          target.push(game.i18n.localize(`DND5R.Dist${this.target.units.capitalize()}Abbr`));
         }
-        else target.push(CONFIG.DND5E.distanceUnits[this.target.units]);
+        else target.push(CONFIG.DND5R.distanceUnits[this.target.units]);
       }
-      target.push(CONFIG.DND5E.targetTypes[this.target.type]);
+      target.push(CONFIG.DND5R.targetTypes[this.target.type]);
       this.parent.labels.target = target.filterJoin(" ");
     }
 
     if ( this.isActive && this.range.units ) {
       const range = [this.range.value, this.range.long ? `/ ${this.range.long}` : null];
-      if ( this.range.units in CONFIG.DND5E.movementUnits ) {
-        range.push(game.i18n.localize(`DND5E.Dist${this.range.units.capitalize()}Abbr`));
+      if ( this.range.units in CONFIG.DND5R.movementUnits ) {
+        range.push(game.i18n.localize(`DND5R.Dist${this.range.units.capitalize()}Abbr`));
       }
-      else range.push(CONFIG.DND5E.distanceUnits[this.range.units]);
+      else range.push(CONFIG.DND5R.distanceUnits[this.range.units]);
       this.parent.labels.range = range.filterJoin(" ");
-    } else this.parent.labels.range = game.i18n.localize("DND5E.None");
+    } else this.parent.labels.range = game.i18n.localize("DND5R.None");
 
-    if ( this.recharge ) this.parent.labels.recharge = `${game.i18n.localize("DND5E.Recharge")} [${
+    if ( this.recharge ) this.parent.labels.recharge = `${game.i18n.localize("DND5R.Recharge")} [${
       `${this.recharge.value}${parseInt(this.recharge.value) < 6 ? "+" : ""}`
     }]`;
 
@@ -164,7 +164,7 @@ export default class ActivatedEffectTemplate extends SystemDataModel {
       foundry.utils.setProperty(this, keyPath, roll.evaluateSync().total);
     } catch(err) {
       if ( this.parent.isEmbedded ) {
-        const message = game.i18n.format("DND5E.FormulaMalformedError", { property, name: this.parent.name });
+        const message = game.i18n.format("DND5R.FormulaMalformedError", { property, name: this.parent.name });
         this.parent.actor._preparationWarnings.push({ message, link: this.parent.uuid, type: "error" });
         console.error(message, err);
       }
@@ -293,7 +293,7 @@ export default class ActivatedEffectTemplate extends SystemDataModel {
    * @type {boolean}
    */
   get hasAreaTarget() {
-    return this.isActive && (this.target.type in CONFIG.DND5E.areaTargetTypes);
+    return this.isActive && (this.target.type in CONFIG.DND5R.areaTargetTypes);
   }
 
   /* -------------------------------------------- */
@@ -303,7 +303,7 @@ export default class ActivatedEffectTemplate extends SystemDataModel {
    * @type {boolean}
    */
   get hasIndividualTarget() {
-    return this.isActive && (this.target.type in CONFIG.DND5E.individualTargetTypes);
+    return this.isActive && (this.target.type in CONFIG.DND5R.individualTargetTypes);
   }
 
   /* -------------------------------------------- */
@@ -313,7 +313,7 @@ export default class ActivatedEffectTemplate extends SystemDataModel {
    * @type {boolean}
    */
   get hasLimitedUses() {
-    return this.isActive && (this.uses.per in CONFIG.DND5E.limitedUsePeriods) && (this.uses.max > 0);
+    return this.isActive && (this.uses.per in CONFIG.DND5R.limitedUsePeriods) && (this.uses.max > 0);
   }
 
   /* -------------------------------------------- */
@@ -345,7 +345,7 @@ export default class ActivatedEffectTemplate extends SystemDataModel {
    * @type {boolean}
    */
   get hasScalarDuration() {
-    return this.duration.units in CONFIG.DND5E.scalarTimePeriods;
+    return this.duration.units in CONFIG.DND5R.scalarTimePeriods;
   }
 
   /* -------------------------------------------- */
@@ -355,7 +355,7 @@ export default class ActivatedEffectTemplate extends SystemDataModel {
    * @type {boolean}
    */
   get hasScalarRange() {
-    return this.range.units in CONFIG.DND5E.movementUnits;
+    return this.range.units in CONFIG.DND5R.movementUnits;
   }
 
   /* -------------------------------------------- */

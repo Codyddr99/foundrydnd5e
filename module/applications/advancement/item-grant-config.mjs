@@ -8,10 +8,10 @@ export default class ItemGrantConfig extends AdvancementConfig {
   /** @inheritDoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["dnd5e", "advancement", "item-grant"],
+      classes: ["dnd5r", "advancement", "item-grant"],
       dragDrop: [{ dropSelector: ".drop-target" }],
       dropKeyPath: "items",
-      template: "systems/dnd5etools/templates/advancement/item-grant-config.hbs"
+      template: "systems/dnd5r/templates/advancement/item-grant-config.hbs"
     });
   }
 
@@ -21,14 +21,14 @@ export default class ItemGrantConfig extends AdvancementConfig {
   getData(options={}) {
     const context = super.getData(options);
     const indexes = context.configuration.items.map(i => fromUuidSync(i.uuid));
-    context.abilities = Object.entries(CONFIG.DND5E.abilities).reduce((obj, [k, c]) => {
+    context.abilities = Object.entries(CONFIG.DND5R.abilities).reduce((obj, [k, c]) => {
       obj[k] = { label: c.label, selected: context.configuration.spell?.ability.has(k) ? "selected" : "" };
       return obj;
     }, {});
     context.showContainerWarning = indexes.some(i => i?.type === "container");
     context.showSpellConfig = indexes.some(i => i?.type === "spell");
     context.showRequireSpellSlot = !this.advancement.configuration.spell?.preparation
-      || CONFIG.DND5E.spellPreparationModes[this.advancement.configuration.spell?.preparation]?.upcast;
+      || CONFIG.DND5R.spellPreparationModes[this.advancement.configuration.spell?.preparation]?.upcast;
     return context;
   }
 

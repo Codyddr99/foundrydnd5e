@@ -58,43 +58,43 @@ export class SummonsData extends foundry.abstract.DataModel {
     return {
       bonuses: new SchemaField({
         ac: new FormulaField({
-          label: "DND5E.Summoning.Bonuses.ArmorClass.Label", hint: "DND5E.Summoning.Bonuses.ArmorClass.hint"
+          label: "DND5R.Summoning.Bonuses.ArmorClass.Label", hint: "DND5R.Summoning.Bonuses.ArmorClass.hint"
         }),
         hd: new FormulaField({
-          label: "DND5E.Summoning.Bonuses.HitDice.Label", hint: "DND5E.Summoning.Bonuses.HitDice.hint"
+          label: "DND5R.Summoning.Bonuses.HitDice.Label", hint: "DND5R.Summoning.Bonuses.HitDice.hint"
         }),
         hp: new FormulaField({
-          label: "DND5E.Summoning.Bonuses.HitPoints.Label", hint: "DND5E.Summoning.Bonuses.HitPoints.hint"
+          label: "DND5R.Summoning.Bonuses.HitPoints.Label", hint: "DND5R.Summoning.Bonuses.HitPoints.hint"
         }),
         attackDamage: new FormulaField({
-          label: "DND5E.Summoning.Bonuses.Attack.Label", hint: "DND5E.Summoning.Bonuses.Attack.Hint"
+          label: "DND5R.Summoning.Bonuses.Attack.Label", hint: "DND5R.Summoning.Bonuses.Attack.Hint"
         }),
         saveDamage: new FormulaField({
-          label: "DND5E.Summoning.Bonuses.Saves.Label", hint: "DND5E.Summoning.Bonuses.Saves.Hint"
+          label: "DND5R.Summoning.Bonuses.Saves.Label", hint: "DND5R.Summoning.Bonuses.Saves.Hint"
         }),
         healing: new FormulaField({
-          label: "DND5E.Summoning.Bonuses.Healing.Label", hint: "DND5E.Summoning.Bonuses.Healing.Hint"
+          label: "DND5R.Summoning.Bonuses.Healing.Label", hint: "DND5R.Summoning.Bonuses.Healing.Hint"
         })
       }),
       classIdentifier: new IdentifierField(),
       creatureSizes: new SetField(new StringField(), {
-        label: "DND5E.Summoning.CreatureSizes.Label", hint: "DND5E.Summoning.CreatureSizes.Hint"
+        label: "DND5R.Summoning.CreatureSizes.Label", hint: "DND5R.Summoning.CreatureSizes.Hint"
       }),
       creatureTypes: new SetField(new StringField(), {
-        label: "DND5E.Summoning.CreatureTypes.Label", hint: "DND5E.Summoning.CreatureTypes.Hint"
+        label: "DND5R.Summoning.CreatureTypes.Label", hint: "DND5R.Summoning.CreatureTypes.Hint"
       }),
       match: new SchemaField({
         attacks: new BooleanField({
-          label: "DND5E.Summoning.Match.Attacks.Label", hint: "DND5E.Summoning.Match.Attacks.Hint"
+          label: "DND5R.Summoning.Match.Attacks.Label", hint: "DND5R.Summoning.Match.Attacks.Hint"
         }),
         proficiency: new BooleanField({
-          label: "DND5E.Summoning.Match.Proficiency.Label", hint: "DND5E.Summoning.Match.Proficiency.Hint"
+          label: "DND5R.Summoning.Match.Proficiency.Label", hint: "DND5R.Summoning.Match.Proficiency.Hint"
         }),
         saves: new BooleanField({
-          label: "DND5E.Summoning.Match.Saves.Label", hint: "DND5E.Summoning.Match.Saves.Hint"
+          label: "DND5R.Summoning.Match.Saves.Label", hint: "DND5R.Summoning.Match.Saves.Hint"
         })
       }),
-      mode: new StringField({label: "DND5E.Summoning.Mode.Label", hint: "DND5E.Summoning.Mode.Hint"}),
+      mode: new StringField({label: "DND5R.Summoning.Mode.Label", hint: "DND5R.Summoning.Mode.Hint"}),
       profiles: new ArrayField(new SchemaField({
         _id: new DocumentIdField({initial: () => foundry.utils.randomID()}),
         count: new FormulaField(),
@@ -108,7 +108,7 @@ export class SummonsData extends foundry.abstract.DataModel {
         uuid: new StringField()
       })),
       prompt: new BooleanField({
-        initial: true, label: "DND5E.Summoning.Prompt.Label", hint: "DND5E.Summoning.Prompt.Hint"
+        initial: true, label: "DND5R.Summoning.Prompt.Label", hint: "DND5R.Summoning.Prompt.Hint"
       })
     };
   }

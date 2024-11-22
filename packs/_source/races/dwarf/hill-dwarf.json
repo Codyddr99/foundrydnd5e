@@ -23,11 +23,11 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.races.ufysTkqet2Ctmtyi",
+              "uuid": "Compendium.dnd5r.races.ufysTkqet2Ctmtyi",
               "optional": false
             },
             {
-              "uuid": "Compendium.dnd5e.races.mQPZDRbUhgYTbXKa",
+              "uuid": "Compendium.dnd5r.races.mQPZDRbUhgYTbXKa",
               "optional": false
             }
           ],
@@ -193,11 +193,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037392950,
     "modifiedTime": 1725992703517,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "sort": 0,
   "folder": "H2wvPtn11yEFSd64",

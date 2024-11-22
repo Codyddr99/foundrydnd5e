@@ -23,7 +23,7 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.wrxIW5sDfmGr3u5s",
+              "uuid": "Compendium.dnd5r.classfeatures.wrxIW5sDfmGr3u5s",
               "optional": false
             }
           ],
@@ -47,7 +47,7 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.WgQrqjmeyMqDzVt3",
+              "uuid": "Compendium.dnd5r.classfeatures.WgQrqjmeyMqDzVt3",
               "optional": false
             }
           ],
@@ -71,7 +71,7 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.7zlTRRXT1vWSBGjX",
+              "uuid": "Compendium.dnd5r.classfeatures.7zlTRRXT1vWSBGjX",
               "optional": false
             }
           ],
@@ -95,7 +95,7 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.a0Sq88dgnREcIMfl",
+              "uuid": "Compendium.dnd5r.classfeatures.a0Sq88dgnREcIMfl",
               "optional": false
             }
           ],
@@ -127,13 +127,13 @@
           "type": "feat",
           "pool": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.5gx1O0sxK08awEO9"
+              "uuid": "Compendium.dnd5r.classfeatures.5gx1O0sxK08awEO9"
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.StfmqK1twVfukpa0"
+              "uuid": "Compendium.dnd5r.classfeatures.StfmqK1twVfukpa0"
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.C6sHdDGmCMo0cYHd"
+              "uuid": "Compendium.dnd5r.classfeatures.C6sHdDGmCMo0cYHd"
             }
           ],
           "spell": {
@@ -170,13 +170,13 @@
           "type": "feat",
           "pool": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.pAQMJU5R9SGUmzHU"
+              "uuid": "Compendium.dnd5r.classfeatures.pAQMJU5R9SGUmzHU"
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.slelvrm83v9UAKZU"
+              "uuid": "Compendium.dnd5r.classfeatures.slelvrm83v9UAKZU"
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.zbHu0NvHuII8lR7W"
+              "uuid": "Compendium.dnd5r.classfeatures.zbHu0NvHuII8lR7W"
             }
           ],
           "spell": {
@@ -213,10 +213,10 @@
           "type": "feat",
           "pool": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.l7W6JB9yWLLLtQKP"
+              "uuid": "Compendium.dnd5r.classfeatures.l7W6JB9yWLLLtQKP"
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.1DY8w3CXeD7PHDXF"
+              "uuid": "Compendium.dnd5r.classfeatures.1DY8w3CXeD7PHDXF"
             }
           ],
           "spell": {
@@ -253,13 +253,13 @@
           "type": "feat",
           "pool": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.laVHAIOKIsUeezWd"
+              "uuid": "Compendium.dnd5r.classfeatures.laVHAIOKIsUeezWd"
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.Xf763cJoDHPPWSGG"
+              "uuid": "Compendium.dnd5r.classfeatures.Xf763cJoDHPPWSGG"
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.7pyZjz5vlUWV01qQ"
+              "uuid": "Compendium.dnd5r.classfeatures.7pyZjz5vlUWV01qQ"
             }
           ],
           "spell": {
@@ -300,11 +300,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037373087,
     "modifiedTime": 1725992730716,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!uqd2q6WjVfcsaaGb"
 }

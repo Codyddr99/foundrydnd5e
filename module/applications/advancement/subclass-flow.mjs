@@ -7,7 +7,7 @@ export default class SubclassFlow extends AdvancementFlow {
   /** @inheritDoc */
   async getData() {
     return foundry.utils.mergeObject(super.getData(), {
-      hint: `${this.advancement.hint ?? ""} ${game.i18n.localize("DND5E.ADVANCEMENT.Subclass.FlowHint")}`
+      hint: `${this.advancement.hint ?? ""} ${game.i18n.localize("DND5R.ADVANCEMENT.Subclass.FlowHint")}`
     });
   }
 }

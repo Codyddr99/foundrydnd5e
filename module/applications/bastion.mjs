@@ -9,7 +9,7 @@ export default class BastionConfig extends Application5e {
       width: 500
     },
     window: {
-      title: "DND5E.Bastion.Configuration.Label"
+      title: "DND5R.Bastion.Configuration.Label"
     },
     form: {
       closeOnSubmit: true,
@@ -20,7 +20,7 @@ export default class BastionConfig extends Application5e {
   /** @override */
   static PARTS = {
     config: {
-      template: "systems/dnd5etools/templates/apps/bastion-config.hbs"
+      template: "systems/dnd5r/templates/apps/bastion-config.hbs"
     },
     footer: {
       template: "templates/generic/form-footer.hbs"
@@ -35,7 +35,7 @@ export default class BastionConfig extends Application5e {
   async _preparePartContext(partId, context, options) {
     context = await super._preparePartContext(partId, context, options);
     context.fields = BastionSetting.schema.fields;
-    context.source = game.settings.get("dnd5e", "bastionConfiguration");
+    context.source = game.settings.get("dnd5r", "bastionConfiguration");
     context.buttons = [{ type: "submit", icon: "fas fa-save", label: "Save Changes" }];
     return context;
   }
@@ -53,7 +53,7 @@ export default class BastionConfig extends Application5e {
    * @returns {Promise}
    */
   static #onCommitChanges(event, form, formData) {
-    return game.settings.set("dnd5e", "bastionConfiguration", formData.object);
+    return game.settings.set("dnd5r", "bastionConfiguration", formData.object);
   }
 }
 
@@ -69,13 +69,13 @@ export class BastionSetting extends foundry.abstract.DataModel {
   static defineSchema() {
     return {
       button: new BooleanField({
-        required: true, label: "DND5E.Bastion.Button.Label", hint: "DND5E.Bastion.Button.Hint"
+        required: true, label: "DND5R.Bastion.Button.Label", hint: "DND5R.Bastion.Button.Hint"
       }),
       duration: new NumberField({
-        required: true, positive: true, integer: true, initial: 7, label: "DND5E.Bastion.Duration.Label"
+        required: true, positive: true, integer: true, initial: 7, label: "DND5R.Bastion.Duration.Label"
       }),
       enabled: new BooleanField({
-        required: true, label: "DND5E.Bastion.Enabled.Label", hint: "DND5E.Bastion.Enabled.Hint"
+        required: true, label: "DND5R.Bastion.Enabled.Label", hint: "DND5R.Bastion.Enabled.Hint"
       })
     };
   }

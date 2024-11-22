@@ -65,8 +65,8 @@
       "concentration"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "action",
@@ -129,7 +129,7 @@
   "effects": [
     {
       "name": "Shield of Faith",
-      "origin": "Compendium.dnd5e.spells.Item.jZ6JNykRtdQ90MOo",
+      "origin": "Compendium.dnd5r.spells.Item.jZ6JNykRtdQ90MOo",
       "duration": {
         "startTime": null,
         "seconds": 600,
@@ -158,7 +158,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -175,11 +175,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037363559,
     "modifiedTime": 1725992722266,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!jZ6JNykRtdQ90MOo"
 }

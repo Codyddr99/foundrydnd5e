@@ -19,7 +19,7 @@ export default class ToolsConfig extends TraitsConfig {
   /** @override */
   static PARTS = {
     traits: {
-      template: "systems/dnd5etools/templates/actors/config/tools-config.hbs"
+      template: "systems/dnd5r/templates/actors/config/tools-config.hbs"
     }
   };
 
@@ -36,7 +36,7 @@ export default class ToolsConfig extends TraitsConfig {
       choice.value = tool.value;
       choice.total = this.document.system.tools[key]?.total;
     }
-    choice.tooltip = CONFIG.DND5E.proficiencyLevels[tool?.value ?? 0];
+    choice.tooltip = CONFIG.DND5R.proficiencyLevels[tool?.value ?? 0];
   }
 
   /* -------------------------------------------- */
@@ -75,7 +75,7 @@ export default class ToolsConfig extends TraitsConfig {
     const submitData = Object.entries(formData.object).reduce((obj, [k, value]) => {
       const key = k.split(".")[2];
       const tool = this.document.system._source.tools[key];
-      const config = CONFIG.DND5E.tools[key];
+      const config = CONFIG.DND5R.tools[key];
       if ( tool && !value ) obj[`system.tools.-=${key}`] = null;
       else if ( !tool && value ) obj[`system.tools.${key}`] = { value, ability: config?.ability || "int" };
       else if ( value ) obj[`system.tools.${key}.value`] = value;

@@ -5,7 +5,7 @@
   "img": "icons/weapons/staves/staff-ornate-blue.webp",
   "system": {
     "description": {
-      "value": "<p><em>(Requires attunement by a druid, sorcerer, warlock, or wizard)</em></p><p>You have resistance to cold damage while you hold this staff.</p><p>The staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC: @UUID[Compendium.dnd5e.spells.Item.RpKjTlYASrfqUPVA]{Cone of Cold} (5 charges), @UUID[Compendium.dnd5e.spells.Item.IBJmWjzbQGu7M4UX]{Fog Cloud} (1 charge), @UUID[Compendium.dnd5e.spells.Item.WN2LWEljYU6QqnRH]{Ice Storm} (4 charges), or @UUID[Compendium.dnd5e.spells.Item.fzZnVKLmBMo2f5up]{Wall of Ice} (4 charges).</p><p>The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff turns to water and is destroyed.</p>",
+      "value": "<p><em>(Requires attunement by a druid, sorcerer, warlock, or wizard)</em></p><p>You have resistance to cold damage while you hold this staff.</p><p>The staff has 10 charges. While holding it, you can use an action to expend 1 or more of its charges to cast one of the following spells from it, using your spell save DC: @UUID[Compendium.dnd5r.spells.Item.RpKjTlYASrfqUPVA]{Cone of Cold} (5 charges), @UUID[Compendium.dnd5r.spells.Item.IBJmWjzbQGu7M4UX]{Fog Cloud} (1 charge), @UUID[Compendium.dnd5r.spells.Item.WN2LWEljYU6QqnRH]{Ice Storm} (4 charges), or @UUID[Compendium.dnd5r.spells.Item.fzZnVKLmBMo2f5up]{Wall of Ice} (4 charges).</p><p>The staff regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, the staff turns to water and is destroyed.</p>",
       "chat": ""
     },
     "source": {
@@ -103,7 +103,7 @@
       "t2bjgs4Rehoss7mc": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.RpKjTlYASrfqUPVA",
+          "uuid": "Compendium.dnd5r.spells.Item.RpKjTlYASrfqUPVA",
           "challenge": {
             "attack": null,
             "save": null,
@@ -170,7 +170,7 @@
       "3ozkXRFfpdGwx6zZ": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.IBJmWjzbQGu7M4UX",
+          "uuid": "Compendium.dnd5r.spells.Item.IBJmWjzbQGu7M4UX",
           "challenge": {
             "attack": null,
             "save": null,
@@ -236,7 +236,7 @@
       "BjnMyi8sdbu0Ybrr": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.WN2LWEljYU6QqnRH",
+          "uuid": "Compendium.dnd5r.spells.Item.WN2LWEljYU6QqnRH",
           "challenge": {
             "attack": null,
             "save": null,
@@ -303,7 +303,7 @@
       "LOde45eToutGhwC6": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.fzZnVKLmBMo2f5up",
+          "uuid": "Compendium.dnd5r.spells.Item.fzZnVKLmBMo2f5up",
           "challenge": {
             "attack": null,
             "save": null,
@@ -430,7 +430,7 @@
   "effects": [
     {
       "name": "Staff of Frost",
-      "origin": "Compendium.dnd5e.items.Item.xEtBeZjJnkDXojQM",
+      "origin": "Compendium.dnd5r.items.Item.xEtBeZjJnkDXojQM",
       "duration": {
         "rounds": null,
         "startTime": null,
@@ -463,7 +463,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -478,7 +478,7 @@
     "default": 0
   },
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "riders": {
         "activity": [],
         "effect": []
@@ -488,11 +488,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037322364,
     "modifiedTime": 1731019516799,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!xEtBeZjJnkDXojQM"
 }

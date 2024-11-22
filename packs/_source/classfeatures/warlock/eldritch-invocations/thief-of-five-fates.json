@@ -7,7 +7,7 @@
   "type": "feat",
   "system": {
     "description": {
-      "value": "<p>You can cast @UUID[Compendium.dnd5e.spells.Item.95K2aUhAGV9qXjnf]{Bane} once using a warlock spell slot. You can't do so again until you finish a long rest.</p>",
+      "value": "<p>You can cast @UUID[Compendium.dnd5r.spells.Item.95K2aUhAGV9qXjnf]{Bane} once using a warlock spell slot. You can't do so again until you finish a long rest.</p>",
       "chat": ""
     },
     "source": {
@@ -34,8 +34,8 @@
     "requirements": "Warlock 2",
     "properties": [],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "save",
         "activation": {
           "type": "action",
@@ -129,11 +129,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037389152,
     "modifiedTime": 1725992290165,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!rhbwDZ9XNTmdkX2u"
 }

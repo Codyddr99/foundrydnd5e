@@ -1,32 +1,32 @@
 <fieldset>
-    <legend>{{ localize "DND5E.ItemToolProperties" }}</legend>
+    <legend>{{ localize "DND5R.ItemToolProperties" }}</legend>
 
     {{!-- Tool Type --}}
-    {{ formField fields.type.fields.value value=source.type.value choices=config.toolTypes label="DND5E.ItemToolType"
+    {{ formField fields.type.fields.value value=source.type.value choices=config.toolTypes label="DND5R.ItemToolType"
                  blank="" localize=true }}
 
     {{!-- Base Tool --}}
     {{#if baseItems}}
-    {{ formField fields.type.fields.baseItem value=source.type.baseItem choices=baseItems label="DND5E.ItemToolBase"
+    {{ formField fields.type.fields.baseItem value=source.type.baseItem choices=baseItems label="DND5R.ItemToolBase"
                  blank="" localize=true }}
     {{/if}}
 
     {{!-- Tool Properties --}}
-    {{ formField fields.properties options=properties.options label="DND5E.ItemToolProperties" localize=true
+    {{ formField fields.properties options=properties.options label="DND5R.ItemToolProperties" localize=true
                  input=inputs.createMultiCheckboxInput stacked=true classes="checkbox-grid checkbox-grid-3" }}
 
     {{!-- Ability Check --}}
     <div class="form-group">
-        <label>{{ localize "DND5E.ActionAbil" }}</label>
+        <label>{{ localize "DND5R.ActionAbil" }}</label>
         <div class="form-fields">
 
             {{!-- Proficiency --}}
             {{ formField fields.proficient value=source.proficient choices=config.proficiencyLevels
-                         label="DND5E.Proficiency" blank="DND5E.Automatic" localize=true classes="label-top" }}
+                         label="DND5R.Proficiency" blank="DND5R.Automatic" localize=true classes="label-top" }}
 
             {{!-- Ability --}}
             {{ formField fields.ability value=source.ability choices=config.abilities labelAttr="label"
-                         label="DND5E.Ability" blank="DND5E.Default" localize=true classes="label-top" }}
+                         label="DND5R.Ability" blank="DND5R.Default" localize=true classes="label-top" }}
         </div>
     </div>
 
@@ -36,18 +36,18 @@
     {{!-- Attunement --}}
     {{#if properties.object.mgc}}
     <div class="form-group">
-        <label>{{ localize "DND5E.Attunement" }}</label>
+        <label>{{ localize "DND5R.Attunement" }}</label>
         <div class="form-fields">
 
             {{!-- Attuned --}}
             {{#if source.attunement}}
             {{ formInput fields.attuned value=source.attuned input=inputs.createCheckboxInput
-                         ariaLabel=(localize "DND5E.Attuned") dataset=(dnd5e-object tooltip="DND5E.Attuned") }}
+                         ariaLabel=(localize "DND5R.Attuned") dataset=(dnd5r-object tooltip="DND5R.Attuned") }}
             {{/if}}
 
             {{!-- Attunement --}}
             {{ formInput fields.attunement value=source.attunement choices=config.attunementTypes
-                         blank="DND5E.AttunementNone" localize=true }}
+                         blank="DND5R.AttunementNone" localize=true }}
         </div>
     </div>
     {{/if}}

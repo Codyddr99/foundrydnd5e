@@ -10,7 +10,7 @@ const { ArrayField, BooleanField, NumberField, SchemaField, StringField } = foun
 /**
  * System data definition for Vehicles.
  *
- * @property {string} vehicleType                      Type of vehicle as defined in `DND5E.vehicleTypes`.
+ * @property {string} vehicleType                      Type of vehicle as defined in `DND5R.vehicleTypes`.
  * @property {object} attributes
  * @property {object} attributes.ac
  * @property {number} attributes.ac.flat               Flat value used for flat or natural armor calculation.
@@ -49,7 +49,7 @@ export default class VehicleData extends CommonTemplate {
   /* -------------------------------------------- */
 
   /** @override */
-  static LOCALIZATION_PREFIXES = ["DND5E.SOURCE"];
+  static LOCALIZATION_PREFIXES = ["DND5R.SOURCE"];
 
   /* -------------------------------------------- */
 
@@ -61,73 +61,73 @@ export default class VehicleData extends CommonTemplate {
   /** @inheritDoc */
   static defineSchema() {
     return this.mergeSchema(super.defineSchema(), {
-      vehicleType: new StringField({ required: true, initial: "water", label: "DND5E.VehicleType" }),
+      vehicleType: new StringField({ required: true, initial: "water", label: "DND5R.VehicleType" }),
       attributes: new SchemaField({
         ...AttributesFields.common,
         ac: new SchemaField({
-          flat: new NumberField({ integer: true, min: 0, label: "DND5E.ArmorClassFlat" }),
-          calc: new StringField({ initial: "default", label: "DND5E.ArmorClassCalculation" }),
-          formula: new FormulaField({ deterministic: true, label: "DND5E.ArmorClassFormula" }),
-          motionless: new StringField({ required: true, label: "DND5E.ArmorClassMotionless" })
-        }, { label: "DND5E.ArmorClass" }),
+          flat: new NumberField({ integer: true, min: 0, label: "DND5R.ArmorClassFlat" }),
+          calc: new StringField({ initial: "default", label: "DND5R.ArmorClassCalculation" }),
+          formula: new FormulaField({ deterministic: true, label: "DND5R.ArmorClassFormula" }),
+          motionless: new StringField({ required: true, label: "DND5R.ArmorClassMotionless" })
+        }, { label: "DND5R.ArmorClass" }),
         hp: new SchemaField({
           value: new NumberField({
-            nullable: true, integer: true, min: 0, initial: null, label: "DND5E.HitPointsCurrent"
+            nullable: true, integer: true, min: 0, initial: null, label: "DND5R.HitPointsCurrent"
           }),
           max: new NumberField({
-            nullable: true, integer: true, min: 0, initial: null, label: "DND5E.HitPointsMax"
+            nullable: true, integer: true, min: 0, initial: null, label: "DND5R.HitPointsMax"
           }),
-          temp: new NumberField({ integer: true, initial: 0, min: 0, label: "DND5E.HitPointsTemp" }),
+          temp: new NumberField({ integer: true, initial: 0, min: 0, label: "DND5R.HitPointsTemp" }),
           tempmax: new NumberField({
-            integer: true, initial: 0, label: "DND5E.HitPointsTempMax", hint: "DND5E.HitPointsTempMaxHint"
+            integer: true, initial: 0, label: "DND5R.HitPointsTempMax", hint: "DND5R.HitPointsTempMaxHint"
           }),
           dt: new NumberField({
-            required: true, integer: true, min: 0, label: "DND5E.DamageThreshold"
+            required: true, integer: true, min: 0, label: "DND5R.DamageThreshold"
           }),
           mt: new NumberField({
-            required: true, integer: true, min: 0, label: "DND5E.VehicleMishapThreshold"
+            required: true, integer: true, min: 0, label: "DND5R.VehicleMishapThreshold"
           })
-        }, {label: "DND5E.HitPoints"}),
+        }, {label: "DND5R.HitPoints"}),
         actions: new SchemaField({
-          stations: new BooleanField({ required: true, label: "DND5E.VehicleActionStations" }),
+          stations: new BooleanField({ required: true, label: "DND5R.VehicleActionStations" }),
           value: new NumberField({
-            required: true, nullable: false, integer: true, initial: 0, min: 0, label: "DND5E.VehicleActionMax"
+            required: true, nullable: false, integer: true, initial: 0, min: 0, label: "DND5R.VehicleActionMax"
           }),
           thresholds: new SchemaField({
             2: new NumberField({
-              required: true, integer: true, min: 0, label: "DND5E.VehicleActionThresholdsFull"
+              required: true, integer: true, min: 0, label: "DND5R.VehicleActionThresholdsFull"
             }),
             1: new NumberField({
-              required: true, integer: true, min: 0, label: "DND5E.VehicleActionThresholdsMid"
+              required: true, integer: true, min: 0, label: "DND5R.VehicleActionThresholdsMid"
             }),
             0: new NumberField({
-              required: true, integer: true, min: 0, label: "DND5E.VehicleActionThresholdsMin"
+              required: true, integer: true, min: 0, label: "DND5R.VehicleActionThresholdsMin"
             })
-          }, {label: "DND5E.VehicleActionThresholds"})
-        }, {label: "DND5E.VehicleActions"}),
+          }, {label: "DND5R.VehicleActionThresholds"})
+        }, {label: "DND5R.VehicleActions"}),
         capacity: new SchemaField({
-          creature: new StringField({ required: true, label: "DND5E.VehicleCreatureCapacity" }),
+          creature: new StringField({ required: true, label: "DND5R.VehicleCreatureCapacity" }),
           cargo: new NumberField({
-            required: true, nullable: false, integer: true, initial: 0, min: 0, label: "DND5E.VehicleCargoCapacity"
+            required: true, nullable: false, integer: true, initial: 0, min: 0, label: "DND5R.VehicleCargoCapacity"
           })
-        }, { label: "DND5E.VehicleCargoCrew" })
-      }, { label: "DND5E.Attributes" }),
-      details: new SchemaField(DetailsFields.common, { label: "DND5E.Details" }),
+        }, { label: "DND5R.VehicleCargoCrew" })
+      }, { label: "DND5R.Attributes" }),
+      details: new SchemaField(DetailsFields.common, { label: "DND5R.Details" }),
       source: new SourceField(),
       traits: new SchemaField({
         ...TraitsFields.common,
-        size: new StringField({ required: true, initial: "lg", label: "DND5E.Size" }),
-        di: TraitsFields.makeDamageTrait({ label: "DND5E.DamImm" }, { initial: ["poison", "psychic"] }),
-        ci: TraitsFields.makeSimpleTrait({ label: "DND5E.ConImm" }, { initial: [
+        size: new StringField({ required: true, initial: "lg", label: "DND5R.Size" }),
+        di: TraitsFields.makeDamageTrait({ label: "DND5R.DamImm" }, { initial: ["poison", "psychic"] }),
+        ci: TraitsFields.makeSimpleTrait({ label: "DND5R.ConImm" }, { initial: [
           "blinded", "charmed", "deafened", "frightened", "paralyzed",
           "petrified", "poisoned", "stunned", "unconscious"
         ] }),
-        dimensions: new StringField({ required: true, label: "DND5E.Dimensions" })
-      }, { label: "DND5E.Traits" }),
+        dimensions: new StringField({ required: true, label: "DND5R.Dimensions" })
+      }, { label: "DND5R.Traits" }),
       cargo: new SchemaField({
-        crew: new ArrayField(makePassengerData(), { label: "DND5E.VehicleCrew" }),
-        passengers: new ArrayField(makePassengerData(), { label: "DND5E.VehiclePassengers" })
-      }, { label: "DND5E.VehicleCrewPassengers" })
+        crew: new ArrayField(makePassengerData(), { label: "DND5R.VehicleCrew" }),
+        passengers: new ArrayField(makePassengerData(), { label: "DND5R.VehiclePassengers" })
+      }, { label: "DND5R.VehicleCrewPassengers" })
     });
   }
 
@@ -176,7 +176,7 @@ export default class VehicleData extends CommonTemplate {
 
     this.prepareAbilities({ rollData, originalSaves });
     AttributesFields.prepareEncumbrance.call(this, rollData, { validateItem: item =>
-      (item.flags.dnd5e?.vehicleCargo === true) || !["weapon", "equipment"].includes(item.type)
+      (item.flags.dnd5r?.vehicleCargo === true) || !["weapon", "equipment"].includes(item.type)
     });
     AttributesFields.prepareHitPoints.call(this, this.attributes.hp);
     SourceField.prepareData.call(this.source, this.parent._stats?.compendiumSource ?? this.parent.uuid);
@@ -200,9 +200,9 @@ export default class VehicleData extends CommonTemplate {
  */
 function makePassengerData(schemaOptions={}) {
   return new SchemaField({
-    name: new StringField({required: true, label: "DND5E.VehiclePassengerName"}),
+    name: new StringField({required: true, label: "DND5R.VehiclePassengerName"}),
     quantity: new NumberField({
-      required: true, nullable: false, integer: true, initial: 0, min: 0, label: "DND5E.VehiclePassengerQuantity"
+      required: true, nullable: false, integer: true, initial: 0, min: 0, label: "DND5R.VehiclePassengerQuantity"
     })
   }, schemaOptions);
 }

@@ -5,7 +5,7 @@
   "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
   "system": {
     "description": {
-      "value": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p>\n<p>When you drink this potion, you gain resistance to Lightning type damage for 1 hour.</p>\n<p>For other potions of resistance, roll on the @UUID[Compendium.dnd5e.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p>",
+      "value": "<p><em>The potion is a plain indescriminate color and smells slightly foul.</em></p>\n<p>When you drink this potion, you gain resistance to Lightning type damage for 1 hour.</p>\n<p>For other potions of resistance, roll on the @UUID[Compendium.dnd5r.tables.RollTable.JzLOE4IxcmxjLLuz]{Potion of Resistance} table.</p>",
       "chat": ""
     },
     "source": {
@@ -61,8 +61,8 @@
     ],
     "magicalBonus": null,
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "action",
@@ -149,11 +149,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037113266,
     "modifiedTime": 1725992488266,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!8MPnSrvEeZhPhtTi"
 }

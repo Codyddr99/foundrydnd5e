@@ -118,9 +118,9 @@ export default class BasicRoll extends Roll {
 
     /**
      * A hook event that fires before a roll is performed. Multiple hooks may be called depending on the rolling
-     * method (e.g. `dnd5e.preRollSkillV2`, `dnd5e.preRollAbilityCheckV2`, `dnd5e.preRollV2`). Exact contents of the
+     * method (e.g. `dnd5r.preRollSkillV2`, `dnd5r.preRollAbilityCheckV2`, `dnd5r.preRollV2`). Exact contents of the
      * configuration object will also change based on the roll type, but the same objects will always be present.
-     * @function dnd5e.preRollV2
+     * @function dnd5r.preRollV2
      * @memberof hookEvents
      * @param {BasicRollProcessConfiguration} config   Configuration data for the pending roll.
      * @param {BasicRollDialogConfiguration} dialog    Presentation data for the roll configuration dialog.
@@ -128,7 +128,7 @@ export default class BasicRoll extends Roll {
      * @returns {boolean}                              Explicitly return `false` to prevent the roll.
      */
     for ( const hookName of hookNames ) {
-      if ( Hooks.call(`dnd5e.preRoll${hookName.capitalize()}V2`, config, dialog, message) === false ) return [];
+      if ( Hooks.call(`dnd5r.preRoll${hookName.capitalize()}V2`, config, dialog, message) === false ) return [];
     }
 
     this.applyKeybindings(config, dialog, message);
@@ -142,10 +142,10 @@ export default class BasicRoll extends Roll {
 
     /**
      * A hook event that fires after roll configuration is complete, but before the roll is evaluated.
-     * Multiple hooks may be called depending on the rolling method (e.g. `dnd5e.postSkillCheckRollConfiguration`,
-     * `dnd5e.postAbilityTestRollConfiguration`, and `dnd5e.postRollConfiguration` for skill checks). Exact contents of
+     * Multiple hooks may be called depending on the rolling method (e.g. `dnd5r.postSkillCheckRollConfiguration`,
+     * `dnd5r.postAbilityTestRollConfiguration`, and `dnd5r.postRollConfiguration` for skill checks). Exact contents of
      * the configuration object will also change based on the roll type, but the same objects will always be present.
-     * @function dnd5e.postRollConfiguration
+     * @function dnd5r.postRollConfiguration
      * @memberof hookEvents
      * @param {BasicRoll[]} rolls                      Rolls that have been constructed but not evaluated.
      * @param {BasicRollProcessConfiguration} config   Configuration information for the roll.
@@ -154,7 +154,7 @@ export default class BasicRoll extends Roll {
      * @returns {boolean}                              Explicitly return `false` to prevent rolls.
      */
     for ( const hookName of hookNames ) {
-      const name = `dnd5e.post${hookName.capitalize()}RollConfiguration`;
+      const name = `dnd5r.post${hookName.capitalize()}RollConfiguration`;
       if ( Hooks.call(name, rolls, config, dialog, message) === false ) return [];
     }
 
@@ -163,7 +163,7 @@ export default class BasicRoll extends Roll {
 
     message.data = foundry.utils.expandObject(message.data ?? {});
     const messageId = config.event?.target.closest("[data-message-id]")?.dataset.messageId;
-    if ( messageId ) foundry.utils.setProperty(message.data, "flags.dnd5e.originatingMessage", messageId);
+    if ( messageId ) foundry.utils.setProperty(message.data, "flags.dnd5r.originatingMessage", messageId);
 
     if ( rolls?.length && (message.create !== false) ) {
       await this.toMessage(rolls, message.data, { rollMode: message.rollMode });

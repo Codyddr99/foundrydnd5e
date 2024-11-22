@@ -34,8 +34,8 @@
     "requirements": "Paladin 1",
     "properties": [],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "heal",
         "activation": {
           "type": "action",
@@ -119,8 +119,8 @@
         },
         "sort": 0
       },
-      "dnd5eactivity001": {
-        "_id": "dnd5eactivity001",
+      "dnd5ractivity001": {
+        "_id": "dnd5ractivity001",
         "type": "utility",
         "name": "Cure Disease and Poison",
         "activation": {
@@ -203,11 +203,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037383620,
     "modifiedTime": 1725992288225,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!OdrvL3afwLOPeuYZ"
 }

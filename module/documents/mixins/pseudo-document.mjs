@@ -53,7 +53,7 @@ export default Base => class extends Base {
    * @type {object}
    */
   static get documentConfig() {
-    return CONFIG.DND5E[`${this.documentName.toLowerCase()}Types`];
+    return CONFIG.DND5R[`${this.documentName.toLowerCase()}Types`];
   }
 
   get documentConfig() {
@@ -265,12 +265,12 @@ export default Base => class extends Base {
     types ??= Object.keys(this.documentConfig);
     if ( !types.length || !parent ) return null;
 
-    const label = game.i18n.localize(`DOCUMENT.DND5E.${this.documentName}`);
+    const label = game.i18n.localize(`DOCUMENT.DND5R.${this.documentName}`);
     const title = game.i18n.format("DOCUMENT.Create", { type: label });
     let type = data.type;
 
     if ( !types.includes(type) ) type = types[0];
-    const content = await renderTemplate("systems/dnd5etools/templates/apps/document-create.hbs", {
+    const content = await renderTemplate("systems/dnd5r/templates/apps/document-create.hbs", {
       name, type,
       types: types.reduce((arr, type) => {
         const label = this.documentConfig[type]?.documentClass?.metadata?.title;
@@ -301,7 +301,7 @@ export default Base => class extends Base {
       callback: html => {
         const form = html.querySelector("form");
         if ( !form.checkValidity() ) {
-          throw new Error(game.i18n.format("DOCUMENT.DND5E.Warning.SelectType", { name: label }));
+          throw new Error(game.i18n.format("DOCUMENT.DND5R.Warning.SelectType", { name: label }));
         }
         const fd = new FormDataExtended(form);
         const createData = foundry.utils.mergeObject(data, fd.object, { inplace: false });
@@ -309,7 +309,7 @@ export default Base => class extends Base {
         parent[`create${this.documentName}`](createData.type, createData);
       },
       rejectClose: false,
-      options: { ...options, jQuery: false, width: 350, classes: ["dnd5e2", "create-document", "dialog"] }
+      options: { ...options, jQuery: false, width: 350, classes: ["dnd5r2", "create-document", "dialog"] }
     });
   }
 };

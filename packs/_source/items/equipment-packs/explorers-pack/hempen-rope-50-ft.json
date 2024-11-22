@@ -58,8 +58,8 @@
     },
     "magicalBonus": null,
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "check",
         "activation": {
           "type": "action",
@@ -130,8 +130,8 @@
         },
         "sort": 0
       },
-      "dnd5eactivity100": {
-        "_id": "dnd5eactivity100",
+      "dnd5ractivity100": {
+        "_id": "dnd5ractivity100",
         "type": "save",
         "activation": {
           "type": "action",
@@ -219,11 +219,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037226586,
     "modifiedTime": 1725992526180,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_id": "bDZFQqLQE73cFB8c",
   "sort": 500000,

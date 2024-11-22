@@ -17,7 +17,7 @@ export default class ConcentrationConfig extends BaseConfigSheet {
   /** @override */
   static PARTS = {
     config: {
-      template: "systems/dnd5etools/templates/actors/config/concentration-config.hbs"
+      template: "systems/dnd5r/templates/actors/config/concentration-config.hbs"
     }
   };
 
@@ -27,7 +27,7 @@ export default class ConcentrationConfig extends BaseConfigSheet {
 
   /** @override */
   get title() {
-    return game.i18n.format("DND5E.ABILITY.Configure.Title", { ability: game.i18n.localize("DND5E.Concentration") });
+    return game.i18n.format("DND5R.ABILITY.Configure.Title", { ability: game.i18n.localize("DND5R.Concentration") });
   }
 
   /* -------------------------------------------- */
@@ -41,16 +41,16 @@ export default class ConcentrationConfig extends BaseConfigSheet {
 
     context.data = source.attributes?.concentration ?? {};
     context.fields = this.document.system.schema.fields.attributes.fields.concentration.fields;
-    const ability = CONFIG.DND5E.abilities[CONFIG.DND5E.defaultAbilities.concentration]?.label?.toLowerCase();
+    const ability = CONFIG.DND5R.abilities[CONFIG.DND5R.defaultAbilities.concentration]?.label?.toLowerCase();
     context.abilityOptions = [
-      { value: "", label: ability ? game.i18n.format("DND5E.DefaultSpecific", { default: ability }) : "" },
+      { value: "", label: ability ? game.i18n.format("DND5R.DefaultSpecific", { default: ability }) : "" },
       { rule: true },
-      ...Object.entries(CONFIG.DND5E.abilities).map(([value, { label }]) => ({ value, label }))
+      ...Object.entries(CONFIG.DND5R.abilities).map(([value, { label }]) => ({ value, label }))
     ];
     context.advantageModeOptions = [
-      { value: -1, label: game.i18n.localize("DND5E.Disadvantage") },
-      { value: 0, label: game.i18n.localize("DND5E.Normal") },
-      { value: 1, label: game.i18n.localize("DND5E.Advantage") }
+      { value: -1, label: game.i18n.localize("DND5R.Disadvantage") },
+      { value: 0, label: game.i18n.localize("DND5R.Normal") },
+      { value: 1, label: game.i18n.localize("DND5R.Advantage") }
     ];
 
     if ( this.document.system.bonuses?.abilities ) context.global = {

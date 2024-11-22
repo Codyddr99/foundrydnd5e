@@ -19,7 +19,7 @@ export default class SkillsConfig extends TraitsConfig {
   /** @override */
   static PARTS = {
     traits: {
-      template: "systems/dnd5etools/templates/actors/config/skills-config.hbs"
+      template: "systems/dnd5r/templates/actors/config/skills-config.hbs"
     }
   };
 
@@ -44,7 +44,7 @@ export default class SkillsConfig extends TraitsConfig {
     if ( skill ) {
       choice.value = skill.value;
       choice.total = this.document.system.skills[key]?.total;
-      choice.tooltip = CONFIG.DND5E.proficiencyLevels[skill.value];
+      choice.tooltip = CONFIG.DND5R.proficiencyLevels[skill.value];
     }
   }
 

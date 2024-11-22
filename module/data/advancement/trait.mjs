@@ -33,18 +33,18 @@ const LANGUAGE_MAP = { modern: _MAP, legacy: foundry.utils.invertObject(_MAP) };
 export class TraitConfigurationData extends foundry.abstract.DataModel {
   static defineSchema() {
     return {
-      mode: new StringField({ initial: "default", label: "DND5E.AdvancementTraitMode" }),
+      mode: new StringField({ initial: "default", label: "DND5R.AdvancementTraitMode" }),
       allowReplacements: new BooleanField({
-        required: true, label: "DND5E.AdvancementTraitAllowReplacements",
-        hint: "DND5E.AdvancementTraitAllowReplacementsHint"
+        required: true, label: "DND5R.AdvancementTraitAllowReplacements",
+        hint: "DND5R.AdvancementTraitAllowReplacementsHint"
       }),
-      grants: new SetField(new StringField(), { required: true, label: "DND5E.AdvancementTraitGrants" }),
+      grants: new SetField(new StringField(), { required: true, label: "DND5R.AdvancementTraitGrants" }),
       choices: new ArrayField(new SchemaField({
         count: new NumberField({
-          required: true, positive: true, integer: true, initial: 1, label: "DND5E.AdvancementTraitCount"
+          required: true, positive: true, integer: true, initial: 1, label: "DND5R.AdvancementTraitCount"
         }),
         pool: new SetField(new StringField(), { required: false, label: "DOCUMENT.Items" })
-      }), { label: "DND5E.AdvancementTraitChoices" })
+      }), { label: "DND5R.AdvancementTraitChoices" })
     };
   }
 
@@ -53,7 +53,7 @@ export class TraitConfigurationData extends foundry.abstract.DataModel {
   get hint() {
     foundry.utils.logCompatibilityWarning(
       "Advancement hints are now part of the base data model.",
-      { since: "DnD5e 3.3", until: "DnD5e 4.1" }
+      { since: "DnD5r 3.3", until: "DnD5r 4.1" }
     );
     return this.parent.hint ?? "";
   }
@@ -63,7 +63,7 @@ export class TraitConfigurationData extends foundry.abstract.DataModel {
   /** @inheritDoc */
   static migrateData(source) {
     super.migrateData(source);
-    const version = game.settings.get("dnd5e", "rulesVersion");
+    const version = game.settings.get("dnd5r", "rulesVersion");
     const languageMap = LANGUAGE_MAP[version] ?? {};
     if ( source.grants?.length ) source.grants = source.grants.map(t => languageMap[t] ?? t);
     if ( source.choices?.length ) source.choices.forEach(c => c.pool = c.pool.map(t => languageMap[t] ?? t));
@@ -88,7 +88,7 @@ export class TraitValueData extends foundry.abstract.DataModel {
   /** @inheritDoc */
   static migrateData(source) {
     super.migrateData(source);
-    const version = game.settings.get("dnd5e", "rulesVersion");
+    const version = game.settings.get("dnd5r", "rulesVersion");
     const languageMap = LANGUAGE_MAP[version] ?? {};
     if ( source.chosen?.length ) source.chosen = source.chosen.map(t => languageMap[t] ?? t);
     return source;

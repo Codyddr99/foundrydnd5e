@@ -5,7 +5,7 @@
   "img": "icons/weapons/staves/staff-spiked.webp",
   "system": {
     "description": {
-      "value": "<p><em>(Requires attunement by a bard, cleric, druid, sorcerer, warlock, or wizard)</em></p><p>This staff has 10 charges and regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, a swarm of insects consumes and destroys the staff, then disperses.</p><p><strong>Spells</strong>. While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC: @UUID[Compendium.dnd5e.spells.Item.czXrVRx6XYRWsHAi]{Giant Insect} (4 charges) or @UUID[Compendium.dnd5e.spells.Item.OVikYmSdHliAG2YD]{Insect Plague} (5 charges).</p><p><strong>Insect Cloud</strong>. While holding the staff, you can use an action and expend 1 charge to cause a swarm of harmless flying insects to spread out in a 30-foot radius from you. The insects remain for 10 minutes, making the area heavily obscured for creatures other than you. The swarm moves with you, remaining centered on you. A wind of at least 10 miles per hour disperses the swarm and ends the effect.</p>",
+      "value": "<p><em>(Requires attunement by a bard, cleric, druid, sorcerer, warlock, or wizard)</em></p><p>This staff has 10 charges and regains 1d6 + 4 expended charges daily at dawn. If you expend the last charge, roll a d20. On a 1, a swarm of insects consumes and destroys the staff, then disperses.</p><p><strong>Spells</strong>. While holding the staff, you can use an action to expend some of its charges to cast one of the following spells from it, using your spell save DC: @UUID[Compendium.dnd5r.spells.Item.czXrVRx6XYRWsHAi]{Giant Insect} (4 charges) or @UUID[Compendium.dnd5r.spells.Item.OVikYmSdHliAG2YD]{Insect Plague} (5 charges).</p><p><strong>Insect Cloud</strong>. While holding the staff, you can use an action and expend 1 charge to cause a swarm of harmless flying insects to spread out in a 30-foot radius from you. The insects remain for 10 minutes, making the area heavily obscured for creatures other than you. The swarm moves with you, remaining centered on you. A wind of at least 10 miles per hour disperses the swarm and ends the effect.</p>",
       "chat": ""
     },
     "source": {
@@ -102,7 +102,7 @@
       "YYSStWx9ygrl41hI": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.czXrVRx6XYRWsHAi",
+          "uuid": "Compendium.dnd5r.spells.Item.czXrVRx6XYRWsHAi",
           "challenge": {
             "attack": null,
             "save": null,
@@ -169,7 +169,7 @@
       "daXCQjAPpv1uGjw4": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.OVikYmSdHliAG2YD",
+          "uuid": "Compendium.dnd5r.spells.Item.OVikYmSdHliAG2YD",
           "challenge": {
             "attack": null,
             "save": null,
@@ -370,7 +370,7 @@
     "default": 0
   },
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "riders": {
         "activity": [],
         "effect": []
@@ -380,11 +380,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037228686,
     "modifiedTime": 1731019487934,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!bod1dKzbAkAm21Ho"
 }

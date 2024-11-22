@@ -55,8 +55,8 @@ export default class TraitConfig extends AdvancementConfig {
   /** @inheritDoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["dnd5e", "advancement", "traits", "two-column"],
-      template: "systems/dnd5etools/templates/advancement/trait-config.hbs",
+      classes: ["dnd5r", "advancement", "traits", "two-column"],
+      template: "systems/dnd5r/templates/advancement/trait-config.hbs",
       width: 640
     });
   }
@@ -83,7 +83,7 @@ export default class TraitConfig extends AdvancementConfig {
     context.count = context.choices[this.selected]?.data.count;
     context.selectedIndex = this.selected;
 
-    context.validTraitTypes = Object.entries(CONFIG.DND5E.traits).reduce((obj, [key, config]) => {
+    context.validTraitTypes = Object.entries(CONFIG.DND5R.traits).reduce((obj, [key, config]) => {
       if ( ((this.config.mode === "default") || (this.config.mode === "mastery" ? config.mastery : config.expertise))
         && (config.dataType !== Number) ) {
         obj[key] = config.labels.title;
@@ -93,18 +93,18 @@ export default class TraitConfig extends AdvancementConfig {
 
     const rep = this.advancement.representedTraits();
     context.disableAllowReplacements = rep.size > 1;
-    const traitConfig = rep.size === 1 ? CONFIG.DND5E.traits[rep.first()] : null;
+    const traitConfig = rep.size === 1 ? CONFIG.DND5R.traits[rep.first()] : null;
     if ( traitConfig ) {
       context.default.title = traitConfig.labels.title;
       context.default.icon = traitConfig.icon;
     } else {
-      context.default.title = game.i18n.localize("DND5E.TraitGenericPlural.other");
+      context.default.title = game.i18n.localize("DND5R.TraitGenericPlural.other");
       context.default.icon = this.advancement.constructor.metadata.icon;
     }
     context.default.hint = Trait.localizedList({ grants: this.config.grants, choices: this.config.choices });
 
     context.choiceOptions = await Trait.choices(this.trait, { chosen, prefixed: true, any: this.selected !== -1 });
-    context.selectedTraitHeader = `${CONFIG.DND5E.traits[this.trait].labels.localization}.other`;
+    context.selectedTraitHeader = `${CONFIG.DND5R.traits[this.trait].labels.localization}.other`;
     context.selectedTrait = this.trait;
 
     // Disable selecting categories in mastery mode
@@ -185,7 +185,7 @@ export default class TraitConfig extends AdvancementConfig {
       && (event.target.value !== "default")
       && (event.target.value !== this.config.mode) ) {
       const checkKey = event.target.value === "mastery" ? "mastery" : "expertise";
-      const validTraitTypes = filteredKeys(CONFIG.DND5E.traits, c => c[checkKey]);
+      const validTraitTypes = filteredKeys(CONFIG.DND5R.traits, c => c[checkKey]);
       if ( !validTraitTypes.includes(this.trait) ) this.trait = validTraitTypes[0];
     }
 
@@ -233,7 +233,7 @@ export default class TraitConfig extends AdvancementConfig {
     // If one of the expertise modes is selected, filter out any traits that are not of a valid type
     if ( (configuration.mode ?? this.config.mode) !== "default" ) {
       const checkKey = (configuration.mode ?? this.config.mode) === "mastery" ? "mastery" : "expertise";
-      const validTraitTypes = filteredKeys(CONFIG.DND5E.traits, c => c[checkKey]);
+      const validTraitTypes = filteredKeys(CONFIG.DND5R.traits, c => c[checkKey]);
       configuration.grants = configuration.grants.filter(k => validTraitTypes.some(t => k.startsWith(t)));
       configuration.choices.forEach(c => c.pool = c.pool?.filter(k => validTraitTypes.some(t => k.startsWith(t))));
     }

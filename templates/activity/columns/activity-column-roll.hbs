@@ -1,6 +1,6 @@
 <div class="item-detail item-roll {{#if (and (not save.ability) (eq toHit null))}}empty{{/if}}">
     {{#if toHit includeZero=true}}
-    <span class="value">{{ dnd5e-formatModifier toHit }}</span>
+    <span class="value">{{ dnd5r-formatModifier toHit }}</span>
     {{else if save.ability}}
     <div class="stacked">
         <span class="ability">{{ save.ability }}</span>

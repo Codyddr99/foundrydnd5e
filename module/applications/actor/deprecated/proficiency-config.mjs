@@ -16,7 +16,7 @@ export default class ProficiencyConfig extends SkillToolConfig {
   constructor(actor, options) {
     foundry.utils.logCompatibilityWarning(
       "The `ProficiencyConfig` application has been deprecated and replaced with `SkillToolConfig`.",
-      { since: "DnD5e 4.1", until: "DnD5e 4.3" }
+      { since: "DnD5r 4.1", until: "DnD5r 4.3" }
     );
     const trait = options.property === "skills" ? "skills" : "tool";
     super({ ...options, document: actor, trait });

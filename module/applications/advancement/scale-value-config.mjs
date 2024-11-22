@@ -9,8 +9,8 @@ export default class ScaleValueConfig extends AdvancementConfig {
   /** @inheritDoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["dnd5e", "advancement", "scale-value", "two-column"],
-      template: "systems/dnd5etools/templates/advancement/scale-value-config.hbs",
+      classes: ["dnd5r", "advancement", "scale-value", "two-column"],
+      template: "systems/dnd5r/templates/advancement/scale-value-config.hbs",
       width: 540
     });
   }
@@ -31,7 +31,7 @@ export default class ScaleValueConfig extends AdvancementConfig {
       ),
       faces: Object.fromEntries(TYPES.dice.FACES.map(die => [die, `d${die}`])),
       levels: this._prepareLevelData(),
-      movementUnits: CONFIG.DND5E.movementUnits
+      movementUnits: CONFIG.DND5R.movementUnits
     });
   }
 
@@ -44,7 +44,7 @@ export default class ScaleValueConfig extends AdvancementConfig {
    */
   _prepareLevelData() {
     let lastValue = null;
-    let levels = Array.fromRange(CONFIG.DND5E.maxLevel + 1);
+    let levels = Array.fromRange(CONFIG.DND5R.maxLevel + 1);
     if ( ["class", "subclass"].includes(this.advancement.item.type) ) levels = levels.slice(1);
     return levels.reduce((obj, level) => {
       obj[level] = { placeholder: this._formatPlaceholder(lastValue), value: null };
@@ -142,7 +142,7 @@ export default class ScaleValueConfig extends AdvancementConfig {
     const typeChange = "configuration.type" in formData;
     if ( typeChange && (updates.configuration.type !== this.advancement.configuration.type) ) {
       // Clear existing scale value data to prevent error during type update
-      await this.advancement.update(Array.fromRange(CONFIG.DND5E.maxLevel, 1).reduce((obj, lvl) => {
+      await this.advancement.update(Array.fromRange(CONFIG.DND5R.maxLevel, 1).reduce((obj, lvl) => {
         obj[`configuration.scale.-=${lvl}`] = null;
         return obj;
       }, {}));

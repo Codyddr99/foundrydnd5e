@@ -5,7 +5,7 @@
             <span>{{ localize label }}</span>
             {{#if @root.owner}}
             <button type="button" class="description-edit unbutton" data-target="{{ target }}"
-                    aria-label="{{ localize "DND5E.DescriptionEdit" description=(localize label) }}">
+                    aria-label="{{ localize "DND5R.DescriptionEdit" description=(localize label) }}">
                 <i class="fas fa-feather" inert></i>
             </button>
             {{/if}}
@@ -26,7 +26,7 @@
     {{else}}
 
     {{#if (eq item.type "spell")}}
-        {{> "dnd5e.spell-block" activation=system.activation fullWidth=true }}
+        {{> "dnd5r.spell-block" activation=system.activation fullWidth=true }}
     {{/if}}
 
     {{#if info}}
@@ -61,18 +61,18 @@
         {{#if (or isIdentified user.isGM)}}
 
             {{!-- All users see the main, identified description --}}
-            {{> description collapsible=owner label="DND5E.Description" target="system.description.value"
+            {{> description collapsible=owner label="DND5R.Description" target="system.description.value"
                 enriched=enriched.description }}
 
             {{!-- Only GM users are able to see and edit the unidentified description --}}
             {{#if (and isIdentifiable user.isGM)}}
-                {{> description collapsible=true label="DND5E.DescriptionUnidentified"
+                {{> description collapsible=true label="DND5R.DescriptionUnidentified"
                     target="system.unidentified.description" enriched=enriched.unidentified }}
             {{/if}}
 
             {{!-- Owners can see and edit the chat description. It is only visible to non-owners if not blank. --}}
             {{#if (or owner system.description.chat)}}
-                {{> description collapsible=owner label="DND5E.DescriptionChat" target="system.description.chat"
+                {{> description collapsible=owner label="DND5R.DescriptionChat" target="system.description.chat"
                     enriched=enriched.chat }}
             {{/if}}
 
@@ -80,7 +80,7 @@
 
         {{!-- When unidentified, non-GM users can only see and edit the unidentified description --}}
         {{#if (or owner system.unidentified.description)}}
-            {{> description collapsible=false label="DND5E.Description" target="system.unidentified.description"
+            {{> description collapsible=false label="DND5R.Description" target="system.unidentified.description"
                 enriched=enriched.unidentified }}
         {{/if}}
 

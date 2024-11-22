@@ -61,8 +61,8 @@
       "material"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "save",
         "activation": {
           "type": "action",
@@ -161,7 +161,7 @@
   "effects": [
     {
       "name": "Symbol (fear)",
-      "origin": "Compendium.dnd5e.spells.Item.B2kbmgbA2WQR00kx",
+      "origin": "Compendium.dnd5r.spells.Item.B2kbmgbA2WQR00kx",
       "duration": {
         "startTime": null,
         "seconds": 60,
@@ -185,7 +185,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -199,7 +199,7 @@
     },
     {
       "name": "Symbol (pain)",
-      "origin": "Compendium.dnd5e.spells.Item.B2kbmgbA2WQR00kx",
+      "origin": "Compendium.dnd5r.spells.Item.B2kbmgbA2WQR00kx",
       "duration": {
         "startTime": null,
         "seconds": 60,
@@ -223,7 +223,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -237,7 +237,7 @@
     },
     {
       "name": "Symbol (sleep)",
-      "origin": "Compendium.dnd5e.spells.Item.B2kbmgbA2WQR00kx",
+      "origin": "Compendium.dnd5r.spells.Item.B2kbmgbA2WQR00kx",
       "duration": {
         "startTime": null,
         "seconds": 600,
@@ -262,7 +262,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -276,7 +276,7 @@
     },
     {
       "name": "Symbol (stunning)",
-      "origin": "Compendium.dnd5e.spells.Item.B2kbmgbA2WQR00kx",
+      "origin": "Compendium.dnd5r.spells.Item.B2kbmgbA2WQR00kx",
       "duration": {
         "startTime": null,
         "seconds": 60,
@@ -301,7 +301,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -318,11 +318,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037350335,
     "modifiedTime": 1725992717934,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!B2kbmgbA2WQR00kx"
 }

@@ -19,14 +19,14 @@ export default class CastSheet extends ActivitySheet {
   static PARTS = {
     ...super.PARTS,
     identity: {
-      template: "systems/dnd5etools/templates/activity/cast-identity.hbs",
+      template: "systems/dnd5r/templates/activity/cast-identity.hbs",
       templates: super.PARTS.identity.templates
     },
     effect: {
-      template: "systems/dnd5etools/templates/activity/cast-effect.hbs",
+      template: "systems/dnd5r/templates/activity/cast-effect.hbs",
       templates: [
-        "systems/dnd5etools/templates/activity/parts/cast-spell.hbs",
-        "systems/dnd5etools/templates/activity/parts/cast-details.hbs"
+        "systems/dnd5r/templates/activity/parts/cast-spell.hbs",
+        "systems/dnd5r/templates/activity/parts/cast-details.hbs"
       ]
     }
   };
@@ -51,13 +51,13 @@ export default class CastSheet extends ActivitySheet {
 
     if ( context.spell ) {
       context.contentLink = context.spell.toAnchor().outerHTML;
-      if ( context.spell.system.level > 0 ) context.levelOptions = Object.entries(CONFIG.DND5E.spellLevels)
+      if ( context.spell.system.level > 0 ) context.levelOptions = Object.entries(CONFIG.DND5R.spellLevels)
         .filter(([level]) => Number(level) >= context.spell.system.level)
         .map(([value, label]) => ({ value, label }));
     }
 
-    context.propertyOptions = Array.from(CONFIG.DND5E.validProperties.spell).map(value => ({
-      value, label: CONFIG.DND5E.itemProperties[value]?.label ?? ""
+    context.propertyOptions = Array.from(CONFIG.DND5R.validProperties.spell).map(value => ({
+      value, label: CONFIG.DND5R.itemProperties[value]?.label ?? ""
     }));
 
     return context;
@@ -77,7 +77,7 @@ export default class CastSheet extends ActivitySheet {
   /** @inheritDoc */
   _getTabs() {
     const tabs = super._getTabs();
-    tabs.effect.label = "DND5E.CAST.SECTIONS.Spell";
+    tabs.effect.label = "DND5R.CAST.SECTIONS.Spell";
     tabs.effect.icon = "fa-solid fa-wand-sparkles";
     return tabs;
   }

@@ -10,10 +10,10 @@ export default class CurrencyManager extends DialogMixin(FormApplication) {
   /** @inheritDoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["dnd5e2", "currency-manager", "dialog"],
+      classes: ["dnd5r2", "currency-manager", "dialog"],
       tabs: [{navSelector: "nav", contentSelector: ".sheet-content", initial: "transfer"}],
-      template: "systems/dnd5etools/templates/apps/currency-manager.hbs",
-      title: "DND5E.CurrencyManager.Title",
+      template: "systems/dnd5r/templates/apps/currency-manager.hbs",
+      title: "DND5R.CurrencyManager.Title",
       width: 350,
       height: "auto"
     });
@@ -34,7 +34,7 @@ export default class CurrencyManager extends DialogMixin(FormApplication) {
     destinations.push(...(actor?.system.transferDestinations ?? []));
     destinations.push(...(actor?.itemTypes.container.filter(b => b !== this.object) ?? []));
     if ( game.user.isGM ) {
-      const primaryParty = game.settings.get("dnd5e", "primaryParty")?.actor;
+      const primaryParty = game.settings.get("dnd5r", "primaryParty")?.actor;
       if ( primaryParty && (this.object !== primaryParty) && !destinations.includes(primaryParty) ) {
         destinations.push(primaryParty);
       }
@@ -50,7 +50,7 @@ export default class CurrencyManager extends DialogMixin(FormApplication) {
   getData(options={}) {
     const context = super.getData(options);
 
-    context.CONFIG = CONFIG.DND5E;
+    context.CONFIG = CONFIG.DND5R;
     context.currency = this.object.system.currency;
     context.destinations = Award.prepareDestinations(this.transferDestinations);
 
@@ -132,14 +132,14 @@ export default class CurrencyManager extends DialogMixin(FormApplication) {
 
   /**
    * Convert all carried currency to the highest possible denomination using configured conversion rates.
-   * See CONFIG.DND5E.currencies for configuration.
+   * See CONFIG.DND5R.currencies for configuration.
    * @param {Actor5e|Item5e} doc  Actor or container item to convert.
    * @returns {Promise<Actor5e|Item5e>}
    */
   static convertCurrency(doc) {
     const currency = foundry.utils.deepClone(doc.system.currency);
 
-    const currencies = Object.entries(CONFIG.DND5E.currencies);
+    const currencies = Object.entries(CONFIG.DND5R.currencies);
     currencies.sort((a, b) => a[1].conversion - b[1].conversion);
 
     // Count total converted units of the base currency
@@ -178,7 +178,7 @@ export default class CurrencyManager extends DialogMixin(FormApplication) {
     if ( amount <= 0 ) return;
     // eslint-disable-next-line no-unused-vars
     const { item, remainder, ...updates } = this.getActorCurrencyUpdates(actor, amount, denomination, options);
-    if ( remainder ) throw new Error(game.i18n.format("DND5E.CurrencyManager.Error.InsufficientFunds", {
+    if ( remainder ) throw new Error(game.i18n.format("DND5R.CurrencyManager.Error.InsufficientFunds", {
       denomination,
       amount: new Intl.NumberFormat(game.i18n.lang).format(amount),
       name: actor.name
@@ -204,10 +204,10 @@ export default class CurrencyManager extends DialogMixin(FormApplication) {
     const updates = { system: { currency: { ...currency } }, remainder: amount, item: [] };
     if ( amount <= 0 ) return updates;
 
-    const currencies = Object.entries(CONFIG.DND5E.currencies).map(([denom, { conversion }]) => {
+    const currencies = Object.entries(CONFIG.DND5R.currencies).map(([denom, { conversion }]) => {
       return [denom, conversion];
     }).sort(([, a], [, b]) => priority === "high" ? a - b : b - a);
-    const baseConversion = CONFIG.DND5E.currencies[denomination].conversion;
+    const baseConversion = CONFIG.DND5R.currencies[denomination].conversion;
 
     if ( exact ) currencies.unshift([denomination, baseConversion]);
     for ( const [denom, conversion] of currencies ) {

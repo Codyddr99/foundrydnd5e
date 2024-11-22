@@ -27,7 +27,7 @@
       &::before, &::after {
         content: "";
         flex-basis: 50%;
-        border-top: 1px dotted var(--dnd5e-color-gold);
+        border-top: 1px dotted var(--dnd5r-color-gold);
         align-self: center;
       }
     }
@@ -36,8 +36,8 @@
     margin-top: 4px;
     > li {
       padding: 6px;
-      border: var(--dnd5e-border-gold);
-      box-shadow: 0 0 6px var(--dnd5e-shadow-15);
+      border: var(--dnd5r-border-gold);
+      box-shadow: 0 0 6px var(--dnd5r-shadow-15);
 
       &.empty {
         border: none;
@@ -138,19 +138,19 @@
       padding-inline: 3px;
       font-weight: bold;
     }
-    .separator { color: var(--dnd5e-color-gold); }
+    .separator { color: var(--dnd5r-color-gold); }
   }
-  i.warning { color: var(--dnd5e-color-failure); }
+  i.warning { color: var(--dnd5r-color-failure); }
   .hint code {
     background: none;
     border: none;
-    color: var(--dnd5e-color-crimson);
+    color: var(--dnd5r-color-crimson);
     font-size: inherit;
     padding: 0;
   }
   [data-application-part="consumption"] .form-group:not(.label-top) > label { flex: 4; }
   .note {
-    --note-color: var(--dnd5e-color-note-info);
+    --note-color: var(--dnd5r-color-note-info);
     position: relative;
     margin-block-end: 0;
     border-radius: 4px;
@@ -171,7 +171,7 @@
       inset-inline-start: calc(-1 * var(--marker-size) / 2);
       align-content: center;
       background: var(--note-color);
-      color: var(--dnd5e-color-parchment);
+      color: var(--dnd5r-color-parchment);
       font-family: var(--font-awesome);
       font-size: calc(var(--marker-size) * .75);
       font-weight: bold;
@@ -179,7 +179,7 @@
     }
     &.info::before { content: "\f129"; }
     &.warn {
-      --note-color: var(--dnd5e-color-note-warn);
+      --note-color: var(--dnd5r-color-note-warn);
       &::before { content: "\21"; }
     }
   }
@@ -193,7 +193,7 @@
     display: flex;
     justify-content: center;
     gap: 8px;
-    font-family: var(--dnd5e-font-roboto-condensed);
+    font-family: var(--dnd5r-font-roboto-condensed);
     font-size: var(--font-size-16);
   }
   fieldset.harvesting {
@@ -240,7 +240,7 @@
     > .name {
       flex: 1;
       text-transform: none;
-      font-family: var(--dnd5e-font-roboto-slab);
+      font-family: var(--dnd5r-font-roboto-slab);
       line-height: normal;
       font-size: var(--font-size-14);
     }
@@ -263,7 +263,7 @@
 /*  Chat Cards                        */
 /* ---------------------------------- */
 
-.dnd5e2.chat-card {
+.dnd5r2.chat-card {
   .order-description {
     padding: 8px;
     text-align: center;
@@ -292,7 +292,7 @@
       flex: 0 0 32px;
       width: 32px;
       height: 32px;
-      border: var(--dnd5e-border-gold);
+      border: var(--dnd5r-border-gold);
       border-radius: 3px;
       overflow: hidden;
       cursor: pointer;
@@ -304,7 +304,7 @@
         height: 100%;
         max-width: unset;
         object-fit: cover;
-        background: var(--dnd5e-color-iron-gray);
+        background: var(--dnd5r-color-iron-gray);
       }
     }
   }

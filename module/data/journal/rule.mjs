@@ -4,15 +4,15 @@ const { HTMLField, StringField } = foundry.data.fields;
  * Data definition for Rule journal entry pages.
  *
  * @property {string} tooltip  Content to display in tooltip in place of page's text content.
- * @property {string} type     Type of rule represented. Should match an entry defined in `CONFIG.DND5E.ruleTypes`.
+ * @property {string} type     Type of rule represented. Should match an entry defined in `CONFIG.DND5R.ruleTypes`.
  */
 export default class RuleJournalPageData extends foundry.abstract.TypeDataModel {
 
   /** @inheritDoc */
   static defineSchema() {
     return {
-      tooltip: new HTMLField({textSearch: true, label: "DND5E.Rule.Tooltip"}),
-      type: new StringField({blank: false, initial: "rule", label: "DND5E.Rule.Type.Label"})
+      tooltip: new HTMLField({textSearch: true, label: "DND5R.Rule.Tooltip"}),
+      type: new StringField({blank: false, initial: "rule", label: "DND5R.Rule.Type.Label"})
     };
   }
 
@@ -26,14 +26,14 @@ export default class RuleJournalPageData extends foundry.abstract.TypeDataModel 
   async richTooltip(enrichmentOptions={}) {
     const context = {
       page: this.parent,
-      type: CONFIG.DND5E.ruleTypes[this.type].label,
+      type: CONFIG.DND5R.ruleTypes[this.type].label,
       content: await TextEditor.enrichHTML(this.tooltip || this.parent.text.content, {
         secrets: false, relativeTo: this.parent, ...enrichmentOptions
       })
     };
     return {
-      content: await renderTemplate("systems/dnd5etools/templates/journal/page-rule-tooltip.hbs", context),
-      classes: ["dnd5e-tooltip", "rule-tooltip"]
+      content: await renderTemplate("systems/dnd5r/templates/journal/page-rule-tooltip.hbs", context),
+      classes: ["dnd5r-tooltip", "rule-tooltip"]
     };
   }
 

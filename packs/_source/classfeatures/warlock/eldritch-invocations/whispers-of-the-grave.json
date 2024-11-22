@@ -7,7 +7,7 @@
   "type": "feat",
   "system": {
     "description": {
-      "value": "<p>You can cast @UUID[Compendium.dnd5e.spells.Item.I2LUSF5ogc7Bj62e]{Speak with Dead} at will, without expending a spell slot.</p>",
+      "value": "<p>You can cast @UUID[Compendium.dnd5r.spells.Item.I2LUSF5ogc7Bj62e]{Speak with Dead} at will, without expending a spell slot.</p>",
       "chat": ""
     },
     "source": {
@@ -32,8 +32,8 @@
       "level": 9
     },
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "action",
@@ -109,11 +109,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037386703,
     "modifiedTime": 1725992289243,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!gFjxo01hAN4c9hDG"
 }

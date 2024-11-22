@@ -55,7 +55,7 @@ function chunkTerms(terms, type) {
     currentChunk = null;
     negative = false;
   };
-  const isValidType = t => ((t in CONFIG.DND5E.damageTypes) || (t in CONFIG.DND5E.healingTypes));
+  const isValidType = t => ((t in CONFIG.DND5R.damageTypes) || (t in CONFIG.DND5R.healingTypes));
   const chunks = [];
   let currentChunk;
   let negative = false;

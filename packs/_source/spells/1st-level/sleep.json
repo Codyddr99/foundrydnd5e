@@ -62,8 +62,8 @@
       "material"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "damage",
         "activation": {
           "type": "action",
@@ -140,7 +140,7 @@
   "effects": [
     {
       "name": "Sleep",
-      "origin": "Compendium.dnd5e.spells.Item.KhwiSi9fwVfUPtku",
+      "origin": "Compendium.dnd5r.spells.Item.KhwiSi9fwVfUPtku",
       "duration": {
         "startTime": null,
         "seconds": 60,
@@ -165,7 +165,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -187,11 +187,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037353656,
     "modifiedTime": 1725992719021,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!KhwiSi9fwVfUPtku"
 }

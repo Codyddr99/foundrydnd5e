@@ -56,8 +56,8 @@ export default class BaseActivityData extends foundry.abstract.DataModel {
 
   /** @override */
   static LOCALIZATION_PREFIXES = [
-    "DND5E.ACTIVITY", "DND5E.ACTIVATION", "DND5E.CONSUMPTION",
-    "DND5E.DURATION", "DND5E.RANGE", "DND5E.TARGET", "DND5E.USES"
+    "DND5R.ACTIVITY", "DND5R.ACTIVATION", "DND5R.CONSUMPTION",
+    "DND5R.DURATION", "DND5R.RANGE", "DND5R.TARGET", "DND5R.USES"
   ];
 
   /* -------------------------------------------- */
@@ -164,7 +164,7 @@ export default class BaseActivityData extends foundry.abstract.DataModel {
    */
   get canScale() {
     return this.consumption.scaling.allowed || (this.isSpell && this.item.system.level > 0
-      && CONFIG.DND5E.spellPreparationModes[this.item.system.preparation.mode]?.upcast);
+      && CONFIG.DND5R.spellPreparationModes[this.item.system.preparation.mode]?.upcast);
   }
 
   /* -------------------------------------------- */
@@ -184,7 +184,7 @@ export default class BaseActivityData extends foundry.abstract.DataModel {
    * @type {boolean}
    */
   get isScaledScroll() {
-    return !!this.item.getFlag("dnd5e", "spellLevel");
+    return !!this.item.getFlag("dnd5r", "spellLevel");
   }
 
   /* -------------------------------------------- */
@@ -238,7 +238,7 @@ export default class BaseActivityData extends foundry.abstract.DataModel {
    * Static ID used for the automatically generated activity created during migration.
    * @type {string}
    */
-  static INITIAL_ID = staticID("dnd5eactivity");
+  static INITIAL_ID = staticID("dnd5ractivity");
 
   /* -------------------------------------------- */
 
@@ -262,7 +262,7 @@ export default class BaseActivityData extends foundry.abstract.DataModel {
       uses: this.transformUsesData(source, options)
     }, options);
     foundry.utils.setProperty(source, `system.activities.${activityData._id}`, activityData);
-    foundry.utils.setProperty(source, "flags.dnd5e.persistSourceMigration", true);
+    foundry.utils.setProperty(source, "flags.dnd5r.persistSourceMigration", true);
   }
 
   /* -------------------------------------------- */
@@ -363,7 +363,7 @@ export default class BaseActivityData extends foundry.abstract.DataModel {
     };
 
     const parsed = (formula ?? "").match(/^\s*(\d+)d(\d+)(?:\s*([+|-])\s*(@?[\w\d.-]+))?\s*$/i);
-    if ( parsed && CONFIG.DND5E.dieSteps.includes(Number(parsed[2])) ) {
+    if ( parsed && CONFIG.DND5R.dieSteps.includes(Number(parsed[2])) ) {
       data.number = Number(parsed[1]);
       data.denomination = Number(parsed[2]);
       if ( parsed[4] ) data.bonus = parsed[3] === "-" ? `-${parsed[4]}` : parsed[4];
@@ -425,7 +425,7 @@ export default class BaseActivityData extends foundry.abstract.DataModel {
    */
   static transformEffectsData(source, options) {
     return source.effects
-      .filter(e => !e.transfer && (e.type !== "enchantment") && (e.flags?.dnd5e?.type !== "enchantment"))
+      .filter(e => !e.transfer && (e.type !== "enchantment") && (e.flags?.dnd5r?.type !== "enchantment"))
       .map(e => ({ _id: e._id }));
   }
 
@@ -478,7 +478,7 @@ export default class BaseActivityData extends foundry.abstract.DataModel {
       prompt: source.system.target?.prompt ?? true
     };
 
-    if ( source.system.target?.type in CONFIG.DND5E.areaTargetTypes ) foundry.utils.mergeObject(data, {
+    if ( source.system.target?.type in CONFIG.DND5R.areaTargetTypes ) foundry.utils.mergeObject(data, {
       template: {
         type: source.system.target?.type ?? "",
         size: source.system.target?.value ?? "",
@@ -586,7 +586,7 @@ export default class BaseActivityData extends foundry.abstract.DataModel {
 
       // If targeted item isn't found, display preparation warning
       if ( !actor.items.get(target.target) ) {
-        const message = game.i18n.format("DND5E.CONSUMPTION.Warning.MissingItem", {
+        const message = game.i18n.format("DND5R.CONSUMPTION.Warning.MissingItem", {
           activity: this.name, item: this.item.name
         });
         actor._preparationWarnings.push({ message, link: this.uuid, type: "warning" });
@@ -623,7 +623,7 @@ export default class BaseActivityData extends foundry.abstract.DataModel {
       if ( part.types.size ) {
         label = `${formula} ${game.i18n.getListFormatter({ type: "conjunction" }).format(
           Array.from(part.types)
-            .map(p => CONFIG.DND5E.damageTypes[p]?.label ?? CONFIG.DND5E.healingTypes[p]?.label)
+            .map(p => CONFIG.DND5R.damageTypes[p]?.label ?? CONFIG.DND5R.healingTypes[p]?.label)
             .filter(t => t)
         )}`;
       }
@@ -689,7 +689,7 @@ export default class BaseActivityData extends foundry.abstract.DataModel {
       if ( bonus && (parseInt(bonus) !== 0) ) parts.push(bonus);
     }
 
-    const lastType = this.item.getFlag("dnd5e", `last.${this.id}.damageType.${index}`);
+    const lastType = this.item.getFlag("dnd5r", `last.${this.id}.damageType.${index}`);
 
     return {
       data, parts,
@@ -697,7 +697,7 @@ export default class BaseActivityData extends foundry.abstract.DataModel {
         type: (damage.types.has(lastType) ? lastType : null) ?? damage.types.first(),
         types: Array.from(damage.types),
         properties: Array.from(this.item.system.properties ?? [])
-          .filter(p => CONFIG.DND5E.itemProperties[p]?.isPhysical)
+          .filter(p => CONFIG.DND5R.itemProperties[p]?.isPhysical)
       }
     };
   }

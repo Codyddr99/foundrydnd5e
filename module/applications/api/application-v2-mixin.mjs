@@ -9,7 +9,7 @@ const { HandlebarsApplicationMixin } = foundry.applications.api;
 export default Base => class extends HandlebarsApplicationMixin(Base) {
   /** @override */
   static DEFAULT_OPTIONS = {
-    classes: ["dnd5e2"],
+    classes: ["dnd5r2"],
     window: {
       subtitle: ""
     }
@@ -58,8 +58,8 @@ export default Base => class extends HandlebarsApplicationMixin(Base) {
   /** @inheritDoc */
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
-    context.CONFIG = CONFIG.DND5E;
-    context.inputs = { ...foundry.applications.fields, ...dnd5e.applications.fields };
+    context.CONFIG = CONFIG.DND5R;
+    context.inputs = { ...foundry.applications.fields, ...dnd5r.applications.fields };
     return context;
   }
 
@@ -84,7 +84,7 @@ export default Base => class extends HandlebarsApplicationMixin(Base) {
     // Icon
     if ( (options.window?.icon ?? "").includes(".") ) {
       const icon = frame.querySelector(".window-icon");
-      const newIcon = document.createElement(options.window.icon?.endsWith(".svg") ? "dnd5e-icon" : "img");
+      const newIcon = document.createElement(options.window.icon?.endsWith(".svg") ? "dnd5r-icon" : "img");
       newIcon.classList.add("window-icon");
       newIcon.src = options.window.icon;
       icon.replaceWith(newIcon);
@@ -136,7 +136,7 @@ export default Base => class extends HandlebarsApplicationMixin(Base) {
    */
   _disableFields() {
     const selector = `.window-content :is(${[
-      "INPUT", "SELECT", "TEXTAREA", "BUTTON", "DND5E-CHECKBOX", "COLOR-PICKER", "DOCUMENT-TAGS",
+      "INPUT", "SELECT", "TEXTAREA", "BUTTON", "DND5R-CHECKBOX", "COLOR-PICKER", "DOCUMENT-TAGS",
       "FILE-PICKER", "HUE-SLIDER", "MULTI-SELECT", "PROSE-MIRROR", "RANGE-PICKER", "STRING-TAGS"
     ].join(", ")}):not(.interface-only)`;
     for ( const element of this.element.querySelectorAll(selector) ) {

@@ -103,11 +103,11 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.1.0",
         "createdTime": 1731017547732,
         "modifiedTime": 1731017567144,
-        "lastModifiedBy": "dnd5ebuilder0000"
+        "lastModifiedBy": "dnd5rbuilder0000"
       },
       "_key": "!items.effects!2veAOEyfbDJuxR8Y.ww5XGi3vgzt77IJs"
     }
@@ -118,7 +118,7 @@
     "default": 0
   },
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "riders": {
         "activity": [],
         "effect": []
@@ -128,11 +128,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037091220,
     "modifiedTime": 1731017391925,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!2veAOEyfbDJuxR8Y"
 }

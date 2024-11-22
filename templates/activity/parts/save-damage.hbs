@@ -1,12 +1,12 @@
 <fieldset>
     <legend>
-        <span>{{ localize "DND5E.SAVE.FIELDS.damage.label" }}</span>
+        <span>{{ localize "DND5R.SAVE.FIELDS.damage.label" }}</span>
         <button type="button" class="unbutton control-button" data-action="addDamagePart"
-                data-tooltip="DND5E.DAMAGE.Part.Action.Create"
-                aria-label="{{ localize "DND5E.DAMAGE.Part.Action.Create" }}">
+                data-tooltip="DND5R.DAMAGE.Part.Action.Create"
+                aria-label="{{ localize "DND5R.DAMAGE.Part.Action.Create" }}">
             <i class="fas fa-plus" inert></i>
         </button>
     </legend>
     {{ formField fields.damage.fields.onSave value=activity.damage.onSave options=onSaveOptions }}
-    {{> "systems/dnd5etools/templates/activity/parts/damage-parts.hbs" }}
+    {{> "systems/dnd5r/templates/activity/parts/damage-parts.hbs" }}
 </fieldset>

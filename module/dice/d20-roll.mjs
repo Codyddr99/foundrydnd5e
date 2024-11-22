@@ -227,7 +227,7 @@ export default class D20Roll extends BasicRoll {
     let advantage = true;
     let disadvantage = true;
 
-    const rtLabel = game.i18n.localize("DND5E.FlagsReliableTalent");
+    const rtLabel = game.i18n.localize("DND5R.FlagsReliableTalent");
     for ( const roll of rolls ) {
       if ( !roll.validD20Roll ) continue;
       if ( !roll.hasAdvantage ) advantage = false;
@@ -238,8 +238,8 @@ export default class D20Roll extends BasicRoll {
     }
 
     messageData.flavor ??= "";
-    if ( advantage ) messageData.flavor += ` (${game.i18n.localize("DND5E.Advantage")})`;
-    else if ( disadvantage ) messageData.flavor += ` (${game.i18n.localize("DND5E.Disadvantage")})`;
+    if ( advantage ) messageData.flavor += ` (${game.i18n.localize("DND5R.Advantage")})`;
+    else if ( disadvantage ) messageData.flavor += ` (${game.i18n.localize("DND5R.Disadvantage")})`;
   }
 
   /* -------------------------------------------- */
@@ -320,7 +320,7 @@ export default class D20Roll extends BasicRoll {
   }={}, options={}) {
     foundry.utils.logCompatibilityWarning(
       "The `configureDialog` on D20Roll has been deprecated and is now handled through `D20Roll.build`.",
-      { since: "DnD5e 4.1", until: "DnD5e 4.5" }
+      { since: "DnD5r 4.1", until: "DnD5r 4.5" }
     );
     let DialogClass = this.constructor.DefaultConfigurationDialog;
     if ( chooseModifier ) DialogClass = SkillToolRollConfigurationDialog;

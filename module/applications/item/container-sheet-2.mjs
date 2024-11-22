@@ -4,7 +4,7 @@ import ItemSheetV2Mixin from "./sheet-v2-mixin.mjs";
 export default class ContainerSheet2 extends ItemSheetV2Mixin(ContainerSheet) {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["dnd5e2", "sheet", "item"],
+      classes: ["dnd5r2", "sheet", "item"],
       width: 500,
       height: "auto",
       resizable: false,
@@ -23,7 +23,7 @@ export default class ContainerSheet2 extends ItemSheetV2Mixin(ContainerSheet) {
 
   /** @override */
   get template() {
-    return "systems/dnd5etools/templates/items/item-sheet-2.hbs";
+    return "systems/dnd5r/templates/items/item-sheet-2.hbs";
   }
 
   /* -------------------------------------------- */
@@ -65,7 +65,7 @@ export default class ContainerSheet2 extends ItemSheetV2Mixin(ContainerSheet) {
     delete inventory.containers;
     [context.items, context.containers] = context.items.partition(item => item.type === "container");
     context.inventory = Object.values(inventory);
-    context.inventory.push({ label: "DND5E.Contents", items: context.items, dataset: { type: "all" } });
+    context.inventory.push({ label: "DND5R.Contents", items: context.items, dataset: { type: "all" } });
 
     for ( const container of context.containers ) {
       const ctx = context.itemContext[container.id];

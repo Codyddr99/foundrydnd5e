@@ -27,8 +27,8 @@ export default class ShortRestDialog extends Dialog {
   /** @inheritDoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      template: "systems/dnd5etools/templates/apps/short-rest.hbs",
-      classes: ["dnd5e", "dialog"],
+      template: "systems/dnd5r/templates/apps/short-rest.hbs",
+      classes: ["dnd5r", "dialog"],
       height: "auto"
     });
   }
@@ -47,7 +47,7 @@ export default class ShortRestDialog extends Dialog {
       context.denomination = `d${hd.denomination}`;
       context.hdOptions = [{
         value: context.denomination,
-        label: `${context.denomination} (${hd.value} ${game.i18n.localize("DND5E.available")})`
+        label: `${context.denomination} (${hd.value} ${game.i18n.localize("DND5R.available")})`
       }];
     }
 
@@ -60,12 +60,12 @@ export default class ShortRestDialog extends Dialog {
       context.denomination = (context.availableHD[this._denom] > 0) ? this._denom : dice.find(([k, v]) => v > 0)?.[0];
 
       context.hdOptions = Object.entries(context.availableHD).map(([value, number]) => ({
-        value, label: `${value} (${number} ${game.i18n.localize("DND5E.available")})`
+        value, label: `${value} (${number} ${game.i18n.localize("DND5R.available")})`
       }));
     }
 
     // Determine rest type
-    const variant = game.settings.get("dnd5e", "restVariant");
+    const variant = game.settings.get("dnd5r", "restVariant");
     context.promptNewDay = variant !== "epic";     // It's never a new day when only resting 1 minute
     context.newDay = false;                        // It may be a new day, but not by default
     return context;
@@ -108,11 +108,11 @@ export default class ShortRestDialog extends Dialog {
   static async shortRestDialog({ actor }={}) {
     return new Promise((resolve, reject) => {
       const dlg = new this(actor, {
-        title: `${game.i18n.localize("DND5E.ShortRest")}: ${actor.name}`,
+        title: `${game.i18n.localize("DND5R.ShortRest")}: ${actor.name}`,
         buttons: {
           rest: {
             icon: '<i class="fas fa-bed"></i>',
-            label: game.i18n.localize("DND5E.Rest"),
+            label: game.i18n.localize("DND5R.Rest"),
             callback: html => {
               const formData = new FormDataExtended(html.find("form")[0]);
               resolve(formData.object);

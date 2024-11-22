@@ -29,8 +29,8 @@
     "requirements": "Way of the Open Hand 17",
     "properties": [],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "save",
         "activation": {
           "type": "action",
@@ -42,7 +42,7 @@
           "targets": [
             {
               "type": "itemUses",
-              "target": "Compendium.dnd5e.classfeatures.Item.10b6z2W1txNkrGP7",
+              "target": "Compendium.dnd5r.classfeatures.Item.10b6z2W1txNkrGP7",
               "value": "3",
               "scaling": {
                 "mode": "",
@@ -141,11 +141,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037386823,
     "modifiedTime": 1725992289302,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!h1gM8SH3BNRtFevE"
 }

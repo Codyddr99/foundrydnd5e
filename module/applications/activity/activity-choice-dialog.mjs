@@ -26,7 +26,7 @@ export default class ActivityChoiceDialog extends Application5e {
 
   static PARTS = {
     activities: {
-      template: "systems/dnd5etools/templates/activity/activity-choices.hbs"
+      template: "systems/dnd5r/templates/activity/activity-choices.hbs"
     }
   };
 
@@ -78,15 +78,15 @@ export default class ActivityChoiceDialog extends Application5e {
   /** @inheritDoc */
   async _prepareContext(options) {
     let controlHint;
-    if ( game.settings.get("dnd5e", "controlHints") ) {
-      controlHint = game.i18n.localize("DND5E.Controls.Activity.FastForwardHint");
+    if ( game.settings.get("dnd5r", "controlHints") ) {
+      controlHint = game.i18n.localize("DND5R.Controls.Activity.FastForwardHint");
       controlHint = controlHint.replace(
         "<left-click>",
-        `<img src="systems/dnd5etools/icons/svg/mouse-left.svg" alt="${game.i18n.localize("DND5E.Controls.LeftClick")}">`
+        `<img src="systems/dnd5r/icons/svg/mouse-left.svg" alt="${game.i18n.localize("DND5R.Controls.LeftClick")}">`
       );
     }
     const activities = this.#item.system.activities
-      .filter(a => !this.#item.getFlag("dnd5e", "riders.activity")?.includes(a.id))
+      .filter(a => !this.#item.getFlag("dnd5r", "riders.activity")?.includes(a.id))
       .map(this._prepareActivityContext.bind(this))
       .sort((a, b) => a.sort - b.sort);
     return {

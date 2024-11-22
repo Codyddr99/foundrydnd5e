@@ -8,10 +8,10 @@ export default class ItemChoiceConfig extends AdvancementConfig {
   /** @inheritDoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["dnd5e", "advancement", "item-choice", "three-column"],
+      classes: ["dnd5r", "advancement", "item-choice", "three-column"],
       dragDrop: [{ dropSelector: ".drop-target" }],
       dropKeyPath: "pool",
-      template: "systems/dnd5etools/templates/advancement/item-choice-config.hbs",
+      template: "systems/dnd5r/templates/advancement/item-choice-config.hbs",
       width: 780
     });
   }
@@ -23,20 +23,20 @@ export default class ItemChoiceConfig extends AdvancementConfig {
     const indexes = this.advancement.configuration.pool.map(i => fromUuidSync(i.uuid));
     const context = {
       ...super.getData(options),
-      abilities: Object.entries(CONFIG.DND5E.abilities).reduce((obj, [k, c]) => {
+      abilities: Object.entries(CONFIG.DND5R.abilities).reduce((obj, [k, c]) => {
         obj[k] = { label: c.label, selected: this.advancement.configuration.spell?.ability.has(k) ? "selected" : "" };
         return obj;
       }, {}),
       levelRestrictionOptions: [
         { value: "", label: "" },
-        { value: "available", label: game.i18n.localize("DND5E.AdvancementItemChoiceSpellLevelAvailable") },
+        { value: "available", label: game.i18n.localize("DND5R.AdvancementItemChoiceSpellLevelAvailable") },
         { rule: true },
-        ...Object.entries(CONFIG.DND5E.spellLevels).map(([value, label]) => ({ value, label }))
+        ...Object.entries(CONFIG.DND5R.spellLevels).map(([value, label]) => ({ value, label }))
       ],
       showContainerWarning: indexes.some(i => i?.type === "container"),
       showSpellConfig: this.advancement.configuration.type === "spell",
       showRequireSpellSlot: !this.advancement.configuration.spell?.preparation
-        || CONFIG.DND5E.spellPreparationModes[this.advancement.configuration.spell?.preparation]?.upcast,
+        || CONFIG.DND5R.spellPreparationModes[this.advancement.configuration.spell?.preparation]?.upcast,
       validTypes: this.advancement.constructor.VALID_TYPES.reduce((obj, type) => {
         obj[type] = game.i18n.localize(CONFIG.Item.typeLabels[type]);
         return obj;
@@ -47,11 +47,11 @@ export default class ItemChoiceConfig extends AdvancementConfig {
       return obj;
     }, {});
     if ( this.advancement.configuration.type === "feat" ) {
-      const selectedType = CONFIG.DND5E.featureTypes[this.advancement.configuration.restriction.type];
+      const selectedType = CONFIG.DND5R.featureTypes[this.advancement.configuration.restriction.type];
       context.typeRestriction = {
-        typeLabel: game.i18n.localize("DND5E.ItemFeatureType"),
-        typeOptions: CONFIG.DND5E.featureTypes,
-        subtypeLabel: game.i18n.format("DND5E.ItemFeatureSubtype", {category: selectedType?.label}),
+        typeLabel: game.i18n.localize("DND5R.ItemFeatureType"),
+        typeOptions: CONFIG.DND5R.featureTypes,
+        subtypeLabel: game.i18n.format("DND5R.ItemFeatureSubtype", {category: selectedType?.label}),
         subtypeOptions: selectedType?.subtypes
       };
     }

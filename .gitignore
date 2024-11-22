@@ -1,7 +1,7 @@
 # Build Artifacts
-dnd5e.css
-dnd5e-compiled*
-dnd5e.lock
+dnd5r.css
+dnd5r-compiled*
+dnd5r.lock
 packs/*
 !packs/_source/
 

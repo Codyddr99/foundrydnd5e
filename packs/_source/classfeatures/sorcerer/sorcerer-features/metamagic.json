@@ -7,7 +7,7 @@
   "type": "feat",
   "system": {
     "description": {
-      "value": "<p>At 3rd level, you gain the ability to twist your spells to suit your needs. You gain two of the following Metamagic options of your choice. You gain another one at 10th and 17th level. You can use only one Metamagic option on a spell when you cast it, unless otherwise noted.</p><p>@UUID[Compendium.dnd5e.classfeatures.Item.zElYrOcCFFMhB6Xl]{Careful Spell}</p><p>@UUID[Compendium.dnd5e.classfeatures.Item.DZpAa3LzMNBexbmX]{Distant Spell}</p><p>@UUID[Compendium.dnd5e.classfeatures.Item.IWpe0Y9uAStHGiH1]{Empowered Spell}</p><p>@UUID[Compendium.dnd5e.classfeatures.Item.tQxlKyAx9sgPrbgj]{Extended Spell}</p><p>@UUID[Compendium.dnd5e.classfeatures.Item.tNG2qi9zhmXEkecA]{Heightened Spell}</p><p>@UUID[Compendium.dnd5e.classfeatures.Item.nViGf6bZ6DQAJhkw]{Quickened Spell}</p><p>@UUID[Compendium.dnd5e.classfeatures.Item.fXa0DMhoVLtbBu9l]{Subtle Spell}</p><p>@UUID[Compendium.dnd5e.classfeatures.Item.Qb391hakCfmH4w8p]{Twinned Spell}</p>",
+      "value": "<p>At 3rd level, you gain the ability to twist your spells to suit your needs. You gain two of the following Metamagic options of your choice. You gain another one at 10th and 17th level. You can use only one Metamagic option on a spell when you cast it, unless otherwise noted.</p><p>@UUID[Compendium.dnd5r.classfeatures.Item.zElYrOcCFFMhB6Xl]{Careful Spell}</p><p>@UUID[Compendium.dnd5r.classfeatures.Item.DZpAa3LzMNBexbmX]{Distant Spell}</p><p>@UUID[Compendium.dnd5r.classfeatures.Item.IWpe0Y9uAStHGiH1]{Empowered Spell}</p><p>@UUID[Compendium.dnd5r.classfeatures.Item.tQxlKyAx9sgPrbgj]{Extended Spell}</p><p>@UUID[Compendium.dnd5r.classfeatures.Item.tNG2qi9zhmXEkecA]{Heightened Spell}</p><p>@UUID[Compendium.dnd5r.classfeatures.Item.nViGf6bZ6DQAJhkw]{Quickened Spell}</p><p>@UUID[Compendium.dnd5r.classfeatures.Item.fXa0DMhoVLtbBu9l]{Subtle Spell}</p><p>@UUID[Compendium.dnd5r.classfeatures.Item.Qb391hakCfmH4w8p]{Twinned Spell}</p>",
       "chat": ""
     },
     "source": {
@@ -43,11 +43,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037381125,
     "modifiedTime": 1725992287483,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!9Uh7uTDNZ04oTJsL"
 }

@@ -7,12 +7,12 @@ export default class SpellConfigurationData extends foundry.abstract.DataModel {
   static defineSchema() {
     return {
       ability: new SetField(new StringField()),
-      preparation: new StringField({ label: "DND5E.SpellPreparation.Mode" }),
+      preparation: new StringField({ label: "DND5R.SpellPreparation.Mode" }),
       uses: new SchemaField({
-        max: new FormulaField({ deterministic: true, label: "DND5E.UsesMax" }),
-        per: new StringField({ label: "DND5E.UsesPeriod" }),
+        max: new FormulaField({ deterministic: true, label: "DND5R.UsesMax" }),
+        per: new StringField({ label: "DND5R.UsesPeriod" }),
         requireSlot: new BooleanField()
-      }, { label: "DND5E.LimitedUses" })
+      }, { label: "DND5R.LimitedUses" })
     };
   }
 
@@ -47,7 +47,7 @@ export default class SpellConfigurationData extends foundry.abstract.DataModel {
       itemData.system.uses.recovery ??= [];
       itemData.system.uses.recovery.push({ period: this.uses.per, type: "recoverAll" });
 
-      const preparationConfig = CONFIG.DND5E.spellPreparationModes[itemData.system.preparation?.mode];
+      const preparationConfig = CONFIG.DND5R.spellPreparationModes[itemData.system.preparation?.mode];
       const createForwardActivity = !this.uses.requireSlot && preparationConfig?.upcast;
 
       for ( const activity of Object.values(itemData.system.activities ?? {}) ) {
@@ -59,8 +59,8 @@ export default class SpellConfigurationData extends foundry.abstract.DataModel {
             _id: foundry.utils.randomID(),
             type: "forward",
             name: `${activity.name ?? game.i18n.localize(
-              CONFIG.DND5E.activityTypes[activity.type]?.documentClass.metadata.title
-            )} (${game.i18n.localize("DND5E.ADVANCEMENT.SPELLCONFIG.FreeCasting").toLowerCase()})`,
+              CONFIG.DND5R.activityTypes[activity.type]?.documentClass.metadata.title
+            )} (${game.i18n.localize("DND5R.ADVANCEMENT.SPELLCONFIG.FreeCasting").toLowerCase()})`,
             sort: (activity.sort ?? 0) + 1,
             activity: {
               id: activity._id
@@ -89,12 +89,12 @@ export default class SpellConfigurationData extends foundry.abstract.DataModel {
    * Changes that this spell configuration indicates should be performed on spells.
    * @param {object} data  Data for the advancement process.
    * @returns {object}
-   * @deprecated since DnD5e 4.0, available until DnD5e 4.4
+   * @deprecated since DnD5r 4.0, available until DnD5r 4.4
    */
   getSpellChanges(data={}) {
     foundry.utils.logCompatibilityWarning(
       "The `getSpellChanges` method on `SpellConfigurationData` has been deprecated and replaced with `applySpellChanges`.",
-      { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+      { since: "DnD5r 4.0", until: "DnD5r 4.4" }
     );
     const updates = {};
     if ( this.ability.size ) {

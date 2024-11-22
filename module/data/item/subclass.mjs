@@ -21,16 +21,16 @@ export default class SubclassData extends ItemDataModel.mixin(ItemDescriptionTem
   /* -------------------------------------------- */
 
   /** @override */
-  static LOCALIZATION_PREFIXES = ["DND5E.SOURCE"];
+  static LOCALIZATION_PREFIXES = ["DND5R.SOURCE"];
 
   /* -------------------------------------------- */
 
   /** @inheritDoc */
   static defineSchema() {
     return this.mergeSchema(super.defineSchema(), {
-      advancement: new ArrayField(new AdvancementField(), { label: "DND5E.AdvancementTitle" }),
+      advancement: new ArrayField(new AdvancementField(), { label: "DND5R.AdvancementTitle" }),
       classIdentifier: new IdentifierField({
-        required: true, label: "DND5E.ClassIdentifier", hint: "DND5E.ClassIdentifierHint"
+        required: true, label: "DND5R.ClassIdentifier", hint: "DND5R.ClassIdentifierHint"
       }),
       spellcasting: new SpellcastingField()
     });
@@ -45,12 +45,12 @@ export default class SubclassData extends ItemDataModel.mixin(ItemDescriptionTem
         label: "TYPES.Item.class",
         type: "set",
         config: {
-          choices: dnd5e.registry.classes.choices,
+          choices: dnd5r.registry.classes.choices,
           keyPath: "system.classIdentifier"
         }
       }],
       ["hasSpellcasting", {
-        label: "DND5E.CompendiumBrowser.Filters.HasSpellcasting",
+        label: "DND5R.CompendiumBrowser.Filters.HasSpellcasting",
         type: "boolean",
         createFilter: (filters, value, def) => {
           if ( value === 0 ) return;
@@ -92,7 +92,7 @@ export default class SubclassData extends ItemDataModel.mixin(ItemDescriptionTem
   async getSheetData(context) {
     context.subtitles = [{ label: context.itemType }];
     context.singleDescription = true;
-    context.parts = ["dnd5e.details-subclass", "dnd5e.details-spellcasting"];
+    context.parts = ["dnd5r.details-subclass", "dnd5r.details-spellcasting"];
   }
 
   /* -------------------------------------------- */

@@ -5,7 +5,7 @@
   "img": "icons/consumables/potions/bottle-bulb-corked-purple.webp",
   "system": {
     "description": {
-      "value": "<p><em>The potion's dense, purple liquid has an ovoid cloud of pink floating in it.</em></p>\n<p>When you drink this potion, you gain the effect of the @UUID[Compendium.dnd5e.spells.Item.ppWAAEul0QHtm4er]{Detect Thoughts} spell (save DC 13). </p>",
+      "value": "<p><em>The potion's dense, purple liquid has an ovoid cloud of pink floating in it.</em></p>\n<p>When you drink this potion, you gain the effect of the @UUID[Compendium.dnd5r.spells.Item.ppWAAEul0QHtm4er]{Detect Thoughts} spell (save DC 13). </p>",
       "chat": ""
     },
     "source": {
@@ -61,8 +61,8 @@
     ],
     "magicalBonus": null,
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "save",
         "activation": {
           "type": "action",
@@ -154,11 +154,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037129606,
     "modifiedTime": 1725992493665,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!Ct9LR9Ft1FG4a6Y1"
 }

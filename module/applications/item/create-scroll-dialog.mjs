@@ -16,7 +16,7 @@ export default class CreateScrollDialog extends Dialog5e {
   static DEFAULT_OPTIONS = {
     classes: ["create-scroll"],
     window: {
-      title: "DND5E.Scroll.CreateScroll",
+      title: "DND5R.Scroll.CreateScroll",
       icon: "fa-solid fa-scroll"
     },
     form: {
@@ -27,7 +27,7 @@ export default class CreateScrollDialog extends Dialog5e {
     },
     buttons: [{
       action: "create",
-      label: "DND5E.Scroll.CreateScroll",
+      label: "DND5R.Scroll.CreateScroll",
       icon: "fa-solid fa-check",
       default: true
     }],
@@ -39,7 +39,7 @@ export default class CreateScrollDialog extends Dialog5e {
   static PARTS = {
     ...super.PARTS,
     content: {
-      template: "systems/dnd5etools/templates/apps/spell-scroll-dialog.hbs"
+      template: "systems/dnd5r/templates/apps/spell-scroll-dialog.hbs"
     }
   };
 
@@ -85,31 +85,31 @@ export default class CreateScrollDialog extends Dialog5e {
     context.config = this.config;
     context.fields = [{
       field: new StringField({
-        label: game.i18n.localize("DND5E.Scroll.Explanation.Label"),
-        hint: game.i18n.localize("DND5E.Scroll.Explanation.Hint")
+        label: game.i18n.localize("DND5R.Scroll.Explanation.Label"),
+        hint: game.i18n.localize("DND5R.Scroll.Explanation.Hint")
       }),
       name: "explanation",
       options: [
-        { value: "full", label: game.i18n.localize("DND5E.Scroll.Explanation.Complete") },
-        { value: "reference", label: game.i18n.localize("DND5E.Scroll.Explanation.Reference") },
-        { value: "none", label: game.i18n.localize("DND5E.None") }
+        { value: "full", label: game.i18n.localize("DND5R.Scroll.Explanation.Complete") },
+        { value: "reference", label: game.i18n.localize("DND5R.Scroll.Explanation.Reference") },
+        { value: "none", label: game.i18n.localize("DND5R.None") }
       ],
       value: this.config.explanation ?? "reference"
     }, {
-      field: new NumberField({ label: game.i18n.localize("DND5E.SpellLevel") }),
+      field: new NumberField({ label: game.i18n.localize("DND5R.SpellLevel") }),
       name: "level",
-      options: Object.entries(CONFIG.DND5E.spellLevels)
+      options: Object.entries(CONFIG.DND5R.spellLevels)
         .map(([value, label]) => ({ value, label }))
         .filter(l => Number(l.value) >= this.spell.system.level),
       value: this.config.level ?? this.spell.system.level
     }];
     context.values = {
-      bonus: new NumberField({ label: game.i18n.localize("DND5E.BonusAttack") }),
-      dc: new NumberField({ label: game.i18n.localize("DND5E.Scroll.SaveDC") })
+      bonus: new NumberField({ label: game.i18n.localize("DND5R.BonusAttack") }),
+      dc: new NumberField({ label: game.i18n.localize("DND5R.Scroll.SaveDC") })
     };
     context.valuePlaceholders = {};
     for ( const level of Array.fromRange(this.config.level + 1).reverse() ) {
-      context.valuePlaceholders = CONFIG.DND5E.spellScrollValues[level];
+      context.valuePlaceholders = CONFIG.DND5R.spellScrollValues[level];
       if ( context.valuePlaceholders ) break;
     }
     return context;
@@ -129,7 +129,7 @@ export default class CreateScrollDialog extends Dialog5e {
   static async #handleFormSubmission(event, form, formData) {
     foundry.utils.mergeObject(this.#config, formData.object);
     this.#config.level = Number(this.#config.level);
-    await this.close({ dnd5e: { submitted: true } });
+    await this.close({ dnd5r: { submitted: true } });
   }
 
   /* -------------------------------------------- */
@@ -147,7 +147,7 @@ export default class CreateScrollDialog extends Dialog5e {
 
   /** @override */
   _onClose(options={}) {
-    if ( !options.dnd5e?.submitted ) this.#config = null;
+    if ( !options.dnd5r?.submitted ) this.#config = null;
   }
 
   /* -------------------------------------------- */

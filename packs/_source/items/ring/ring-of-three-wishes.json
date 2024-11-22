@@ -5,7 +5,7 @@
   "img": "icons/equipment/finger/ring-cabochon-gold-purple.webp",
   "system": {
     "description": {
-      "value": "<p>While wearing this ring, you can use an action to expend 1 of its 3 charges to cast the @UUID[Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz]{Wish} spell from it. The ring becomes nonmagical when you use the last charge.</p>",
+      "value": "<p>While wearing this ring, you can use an action to expend 1 of its 3 charges to cast the @UUID[Compendium.dnd5r.spells.Item.3okM6Gn63zzEULkz]{Wish} spell from it. The ring becomes nonmagical when you use the last charge.</p>",
       "chat": ""
     },
     "source": {
@@ -67,7 +67,7 @@
       "1EUFXGu0QymljFCD": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.3okM6Gn63zzEULkz",
+          "uuid": "Compendium.dnd5r.spells.Item.3okM6Gn63zzEULkz",
           "challenge": {
             "attack": null,
             "save": null,
@@ -141,7 +141,7 @@
     "default": 0
   },
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "riders": {
         "activity": [],
         "effect": []
@@ -151,11 +151,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037244371,
     "modifiedTime": 1731017400070,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!ewXgnWiYQhS8KArS"
 }

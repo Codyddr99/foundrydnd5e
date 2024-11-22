@@ -39,26 +39,26 @@ export class ItemChoiceConfigurationData extends foundry.abstract.DataModel {
     return {
       choices: new MappingField(new SchemaField({
         count: new NumberField({integer: true, min: 0}),
-        replacement: new BooleanField({label: "DND5E.AdvancementItemChoiceReplacement"})
+        replacement: new BooleanField({label: "DND5R.AdvancementItemChoiceReplacement"})
       }), {
-        hint: "DND5E.AdvancementItemChoiceLevelsHint"
+        hint: "DND5R.AdvancementItemChoiceLevelsHint"
       }),
       allowDrops: new BooleanField({
-        initial: true, label: "DND5E.AdvancementConfigureAllowDrops",
-        hint: "DND5E.AdvancementConfigureAllowDropsHint"
+        initial: true, label: "DND5R.AdvancementConfigureAllowDrops",
+        hint: "DND5R.AdvancementConfigureAllowDropsHint"
       }),
       type: new StringField({
         blank: false, nullable: true, initial: null,
-        label: "DND5E.AdvancementItemChoiceType", hint: "DND5E.AdvancementItemChoiceTypeHint"
+        label: "DND5R.AdvancementItemChoiceType", hint: "DND5R.AdvancementItemChoiceTypeHint"
       }),
       pool: new ArrayField(new SchemaField({
         uuid: new StringField()
       }), {label: "DOCUMENT.Items"}),
       spell: new EmbeddedDataField(SpellConfigurationData, {nullable: true, initial: null}),
       restriction: new SchemaField({
-        type: new StringField({label: "DND5E.Type"}),
-        subtype: new StringField({label: "DND5E.Subtype"}),
-        level: new StringField({label: "DND5E.SpellLevel"})
+        type: new StringField({label: "DND5R.Type"}),
+        subtype: new StringField({label: "DND5R.Subtype"}),
+        level: new StringField({label: "DND5R.SpellLevel"})
       })
     };
   }
@@ -68,7 +68,7 @@ export class ItemChoiceConfigurationData extends foundry.abstract.DataModel {
   get hint() {
     foundry.utils.logCompatibilityWarning(
       "Advancement hints are now part of the base data model.",
-      { since: "DnD5e 3.3", until: "DnD5e 4.1" }
+      { since: "DnD5r 3.3", until: "DnD5r 4.1" }
     );
     return this.parent.hint ?? "";
   }

@@ -34,7 +34,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
     sheetClass: ActivitySheet,
     usage: {
       actions: {},
-      chatCard: "systems/dnd5etools/templates/chat/activity-card.hbs",
+      chatCard: "systems/dnd5r/templates/chat/activity-card.hbs",
       dialog: ActivityUsageDialog
     }
   });
@@ -48,12 +48,12 @@ export default Base => class extends PseudoDocumentMixin(Base) {
     Localization.localizeDataModel(this);
     const fields = this.schema.fields;
     if ( fields.damage?.fields.parts ) {
-      this._localizeSchema(fields.damage.fields.parts.element, ["DND5E.DAMAGE.FIELDS.damage.parts"]);
+      this._localizeSchema(fields.damage.fields.parts.element, ["DND5R.DAMAGE.FIELDS.damage.parts"]);
     }
     if ( fields.consumption ) {
-      this._localizeSchema(fields.consumption.fields.targets.element, ["DND5E.CONSUMPTION.FIELDS.consumption.targets"]);
+      this._localizeSchema(fields.consumption.fields.targets.element, ["DND5R.CONSUMPTION.FIELDS.consumption.targets"]);
     }
-    if ( fields.uses ) this._localizeSchema(fields.uses.fields.recovery.element, ["DND5E.USES.FIELDS.uses.recovery"]);
+    if ( fields.uses ) this._localizeSchema(fields.uses.fields.recovery.element, ["DND5R.USES.FIELDS.uses.recovery"]);
   }
 
   /* -------------------------------------------- */
@@ -78,7 +78,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
    * @type {string}
    */
   get damageFlavor() {
-    return game.i18n.localize("DND5E.DamageRoll");
+    return game.i18n.localize("DND5R.DamageRoll");
   }
 
   /* -------------------------------------------- */
@@ -112,7 +112,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
    * @type {Set<string>}
    */
   get validConsumptionTypes() {
-    const types = new Set(Object.keys(CONFIG.DND5E.activityConsumptionTypes));
+    const types = new Set(Object.keys(CONFIG.DND5R.activityConsumptionTypes));
     if ( this.isSpell ) types.delete("spellSlots");
     return types;
   }
@@ -187,7 +187,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
   async use(usage={}, dialog={}, message={}) {
     if ( !this.item.isEmbedded || this.item.pack ) return;
     if ( !this.item.isOwner ) {
-      ui.notifications.error("DND5E.DocumentUseWarn", { localize: true });
+      ui.notifications.error("DND5R.DocumentUseWarn", { localize: true });
       return;
     }
 
@@ -206,7 +206,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
       create: true,
       data: {
         flags: {
-          dnd5e: {
+          dnd5r: {
             ...this.messageFlags,
             messageType: "usage",
             use: {
@@ -220,7 +220,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
 
     /**
      * A hook event that fires before an activity usage is configured.
-     * @function dnd5e.preUseActivity
+     * @function dnd5r.preUseActivity
      * @memberof hookEvents
      * @param {Activity} activity                           Activity being used.
      * @param {ActivityUseConfiguration} usageConfig        Configuration info for the activation.
@@ -228,15 +228,15 @@ export default Base => class extends PseudoDocumentMixin(Base) {
      * @param {ActivityMessageConfiguration} messageConfig  Configuration info for the created chat message.
      * @returns {boolean}  Explicitly return `false` to prevent activity from being used.
      */
-    if ( Hooks.call("dnd5e.preUseActivity", activity, usageConfig, dialogConfig, messageConfig) === false ) return;
+    if ( Hooks.call("dnd5r.preUseActivity", activity, usageConfig, dialogConfig, messageConfig) === false ) return;
 
-    if ( "dnd5e.preUseItem" in Hooks.events ) {
+    if ( "dnd5r.preUseItem" in Hooks.events ) {
       foundry.utils.logCompatibilityWarning(
-        "The `dnd5e.preUseItem` hook has been deprecated and replaced with `dnd5e.preUseActivity`.",
-        { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+        "The `dnd5r.preUseItem` hook has been deprecated and replaced with `dnd5r.preUseActivity`.",
+        { since: "DnD5r 4.0", until: "DnD5r 4.4" }
       );
       const { config, options } = this._createDeprecatedConfigs(usageConfig, dialogConfig, messageConfig);
-      if ( Hooks.call("dnd5e.preUseItem", item, config, options) === false ) return;
+      if ( Hooks.call("dnd5r.preUseItem", item, config, options) === false ) return;
       this._applyDeprecatedConfigs(usageConfig, dialogConfig, messageConfig, config, options);
     }
 
@@ -260,11 +260,11 @@ export default Base => class extends PseudoDocumentMixin(Base) {
 
     // Create concentration effect & end previous effects
     if ( usageConfig.concentration?.begin ) {
-      const effect = await item.actor.beginConcentrating(activity, { "flags.dnd5e.scaling": usageConfig.scaling });
+      const effect = await item.actor.beginConcentrating(activity, { "flags.dnd5r.scaling": usageConfig.scaling });
       if ( effect ) {
         results.effects ??= [];
         results.effects.push(effect);
-        foundry.utils.setProperty(messageConfig.data, "flags.dnd5e.use.concentrationId", effect.id);
+        foundry.utils.setProperty(messageConfig.data, "flags.dnd5r.use.concentrationId", effect.id);
       }
       if ( usageConfig.concentration?.end ) {
         const deleted = await item.actor.endConcentration(usageConfig.concentration.end);
@@ -281,22 +281,22 @@ export default Base => class extends PseudoDocumentMixin(Base) {
 
     /**
      * A hook event that fires when an activity is activated.
-     * @function dnd5e.postUseActivity
+     * @function dnd5r.postUseActivity
      * @memberof hookEvents
      * @param {Activity} activity                     Activity being activated.
      * @param {ActivityUseConfiguration} usageConfig  Configuration data for the activation.
      * @param {ActivityUsageResults} results          Final details on the activation.
      * @returns {boolean}  Explicitly return `false` to prevent any subsequent actions from being triggered.
      */
-    if ( Hooks.call("dnd5e.postUseActivity", activity, usageConfig, results) === false ) return results;
+    if ( Hooks.call("dnd5r.postUseActivity", activity, usageConfig, results) === false ) return results;
 
-    if ( "dnd5e.useItem" in Hooks.events ) {
+    if ( "dnd5r.useItem" in Hooks.events ) {
       foundry.utils.logCompatibilityWarning(
-        "The `dnd5e.useItem` hook has been deprecated and replaced with `dnd5e.postUseActivity`.",
-        { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+        "The `dnd5r.useItem` hook has been deprecated and replaced with `dnd5r.postUseActivity`.",
+        { since: "DnD5r 4.0", until: "DnD5r 4.4" }
       );
       const { config, options } = this._createDeprecatedConfigs(usageConfig, dialogConfig, messageConfig);
-      Hooks.callAll("dnd5e.itemUsageConsumption", item, config, options, results.templates, results.effects, null);
+      Hooks.callAll("dnd5r.itemUsageConsumption", item, config, options, results.templates, results.effects, null);
     }
 
     // Trigger any primary action provided by this activity
@@ -316,22 +316,22 @@ export default Base => class extends PseudoDocumentMixin(Base) {
   async consume(usageConfig, messageConfig) {
     /**
      * A hook event that fires before an item's resource consumption is calculated.
-     * @function dnd5e.preActivityConsumption
+     * @function dnd5r.preActivityConsumption
      * @memberof hookEvents
      * @param {Activity} activity                           Activity being activated.
      * @param {ActivityUseConfiguration} usageConfig        Configuration data for the activation.
      * @param {ActivityMessageConfiguration} messageConfig  Configuration info for the created chat message.
      * @returns {boolean}  Explicitly return `false` to prevent activity from being activated.
      */
-    if ( Hooks.call("dnd5e.preActivityConsumption", this, usageConfig, messageConfig) === false ) return;
+    if ( Hooks.call("dnd5r.preActivityConsumption", this, usageConfig, messageConfig) === false ) return;
 
-    if ( "dnd5e.preItemUsageConsumption" in Hooks.events ) {
+    if ( "dnd5r.preItemUsageConsumption" in Hooks.events ) {
       foundry.utils.logCompatibilityWarning(
-        "The `dnd5e.preItemUsageConsumption` hook has been deprecated and replaced with `dnd5e.preActivityConsumption`.",
-        { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+        "The `dnd5r.preItemUsageConsumption` hook has been deprecated and replaced with `dnd5r.preActivityConsumption`.",
+        { since: "DnD5r 4.0", until: "DnD5r 4.4" }
       );
       const { config, options } = this._createDeprecatedConfigs(usageConfig, {}, messageConfig);
-      if ( Hooks.call("dnd5e.preItemUsageConsumption", this.item, config, options) === false ) return;
+      if ( Hooks.call("dnd5r.preItemUsageConsumption", this.item, config, options) === false ) return;
       this._applyDeprecatedConfigs(usageConfig, {}, messageConfig, config, options);
     }
 
@@ -340,7 +340,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
 
     /**
      * A hook event that fires after an item's resource consumption is calculated, but before any updates are performed.
-     * @function dnd5e.activityConsumption
+     * @function dnd5r.activityConsumption
      * @memberof hookEvents
      * @param {Activity} activity                           Activity being activated.
      * @param {ActivityUseConfiguration} usageConfig        Configuration data for the activation.
@@ -348,12 +348,12 @@ export default Base => class extends PseudoDocumentMixin(Base) {
      * @param {ActivityUsageUpdates} updates                Updates to apply to the actor and other documents.
      * @returns {boolean}  Explicitly return `false` to prevent activity from being activated.
      */
-    if ( Hooks.call("dnd5e.activityConsumption", this, usageConfig, messageConfig, updates) === false ) return;
+    if ( Hooks.call("dnd5r.activityConsumption", this, usageConfig, messageConfig, updates) === false ) return;
 
-    if ( "dnd5e.itemUsageConsumption" in Hooks.events ) {
+    if ( "dnd5r.itemUsageConsumption" in Hooks.events ) {
       foundry.utils.logCompatibilityWarning(
-        "The `dnd5e.itemUsageConsumption` hook has been deprecated and replaced with `dnd5e.activityConsumption`.",
-        { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+        "The `dnd5r.itemUsageConsumption` hook has been deprecated and replaced with `dnd5r.activityConsumption`.",
+        { since: "DnD5r 4.0", until: "DnD5r 4.4" }
       );
       const { config, options } = this._createDeprecatedConfigs(usageConfig, {}, messageConfig);
       const usage = {
@@ -362,7 +362,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
         itemUpdates: updates.item.find(i => i._id === this.item.id),
         resourceUpdates: updates.item.filter(i => i._id !== this.item.id)
       };
-      if ( Hooks.call("dnd5e.itemUsageConsumption", this.item, config, options, usage) === false ) return;
+      if ( Hooks.call("dnd5r.itemUsageConsumption", this.item, config, options, usage) === false ) return;
       this._applyDeprecatedConfigs(usageConfig, {}, messageConfig, config, options);
       updates.actor = usage.actorUpdates;
       updates.delete = usage.deleteIds;
@@ -372,15 +372,15 @@ export default Base => class extends PseudoDocumentMixin(Base) {
 
     const consumed = await this.#applyUsageUpdates(updates);
     if ( !foundry.utils.isEmpty(consumed) ) {
-      foundry.utils.setProperty(messageConfig, "data.flags.dnd5e.use.consumed", consumed);
+      foundry.utils.setProperty(messageConfig, "data.flags.dnd5r.use.consumed", consumed);
     }
     if ( usageConfig.cause?.activity ) {
-      foundry.utils.setProperty(messageConfig, "data.flags.dnd5e.use.cause", usageConfig.cause.activity);
+      foundry.utils.setProperty(messageConfig, "data.flags.dnd5r.use.cause", usageConfig.cause.activity);
     }
 
     /**
      * A hook event that fires after an item's resource consumption is calculated and applied.
-     * @function dnd5e.postActivityConsumption
+     * @function dnd5r.postActivityConsumption
      * @memberof hookEvents
      * @param {Activity} activity                           Activity being activated.
      * @param {ActivityUseConfiguration} usageConfig        Configuration data for the activation.
@@ -388,7 +388,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
      * @param {ActivityUsageUpdates} updates                Applied updates to the actor and other documents.
      * @returns {boolean}  Explicitly return `false` to prevent activity from being activated.
      */
-    if ( Hooks.call("dnd5e.postActivityConsumption", this, usageConfig, messageConfig, updates) === false ) return;
+    if ( Hooks.call("dnd5r.postActivityConsumption", this, usageConfig, messageConfig, updates) === false ) return;
 
     return updates;
   }
@@ -603,7 +603,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
       config.hasConsumption = hasResourceConsumption || hasLinkedConsumption || (!linked && hasSpellSlotConsumption);
     }
 
-    const levelingFlag = this.item.getFlag("dnd5e", "spellLevel");
+    const levelingFlag = this.item.getFlag("dnd5r", "spellLevel");
     if ( levelingFlag ) {
       // Handle fixed scaling from spell scrolls
       config.scaling = false;
@@ -625,13 +625,13 @@ export default Base => class extends PseudoDocumentMixin(Base) {
       }
     }
 
-    if ( this.requiresConcentration && !game.settings.get("dnd5e", "disableConcentration") ) {
+    if ( this.requiresConcentration && !game.settings.get("dnd5r", "disableConcentration") ) {
       config.concentration ??= {};
       config.concentration.begin ??= true;
       const { effects } = this.actor.concentration;
       const limit = this.actor.system.attributes?.concentration?.limit ?? 0;
       if ( limit && (limit <= effects.size) ) config.concentration.end ??= effects.find(e => {
-        const data = e.flags.dnd5e?.item?.data ?? {};
+        const data = e.flags.dnd5r?.item?.data ?? {};
         return (data === this.id) || (data._id === this.id);
       })?.id ?? effects.first()?.id ?? null;
     }
@@ -655,20 +655,20 @@ export default Base => class extends PseudoDocumentMixin(Base) {
    * @protected
    */
   async _prepareUsageScaling(usageConfig, messageConfig, item) {
-    const levelingFlag = this.item.getFlag("dnd5e", "spellLevel");
+    const levelingFlag = this.item.getFlag("dnd5r", "spellLevel");
     if ( levelingFlag ) {
       usageConfig.scaling = Math.max(0, levelingFlag.value - levelingFlag.base);
     } else if ( this.isSpell ) {
       const level = this.actor.system.spells?.[usageConfig.spell?.slot]?.level;
       if ( level ) {
         usageConfig.scaling = level - item.system.level;
-        foundry.utils.setProperty(messageConfig, "data.flags.dnd5e.use.spellLevel", level);
+        foundry.utils.setProperty(messageConfig, "data.flags.dnd5r.use.spellLevel", level);
       }
     }
 
     if ( usageConfig.scaling ) {
-      foundry.utils.setProperty(messageConfig, "data.flags.dnd5e.scaling", usageConfig.scaling);
-      item.updateSource({ "flags.dnd5e.scaling": usageConfig.scaling });
+      foundry.utils.setProperty(messageConfig, "data.flags.dnd5r.scaling", usageConfig.scaling);
+      item.updateSource({ "flags.dnd5r.scaling": usageConfig.scaling });
       item.prepareFinalAttributes();
     }
   }
@@ -735,7 +735,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
           updates.rolls.push(...results.rolls);
           // Mark this item for deletion if it is linked to a cast activity that will be deleted
           if ( updates.delete.includes(linkedActivity.item.id)
-            && (this.item.getFlag("dnd5e", "cachedFor") === linkedActivity.relativeUUID) ) {
+            && (this.item.getFlag("dnd5r", "cachedFor") === linkedActivity.relativeUUID) ) {
             updates.delete.push(this.item.id);
           }
         } else if ( results?.length ) {
@@ -757,7 +757,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
           const newValue = Math.max(slotData.value - 1, 0);
           foundry.utils.mergeObject(updates.actor, { [`system.spells.${slot}.value`]: newValue });
         } else {
-          const err = new ConsumptionError(game.i18n.format("DND5E.SpellCastNoSlots", {
+          const err = new ConsumptionError(game.i18n.format("DND5R.SpellCastNoSlots", {
             name: this.item.name, level: slotData.label
           }));
           errors.push(err);
@@ -772,13 +772,13 @@ export default Base => class extends PseudoDocumentMixin(Base) {
       if ( config.concentration.end ) {
         const replacedEffect = effects.find(i => i.id === config.concentration.end);
         if ( !replacedEffect ) errors.push(
-          new ConsumptionError(game.i18n.localize("DND5E.ConcentratingMissingItem"))
+          new ConsumptionError(game.i18n.localize("DND5R.ConcentratingMissingItem"))
         );
       }
 
       // Cannot begin more concentrations than the limit
       else if ( effects.size >= this.actor.system.attributes?.concentration?.limit ) errors.push(
-        new ConsumptionError(game.i18n.localize("DND5E.ConcentratingLimited"))
+        new ConsumptionError(game.i18n.localize("DND5R.ConcentratingLimited"))
       );
     }
 
@@ -816,17 +816,17 @@ export default Base => class extends PseudoDocumentMixin(Base) {
     const properties = [...(data.tags ?? []), ...(data.properties ?? [])];
     const supplements = [];
     if ( this.activation.condition ) {
-      supplements.push(`<strong>${game.i18n.localize("DND5E.Trigger")}</strong> ${this.activation.condition}`);
+      supplements.push(`<strong>${game.i18n.localize("DND5R.Trigger")}</strong> ${this.activation.condition}`);
     }
     if ( data.materials?.value ) {
-      supplements.push(`<strong>${game.i18n.localize("DND5E.Materials")}</strong> ${data.materials.value}`);
+      supplements.push(`<strong>${game.i18n.localize("DND5R.Materials")}</strong> ${data.materials.value}`);
     }
     const buttons = this._usageChatButtons(message);
 
     // Include spell level in the subtitle.
     if ( this.item.type === "spell" ) {
-      const spellLevel = foundry.utils.getProperty(message, "data.flags.dnd5e.use.spellLevel");
-      const { spellLevels, spellSchools } = CONFIG.DND5E;
+      const spellLevel = foundry.utils.getProperty(message, "data.flags.dnd5r.use.spellLevel");
+      const { spellLevels, spellSchools } = CONFIG.DND5R;
       data.subtitle = [spellLevels[spellLevel], spellSchools[this.item.system.school]?.label].filterJoin(" &bull; ");
     }
 
@@ -863,7 +863,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
     const buttons = [];
 
     if ( this.target?.template?.type ) buttons.push({
-      label: game.i18n.localize("DND5E.TARGET.Action.PlaceTemplate"),
+      label: game.i18n.localize("DND5R.TARGET.Action.PlaceTemplate"),
       icon: '<i class="fas fa-bullseye" inert></i>',
       dataset: {
         action: "placeTemplate"
@@ -871,13 +871,13 @@ export default Base => class extends PseudoDocumentMixin(Base) {
     });
 
     if ( message.hasConsumption ) buttons.push({
-      label: game.i18n.localize("DND5E.CONSUMPTION.Action.ConsumeResource"),
+      label: game.i18n.localize("DND5R.CONSUMPTION.Action.ConsumeResource"),
       icon: '<i class="fa-solid fa-cubes-stacked" inert></i>',
       dataset: {
         action: "consumeResource"
       }
     }, {
-      label: game.i18n.localize("DND5E.CONSUMPTION.Action.RefundResource"),
+      label: game.i18n.localize("DND5R.CONSUMPTION.Action.RefundResource"),
       icon: '<i class="fa-solid fa-clock-rotate-left"></i>',
       dataset: {
         action: "refundResource"
@@ -896,7 +896,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
    * @returns {boolean}
    */
   shouldHideChatButton(button, message) {
-    const flag = message.getFlag("dnd5e", "use.consumed");
+    const flag = message.getFlag("dnd5r", "use.consumed");
     switch ( button.dataset.action ) {
       case "consumeResource": return !!flag;
       case "refundResource": return !flag;
@@ -928,24 +928,24 @@ export default Base => class extends PseudoDocumentMixin(Base) {
 
     /**
      * A hook event that fires before an activity usage card is created.
-     * @function dnd5e.preCreateUsageMessage
+     * @function dnd5r.preCreateUsageMessage
      * @memberof hookEvents
      * @param {Activity} activity                     Activity for which the card will be created.
      * @param {ActivityMessageConfiguration} message  Configuration info for the created message.
      */
-    Hooks.callAll("dnd5e.preCreateUsageMessage", this, messageConfig);
+    Hooks.callAll("dnd5r.preCreateUsageMessage", this, messageConfig);
 
     ChatMessage.applyRollMode(messageConfig.data, messageConfig.rollMode);
     const card = messageConfig.create === false ? messageConfig.data : await ChatMessage.create(messageConfig.data);
 
     /**
      * A hook event that fires after an activity usage card is created.
-     * @function dnd5e.postCreateUsageMessage
+     * @function dnd5r.postCreateUsageMessage
      * @memberof hookEvents
      * @param {Activity} activity          Activity for which the card was created.
      * @param {ChatMessage5e|object} card  Created card or configuration data if not created.
      */
-    Hooks.callAll("dnd5e.postCreateUsageMessage", this, card);
+    Hooks.callAll("dnd5r.postCreateUsageMessage", this, card);
 
     return card;
   }
@@ -1003,7 +1003,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
       data: {
         flavor: `${this.item.name} - ${this.damageFlavor}`,
         flags: {
-          dnd5e: {
+          dnd5r: {
             ...this.messageFlags,
             messageType: "roll",
             roll: { type: "damage" }
@@ -1014,10 +1014,10 @@ export default Base => class extends PseudoDocumentMixin(Base) {
     }, message);
 
     let returnMultiple = rollConfig.returnMultiple ?? true;
-    if ( "dnd5e.preRollDamage" in Hooks.events ) {
+    if ( "dnd5r.preRollDamage" in Hooks.events ) {
       foundry.utils.logCompatibilityWarning(
-        "The `dnd5e.preRollDamage` hook has been deprecated and replaced with `dnd5e.preRollDamageV2`.",
-        { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+        "The `dnd5r.preRollDamage` hook has been deprecated and replaced with `dnd5r.preRollDamageV2`.",
+        { since: "DnD5r 4.0", until: "DnD5r 4.4" }
       );
       const oldRollConfig = {
         actor: this.actor,
@@ -1046,7 +1046,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
         flavor: messageConfig.data.flavor
       };
       if ( "configure" in dialogConfig ) oldRollConfig.fastForward = !dialogConfig.configure;
-      if ( Hooks.call("dnd5e.preRollDamage", this.item, oldRollConfig) === false ) return;
+      if ( Hooks.call("dnd5r.preRollDamage", this.item, oldRollConfig) === false ) return;
       rollConfig.rolls = rollConfig.rolls.map((roll, index) => {
         const otherConfig = oldRollConfig.rollConfigs.find(r => r._index === index);
         if ( !otherConfig ) return null;
@@ -1078,25 +1078,25 @@ export default Base => class extends PseudoDocumentMixin(Base) {
       return obj;
     }, {});
     if ( !foundry.utils.isEmpty(lastDamageTypes) ) {
-      await this.item.setFlag("dnd5e", `last.${this.id}.damageType`, lastDamageTypes);
+      await this.item.setFlag("dnd5r", `last.${this.id}.damageType`, lastDamageTypes);
     }
 
     /**
      * A hook event that fires after damage has been rolled.
-     * @function dnd5e.rollDamageV2
+     * @function dnd5r.rollDamageV2
      * @memberof hookEvents
      * @param {DamageRoll[]} rolls       The resulting rolls.
      * @param {object} [data]
      * @param {Activity} [data.subject]  The activity that performed the roll.
      */
-    Hooks.callAll("dnd5e.rollDamageV2", rolls, { subject: this });
+    Hooks.callAll("dnd5r.rollDamageV2", rolls, { subject: this });
 
-    if ( "dnd5e.rollDamage" in Hooks.events ) {
+    if ( "dnd5r.rollDamage" in Hooks.events ) {
       foundry.utils.logCompatibilityWarning(
-        "The `dnd5e.rollDamage` hook has been deprecated and replaced with `dnd5e.rollDamageV2`.",
-        { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+        "The `dnd5r.rollDamage` hook has been deprecated and replaced with `dnd5r.rollDamageV2`.",
+        { since: "DnD5r 4.0", until: "DnD5r 4.4" }
       );
-      Hooks.callAll("dnd5e.rollDamage", this.item, returnMultiple ? rolls : rolls[0]);
+      Hooks.callAll("dnd5r.rollDamage", this.item, returnMultiple ? rolls : rolls[0]);
     }
 
     return rolls;
@@ -1129,11 +1129,11 @@ export default Base => class extends PseudoDocumentMixin(Base) {
 
     if ( this.item.isOwner && !this.item.compendium?.locked ) {
       entries.push({
-        name: "DND5E.ContextMenuActionEdit",
+        name: "DND5R.ContextMenuActionEdit",
         icon: '<i class="fas fa-pen-to-square fa-fw"></i>',
         callback: () => this.sheet.render({ force: true })
       }, {
-        name: "DND5E.ContextMenuActionDuplicate",
+        name: "DND5R.ContextMenuActionDuplicate",
         icon: '<i class="fas fa-copy fa-fw"></i>',
         callback: () => {
           const createData = this.toObject();
@@ -1141,13 +1141,13 @@ export default Base => class extends PseudoDocumentMixin(Base) {
           this.item.createActivity(createData.type, createData, { renderSheet: false });
         }
       }, {
-        name: "DND5E.ContextMenuActionDelete",
+        name: "DND5R.ContextMenuActionDelete",
         icon: '<i class="fas fa-trash fa-fw"></i>',
         callback: () => this.deleteDialog()
       });
     } else {
       entries.push({
-        name: "DND5E.ContextMenuActionView",
+        name: "DND5R.ContextMenuActionView",
         icon: '<i class="fas fa-eye fa-fw"></i>',
         callback: () => this.sheet.render({ force: true })
       });
@@ -1157,7 +1157,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
       const uuid = `${this.item.getRelativeUUID(this.actor)}.Activity.${this.id}`;
       const isFavorited = this.actor.system.hasFavorite(uuid);
       entries.push({
-        name: isFavorited ? "DND5E.FavoriteRemove" : "DND5E.Favorite",
+        name: isFavorited ? "DND5R.FavoriteRemove" : "DND5R.Favorite",
         icon: '<i class="fas fa-star fa-fw"></i>',
         condition: () => this.item.isOwner && !this.item.compendium?.locked,
         callback: () => {
@@ -1180,8 +1180,8 @@ export default Base => class extends PseudoDocumentMixin(Base) {
    * @param {ChatMessage5e} message  Message associated with the activation.
    */
   async #onChatAction(event, target, message) {
-    const scaling = message.getFlag("dnd5e", "scaling") ?? 0;
-    const item = scaling ? this.item.clone({ "flags.dnd5e.scaling": scaling }, { keepId: true }) : this.item;
+    const scaling = message.getFlag("dnd5r", "scaling") ?? 0;
+    const item = scaling ? this.item.clone({ "flags.dnd5r.scaling": scaling }, { keepId: true }) : this.item;
     const activity = item.system.activities.get(this.id);
 
     const action = target.dataset.action;
@@ -1227,13 +1227,13 @@ export default Base => class extends PseudoDocumentMixin(Base) {
 
     /**
      * A hook even that fires when the context menu for an Activity is opened.
-     * @function dnd5e.getItemActivityContext
+     * @function dnd5r.getItemActivityContext
      * @memberof hookEvents
      * @param {Activity} activity             The Activity.
      * @param {HTMLElement} target            The element that menu was triggered on.
      * @param {ContextMenuEntry[]} menuItems  The context menu entries.
      */
-    Hooks.callAll("dnd5e.getItemActivityContext", activity, target, menuItems);
+    Hooks.callAll("dnd5r.getItemActivityContext", activity, target, menuItems);
     ui.context.menuItems = menuItems;
   }
 
@@ -1247,9 +1247,9 @@ export default Base => class extends PseudoDocumentMixin(Base) {
    */
   async #consumeResource(event, target, message) {
     const messageConfig = {};
-    const scaling = message.getFlag("dnd5e", "scaling");
+    const scaling = message.getFlag("dnd5r", "scaling");
     const usageConfig = { consume: true, event, scaling };
-    const linkedActivity = this.getLinkedActivity(message.getFlag("dnd5e", "use.cause"));
+    const linkedActivity = this.getLinkedActivity(message.getFlag("dnd5r", "use.cause"));
     if ( linkedActivity ) usageConfig.cause = {
       activity: linkedActivity.relativeUUID, resources: linkedActivity.consumption.targets.length > 0
     };
@@ -1266,10 +1266,10 @@ export default Base => class extends PseudoDocumentMixin(Base) {
    * @param {ChatMessage5e} message  Message associated with the activation.
    */
   async #refundResource(event, target, message) {
-    const consumed = message.getFlag("dnd5e", "use.consumed");
+    const consumed = message.getFlag("dnd5r", "use.consumed");
     if ( !foundry.utils.isEmpty(consumed) ) {
       await this.refund(consumed);
-      await message.unsetFlag("dnd5e", "use.consumed");
+      await message.unsetFlag("dnd5r", "use.consumed");
     }
   }
 
@@ -1288,7 +1288,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
       }
     } catch(err) {
       Hooks.onError("Activity#placeTemplate", err, {
-        msg: game.i18n.localize("DND5E.TARGET.Warning.PlaceTemplate"),
+        msg: game.i18n.localize("DND5R.TARGET.Warning.PlaceTemplate"),
         log: "error",
         notify: "error"
       });
@@ -1323,7 +1323,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
    */
   getLinkedActivity(relativeUUID) {
     if ( !this.actor ) return null;
-    relativeUUID ??= this.item.getFlag("dnd5e", "cachedFor");
+    relativeUUID ??= this.item.getFlag("dnd5r", "cachedFor");
     return fromUuidSync(relativeUUID, { relative: this.actor, strict: false });
   }
 

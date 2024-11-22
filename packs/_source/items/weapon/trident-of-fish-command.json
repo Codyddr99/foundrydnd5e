@@ -5,7 +5,7 @@
   "img": "icons/weapons/polearms/trident-ice-blue.webp",
   "system": {
     "description": {
-      "value": "<p><em>(Requires attunement)</em></p>\n<p>This trident is a magic weapon. It has 3 charges. While you carry it, you can use an action and expend 1 charge to cast @UUID[Compendium.dnd5e.spells.Item.LrPvWHBPmiMQQsKB]{Dominate Beast} (save DC 15) from it on a beast that has an innate swimming speed. The trident regains 1d3 expended charges daily at dawn.</p>",
+      "value": "<p><em>(Requires attunement)</em></p>\n<p>This trident is a magic weapon. It has 3 charges. While you carry it, you can use an action and expend 1 charge to cast @UUID[Compendium.dnd5r.spells.Item.LrPvWHBPmiMQQsKB]{Dominate Beast} (save DC 15) from it on a beast that has an innate swimming speed. The trident regains 1d3 expended charges daily at dawn.</p>",
       "chat": ""
     },
     "source": {
@@ -106,8 +106,8 @@
     "crewed": false,
     "magicalBonus": null,
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "attack",
         "activation": {
           "type": "action",
@@ -209,11 +209,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037285209,
     "modifiedTime": 1725992545857,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!o4Irx3hHiD3FnPbL"
 }

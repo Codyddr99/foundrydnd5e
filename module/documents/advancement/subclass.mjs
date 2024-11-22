@@ -11,9 +11,9 @@ export default class SubclassAdvancement extends Advancement {
     return foundry.utils.mergeObject(super.metadata, {
       order: 70,
       icon: "icons/skills/trades/mining-pickaxe-yellow-blue.webp",
-      typeIcon: "systems/dnd5etools/icons/svg/subclass.svg",
-      title: game.i18n.localize("DND5E.ADVANCEMENT.Subclass.Title"),
-      hint: game.i18n.localize("DND5E.ADVANCEMENT.Subclass.Hint"),
+      typeIcon: "systems/dnd5r/icons/svg/subclass.svg",
+      title: game.i18n.localize("DND5R.ADVANCEMENT.Subclass.Title"),
+      hint: game.i18n.localize("DND5R.ADVANCEMENT.Subclass.Hint"),
       apps: {
         flow: SubclassFlow
       }

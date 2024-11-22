@@ -7,7 +7,7 @@
   "type": "feat",
   "system": {
     "description": {
-      "value": "<p>Starting when you choose this path at 3rd level, you can go into a frenzy when you @UUID[Compendium.dnd5e.classfeatures.Item.VoR0SUrNX5EJVPIO]{Rage}. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion (as described in appendix A).</p>",
+      "value": "<p>Starting when you choose this path at 3rd level, you can go into a frenzy when you @UUID[Compendium.dnd5r.classfeatures.Item.VoR0SUrNX5EJVPIO]{Rage}. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion (as described in appendix A).</p>",
       "chat": ""
     },
     "source": {
@@ -29,8 +29,8 @@
     "requirements": "Path of the Berserker 3",
     "properties": [],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "bonus",
@@ -108,11 +108,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037381470,
     "modifiedTime": 1725992287592,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!CkbbAckeCtyHXEnL"
 }

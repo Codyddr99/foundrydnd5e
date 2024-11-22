@@ -68,8 +68,8 @@
     ],
     "magicalBonus": null,
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "save",
         "activation": {
           "type": "action",
@@ -161,7 +161,7 @@
     {
       "name": "Paralysis",
       "img": "icons/weapons/wands/wand-gem-violet.webp",
-      "origin": "Compendium.dnd5e.items.Item.GcpXNc4dKUNw0Tk6",
+      "origin": "Compendium.dnd5r.items.Item.GcpXNc4dKUNw0Tk6",
       "transfer": false,
       "_id": "lgD1h0ioOsqz6jK8",
       "type": "base",
@@ -188,11 +188,11 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.1.0",
         "createdTime": 1731015925049,
         "modifiedTime": 1731015930528,
-        "lastModifiedBy": "dnd5ebuilder0000"
+        "lastModifiedBy": "dnd5rbuilder0000"
       },
       "_key": "!items.effects!GcpXNc4dKUNw0Tk6.lgD1h0ioOsqz6jK8"
     }
@@ -203,7 +203,7 @@
     "default": 0
   },
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "riders": {
         "activity": [],
         "effect": []
@@ -213,11 +213,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037147741,
     "modifiedTime": 1731015947250,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!GcpXNc4dKUNw0Tk6"
 }

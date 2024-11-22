@@ -18,7 +18,7 @@ export default class MovementSensesConfig extends BaseConfigSheet {
   /** @override */
   static PARTS = {
     config: {
-      template: "systems/dnd5etools/templates/shared/config/movement-senses-config.hbs"
+      template: "systems/dnd5r/templates/shared/config/movement-senses-config.hbs"
     }
   };
 
@@ -40,7 +40,7 @@ export default class MovementSensesConfig extends BaseConfigSheet {
 
   /** @override */
   get title() {
-    return game.i18n.localize(this.options.type === "movement" ? "DND5E.Movement" : "DND5E.Senses");
+    return game.i18n.localize(this.options.type === "movement" ? "DND5R.Movement" : "DND5R.Senses");
   }
 
   /* -------------------------------------------- */
@@ -50,9 +50,9 @@ export default class MovementSensesConfig extends BaseConfigSheet {
    * @type {Record<string, string>}
    */
   get types() {
-    if ( this.options.type === "senses" ) return Object.keys(CONFIG.DND5E.senses);
+    if ( this.options.type === "senses" ) return Object.keys(CONFIG.DND5R.senses);
     if ( this.document.type === "group" ) return ["land", "water", "air"];
-    return Object.keys(CONFIG.DND5E.movementTypes);
+    return Object.keys(CONFIG.DND5R.movementTypes);
   }
 
   /* -------------------------------------------- */
@@ -83,13 +83,13 @@ export default class MovementSensesConfig extends BaseConfigSheet {
       placeholder: placeholderData?.[key]
     }));
 
-    const automaticUnit = CONFIG.DND5E.movementUnits[
-      placeholderData?.units ?? Object.keys(CONFIG.DND5E.movementUnits)[0]
+    const automaticUnit = CONFIG.DND5R.movementUnits[
+      placeholderData?.units ?? Object.keys(CONFIG.DND5R.movementUnits)[0]
     ].toLowerCase();
     context.unitsOptions = [
-      { value: "", label: game.i18n.format("DND5E.AutomaticValue", { value: automaticUnit }) },
+      { value: "", label: game.i18n.format("DND5R.AutomaticValue", { value: automaticUnit }) },
       { rule: true },
-      ...Object.entries(CONFIG.DND5E.movementUnits).map(([value, label]) => ({ value, label }))
+      ...Object.entries(CONFIG.DND5R.movementUnits).map(([value, label]) => ({ value, label }))
     ];
 
     return context;

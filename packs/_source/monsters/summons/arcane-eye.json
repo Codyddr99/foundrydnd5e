@@ -577,7 +577,7 @@
     },
     "detectionModes": [],
     "flags": {
-      "dnd5e": {}
+      "dnd5r": {}
     },
     "randomImg": false,
     "ring": {
@@ -621,20 +621,20 @@
       "transfer": false,
       "flags": {
         "core": {
-          "sourceId": "Actor.eIQIKf1xngnKcRpg.ActiveEffect.dnd5einvisible00"
+          "sourceId": "Actor.eIQIKf1xngnKcRpg.ActiveEffect.dnd5rinvisible00"
         }
       },
       "_stats": {
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
         "lastModifiedBy": null
       },
-      "img": "systems/dnd5etools/icons/svg/statuses/invisible.svg",
+      "img": "systems/dnd5r/icons/svg/statuses/invisible.svg",
       "type": "base",
       "system": {},
       "tint": "#ffffff",
@@ -650,11 +650,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1726171263873,
     "modifiedTime": 1726171451406,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!actors!tuHyePQ9GazMTyc0"
 }

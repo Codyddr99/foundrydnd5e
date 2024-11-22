@@ -40,14 +40,14 @@ export default class ConsumableData extends ItemDataModel.mixin(
   /* -------------------------------------------- */
 
   /** @override */
-  static LOCALIZATION_PREFIXES = ["DND5E.CONSUMABLE", "DND5E.SOURCE"];
+  static LOCALIZATION_PREFIXES = ["DND5R.CONSUMABLE", "DND5R.SOURCE"];
 
   /* -------------------------------------------- */
 
   /** @inheritDoc */
   static defineSchema() {
     return this.mergeSchema(super.defineSchema(), {
-      type: new ItemTypeField({ baseItem: false }, { label: "DND5E.ItemConsumableType" }),
+      type: new ItemTypeField({ baseItem: false }, { label: "DND5R.ItemConsumableType" }),
       damage: new SchemaField({
         base: new DamageField(),
         replace: new BooleanField()
@@ -75,10 +75,10 @@ export default class ConsumableData extends ItemDataModel.mixin(
   static get compendiumBrowserFilters() {
     return new Map([
       ["type", {
-        label: "DND5E.ItemConsumableType",
+        label: "DND5R.ItemConsumableType",
         type: "set",
         config: {
-          choices: CONFIG.DND5E.consumableTypes,
+          choices: CONFIG.DND5R.consumableTypes,
           keyPath: "system.type.value"
         }
       }],
@@ -137,7 +137,7 @@ export default class ConsumableData extends ItemDataModel.mixin(
     this.prepareIdentifiable();
     this.preparePhysicalData();
     if ( !this.type.value ) return;
-    const config = CONFIG.DND5E.consumableTypes[this.type.value];
+    const config = CONFIG.DND5R.consumableTypes[this.type.value];
     if ( config ) {
       this.type.label = config.subtypes?.[this.type.subtype] ?? config.label;
     } else {
@@ -172,15 +172,15 @@ export default class ConsumableData extends ItemDataModel.mixin(
       { label: this.type.label },
       ...this.physicalItemSheetFields
     ];
-    context.damageTypes = Object.entries(CONFIG.DND5E.damageTypes).map(([value, { label }]) => {
+    context.damageTypes = Object.entries(CONFIG.DND5R.damageTypes).map(([value, { label }]) => {
       return { value, label, selected: context.source.damage.base.types.includes(value) };
     });
     context.denominationOptions = [
       { value: "", label: "" },
       { rule: true },
-      ...CONFIG.DND5E.dieSteps.map(value => ({ value, label: `d${value}` }))
+      ...CONFIG.DND5R.dieSteps.map(value => ({ value, label: `d${value}` }))
     ];
-    context.parts = ["dnd5e.details-consumable", "dnd5e.field-uses"];
+    context.parts = ["dnd5r.details-consumable", "dnd5r.field-uses"];
   }
 
   /* -------------------------------------------- */
@@ -194,7 +194,7 @@ export default class ConsumableData extends ItemDataModel.mixin(
   get chatProperties() {
     return [
       this.type.label,
-      this.hasLimitedUses ? `${this.uses.value}/${this.uses.max} ${game.i18n.localize("DND5E.Charges")}` : null,
+      this.hasLimitedUses ? `${this.uses.value}/${this.uses.max} ${game.i18n.localize("DND5R.Charges")}` : null,
       this.priceLabel
     ];
   }
@@ -211,7 +211,7 @@ export default class ConsumableData extends ItemDataModel.mixin(
 
   /** @override */
   static get itemCategories() {
-    return CONFIG.DND5E.consumableTypes;
+    return CONFIG.DND5R.consumableTypes;
   }
 
   /* -------------------------------------------- */
@@ -231,7 +231,7 @@ export default class ConsumableData extends ItemDataModel.mixin(
    * @returns {number}
    */
   get proficiencyMultiplier() {
-    const isProficient = this.parent?.actor?.getFlag("dnd5e", "tavernBrawlerFeat");
+    const isProficient = this.parent?.actor?.getFlag("dnd5r", "tavernBrawlerFeat");
     return isProficient ? 1 : 0;
   }
 
@@ -240,11 +240,11 @@ export default class ConsumableData extends ItemDataModel.mixin(
   /** @inheritDoc */
   get validProperties() {
     const valid = super.validProperties;
-    if ( this.type.value === "ammo" ) Object.entries(CONFIG.DND5E.itemProperties).forEach(([k, v]) => {
+    if ( this.type.value === "ammo" ) Object.entries(CONFIG.DND5R.itemProperties).forEach(([k, v]) => {
       if ( v.isPhysical ) valid.add(k);
       valid.add("ret");
     });
-    else if ( this.type.value === "scroll" ) CONFIG.DND5E.validProperties.spell
+    else if ( this.type.value === "scroll" ) CONFIG.DND5R.validProperties.spell
       .filter(p => p !== "material").forEach(p => valid.add(p));
     return valid;
   }
@@ -266,7 +266,7 @@ export default class ConsumableData extends ItemDataModel.mixin(
   /** @inheritDoc */
   async getCraftCost(options={}) {
     const { days, gold } = await super.getCraftCost(options);
-    const { consumable, magic } = CONFIG.DND5E.crafting;
+    const { consumable, magic } = CONFIG.DND5R.crafting;
     const { rarity } = this;
     if ( !this.properties.has("mgc") || !(rarity in magic) ) return { days, gold };
     const costs = magic[rarity];
@@ -281,7 +281,7 @@ export default class ConsumableData extends ItemDataModel.mixin(
   /** @inheritDoc */
   getRollData(...options) {
     const data = super.getRollData(...options);
-    const spellLevel = this.parent.getFlag("dnd5e", "spellLevel");
+    const spellLevel = this.parent.getFlag("dnd5r", "spellLevel");
     if ( spellLevel ) data.item.level = spellLevel.value ?? spellLevel.base;
     return data;
   }

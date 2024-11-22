@@ -5,7 +5,7 @@
   "img": "icons/weapons/wands/wand-gem-green.webp",
   "system": {
     "description": {
-      "value": "<p><em>(Requires attunement by a spellcaster)</em></p>\n<p>This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>\n<p><strong>Spells</strong>. While holding the wand, you can use an action to expend some of its charges to cast one of the following spells (save DC 17): @UUID[Compendium.dnd5e.spells.Item.l9Ju5KE7bbn3WpTm]{Hold Monster} (5 charges) or @UUID[Compendium.dnd5e.spells.Item.3Lo9boi7P2ro6QV4]{Hold Person} (2 charges).</p>\n<p><strong>Assisted Escape</strong>. While holding the wand, you can use your reaction to expend 1 charge and gain advantage on a saving throw you make to avoid being paralyzed or restrained, or you can expend 1 charge and gain advantage on any check you make to escape a grapple.</p>",
+      "value": "<p><em>(Requires attunement by a spellcaster)</em></p>\n<p>This wand has 7 charges for the following properties. It regains 1d6 + 1 expended charges daily at dawn. If you expend the wand's last charge, roll a d20. On a 1, the wand crumbles into ashes and is destroyed.</p>\n<p><strong>Spells</strong>. While holding the wand, you can use an action to expend some of its charges to cast one of the following spells (save DC 17): @UUID[Compendium.dnd5r.spells.Item.l9Ju5KE7bbn3WpTm]{Hold Monster} (5 charges) or @UUID[Compendium.dnd5r.spells.Item.3Lo9boi7P2ro6QV4]{Hold Person} (2 charges).</p>\n<p><strong>Assisted Escape</strong>. While holding the wand, you can use your reaction to expend 1 charge and gain advantage on a saving throw you make to avoid being paralyzed or restrained, or you can expend 1 charge and gain advantage on any check you make to escape a grapple.</p>",
       "chat": ""
     },
     "source": {
@@ -71,7 +71,7 @@
       "yAh2VKsLWwGagH4w": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.l9Ju5KE7bbn3WpTm",
+          "uuid": "Compendium.dnd5r.spells.Item.l9Ju5KE7bbn3WpTm",
           "challenge": {
             "attack": null,
             "save": 17,
@@ -138,7 +138,7 @@
       "T4OTnHCe9gEtxKtc": {
         "type": "cast",
         "spell": {
-          "uuid": "Compendium.dnd5e.spells.Item.3Lo9boi7P2ro6QV4",
+          "uuid": "Compendium.dnd5r.spells.Item.3Lo9boi7P2ro6QV4",
           "challenge": {
             "attack": null,
             "save": 17,
@@ -280,7 +280,7 @@
     "default": 0
   },
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "riders": {
         "activity": [],
         "effect": []
@@ -290,11 +290,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037109504,
     "modifiedTime": 1730323638379,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!7jEKkA9qbwJ3IuCb"
 }

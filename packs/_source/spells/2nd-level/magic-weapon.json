@@ -61,8 +61,8 @@
       "concentration"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "enchant",
         "activation": {
           "type": "action",
@@ -150,7 +150,7 @@
     {
       "name": "Magic Weapon, +1",
       "flags": {
-        "dnd5e": {
+        "dnd5r": {
           "enchantment": {
             "level": {
               "min": null,
@@ -200,7 +200,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -215,7 +215,7 @@
     {
       "name": "Magic Weapon, +2",
       "flags": {
-        "dnd5e": {
+        "dnd5r": {
           "enchantment": {
             "level": {
               "min": 4,
@@ -265,7 +265,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -280,7 +280,7 @@
     {
       "name": "Magic Weapon, +3",
       "flags": {
-        "dnd5e": {
+        "dnd5r": {
           "enchantment": {
             "level": {
               "min": 6,
@@ -330,7 +330,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -347,11 +347,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037356520,
     "modifiedTime": 1725992719940,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!Sgjrf8qqv97CCWM4"
 }

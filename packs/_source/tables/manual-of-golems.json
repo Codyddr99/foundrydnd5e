@@ -11,10 +11,10 @@
         5
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.monsters",
+      "documentCollection": "dnd5r.monsters",
       "_id": "IiSjf0idEypz8cx5",
       "text": "Clay Golem",
-      "img": "systems/dnd5etools/tokens/construct/ClayGolem.webp",
+      "img": "systems/dnd5r/tokens/construct/ClayGolem.webp",
       "documentId": "YOqhbf8WsX0jH9Fu",
       "flags": {},
       "_key": "!tables.results!htMPUPPABjI6fwck.IiSjf0idEypz8cx5"
@@ -27,7 +27,7 @@
         17
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.monsters",
+      "documentCollection": "dnd5r.monsters",
       "_id": "QudkKiSsSl9eUJBu",
       "text": "Flesh Golem",
       "img": "icons/svg/mystery-man.svg",
@@ -43,10 +43,10 @@
         18
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.monsters",
+      "documentCollection": "dnd5r.monsters",
       "_id": "7uSrcciLe3oXFSui",
       "text": "Iron Golem",
-      "img": "systems/dnd5etools/tokens/construct/IronGolem.webp",
+      "img": "systems/dnd5r/tokens/construct/IronGolem.webp",
       "documentId": "h98AuPfomEPcCibP",
       "flags": {},
       "_key": "!tables.results!htMPUPPABjI6fwck.7uSrcciLe3oXFSui"
@@ -59,10 +59,10 @@
         20
       ],
       "drawn": false,
-      "documentCollection": "dnd5e.monsters",
+      "documentCollection": "dnd5r.monsters",
       "_id": "sRgHiHl7d3sxL74G",
       "text": "Stone Golem",
-      "img": "systems/dnd5etools/tokens/construct/StoneGolem.webp",
+      "img": "systems/dnd5r/tokens/construct/StoneGolem.webp",
       "documentId": "z3gSIXHHWYaHjfBT",
       "flags": {},
       "_key": "!tables.results!htMPUPPABjI6fwck.sRgHiHl7d3sxL74G"
@@ -76,11 +76,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037419526,
     "modifiedTime": 1725037419526,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "sort": 0,
   "folder": null,

@@ -54,7 +54,7 @@ export default class RollConfigurationDialog extends Dialog5e {
   static DEFAULT_OPTIONS = {
     classes: ["roll-configuration"],
     window: {
-      title: "DND5E.RollConfiguration.Title",
+      title: "DND5R.RollConfiguration.Title",
       icon: "fa-solid fa-dice"
     },
     form: {
@@ -77,13 +77,13 @@ export default class RollConfigurationDialog extends Dialog5e {
   /** @override */
   static PARTS = {
     formulas: {
-      template: "systems/dnd5etools/templates/dice/roll-formulas.hbs"
+      template: "systems/dnd5r/templates/dice/roll-formulas.hbs"
     },
     configuration: {
-      template: "systems/dnd5etools/templates/dice/roll-configuration.hbs"
+      template: "systems/dnd5r/templates/dice/roll-configuration.hbs"
     },
     buttons: {
-      template: "systems/dnd5etools/templates/dice/roll-buttons.hbs"
+      template: "systems/dnd5r/templates/dice/roll-buttons.hbs"
     }
   };
 
@@ -171,7 +171,7 @@ export default class RollConfigurationDialog extends Dialog5e {
       // entirely.
       if ( !this.options.rendering.dice.denominations.has(term.denomination) ) return shouldDisplay = false;
       for ( let i = 0; i < term.number; i++ ) dice.push({
-        icon: `systems/dnd5etools/icons/svg/dice/${term.denomination}.svg`,
+        icon: `systems/dnd5r/icons/svg/dice/${term.denomination}.svg`,
         label: term.denomination,
         denomination: term.denomination
       });
@@ -234,7 +234,7 @@ export default class RollConfigurationDialog extends Dialog5e {
       roll: {
         default: true,
         icon: '<i class="fa-solid fa-dice" inert></i>',
-        label: game.i18n.localize("DND5E.Roll")
+        label: game.i18n.localize("DND5R.Roll")
       }
     };
     return context;
@@ -251,7 +251,7 @@ export default class RollConfigurationDialog extends Dialog5e {
    */
   async _prepareConfigurationContext(context, options) {
     context.fields = [{
-      field: new foundry.data.fields.StringField({ label: game.i18n.localize("DND5E.RollMode") }),
+      field: new foundry.data.fields.StringField({ label: game.i18n.localize("DND5R.RollMode") }),
       name: "rollMode",
       value: this.message.rollMode ?? this.options.default?.rollMode ?? game.settings.get("core", "rollMode"),
       options: Object.entries(CONFIG.Dice.rollModes).map(([value, l]) => ({ value, label: game.i18n.localize(`${l}`) }))
@@ -305,14 +305,14 @@ export default class RollConfigurationDialog extends Dialog5e {
 
     /**
      * A hook event that fires when a roll config is built using the roll prompt.
-     * @function dnd5e.buildRollConfig
+     * @function dnd5r.buildRollConfig
      * @memberof hookEvents
      * @param {RollConfigurationDialog} app    Roll configuration dialog.
      * @param {BasicRollConfiguration} config  Roll configuration data.
      * @param {FormDataExtended} [formData]    Any data entered into the rolling prompt.
      * @param {number} index                   Index of the roll within all rolls being prepared.
      */
-    Hooks.callAll("dnd5e.buildRollConfig", this, config, formData, index);
+    Hooks.callAll("dnd5r.buildRollConfig", this, config, formData, index);
 
     const situational = formData?.get(`roll.${index}.situational`);
     if ( situational && (config.situational !== false) ) {
@@ -362,7 +362,7 @@ export default class RollConfigurationDialog extends Dialog5e {
   static async #handleFormSubmission(event, form, formData) {
     if ( formData.has("rollMode") ) this.message.rollMode = formData.get("rollMode");
     this.#rolls = this._finalizeRolls(event.submitter?.dataset?.action);
-    await this.close({ dnd5e: { submitted: true } });
+    await this.close({ dnd5r: { submitted: true } });
   }
 
   /* -------------------------------------------- */
@@ -381,7 +381,7 @@ export default class RollConfigurationDialog extends Dialog5e {
 
   /** @override */
   _onClose(options={}) {
-    if ( !options.dnd5e?.submitted ) this.#rolls = [];
+    if ( !options.dnd5r?.submitted ) this.#rolls = [];
   }
 
   /* -------------------------------------------- */

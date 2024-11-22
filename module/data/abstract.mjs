@@ -70,7 +70,7 @@ export default class SystemDataModel extends foundry.abstract.TypeDataModel {
 
   /**
    * @typedef {object} SystemDataModelMetadata
-   * @property {typeof DataModel} [systemFlagsModel]  Model that represents flags data within the dnd5e namespace.
+   * @property {typeof DataModel} [systemFlagsModel]  Model that represents flags data within the dnd5r namespace.
    */
 
   /**
@@ -112,7 +112,7 @@ export default class SystemDataModel extends foundry.abstract.TypeDataModel {
     const schema = {};
     for ( const template of this._schemaTemplates ) {
       if ( !template.defineSchema ) {
-        throw new Error(`Invalid dnd5e template mixin ${template} defined on class ${this.constructor}`);
+        throw new Error(`Invalid dnd5r template mixin ${template} defined on class ${this.constructor}`);
       }
       this.mergeSchema(schema, template.defineSchema());
     }
@@ -191,7 +191,7 @@ export default class SystemDataModel extends foundry.abstract.TypeDataModel {
     const actor = this.parent.actor;
     if ( (actor?.type !== "character") || !this.metadata?.singleton ) return;
     if ( actor.itemTypes[data.type]?.length ) {
-      ui.notifications.error(game.i18n.format("DND5E.ActorWarningSingleton", {
+      ui.notifications.error(game.i18n.format("DND5R.ActorWarningSingleton", {
         itemType: game.i18n.localize(CONFIG.Item.typeLabels[data.type]),
         actorType: game.i18n.localize(CONFIG.Actor.typeLabels[actor.type])
       }));
@@ -367,7 +367,7 @@ export class ActorDataModel extends SystemDataModel {
    * @type {Actor5e[]}
    */
   get transferDestinations() {
-    const primaryParty = game.settings.get("dnd5e", "primaryParty")?.actor;
+    const primaryParty = game.settings.get("dnd5r", "primaryParty")?.actor;
     if ( !primaryParty?.system.members.ids.has(this.parent.id) ) return [];
     const destinations = primaryParty.system.members.map(m => m.actor).filter(a => a.isOwner && a !== this.parent);
     if ( primaryParty.isOwner ) destinations.unshift(primaryParty);
@@ -420,7 +420,7 @@ export class ItemDataModel extends SystemDataModel {
    * The handlebars template for rendering item tooltips.
    * @type {string}
    */
-  static ITEM_TOOLTIP_TEMPLATE = "systems/dnd5etools/templates/items/parts/item-tooltip.hbs";
+  static ITEM_TOOLTIP_TEMPLATE = "systems/dnd5r/templates/items/parts/item-tooltip.hbs";
 
   /* -------------------------------------------- */
   /*  Properties                                  */
@@ -468,7 +468,7 @@ export class ItemDataModel extends SystemDataModel {
   /** @inheritDoc */
   prepareBaseData() {
     if ( this.parent.isEmbedded ) {
-      const sourceId = this.parent.flags.dnd5e?.sourceId ?? this.parent._stats.compendiumSource
+      const sourceId = this.parent.flags.dnd5r?.sourceId ?? this.parent._stats.compendiumSource
         ?? this.parent.flags.core?.sourceId;
       if ( sourceId ) this.parent.actor?.sourcedItems?.set(sourceId, this.parent);
     }
@@ -488,7 +488,7 @@ export class ItemDataModel extends SystemDataModel {
       content: await renderTemplate(
         this.constructor.ITEM_TOOLTIP_TEMPLATE, await this.getCardData(enrichmentOptions)
       ),
-      classes: ["dnd5e2", "dnd5e-tooltip", "item-tooltip"]
+      classes: ["dnd5r2", "dnd5r-tooltip", "item-tooltip"]
     };
   }
 
@@ -515,8 +515,8 @@ export class ItemDataModel extends SystemDataModel {
     const subtitle = [this.type?.label ?? game.i18n.localize(CONFIG.Item.typeLabels[this.parent.type])];
     const context = {
       name, type, img, price, weight, uses, school, materials,
-      config: CONFIG.DND5E,
-      controlHints: game.settings.get("dnd5e", "controlHints"),
+      config: CONFIG.DND5R,
+      controlHints: game.settings.get("dnd5r", "controlHints"),
       labels: foundry.utils.deepClone((activity ?? this.parent).labels),
       tags: this.parent.labels?.components?.tags,
       subtitle: subtitle.filterJoin(" &bull; "),
@@ -562,7 +562,7 @@ export class ItemDataModel extends SystemDataModel {
 
     // Mundane Items
     if ( !this.properties.has("mgc") || !rarity ) {
-      const { mundane } = CONFIG.DND5E.crafting;
+      const { mundane } = CONFIG.DND5R.crafting;
       const valueInGP = price.valueInGP ?? 0;
       return { days: Math.ceil(valueInGP * mundane.days), gold: Math.floor(valueInGP * mundane.gold) };
     }
@@ -577,7 +577,7 @@ export class ItemDataModel extends SystemDataModel {
       }
     }
 
-    const { magic } = CONFIG.DND5E.crafting;
+    const { magic } = CONFIG.DND5R.crafting;
     if ( !(rarity in magic) ) return { days, gold };
     const costs = magic[rarity];
     return { days: days + costs.days, gold: gold + costs.gold };

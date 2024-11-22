@@ -23,19 +23,19 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.races.LOMdcNAGWh5xpfm4",
+              "uuid": "Compendium.dnd5r.races.LOMdcNAGWh5xpfm4",
               "optional": false
             },
             {
-              "uuid": "Compendium.dnd5e.races.7Yoo9hG0hfPSmBoC",
+              "uuid": "Compendium.dnd5r.races.7Yoo9hG0hfPSmBoC",
               "optional": false
             },
             {
-              "uuid": "Compendium.dnd5e.races.PqxZgcJzp1VVgP8t",
+              "uuid": "Compendium.dnd5r.races.PqxZgcJzp1VVgP8t",
               "optional": false
             },
             {
-              "uuid": "Compendium.dnd5e.races.GWPjKFeIthBBeCFJ",
+              "uuid": "Compendium.dnd5r.races.GWPjKFeIthBBeCFJ",
               "optional": false
             }
           ],
@@ -140,11 +140,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037393019,
     "modifiedTime": 1725992703550,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "sort": 0,
   "folder": "uQNrdSpcXeoB5EnX",

@@ -21,7 +21,7 @@ const { NumberField, SetField, StringField } = foundry.data.fields;
  *
  * @property {string} ability     Default ability when this tool is being used.
  * @property {string} chatFlavor  Additional text added to chat when this tool is used.
- * @property {number} proficient  Level of proficiency in this tool as defined in `DND5E.proficiencyLevels`.
+ * @property {number} proficient  Level of proficiency in this tool as defined in `DND5R.proficiencyLevels`.
  * @property {string} bonus       Bonus formula added to tool rolls.
  */
 export default class ToolData extends ItemDataModel.mixin(
@@ -34,21 +34,21 @@ export default class ToolData extends ItemDataModel.mixin(
   /* -------------------------------------------- */
 
   /** @override */
-  static LOCALIZATION_PREFIXES = ["DND5E.SOURCE"];
+  static LOCALIZATION_PREFIXES = ["DND5R.SOURCE"];
 
   /* -------------------------------------------- */
 
   /** @inheritDoc */
   static defineSchema() {
     return this.mergeSchema(super.defineSchema(), {
-      type: new ItemTypeField({ subtype: false }, { label: "DND5E.ItemToolType" }),
-      ability: new StringField({ required: true, blank: true, label: "DND5E.DefaultAbilityCheck" }),
-      chatFlavor: new StringField({ required: true, label: "DND5E.ChatFlavor" }),
+      type: new ItemTypeField({ subtype: false }, { label: "DND5R.ItemToolType" }),
+      ability: new StringField({ required: true, blank: true, label: "DND5R.DefaultAbilityCheck" }),
+      chatFlavor: new StringField({ required: true, label: "DND5R.ChatFlavor" }),
       proficient: new NumberField({
-        required: true, initial: null, min: 0, max: 2, step: 0.5, label: "DND5E.ItemToolProficiency"
+        required: true, initial: null, min: 0, max: 2, step: 0.5, label: "DND5R.ItemToolProficiency"
       }),
-      properties: new SetField(new StringField(), { label: "DND5E.ItemToolProperties" }),
-      bonus: new FormulaField({ required: true, label: "DND5E.ItemToolBonus" })
+      properties: new SetField(new StringField(), { label: "DND5R.ItemToolProperties" }),
+      bonus: new FormulaField({ required: true, label: "DND5R.ItemToolBonus" })
     });
   }
 
@@ -67,10 +67,10 @@ export default class ToolData extends ItemDataModel.mixin(
   static get compendiumBrowserFilters() {
     return new Map([
       ["type", {
-        label: "DND5E.ItemToolType",
+        label: "DND5R.ItemToolType",
         type: "set",
         config: {
-          choices: CONFIG.DND5E.toolTypes,
+          choices: CONFIG.DND5R.toolTypes,
           keyPath: "system.type.value"
         }
       }],
@@ -112,8 +112,8 @@ export default class ToolData extends ItemDataModel.mixin(
     this.prepareDescriptionData();
     this.prepareIdentifiable();
     this.preparePhysicalData();
-    this.type.label = CONFIG.DND5E.toolTypes[this.type.value] ?? game.i18n.localize(CONFIG.Item.typeLabels.tool);
-    this.type.identifier = CONFIG.DND5E.toolIds[this.type.baseItem];
+    this.type.label = CONFIG.DND5R.toolTypes[this.type.value] ?? game.i18n.localize(CONFIG.Item.typeLabels.tool);
+    this.type.identifier = CONFIG.DND5R.toolIds[this.type.baseItem];
   }
 
   /* -------------------------------------------- */
@@ -142,7 +142,7 @@ export default class ToolData extends ItemDataModel.mixin(
       { label: this.type.label },
       ...this.physicalItemSheetFields
     ];
-    context.parts = ["dnd5e.details-tool", "dnd5e.field-uses"];
+    context.parts = ["dnd5r.details-tool", "dnd5r.field-uses"];
   }
 
   /* -------------------------------------------- */
@@ -154,7 +154,7 @@ export default class ToolData extends ItemDataModel.mixin(
    * @type {string[]}
    */
   get chatProperties() {
-    return [CONFIG.DND5E.abilities[this.ability]?.label];
+    return [CONFIG.DND5R.abilities[this.ability]?.label];
   }
 
   /* -------------------------------------------- */
@@ -164,7 +164,7 @@ export default class ToolData extends ItemDataModel.mixin(
    * @type {string[]}
    */
   get cardProperties() {
-    return [CONFIG.DND5E.abilities[this.ability]?.label];
+    return [CONFIG.DND5R.abilities[this.ability]?.label];
   }
 
   /* -------------------------------------------- */
@@ -181,7 +181,7 @@ export default class ToolData extends ItemDataModel.mixin(
 
   /** @override */
   static get itemCategories() {
-    return CONFIG.DND5E.toolTypes;
+    return CONFIG.DND5R.toolTypes;
   }
 
   /* -------------------------------------------- */
@@ -209,7 +209,7 @@ export default class ToolData extends ItemDataModel.mixin(
     if ( (await super._preCreate(data, options, user)) === false ) return false;
     if ( this.activities.size ) return;
 
-    const activityData = new CONFIG.DND5E.activityTypes.check.documentClass({}, { parent: this.parent }).toObject();
+    const activityData = new CONFIG.DND5R.activityTypes.check.documentClass({}, { parent: this.parent }).toObject();
     this.parent.updateSource({ [`system.activities.${activityData._id}`]: activityData });
   }
 

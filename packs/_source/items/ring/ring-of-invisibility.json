@@ -64,8 +64,8 @@
       "mgc"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "action",
@@ -144,7 +144,7 @@
     {
       "name": "Invisibility",
       "img": "icons/equipment/finger/ring-faceted-silver-orange.webp",
-      "origin": "Compendium.dnd5e.items.Item.1J0dsxyKRhVXYQf5",
+      "origin": "Compendium.dnd5r.items.Item.1J0dsxyKRhVXYQf5",
       "transfer": false,
       "_id": "7KHJyEznWKJ8rc5s",
       "type": "base",
@@ -171,11 +171,11 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.1.0",
         "createdTime": 1731017665728,
         "modifiedTime": 1731017671713,
-        "lastModifiedBy": "dnd5ebuilder0000"
+        "lastModifiedBy": "dnd5rbuilder0000"
       },
       "_key": "!items.effects!1J0dsxyKRhVXYQf5.7KHJyEznWKJ8rc5s"
     }
@@ -186,7 +186,7 @@
     "default": 0
   },
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "riders": {
         "activity": [],
         "effect": []
@@ -196,11 +196,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037085047,
     "modifiedTime": 1731017665769,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!1J0dsxyKRhVXYQf5"
 }

@@ -1,4 +1,4 @@
-.dnd5e2 .inventory-element {
+.dnd5r2 .inventory-element {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -9,7 +9,7 @@
 
   .meter.progress::before {
     // Becomes more red the closer it is to 100% encumbrance.
-    --bar-color-2: color-mix(in oklab, var(--dnd5e-color-blue), var(--dnd5e-color-maroon) var(--bar-percentage));
+    --bar-color-2: color-mix(in oklab, var(--dnd5r-color-blue), var(--dnd5r-color-maroon) var(--bar-percentage));
     --bar-color-1: color-mix(in oklab, var(--bar-color-2), black 33%);
     --bar-color-3: color-mix(in oklab, var(--bar-color-2), black 20%);
     background: linear-gradient(to right, var(--bar-color-1), var(--bar-color-2));
@@ -39,7 +39,7 @@
       border-radius: 3px 3px 0 0;
       height: 25px;
       border: none;
-      border-bottom: var(--dnd5e-border-gold);
+      border-bottom: var(--dnd5r-border-gold);
 
       .label {
         display: flex;
@@ -62,11 +62,11 @@
         &.encumbrance-high { inset-inline-start: var(--encumbrance-high); }
         &.arrow-up {
           inset-block-end: 0;
-          border-block-end: 3px solid var(--dnd5e-color-gold);
+          border-block-end: 3px solid var(--dnd5r-color-gold);
         }
         &.arrow-down {
           inset-block-start: 0;
-          border-top: 3px solid var(--dnd5e-color-gold);
+          border-top: 3px solid var(--dnd5r-color-gold);
         }
         transform: translateX(-50%);
         z-index: 1;
@@ -85,10 +85,10 @@
       max-width: 78px;
       max-height: 78px;
       aspect-ratio: 1;
-      border: var(--dnd5e-border-gold);
+      border: var(--dnd5r-border-gold);
       border-radius: 4px;
-      box-shadow: 0 0 6px var(--dnd5e-shadow-45);
-      background-color: var(--dnd5e-color-light-gray);
+      box-shadow: 0 0 6px var(--dnd5r-shadow-45);
+      background-color: var(--dnd5r-color-light-gray);
 
       a {
         display: flex;
@@ -134,14 +134,14 @@
       display: flex;
       gap: .5rem;
       align-items: center;
-      background: var(--dnd5e-background-card);
+      background: var(--dnd5r-background-card);
       border-radius: 4px;
-      box-shadow: 0 0 6px var(--dnd5e-shadow-45);
-      border: var(--dnd5e-border-gold);
+      box-shadow: 0 0 6px var(--dnd5r-shadow-45);
+      border: var(--dnd5r-border-gold);
       padding: 0 .875rem 0 .5rem;
       font-weight: bold;
 
-      .fa-sun, .separator { color: var(--dnd5e-color-gold); }
+      .fa-sun, .separator { color: var(--dnd5r-color-gold); }
       .config-button { color: var(--color-text-light-6); }
       .max { color: var(--color-text-dark-5); }
 
@@ -149,12 +149,12 @@
         width: 22px;
         text-align: left;
         font-weight: bold;
-        background: var(--dnd5e-background-5);
+        background: var(--dnd5r-background-5);
         border: none;
         padding: 0;
         transition: box-shadow 250ms ease;
 
-        &:focus-visible, &:hover { box-shadow: 0 0 6px var(--dnd5e-color-gold); }
+        &:focus-visible, &:hover { box-shadow: 0 0 6px var(--dnd5r-color-gold); }
       }
     }
   }
@@ -179,12 +179,12 @@
         border: none;
         background: none;
         --icon-size: 13px;
-        --icon-fill: var(--dnd5e-color-light-gray);
+        --icon-fill: var(--dnd5r-color-light-gray);
         box-shadow: none;
-        filter: drop-shadow(0 0 1px var(--dnd5e-color-black));
+        filter: drop-shadow(0 0 1px var(--dnd5r-color-black));
 
-        &.filled { --icon-fill: var(--dnd5e-color-gold); }
-        &:hover { filter: drop-shadow(0 0 2px var(--dnd5e-color-gold)); }
+        &.filled { --icon-fill: var(--dnd5r-color-gold); }
+        &:hover { filter: drop-shadow(0 0 2px var(--dnd5r-color-gold)); }
       }
     }
   }
@@ -194,7 +194,7 @@
 /*  Entries                           */
 /* ---------------------------------- */
 
-.dnd5e2 {
+.dnd5r2 {
 
   .items-list {
     display: flex;
@@ -208,7 +208,7 @@
 
     .items-header, .item {
       &[hidden] { display: none; }
-      .condensed { font-family: var(--dnd5e-font-roboto-condensed); }
+      .condensed { font-family: var(--dnd5r-font-roboto-condensed); }
 
       .item-row {
         display: flex;
@@ -245,7 +245,7 @@
           display: flex;
           align-items: center;
           gap: .25rem;
-          --icon-fill: var(--dnd5e-color-black);
+          --icon-fill: var(--dnd5r-color-black);
         }
 
         > .concentration {
@@ -255,14 +255,14 @@
           font-size: var(--font-size-24);
           display: grid;
           place-content: center;
-          color: var(--dnd5e-color-gold);
+          color: var(--dnd5r-color-gold);
           opacity: .5;
           @media (prefers-reduced-motion) { animation: none; }
         }
       }
 
       .item-header {
-        font-family: var(--dnd5e-font-roboto-condensed);
+        font-family: var(--dnd5r-font-roboto-condensed);
         text-transform: uppercase;
         font-size: var(--font-size-11);
       }
@@ -334,7 +334,7 @@
           font-weight: bold;
           transition: box-shadow 250ms ease;
 
-          &:focus-visible, &:hover { box-shadow: 0 0 6px var(--dnd5e-color-gold); }
+          &:focus-visible, &:hover { box-shadow: 0 0 6px var(--dnd5r-color-gold); }
         }
       }
 
@@ -347,13 +347,13 @@
         gap: unset;
         &.item-detail { font-weight: bold; }
         .max, input { width: 20px; }
-        .separator { color: var(--dnd5e-color-gold); }
+        .separator { color: var(--dnd5r-color-gold); }
         .max {
           color: var(--color-text-dark-5);
           text-align: start;
         }
         input { text-align: end; }
-        i.fa-bolt { color: var(--dnd5e-color-gold); }
+        i.fa-bolt { color: var(--dnd5r-color-gold); }
       }
       .spell-uses { display: none; }
 
@@ -376,7 +376,7 @@
       }
 
       .item-school {
-        --icon-fill: var(--dnd5e-color-gold);
+        --icon-fill: var(--dnd5r-color-gold);
         --icon-size: 18px;
         display: none;
       }
@@ -397,7 +397,7 @@
         .ability {
           text-transform: uppercase;
           font-size: var(--font-size-10);
-          color: var(--dnd5e-color-gold);
+          color: var(--dnd5r-color-gold);
         }
       }
 
@@ -423,7 +423,7 @@
       .item-formula, .spell-formula {
         flex-direction: column;
 
-        dnd5e-icon {
+        dnd5r-icon {
           font-size: var(--font-size-14);
           --icon-fill: var(--color-text-dark-5);
         }
@@ -466,7 +466,7 @@
           display: flex;
           align-items: center;
         }
-        .item-control.active { color: var(--dnd5e-color-black); }
+        .item-control.active { color: var(--dnd5r-color-black); }
 
         &.item-detail .radio-button {
           background: none;
@@ -500,7 +500,7 @@
       .item-description .item-summary {
         font-size: var(--font-size-11);
         padding: 1px 8px 8px;
-        background: var(--dnd5e-color-parchment);
+        background: var(--dnd5r-color-parchment);
         .item-properties { padding-top: 7px; }
         > * + .item-properties { padding-top: 0; }
       }
@@ -530,7 +530,7 @@
       .config-button {
         position: absolute;
         inset: .5rem 1.5rem auto auto;
-        color: var(--dnd5e-color-gold);
+        color: var(--dnd5r-color-gold);
         font-size: var(--font-size-12);
       }
 
@@ -541,7 +541,7 @@
     }
 
     .item {
-      border-bottom: var(--dnd5e-border-dotted);
+      border-bottom: var(--dnd5r-border-dotted);
       &:last-child { border: none; }
     }
 
@@ -572,7 +572,7 @@
     padding: .25rem;
     border: 1px dashed var(--color-border-light-1);
     border-radius: 4px;
-    font-family: var(--dnd5e-font-roboto-condensed);
+    font-family: var(--dnd5r-font-roboto-condensed);
     text-transform: uppercase;
     font-size: var(--font-size-11);
     color: var(--color-text-dark-5);
@@ -585,7 +585,7 @@
 /*  Currency                          */
 /* ---------------------------------- */
 
-.dnd5e2 section.currency, .dnd5e2 .currency-style {
+.dnd5r2 section.currency, .dnd5r2 .currency-style {
   display: flex;
   gap: 8px;
 
@@ -601,13 +601,13 @@
   }
 
   input, button {
-    border: var(--dnd5e-border-gold);
-    background: var(--dnd5e-background-parchment);
-    box-shadow: 0 0 6px var(--dnd5e-shadow-15);
+    border: var(--dnd5r-border-gold);
+    background: var(--dnd5r-background-parchment);
+    box-shadow: 0 0 6px var(--dnd5r-shadow-15);
 
     &:hover, &:focus {
-      box-shadow: 0 0 6px var(--dnd5e-color-gold);
-      border: 1px solid var(--dnd5e-color-gold);
+      box-shadow: 0 0 6px var(--dnd5r-color-gold);
+      border: 1px solid var(--dnd5r-color-gold);
     }
   }
 
@@ -615,7 +615,7 @@
     border-radius: 6px;
     padding: .375rem .5rem .3755rem 1rem;
     text-align: right;
-    font-family: var(--dnd5e-font-roboto);
+    font-family: var(--dnd5r-font-roboto);
     font-weight: bold;
     font-size: var(--font-size-11);
     max-width: 80px;
@@ -632,7 +632,7 @@
 /*  Locked                            */
 /* ---------------------------------- */
 
-.dnd5e2 .locked .inventory-element {
+.dnd5r2 .locked .inventory-element {
   .item :is(.item-quantity, .item-uses) input:is(:focus-visible, :hover) { box-shadow: none; }
 }
 
@@ -640,7 +640,7 @@
 /*  Edit Mode                         */
 /* ---------------------------------- */
 
-.dnd5e2 .editable .inventory-element {
+.dnd5r2 .editable .inventory-element {
   .middle .attunement { padding-right: 0; }
   .items-section .pips { display: none; }
 }
@@ -649,7 +649,7 @@
 /*  Award & Currency                  */
 /* ---------------------------------- */
 
-.dnd5e2:is(.award, .currency-manager) {
+.dnd5r2:is(.award, .currency-manager) {
   --award-gap: 8px;
 
   nav {
@@ -659,12 +659,12 @@
     padding-block-end: var(--award-gap);
 
     a {
-      border-block-end: 3px solid var(--dnd5e-color-beige);
+      border-block-end: 3px solid var(--dnd5r-color-beige);
       padding-block: 2px;
       padding-inline: 6px;
 
       &.active {
-        border-color: var(--dnd5e-color-crimson);
+        border-color: var(--dnd5r-color-crimson);
         text-shadow: 0 0 10px var(--color-shadow-primary);
       }
     }
@@ -710,8 +710,8 @@
     span:has(+ slide-toggle:not([checked])), slide-toggle[checked] + span { font-weight: bold; }
 
     slide-toggle {
-      --slide-toggle-track-color-unchecked: var(--dnd5e-color-olive);
-      --slide-toggle-track-color-checked: var(--dnd5e-color-gold);
+      --slide-toggle-track-color-unchecked: var(--dnd5r-color-olive);
+      --slide-toggle-track-color-checked: var(--dnd5r-color-gold);
     }
   }
 

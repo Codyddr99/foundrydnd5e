@@ -1,12 +1,12 @@
 <div class="textbox {{ class }}">
     <h3 class="icon">
         {{#if icon}}<i class="{{ icon }}"></i>
-        {{~else if svg}}<dnd5e-icon src="systems/dnd5etools/icons/svg/{{ svg }}.svg"></dnd5e-icon>{{/if}}
+        {{~else if svg}}<dnd5r-icon src="systems/dnd5r/icons/svg/{{ svg }}.svg"></dnd5r-icon>{{/if}}
         <span class="roboto-upper">{{ localize label }}</span>
     </h3>
     {{#if @root.editable}}
     <textarea class="untext" name="{{ name }}">{{ value }}</textarea>
     {{else}}
-    <p>{{ dnd5e-textFormat value }}</p>
+    <p>{{ dnd5r-textFormat value }}</p>
     {{/if}}
 </div>

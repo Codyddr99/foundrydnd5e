@@ -12,7 +12,7 @@ export default class TraitSelector extends TraitsConfig {
   constructor(actor, trait, options={}) {
     foundry.utils.logCompatibilityWarning(
       "The `TraitSelector` application has been deprecated and replaced with `BaseTraitsConfig`.",
-      { since: "DnD5e 4.1", until: "DnD5e 4.3" }
+      { since: "DnD5r 4.1", until: "DnD5r 4.3" }
     );
     super({ ...options, document: actor, trait });
   }

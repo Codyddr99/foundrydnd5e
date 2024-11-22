@@ -42,7 +42,7 @@
       "_id": "q7TkJQX7PeVOzTQH",
       "changes": [
         {
-          "key": "flags.dnd5e.initiativeAdv",
+          "key": "flags.dnd5r.initiativeAdv",
           "mode": 5,
           "value": "true",
           "priority": null
@@ -69,7 +69,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -87,11 +87,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037383406,
     "modifiedTime": 1725992288180,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!NlXslw4yAqmKZWtN"
 }

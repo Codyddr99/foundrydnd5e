@@ -7,7 +7,7 @@ export default class ActorMovementConfig extends MovementSensesConfig {
   constructor(actor, options) {
     foundry.utils.logCompatibilityWarning(
       "The `ActorMovementConfig` application has been deprecated and replaced with `MovementSensesConfig`.",
-      { since: "DnD5e 4.1", until: "DnD5e 4.3" }
+      { since: "DnD5r 4.1", until: "DnD5r 4.3" }
     );
     super({ ...options, document: actor, type: "movement" });
   }

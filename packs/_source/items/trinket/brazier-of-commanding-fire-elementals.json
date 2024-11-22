@@ -5,7 +5,7 @@
   "img": "icons/tools/laboratory/bowl-liquid-orange.webp",
   "system": {
     "description": {
-      "value": "<p><em>Wondrous item</em></p>\n<p>While a fire burns in this brazier, you can use an action to speak the brazier's command word and summon a @UUID[Compendium.dnd5e.monsters.Actor.8SMQl75HLjhuSeau]{Fire Elemental}, as if you had cast the <em>@UUID[Compendium.dnd5e.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental}</em> spell. The brazier can't be used this way again until the next dawn.</p>\n<p>The brazier weighs 5 pounds.</p>",
+      "value": "<p><em>Wondrous item</em></p>\n<p>While a fire burns in this brazier, you can use an action to speak the brazier's command word and summon a @UUID[Compendium.dnd5r.monsters.Actor.8SMQl75HLjhuSeau]{Fire Elemental}, as if you had cast the <em>@UUID[Compendium.dnd5r.spells.Item.1LkZvINag7KqBmDR]{Conjure Elemental}</em> spell. The brazier can't be used this way again until the next dawn.</p>\n<p>The brazier weighs 5 pounds.</p>",
       "chat": ""
     },
     "source": {
@@ -66,8 +66,8 @@
     ],
     "magicalBonus": null,
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "action",
@@ -155,11 +155,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037177644,
     "modifiedTime": 1725992509809,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!OcjcplcUWH07Kn9k"
 }

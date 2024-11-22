@@ -30,7 +30,7 @@ export default class FeatData extends ItemDataModel.mixin(
   /* -------------------------------------------- */
 
   /** @override */
-  static LOCALIZATION_PREFIXES = ["DND5E.ENCHANTMENT", "DND5E.Prerequisites", "DND5E.SOURCE"];
+  static LOCALIZATION_PREFIXES = ["DND5R.ENCHANTMENT", "DND5R.Prerequisites", "DND5R.SOURCE"];
 
   /* -------------------------------------------- */
 
@@ -41,14 +41,14 @@ export default class FeatData extends ItemDataModel.mixin(
         max: new FormulaField({deterministic: true}),
         period: new StringField()
       }),
-      type: new ItemTypeField({baseItem: false}, {label: "DND5E.ItemFeatureType"}),
+      type: new ItemTypeField({baseItem: false}, {label: "DND5R.ItemFeatureType"}),
       prerequisites: new SchemaField({
         level: new NumberField({integer: true, min: 0})
       }),
       properties: new SetField(new StringField(), {
-        label: "DND5E.ItemFeatureProperties"
+        label: "DND5R.ItemFeatureProperties"
       }),
-      requirements: new StringField({required: true, nullable: true, label: "DND5E.Requirements"})
+      requirements: new StringField({required: true, nullable: true, label: "DND5R.Requirements"})
     });
   }
 
@@ -58,18 +58,18 @@ export default class FeatData extends ItemDataModel.mixin(
   static get compendiumBrowserFilters() {
     return new Map([
       ["category", {
-        label: "DND5E.Item.Category.Label",
+        label: "DND5R.Item.Category.Label",
         type: "set",
         config: {
-          choices: CONFIG.DND5E.featureTypes,
+          choices: CONFIG.DND5R.featureTypes,
           keyPath: "system.type.value"
         }
       }],
       ["subtype", {
-        label: "DND5E.ItemFeatureType",
+        label: "DND5R.ItemFeatureType",
         type: "set",
         config: {
-          choices: Object.values(CONFIG.DND5E.featureTypes).reduce((obj, config) => {
+          choices: Object.values(CONFIG.DND5R.featureTypes).reduce((obj, config) => {
             for ( const [key, label] of Object.entries(config.subtypes ?? {}) ) obj[key] = label;
             return obj;
           }, {}),
@@ -91,18 +91,18 @@ export default class FeatData extends ItemDataModel.mixin(
     this.prepareDescriptionData();
 
     if ( this.type.value ) {
-      const config = CONFIG.DND5E.featureTypes[this.type.value];
+      const config = CONFIG.DND5R.featureTypes[this.type.value];
       if ( config ) this.type.label = config.subtypes?.[this.type.subtype] ?? null;
       else this.type.label = game.i18n.localize(CONFIG.Item.typeLabels.feat);
     }
 
     let label;
     const activation = this.activities.contents[0]?.activation.type;
-    if ( activation === "legendary" ) label = game.i18n.localize("DND5E.LegendaryActionLabel");
-    else if ( activation === "lair" ) label = game.i18n.localize("DND5E.LairActionLabel");
-    else if ( activation === "action" && this.hasAttack ) label = game.i18n.localize("DND5E.Attack");
-    else if ( activation ) label = game.i18n.localize("DND5E.Action");
-    else label = game.i18n.localize("DND5E.Passive");
+    if ( activation === "legendary" ) label = game.i18n.localize("DND5R.LegendaryActionLabel");
+    else if ( activation === "lair" ) label = game.i18n.localize("DND5R.LairActionLabel");
+    else if ( activation === "action" && this.hasAttack ) label = game.i18n.localize("DND5R.Attack");
+    else if ( activation ) label = game.i18n.localize("DND5R.Action");
+    else label = game.i18n.localize("DND5R.Passive");
     this.parent.labels ??= {};
     this.parent.labels.featType = label;
   }
@@ -121,7 +121,7 @@ export default class FeatData extends ItemDataModel.mixin(
           "Recharge data has been merged into uses data. Recharge state can now be determined by checking"
           + " `system.uses.recovery` for a profile with a `period` of 'recharge', and checking its `formula` for the"
           + " recharge formula.",
-          { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+          { since: "DnD5r 4.0", until: "DnD5r 4.4" }
         );
         return uses.period === "recharge" ? Number(uses.formula) : null;
       },
@@ -132,7 +132,7 @@ export default class FeatData extends ItemDataModel.mixin(
         foundry.utils.logCompatibilityWarning(
           "Recharge data has been merged into uses data. Determining charged state can now be done by determining"
           + " whether `system.uses.value` is greater than `0`.",
-          { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+          { since: "DnD5r 4.0", until: "DnD5r 4.4" }
         );
         return uses.value > 0;
       },
@@ -158,9 +158,9 @@ export default class FeatData extends ItemDataModel.mixin(
       { label: this.type.label },
       { label: this.parent.labels.featType },
       { label: this.requirements, value: this._source.requirements, field: this.schema.getField("requirements"),
-        placeholder: "DND5E.Requirements" }
+        placeholder: "DND5R.Requirements" }
     ];
-    context.parts = ["dnd5e.details-feat", "dnd5e.field-uses"];
+    context.parts = ["dnd5r.details-feat", "dnd5r.field-uses"];
   }
 
   /* -------------------------------------------- */
@@ -246,8 +246,8 @@ export default class FeatData extends ItemDataModel.mixin(
    * @type {boolean}
    */
   get isEnchantmentSource() {
-    return CONFIG.DND5E.featureTypes[this.type?.value]?.subtypes?.[this.type?.subtype]
-      && (this.type?.subtype in CONFIG.DND5E.featureTypes.enchantment.subtypes);
+    return CONFIG.DND5R.featureTypes[this.type?.value]?.subtypes?.[this.type?.subtype]
+      && (this.type?.subtype in CONFIG.DND5R.featureTypes.enchantment.subtypes);
   }
 
   /* -------------------------------------------- */

@@ -7,7 +7,7 @@
   "type": "feat",
   "system": {
     "description": {
-      "value": "<p>Starting when you choose this tradition at 3rd level, you can manipulate your enemy's ki when you harness your own.</p><p>Whenever you hit a creature with one of the attacks granted by your @UUID[Compendium.dnd5e.classfeatures.Item.5MwNlVZK7m6VolOH]{Flurry of Blows}, you can impose one of the following effects on that target:</p><ul><li>It must succeed on a Dexterity saving throw or be knocked prone.</li><li>It must make a Strength saving throw. If it fails, you can push it up to 15 feet away from you.</li><li>It can't take reactions until the end of your next turn.</li></ul>",
+      "value": "<p>Starting when you choose this tradition at 3rd level, you can manipulate your enemy's ki when you harness your own.</p><p>Whenever you hit a creature with one of the attacks granted by your @UUID[Compendium.dnd5r.classfeatures.Item.5MwNlVZK7m6VolOH]{Flurry of Blows}, you can impose one of the following effects on that target:</p><ul><li>It must succeed on a Dexterity saving throw or be knocked prone.</li><li>It must make a Strength saving throw. If it fails, you can push it up to 15 feet away from you.</li><li>It can't take reactions until the end of your next turn.</li></ul>",
       "chat": ""
     },
     "source": {
@@ -29,8 +29,8 @@
     "requirements": "Way of the Open Hand 3",
     "properties": [],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "special",
@@ -108,11 +108,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037387127,
     "modifiedTime": 1725992289373,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!iQxLNydNLlCHNKbp"
 }

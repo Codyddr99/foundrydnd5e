@@ -1,5 +1,5 @@
 {
-  "id": "dnd5etools",
+  "id": "dnd5r",
   "title": "Dungeons & Dragons Fifth Edition (5e.tools edition)",
   "description": "A system for playing the fifth edition of the world's most popular role-playing game in the Foundry Virtual Tabletop environment.",
   "version": "4.1.1",
@@ -7,9 +7,9 @@
     "minimum": "12.331",
     "verified": "13.332"
   },
-  "url": "https://github.com/Codyddr99/foundrydnd5e/",
-  "manifest": "https://raw.githubusercontent.com/Codyddr99/foundrydnd5e/master/system.json",
-  "download": "https://github.com/Codyddr99/foundrydnd5e/releases/download/release-4.1.1/dnd5e-release-4.1.1.zip",
+  "url": "https://github.com/Codyddr99/foundrydnd5r/",
+  "manifest": "https://raw.githubusercontent.com/Codyddr99/foundrydnd5r/master/system.json",
+  "download": "https://github.com/Codyddr99/foundrydnd5r/releases/download/release-4.1.1/dnd5r-release-4.1.1.zip",
   "authors": [
     {
       "name": "Atropos",
@@ -18,10 +18,10 @@
     }
   ],
   "esmodules": [
-    "dnd5e.mjs"
+    "dnd5r.mjs"
   ],
   "styles": [
-    "dnd5e.css"
+    "dnd5r.css"
   ],
   "documentTypes": {
     "ActiveEffect": {
@@ -109,12 +109,12 @@
     {
       "name": "heroes",
       "label": "Starter Heroes",
-      "system": "dnd5etools",
+      "system": "dnd5r",
       "path": "packs/heroes",
       "type": "Actor",
       "private": false,
       "flags": {
-        "dnd5e": {
+        "dnd5r": {
           "types": ["character"]
         }
       }
@@ -122,12 +122,12 @@
     {
       "name": "monsters",
       "label": "Monsters (SRD)",
-      "system": "dnd5etools",
+      "system": "dnd5r",
       "path": "packs/monsters",
       "type": "Actor",
       "private": false,
       "flags": {
-        "dnd5e": {
+        "dnd5r": {
           "types": ["npc"]
         }
       }
@@ -135,12 +135,12 @@
     {
       "name": "items",
       "label": "Items (SRD)",
-      "system": "dnd5etools",
+      "system": "dnd5r",
       "path": "packs/items",
       "type": "Item",
       "private": false,
       "flags": {
-        "dnd5e": {
+        "dnd5r": {
           "types": ["weapon", "equipment", "consumable", "tool", "loot", "feat", "container"]
         }
       }
@@ -148,12 +148,12 @@
     {
       "name": "tradegoods",
       "label": "Trade Goods (SRD)",
-      "system": "dnd5etools",
+      "system": "dnd5r",
       "path": "packs/tradegoods",
       "type": "Item",
       "private": false,
       "flags": {
-        "dnd5e": {
+        "dnd5r": {
           "types": ["loot"]
         }
       }
@@ -161,12 +161,12 @@
     {
       "name": "spells",
       "label": "Spells (SRD)",
-      "system": "dnd5etools",
+      "system": "dnd5r",
       "path": "packs/spells",
       "type": "Item",
       "private": false,
       "flags": {
-        "dnd5e": {
+        "dnd5r": {
           "types": ["spell"]
         }
       }
@@ -174,12 +174,12 @@
     {
       "name": "backgrounds",
       "label": "Backgrounds (SRD)",
-      "system": "dnd5etools",
+      "system": "dnd5r",
       "path": "packs/backgrounds",
       "type": "Item",
       "private": false,
       "flags": {
-        "dnd5e": {
+        "dnd5r": {
           "types": ["background", "feat"]
         }
       }
@@ -187,12 +187,12 @@
     {
       "name": "classes",
       "label": "Classes (SRD)",
-      "system": "dnd5etools",
+      "system": "dnd5r",
       "path": "packs/classes",
       "type": "Item",
       "private": false,
       "flags": {
-        "dnd5e": {
+        "dnd5r": {
           "types": ["class"]
         }
       }
@@ -200,12 +200,12 @@
     {
       "name": "subclasses",
       "label": "Subclasses (SRD)",
-      "system": "dnd5etools",
+      "system": "dnd5r",
       "path": "packs/subclasses",
       "type": "Item",
       "private": false,
       "flags": {
-        "dnd5e": {
+        "dnd5r": {
           "types": ["subclass"]
         }
       }
@@ -213,12 +213,12 @@
     {
       "name": "classfeatures",
       "label": "Class & Subclass Features (SRD)",
-      "system": "dnd5etools",
+      "system": "dnd5r",
       "path": "packs/classfeatures",
       "type": "Item",
       "private": false,
       "flags": {
-        "dnd5e": {
+        "dnd5r": {
           "types": ["feat", "weapon"]
         }
       }
@@ -226,12 +226,12 @@
     {
       "name": "races",
       "label": "Races (SRD)",
-      "system": "dnd5etools",
+      "system": "dnd5r",
       "path": "packs/races",
       "type": "Item",
       "private": false,
       "flags": {
-        "dnd5e": {
+        "dnd5r": {
           "types": ["race", "feat"]
         }
       }
@@ -239,12 +239,12 @@
     {
       "name": "monsterfeatures",
       "label": "Monster Features (SRD)",
-      "system": "dnd5etools",
+      "system": "dnd5r",
       "path": "packs/monsterfeatures",
       "type": "Item",
       "private": false,
       "flags": {
-        "dnd5e": {
+        "dnd5r": {
           "types": ["feat", "weapon"]
         }
       }
@@ -252,7 +252,7 @@
     {
       "name": "rules",
       "label": "Rules (SRD)",
-      "system": "dnd5etools",
+      "system": "dnd5r",
       "path": "packs/rules",
       "type": "JournalEntry",
       "private": false,
@@ -263,7 +263,7 @@
     {
       "name": "tables",
       "label": "Tables (SRD)",
-      "system": "dnd5etools",
+      "system": "dnd5r",
       "path": "packs/tables",
       "type": "RollTable",
       "private": false,
@@ -331,8 +331,8 @@
     },
     {
       "type": "setup",
-      "url": "systems/dnd5etools/ui/official/dnd5e-repo.jpg",
-      "thumbnail": "systems/dnd5etools/ui/official/dnd5e-thumbnail.jpg"
+      "url": "systems/dnd5r/ui/official/dnd5r-repo.jpg",
+      "thumbnail": "systems/dnd5r/ui/official/dnd5r-thumbnail.jpg"
     }
   ],
   "socket": true,
@@ -341,28 +341,28 @@
     "units": "ft"
   },
   "primaryTokenAttribute": "attributes.hp",
-  "background": "systems/dnd5etools/ui/official/dnd5e-background.webp",
+  "background": "systems/dnd5r/ui/official/dnd5r-background.webp",
   "flags": {
-    "dnd5e": {
+    "dnd5r": {
       "sourceBooks": {
         "SRD 5.1": "SOURCE.BOOK.SRD"
       },
       "spellLists": [
-        "Compendium.dnd5e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.ziBzRlrpBm1KVV0j",
-        "Compendium.dnd5e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.cuG9d7J9fQH9InYT",
-        "Compendium.dnd5e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.MWiN7ILEO0Vd3zAZ",
-        "Compendium.dnd5e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.FhucONA0yRZQjMmb",
-        "Compendium.dnd5e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.sANq9JMycfSq3A5d",
-        "Compendium.dnd5e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.PVgly1xB2S2I8GLQ",
-        "Compendium.dnd5e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.mx4TsSbBIAaAkhQ7",
-        "Compendium.dnd5e.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.k7Rs5EyXeA0SFTXD"
+        "Compendium.dnd5r.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.ziBzRlrpBm1KVV0j",
+        "Compendium.dnd5r.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.cuG9d7J9fQH9InYT",
+        "Compendium.dnd5r.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.MWiN7ILEO0Vd3zAZ",
+        "Compendium.dnd5r.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.FhucONA0yRZQjMmb",
+        "Compendium.dnd5r.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.sANq9JMycfSq3A5d",
+        "Compendium.dnd5r.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.PVgly1xB2S2I8GLQ",
+        "Compendium.dnd5r.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.mx4TsSbBIAaAkhQ7",
+        "Compendium.dnd5r.rules.JournalEntry.QvPDSUsAiEn3hD8s.JournalEntryPage.k7Rs5EyXeA0SFTXD"
       ]
     },
     "needsMigrationVersion": "4.0.1",
     "compatibleMigrationVersion": "0.8",
     "hotReload": {
       "extensions": ["css", "hbs", "json"],
-      "paths": ["dnd5e.css", "templates", "lang"]
+      "paths": ["dnd5r.css", "templates", "lang"]
     }
   }
 }

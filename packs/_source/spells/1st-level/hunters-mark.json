@@ -63,8 +63,8 @@
       "concentration"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "damage",
         "activation": {
           "type": "action",
@@ -144,7 +144,7 @@
   "effects": [
     {
       "name": "Hunter's Mark",
-      "origin": "Compendium.dnd5e.spells.Item.0xmXiPiuYws1OGcX",
+      "origin": "Compendium.dnd5r.spells.Item.0xmXiPiuYws1OGcX",
       "duration": {
         "startTime": null,
         "seconds": 3600,
@@ -168,7 +168,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -185,11 +185,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037345248,
     "modifiedTime": 1725992716340,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!0xmXiPiuYws1OGcX"
 }

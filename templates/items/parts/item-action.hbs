@@ -1,6 +1,6 @@
 {{!-- Action Type --}}
 <div class="form-group select">
-    <label>{{ localize "DND5E.ItemActionType" }}</label>
+    <label>{{ localize "DND5R.ItemActionType" }}</label>
     <select name="system.actionType">
         {{ selectOptions config.itemActionTypes selected=system.actionType blank="" }}
     </select>
@@ -9,12 +9,12 @@
 
 {{!-- Ability Modifier --}}
 <div class="form-group select">
-    <label>{{ localize "DND5E.AbilityModifier" }}</label>
+    <label>{{ localize "DND5R.AbilityModifier" }}</label>
     <select name="system.ability">
         {{#select system.ability}}
-        <option value="">{{ localize "DND5E.Default" }}</option>
-        <option value="none">{{ localize "DND5E.None" }}</option>
-        <optgroup label="{{ localize 'DND5E.Ability' }}">
+        <option value="">{{ localize "DND5R.Default" }}</option>
+        <option value="none">{{ localize "DND5R.None" }}</option>
+        <optgroup label="{{ localize 'DND5R.Ability' }}">
             {{#each config.abilities as |ability a|}}
             <option value="{{a}}">{{ability.label}}</option>
             {{/each}}
@@ -26,19 +26,19 @@
 {{#if system.hasAttack}}
 {{!-- Attack Roll Bonus --}}
 <div class="form-group">
-    <label>{{ localize "DND5E.ItemAttackBonus" }}</label>
+    <label>{{ localize "DND5R.ItemAttackBonus" }}</label>
     <div class="form-fields">
         <input type="text" name="system.attack.bonus" value="{{system.attack.bonus}}" data-formula-editor>
-        <label class="checkbox" data-tooltip="DND5E.ItemAttackFlatHint">
+        <label class="checkbox" data-tooltip="DND5R.ItemAttackFlatHint">
           <input type="checkbox" name="system.attack.flat" {{checked system.attack.flat}}>
-          {{localize "DND5E.ItemAttackFlat"}}
+          {{localize "DND5R.ItemAttackFlat"}}
         </label>
     </div>
 </div>
 
 {{!-- Critical Hit Threshold --}}
 <div class="form-group">
-    <label>{{ localize "DND5E.ItemCritThreshold" }}</label>
+    <label>{{ localize "DND5R.ItemCritThreshold" }}</label>
     <div class="form-fields">
         {{numberInput system.critical.threshold name="system.critical.threshold" placeholder="20" max=20 min=1 step=1}}
     </div>
@@ -46,7 +46,7 @@
 
 {{!-- Critical Hit Damage --}}
 <div class="form-group">
-    <label>{{ localize "DND5E.ItemCritExtraDamage" }}</label>
+    <label>{{ localize "DND5R.ItemCritExtraDamage" }}</label>
     <div class="form-fields">
         <input type="text" name="system.critical.damage" value="{{system.critical.damage}}">
     </div>
@@ -55,8 +55,8 @@
 
 {{!-- Damage Formula --}}
 <h4 class="damage-header">
-    {{#unless isHealing}}{{ localize "DND5E.Damage" }}{{ else }}{{ localize "DND5E.Healing" }}{{/unless}}
-    {{ localize "DND5E.Formula" }}
+    {{#unless isHealing}}{{ localize "DND5R.Damage" }}{{ else }}{{ localize "DND5R.Healing" }}{{/unless}}
+    {{ localize "DND5R.Formula" }}
     <a class="damage-control add-damage"><i class="fas fa-plus"></i></a>
 </h4>
 <ol class="damage-parts form-group">
@@ -65,11 +65,11 @@
         <input type="text" name="system.damage.parts.{{i}}.0" value="{{lookup this "0"}}" data-formula-editor/>
         <select name="system.damage.parts.{{i}}.1">
             {{#select (lookup this "1")}}
-                <option value="">{{ localize "DND5E.None" }}</option>
-                <optgroup label="{{localize 'DND5E.Damage'}}">
+                <option value="">{{ localize "DND5R.None" }}</option>
+                <optgroup label="{{localize 'DND5R.Damage'}}">
                     {{selectOptions @root.config.damageTypes labelAttr="label"}}
                 </optgroup>
-                <optgroup label="{{localize 'DND5E.Healing'}}">
+                <optgroup label="{{localize 'DND5R.Healing'}}">
                     {{selectOptions @root.config.healingTypes labelAttr="label"}}
                 </optgroup>
             {{/select}}
@@ -82,39 +82,39 @@
 {{!-- Versatile Damage --}}
 {{#if system.damage.parts.length }}
 <div class="form-group">
-    <label>{{ localize "DND5E.VersatileDamage" }}</label>
+    <label>{{ localize "DND5R.VersatileDamage" }}</label>
     <div class="form-fields">
         <input type="text" name="system.damage.versatile" value="{{system.damage.versatile}}"
-               placeholder="{{ localize 'DND5E.Formula' }}" data-formula-editor>
+               placeholder="{{ localize 'DND5R.Formula' }}" data-formula-editor>
     </div>
 </div>
 {{/if}}
 
 {{!-- Other Formula --}}
 <div class="form-group">
-    <label>{{ localize "DND5E.OtherFormula" }}</label>
+    <label>{{ localize "DND5R.OtherFormula" }}</label>
     <div class="form-fields">
         <input type="text" name="system.formula" value="{{system.formula}}"
-               placeholder="{{ localize 'DND5E.Formula' }}" data-formula-editor>
+               placeholder="{{ localize 'DND5R.Formula' }}" data-formula-editor>
     </div>
 </div>
 
 {{!-- Saving Throw --}}
 <div class="form-group input-select">
-    <label>{{ localize "DND5E.ActionSave" }}</label>
+    <label>{{ localize "DND5R.ActionSave" }}</label>
     <div class="form-fields">
         <select name="system.save.ability">
             {{selectOptions config.abilities selected=system.save.ability labelAttr="label" blank=""}}
         </select>
-        <span>{{ localize "DND5E.VsDC" }}</span>
+        <span>{{ localize "DND5R.VsDC" }}</span>
         <input type="number" step="any" name="system.save.dc"
             value="{{#if system.save.dc}}{{system.save.dc}}{{/if}}"
-            placeholder="{{ localize 'DND5E.AbbreviationDC' }}" {{#unless isFlatDC}}disabled{{/unless}}>
+            placeholder="{{ localize 'DND5R.AbbreviationDC' }}" {{#unless isFlatDC}}disabled{{/unless}}>
         <select name="system.save.scaling">
             {{#select system.save.scaling}}
-                <option value="spell">{{ localize "DND5E.Spellcasting" }}</option>
+                <option value="spell">{{ localize "DND5R.Spellcasting" }}</option>
                 {{selectOptions config.abilities labelAttr="label"}}
-                <option value="flat">{{ localize "DND5E.Flat" }}</option>
+                <option value="flat">{{ localize "DND5R.Flat" }}</option>
             {{/select}}
         </select>
     </div>
@@ -123,16 +123,16 @@
 {{!-- Enchantment --}}
 {{#if system.isEnchantment}}
 <div class="form-group enchantment">
-    <label>{{ localize "DND5E.ENCHANTMENT.Label" }}</label>
+    <label>{{ localize "DND5R.ENCHANTMENT.Label" }}</label>
     {{#if appliedEnchantments.length}}
-    <ul class="separated-list dnd5e2">
+    <ul class="separated-list dnd5r2">
         {{#each appliedEnchantments}}
         <li class="item" data-enchantment-uuid="{{ enchantment.uuid }}">
             <div class="details flexrow">
                 <img class="gold-icon" src="{{ item.img }}" alt="{{ name }}">
                 <span class="name">
                     {{#if actor}}
-                    {{{ localize "DND5E.ENCHANTMENT.Items.Entry" item=name actor=actor.name }}}
+                    {{{ localize "DND5R.ENCHANTMENT.Items.Entry" item=name actor=actor.name }}}
                     {{else}}
                     {{ name }}
                     {{/if}}
@@ -140,12 +140,12 @@
                 <div class="list-controls flexrow">
                     {{#if item.isOwner}}
                     <button type="button" class="unbutton" data-action="view" data-uuid="{{ item.uuid }}"
-                            data-tooltip="DND5E.ItemView" aria-label="{{ localize 'DND5E.ItemView' }}">
+                            data-tooltip="DND5R.ItemView" aria-label="{{ localize 'DND5R.ItemView' }}">
                         <i class="fa-solid fa-eye" aria-hidden="true"></i>
                     </button>
                     <button type="button" class="enchantment-button unbutton" data-action="removeEnchantment"
-                            data-tooltip="DND5E.ENCHANTMENT.Action.Remove"
-                            aria-label="{{ localize 'DND5E.ENCHANTMENT.Action.Remove' }}">
+                            data-tooltip="DND5R.ENCHANTMENT.Action.Remove"
+                            aria-label="{{ localize 'DND5R.ENCHANTMENT.Action.Remove' }}">
                         <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
                     </button>
                     {{/if}}
@@ -161,10 +161,10 @@
 {{!-- Summoning --}}
 {{#if (eq system.actionType "summ")}}
 <div class="form-group summoning">
-    <label>{{ localize "DND5E.Summoning.Label" }}</label>
+    <label>{{ localize "DND5R.Summoning.Label" }}</label>
     {{#with system.summonedCreatures as |summonedCreatures|}}
     {{#if summonedCreatures.length}}
-    <ul class="separated-list dnd5e2">
+    <ul class="separated-list dnd5r2">
         {{#each summonedCreatures}}
         <li class="item" data-summon-uuid="{{ uuid }}">
             <div class="details flexrow">
@@ -172,8 +172,8 @@
                 <span class="name">{{ name }}</span>
                 <div class="list-controls flexrow">
                     <button type="button" class="unbutton" data-action="view" data-uuid="{{ uuid }}"
-                            data-tooltip="DND5E.Summoning.Action.View"
-                            aria-label="{{ localize 'DND5E.Summoning.Action.View' }}">
+                            data-tooltip="DND5R.Summoning.Action.View"
+                            aria-label="{{ localize 'DND5R.Summoning.Action.View' }}">
                         <i class="fa-solid fa-eye" aria-hidden="true"></i>
                     </button>
                 </div>
@@ -188,7 +188,7 @@
 
 {{!-- Chat Message Flavor --}}
 <div class="form-group stacked">
-    <label>{{ localize "DND5E.ChatFlavor" }}</label>
+    <label>{{ localize "DND5R.ChatFlavor" }}</label>
     <input type="text" name="system.chatFlavor" value="{{system.chatFlavor}}"/>
 </div>
 {{/if}}

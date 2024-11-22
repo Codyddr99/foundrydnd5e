@@ -7,7 +7,7 @@ export default class ActorArmorConfig extends ArmorClassConfig {
   constructor(actor, options) {
     foundry.utils.logCompatibilityWarning(
       "The `ActorArmorConfig` application has been deprecated and replaced with `ArmorClassConfig`.",
-      { since: "DnD5e 4.1", until: "DnD5e 4.3" }
+      { since: "DnD5r 4.1", until: "DnD5r 4.3" }
     );
     super({ ...options, document: actor });
   }

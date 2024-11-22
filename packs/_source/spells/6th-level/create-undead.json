@@ -64,8 +64,8 @@
       "material"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "summon",
         "activation": {
           "type": "action",
@@ -122,7 +122,7 @@
             "count": "@item.level - 6",
             "name": "",
             "_id": "GGQa2fXx4sJFOhCv",
-            "uuid": "Compendium.dnd5e.monsters.Actor.IyIybE5t2adMEVUM",
+            "uuid": "Compendium.dnd5r.monsters.Actor.IyIybE5t2adMEVUM",
             "level": {
               "min": 8,
               "max": null
@@ -133,7 +133,7 @@
             "count": "@item.level - 3",
             "name": "",
             "_id": "439tNP7qngefOmVd",
-            "uuid": "Compendium.dnd5e.monsters.Actor.OBujQLLPSmlJiZnL",
+            "uuid": "Compendium.dnd5r.monsters.Actor.OBujQLLPSmlJiZnL",
             "level": {
               "min": null,
               "max": null
@@ -144,7 +144,7 @@
             "count": "@item.level - 7",
             "name": "",
             "_id": "8377f4szK4aEYLqD",
-            "uuid": "Compendium.dnd5e.monsters.Actor.t8WYD7ak07X7xpx8",
+            "uuid": "Compendium.dnd5r.monsters.Actor.t8WYD7ak07X7xpx8",
             "level": {
               "min": 9,
               "max": null
@@ -155,7 +155,7 @@
             "count": "@item.level - 6",
             "name": "",
             "_id": "1wXs9fpxffiMlT1j",
-            "uuid": "Compendium.dnd5e.monsters.Actor.rbyp54px2D0ql4QK",
+            "uuid": "Compendium.dnd5r.monsters.Actor.rbyp54px2D0ql4QK",
             "level": {
               "min": 8,
               "max": null
@@ -185,11 +185,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037351363,
     "modifiedTime": 1725992718229,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!E4NXux0RHvME1XgP"
 }

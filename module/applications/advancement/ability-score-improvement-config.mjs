@@ -8,7 +8,7 @@ export default class AbilityScoreImprovementConfig extends AdvancementConfig {
   /** @inheritDoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      template: "systems/dnd5etools/templates/advancement/ability-score-improvement-config.hbs"
+      template: "systems/dnd5r/templates/advancement/ability-score-improvement-config.hbs"
     });
   }
 
@@ -18,7 +18,7 @@ export default class AbilityScoreImprovementConfig extends AdvancementConfig {
 
   /** @inheritDoc */
   getData() {
-    const abilities = Object.entries(CONFIG.DND5E.abilities).reduce((obj, [key, data]) => {
+    const abilities = Object.entries(CONFIG.DND5R.abilities).reduce((obj, [key, data]) => {
       if ( !this.advancement.canImprove(key) ) return obj;
       const fixed = this.advancement.configuration.fixed[key] ?? 0;
       obj[key] = {
@@ -38,7 +38,7 @@ export default class AbilityScoreImprovementConfig extends AdvancementConfig {
       points: {
         key: "points",
         name: "configuration.points",
-        label: game.i18n.localize("DND5E.ADVANCEMENT.AbilityScoreImprovement.FIELDS.points.label"),
+        label: game.i18n.localize("DND5R.ADVANCEMENT.AbilityScoreImprovement.FIELDS.points.label"),
         min: 0,
         value: this.advancement.configuration.points,
         canIncrease: true,

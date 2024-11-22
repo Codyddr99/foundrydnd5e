@@ -86,8 +86,8 @@ export default class DamageRoll extends BasicRoll {
   /** @inheritDoc */
   static async build(config={}, dialog={}, message={}) {
     config.critical ??= {};
-    config.critical.multiplyNumeric ??= game.settings.get("dnd5e", "criticalDamageModifiers");
-    config.critical.powerfulCritical ??= game.settings.get("dnd5e", "criticalDamageMaxDice");
+    config.critical.multiplyNumeric ??= game.settings.get("dnd5r", "criticalDamageModifiers");
+    config.critical.powerfulCritical ??= game.settings.get("dnd5r", "criticalDamageMaxDice");
     return super.build(config, dialog, message);
   }
 
@@ -212,7 +212,7 @@ export default class DamageRoll extends BasicRoll {
           if ( critical.powerfulCritical ) {
             const bonus = Roll.create(term.formula).evaluateSync({ maximize: true }).total;
             if ( bonus > 0 ) {
-              const flavor = term.flavor?.toLowerCase().trim() ?? game.i18n.localize("DND5E.PowerfulCritical");
+              const flavor = term.flavor?.toLowerCase().trim() ?? game.i18n.localize("DND5R.PowerfulCritical");
               flatBonus.set(flavor, (flatBonus.get(flavor) ?? 0) + bonus);
             }
             cm = Math.max(1, cm-1);
@@ -298,7 +298,7 @@ export default class DamageRoll extends BasicRoll {
     title, defaultRollMode, defaultCritical=false, template, allowCritical=true}={}, options={}) {
     foundry.utils.logCompatibilityWarning(
       "The `configureDialog` on DamageRoll has been deprecated and is now handled through `DamageRoll.build`.",
-      { since: "DnD5e 4.0", until: "DnD5e 4.4" }
+      { since: "DnD5r 4.0", until: "DnD5r 4.4" }
     );
     const DialogClass = this.DefaultConfigurationDialog;
     return await DialogClass.configure(

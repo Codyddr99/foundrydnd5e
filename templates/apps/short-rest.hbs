@@ -1,37 +1,37 @@
 <form id="short-rest-hd" class="dialog-content" onsubmit="event.preventDefault();">
     <p>
-        {{#if isGroup}}{{ localize "DND5E.ShortRestHintGroup" }}
-        {{else}}{{ localize "DND5E.ShortRestHint" }}{{/if}}
+        {{#if isGroup}}{{ localize "DND5R.ShortRestHintGroup" }}
+        {{else}}{{ localize "DND5R.ShortRestHint" }}{{/if}}
     </p>
 
     {{#if availableHD}}
     <div class="form-group">
-        <label>{{ localize "DND5E.ShortRestSelect" }}</label>
+        <label>{{ localize "DND5R.ShortRestSelect" }}</label>
         <div class="form-fields">
             <select name="hd">
                 {{ selectOptions hdOptions selected=denomination }}
             </select>
             <button id="roll-hd" {{#unless canRoll}}disabled{{/unless}}>
-                <i class="fas fa-dice-d20"></i> {{ localize "DND5E.Roll" }}
+                <i class="fas fa-dice-d20"></i> {{ localize "DND5R.Roll" }}
             </button>
         </div>
         {{#unless canRoll}}
-        <p class="notes">{{ localize "DND5E.ShortRestNoHD" }}</p>
+        <p class="notes">{{ localize "DND5R.ShortRestNoHD" }}</p>
         {{/unless}}
     </div>
     {{else}}
     <div class="form-group">
-        <label>{{ localize "DND5E.HitDiceAutoSpend.Label" }}</label>
+        <label>{{ localize "DND5R.HitDiceAutoSpend.Label" }}</label>
         <input type="checkbox" name="autoHD">
-        <p class="hint">{{localize "DND5E.HitDiceAutoSpend.Hint" }}</p>
+        <p class="hint">{{localize "DND5R.HitDiceAutoSpend.Hint" }}</p>
     </div>
     {{/if}}
 
     {{#if promptNewDay}}
     <div class="form-group">
-        <label>{{ localize "DND5E.NewDay" }}</label>
+        <label>{{ localize "DND5R.NewDay" }}</label>
         <input type="checkbox" name="newDay" {{checked newDay}}>
-        <p class="hint">{{ localize "DND5E.NewDayHint" }}</p>
+        <p class="hint">{{ localize "DND5R.NewDayHint" }}</p>
     </div>
     {{/if}}
 

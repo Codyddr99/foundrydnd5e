@@ -67,8 +67,8 @@
       "concentration"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "action",
@@ -131,7 +131,7 @@
   "effects": [
     {
       "name": "Invisibility",
-      "origin": "Compendium.dnd5e.spells.Item.1N8dDMMgZ1h1YJ3B",
+      "origin": "Compendium.dnd5r.spells.Item.1N8dDMMgZ1h1YJ3B",
       "duration": {
         "startTime": null,
         "seconds": 3600,
@@ -155,7 +155,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -172,11 +172,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.1.0",
     "createdTime": 1725037345708,
     "modifiedTime": 1731016443164,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!1N8dDMMgZ1h1YJ3B"
 }

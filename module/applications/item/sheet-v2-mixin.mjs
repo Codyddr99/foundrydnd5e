@@ -10,12 +10,12 @@ export default function ItemSheetV2Mixin(Base) {
   return class ItemSheetV2 extends DocumentSheetV2Mixin(Base) {
     /** @override */
     static TABS = [
-      { tab: "contents", label: "DND5E.Contents", condition: this.itemHasContents.bind(this) },
-      { tab: "description", label: "DND5E.Description" },
-      { tab: "details", label: "DND5E.Details", condition: this.isItemIdentified.bind(this) },
-      { tab: "activities", label: "DND5E.ACTIVITY.Title.other", condition: this.itemHasActivities.bind(this) },
-      { tab: "effects", label: "DND5E.Effects", condition: this.itemHasEffects.bind(this) },
-      { tab: "advancement", label: "DND5E.AdvancementTitle", condition: this.itemHasAdvancements.bind(this) }
+      { tab: "contents", label: "DND5R.Contents", condition: this.itemHasContents.bind(this) },
+      { tab: "description", label: "DND5R.Description" },
+      { tab: "details", label: "DND5R.Details", condition: this.isItemIdentified.bind(this) },
+      { tab: "activities", label: "DND5R.ACTIVITY.Title.other", condition: this.itemHasActivities.bind(this) },
+      { tab: "effects", label: "DND5R.Effects", condition: this.itemHasEffects.bind(this) },
+      { tab: "advancement", label: "DND5R.AdvancementTitle", condition: this.itemHasAdvancements.bind(this) }
     ];
 
     /**
@@ -36,7 +36,7 @@ export default function ItemSheetV2Mixin(Base) {
     };
 
     /** @inheritDoc */
-    static _customElements = super._customElements.concat(["dnd5e-checkbox"]);
+    static _customElements = super._customElements.concat(["dnd5r-checkbox"]);
 
     /* -------------------------------------------- */
     /*  Rendering                                   */
@@ -81,7 +81,7 @@ export default function ItemSheetV2Mixin(Base) {
       const [identified] = this.element.find(".toggle-identified");
       if ( identified ) {
         const isIdentified = this.item.system.identified;
-        const label = isIdentified ? "DND5E.Identified" : "DND5E.Unidentified.Title";
+        const label = isIdentified ? "DND5R.Identified" : "DND5R.Unidentified.Title";
         identified.setAttribute("aria-label", game.i18n.localize(label));
         identified.dataset.tooltip = label;
         identified.classList.toggle("active", isIdentified);
@@ -90,7 +90,7 @@ export default function ItemSheetV2Mixin(Base) {
       const [equipped] = this.element.find(".toggle-equipped");
       if ( equipped ) {
         const isEquipped = this.item.system.equipped;
-        const label = isEquipped ? "DND5E.Equipped" : "DND5E.Unequipped";
+        const label = isEquipped ? "DND5R.Equipped" : "DND5R.Unequipped";
         equipped.setAttribute("aria-label", game.i18n.localize(label));
         equipped.dataset.tooltip = label;
         equipped.classList.toggle("active", isEquipped);
@@ -109,8 +109,8 @@ export default function ItemSheetV2Mixin(Base) {
         source: this.item.system.toObject(),
         item: this.item,
         owner: this.item.isOwner,
-        config: CONFIG.DND5E,
-        CONFIG: CONFIG.DND5E,
+        config: CONFIG.DND5R,
+        CONFIG: CONFIG.DND5R,
         user: game.user,
 
         // Physical items
@@ -134,7 +134,7 @@ export default function ItemSheetV2Mixin(Base) {
 
       context.editable = this.isEditable && (this._mode === this.constructor.MODES.EDIT);
       context.cssClass = context.editable ? "editable" : this.isEditable ? "interactable" : "locked";
-      context.inputs = { ...foundry.applications.fields, ...dnd5e.applications.fields };
+      context.inputs = { ...foundry.applications.fields, ...dnd5r.applications.fields };
       const { description, identified, schema, unidentified, validProperties } = this.item.system;
       context.fields = schema.fields;
 
@@ -176,7 +176,7 @@ export default function ItemSheetV2Mixin(Base) {
         active: [],
         object: Object.fromEntries((context.system.properties ?? []).map(p => [p, true])),
         options: (validProperties ?? []).reduce((arr, k) => {
-          const { label } = CONFIG.DND5E.itemProperties[k];
+          const { label } = CONFIG.DND5R.itemProperties[k];
           arr.push({ label, value: k, selected: this.item._source.system.properties?.includes(k) });
           return arr;
         }, [])
@@ -195,7 +195,7 @@ export default function ItemSheetV2Mixin(Base) {
       // Item sub-types
       if ( ["feat", "loot", "consumable"].includes(this.item.type) ) {
         const name = this.item.type === "feat" ? "feature" : this.item.type;
-        const itemTypes = CONFIG.DND5E[`${name}Types`][this.item.system.type.value];
+        const itemTypes = CONFIG.DND5R[`${name}Types`][this.item.system.type.value];
         if ( itemTypes ) context.itemSubtypes = itemTypes.subtypes;
       }
 
@@ -310,13 +310,13 @@ export default function ItemSheetV2Mixin(Base) {
       }
 
       if ( activeTab === "advancement" ) {
-        return game.dnd5e.applications.advancement.AdvancementSelection.createDialog(this.item);
+        return game.dnd5r.applications.advancement.AdvancementSelection.createDialog(this.item);
       }
 
       if ( activeTab === "activities" ) {
-        return dnd5e.documents.activity.UtilityActivity.createDialog({}, {
+        return dnd5r.documents.activity.UtilityActivity.createDialog({}, {
           parent: this.item,
-          types: Object.entries(CONFIG.DND5E.activityTypes).filter(([, { configurable }]) => {
+          types: Object.entries(CONFIG.DND5R.activityTypes).filter(([, { configurable }]) => {
             return configurable !== false;
           }).map(([k]) => k)
         });
@@ -355,7 +355,7 @@ export default function ItemSheetV2Mixin(Base) {
      * @returns {boolean}
      */
     static itemHasContents(item) {
-      return item.system instanceof dnd5e.dataModels.item.ContainerData;
+      return item.system instanceof dnd5r.dataModels.item.ContainerData;
     }
 
     /* -------------------------------------------- */

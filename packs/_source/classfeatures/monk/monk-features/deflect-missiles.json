@@ -7,7 +7,7 @@
   "type": "feat",
   "system": {
     "description": {
-      "value": "<p>Starting at 3rd level, you can use your reaction to deflect or catch the missile when you are hit by a ranged weapon attack. When you do so, the damage you take from the attack is reduced by [[/r 1d10 + @abilities.dex.mod + @classes.monk.levels]]{1d10 + your Dexterity modifier + your monk level}.</p><p>If you reduce the damage to 0, you can catch the missile if it is small enough for you to hold in one hand and you have at least one hand free. If you catch a missile in this way, you can spend 1 @UUID[Compendium.dnd5e.classfeatures.Item.10b6z2W1txNkrGP7]{Ki} point to make a ranged attack with the weapon or piece of ammunition you just caught, as part of the same reaction. You make this attack with proficiency, regardless of your weapon proficiencies, and the missile counts as a monk weapon for the attack, which has a normal range of 20 feet and a long range of 60 feet.</p>",
+      "value": "<p>Starting at 3rd level, you can use your reaction to deflect or catch the missile when you are hit by a ranged weapon attack. When you do so, the damage you take from the attack is reduced by [[/r 1d10 + @abilities.dex.mod + @classes.monk.levels]]{1d10 + your Dexterity modifier + your monk level}.</p><p>If you reduce the damage to 0, you can catch the missile if it is small enough for you to hold in one hand and you have at least one hand free. If you catch a missile in this way, you can spend 1 @UUID[Compendium.dnd5r.classfeatures.Item.10b6z2W1txNkrGP7]{Ki} point to make a ranged attack with the weapon or piece of ammunition you just caught, as part of the same reaction. You make this attack with proficiency, regardless of your weapon proficiencies, and the missile counts as a monk weapon for the attack, which has a normal range of 20 feet and a long range of 60 feet.</p>",
       "chat": ""
     },
     "source": {
@@ -29,8 +29,8 @@
     "requirements": "Monk 3",
     "properties": [],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "attack",
         "activation": {
           "type": "reaction",
@@ -42,7 +42,7 @@
           "targets": [
             {
               "type": "itemUses",
-              "target": "Compendium.dnd5e.classfeatures.Item.10b6z2W1txNkrGP7",
+              "target": "Compendium.dnd5r.classfeatures.Item.10b6z2W1txNkrGP7",
               "value": "1",
               "scaling": {
                 "mode": "",
@@ -148,11 +148,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037388174,
     "modifiedTime": 1725992289782,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!mzweVbnsJPQiVkAe"
 }

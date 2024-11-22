@@ -1,7 +1,7 @@
 import Application5e from "./application.mjs";
 
 /**
- * Application for creating dnd5e dialogs.
+ * Application for creating dnd5r dialogs.
  */
 export default class Dialog5e extends Application5e {
   /** @override */

@@ -17,7 +17,7 @@ const { ArrayField, BooleanField, NumberField, SchemaField, SetField, StringFiel
  * @property {Set<string>} primaryAbility.value List of primary abilities used by this class.
  * @property {boolean} primaryAbility.all       If multiple abilities are selected, does multiclassing require all of
  *                                              them to be 13 or just one.
- * @property {string} hitDice                   Denomination of hit dice available as defined in `DND5E.hitDieTypes`.
+ * @property {string} hitDice                   Denomination of hit dice available as defined in `DND5R.hitDieTypes`.
  * @property {number} hitDiceUsed               Number of hit dice consumed.
  * @property {object[]} advancement             Advancement objects for this class.
  * @property {SpellcastingField} spellcasting   Details on class's spellcasting ability.
@@ -29,7 +29,7 @@ export default class ClassData extends ItemDataModel.mixin(ItemDescriptionTempla
   /* -------------------------------------------- */
 
   /** @override */
-  static LOCALIZATION_PREFIXES = ["DND5E.CLASS", "DND5E.SOURCE"];
+  static LOCALIZATION_PREFIXES = ["DND5R.CLASS", "DND5R.SOURCE"];
 
   /* -------------------------------------------- */
 
@@ -46,7 +46,7 @@ export default class ClassData extends ItemDataModel.mixin(ItemDescriptionTempla
         validate: v => /d\d+/.test(v), validationError: "must be a dice value in the format d#"
       }),
       hitDiceUsed: new NumberField({ required: true, nullable: false, integer: true, initial: 0, min: 0 }),
-      advancement: new ArrayField(new AdvancementField(), { label: "DND5E.AdvancementTitle" }),
+      advancement: new ArrayField(new AdvancementField(), { label: "DND5R.AdvancementTitle" }),
       spellcasting: new SpellcastingField()
     });
   }
@@ -57,7 +57,7 @@ export default class ClassData extends ItemDataModel.mixin(ItemDescriptionTempla
   static get compendiumBrowserFilters() {
     return new Map([
       ["hasSpellcasting", {
-        label: "DND5E.CompendiumBrowser.Filters.HasSpellcasting",
+        label: "DND5R.CompendiumBrowser.Filters.HasSpellcasting",
         type: "boolean",
         createFilter: (filters, value, def) => {
           if ( value === 0 ) return;
@@ -110,8 +110,8 @@ export default class ClassData extends ItemDataModel.mixin(ItemDescriptionTempla
   async getSheetData(context) {
     context.subtitles = [{ label: context.itemType }];
     context.singleDescription = true;
-    context.parts = ["dnd5e.details-class", "dnd5e.details-spellcasting", "dnd5e.details-starting-equipment"];
-    context.primaryAbilities = Object.entries(CONFIG.DND5E.abilities).map(([value, data]) => ({
+    context.parts = ["dnd5r.details-class", "dnd5r.details-spellcasting", "dnd5r.details-starting-equipment"];
+    context.primaryAbilities = Object.entries(CONFIG.DND5R.abilities).map(([value, data]) => ({
       value, label: data.label, selected: this.primaryAbility.value.has(value)
     }));
   }
@@ -203,7 +203,7 @@ export default class ClassData extends ItemDataModel.mixin(ItemDescriptionTempla
       needsMigration = true;
     }
 
-    if ( needsMigration ) foundry.utils.setProperty(source, "flags.dnd5e.persistSourceMigration", true);
+    if ( needsMigration ) foundry.utils.setProperty(source, "flags.dnd5r.persistSourceMigration", true);
   }
 
   /* -------------------------------------------- */
@@ -235,23 +235,23 @@ export default class ClassData extends ItemDataModel.mixin(ItemDescriptionTempla
 
     // Check to make sure the updated class level isn't below zero
     if ( changed.system.levels <= 0 ) {
-      ui.notifications.warn("DND5E.MaxClassLevelMinimumWarn", { localize: true });
+      ui.notifications.warn("DND5R.MaxClassLevelMinimumWarn", { localize: true });
       changed.system.levels = 1;
     }
 
     // Check to make sure the updated class level doesn't exceed level cap
-    if ( changed.system.levels > CONFIG.DND5E.maxLevel ) {
-      ui.notifications.warn(game.i18n.format("DND5E.MaxClassLevelExceededWarn", { max: CONFIG.DND5E.maxLevel }));
-      changed.system.levels = CONFIG.DND5E.maxLevel;
+    if ( changed.system.levels > CONFIG.DND5R.maxLevel ) {
+      ui.notifications.warn(game.i18n.format("DND5R.MaxClassLevelExceededWarn", { max: CONFIG.DND5R.maxLevel }));
+      changed.system.levels = CONFIG.DND5R.maxLevel;
     }
 
     if ( this.parent.actor?.type !== "character" ) return;
 
     // Check to ensure the updated character doesn't exceed level cap
     const newCharacterLevel = this.parent.actor.system.details.level + (changed.system.levels - this.levels);
-    if ( newCharacterLevel > CONFIG.DND5E.maxLevel ) {
-      ui.notifications.warn(game.i18n.format("DND5E.MaxCharacterLevelExceededWarn", { max: CONFIG.DND5E.maxLevel }));
-      changed.system.levels -= newCharacterLevel - CONFIG.DND5E.maxLevel;
+    if ( newCharacterLevel > CONFIG.DND5R.maxLevel ) {
+      ui.notifications.warn(game.i18n.format("DND5R.MaxCharacterLevelExceededWarn", { max: CONFIG.DND5R.maxLevel }));
+      changed.system.levels -= newCharacterLevel - CONFIG.DND5R.maxLevel;
     }
   }
 

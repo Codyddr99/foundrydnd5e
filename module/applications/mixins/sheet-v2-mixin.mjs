@@ -70,8 +70,8 @@ export default function DocumentSheetV2Mixin(Base) {
         const toggle = document.createElement("slide-toggle");
         toggle.checked = this._mode === this.constructor.MODES.EDIT;
         toggle.classList.add("mode-slider");
-        toggle.dataset.tooltip = "DND5E.SheetModeEdit";
-        toggle.setAttribute("aria-label", game.i18n.localize("DND5E.SheetModeEdit"));
+        toggle.dataset.tooltip = "DND5R.SheetModeEdit";
+        toggle.setAttribute("aria-label", game.i18n.localize("DND5R.SheetModeEdit"));
         toggle.addEventListener("change", this._onChangeSheetMode.bind(this));
         toggle.addEventListener("dblclick", event => event.stopPropagation());
         header.insertAdjacentElement("afterbegin", toggle);
@@ -101,8 +101,8 @@ export default function DocumentSheetV2Mixin(Base) {
       elements.classList.add("header-elements");
       elements.innerHTML = `
         <div class="source-book">
-          <a class="config-button" data-action="source" data-tooltip="DND5E.SOURCE.Action.Configure"
-             aria-label="${game.i18n.localize("DND5E.SOURCE.Action.Configure")}">
+          <a class="config-button" data-action="source" data-tooltip="DND5R.SOURCE.Action.Configure"
+             aria-label="${game.i18n.localize("DND5R.SOURCE.Action.Configure")}">
             <i class="fas fa-cog"></i>
           </a>
           <span></span>
@@ -125,7 +125,7 @@ export default function DocumentSheetV2Mixin(Base) {
       const editable = this.isEditable && (this._mode === this.constructor.MODES.EDIT);
       elements.querySelector(".config-button")?.toggleAttribute("hidden", !editable);
       elements.querySelector(".source-book > span").innerText = editable
-        ? (source.label || game.i18n.localize("DND5E.SOURCE.FIELDS.source.label"))
+        ? (source.label || game.i18n.localize("DND5R.SOURCE.FIELDS.source.label"))
         : source.label;
     }
 
@@ -181,7 +181,7 @@ export default function DocumentSheetV2Mixin(Base) {
       element.dataset.tooltip = `
         <section class="loading" data-uuid="${uuid}"><i class="fas fa-spinner fa-spin-pulse"></i></section>
       `;
-      element.dataset.tooltipClass = "dnd5e2 dnd5e-tooltip item-tooltip";
+      element.dataset.tooltipClass = "dnd5r2 dnd5r-tooltip item-tooltip";
       element.dataset.tooltipDirection ??= "LEFT";
     }
 
@@ -191,7 +191,7 @@ export default function DocumentSheetV2Mixin(Base) {
     _disableFields(form) {
       super._disableFields(form);
       form.querySelectorAll(".interface-only").forEach(input => input.disabled = false);
-      form.querySelectorAll("dnd5e-checkbox:not(.interface-only)").forEach(input => input.disabled = true);
+      form.querySelectorAll("dnd5r-checkbox:not(.interface-only)").forEach(input => input.disabled = true);
     }
 
     /* -------------------------------------------- */
@@ -204,7 +204,7 @@ export default function DocumentSheetV2Mixin(Base) {
     async _onChangeSheetMode(event) {
       const { MODES } = this.constructor;
       const toggle = event.currentTarget;
-      const label = game.i18n.localize(`DND5E.SheetMode${toggle.checked ? "Play" : "Edit"}`);
+      const label = game.i18n.localize(`DND5R.SheetMode${toggle.checked ? "Play" : "Edit"}`);
       toggle.dataset.tooltip = label;
       toggle.setAttribute("aria-label", label);
       this._mode = toggle.checked ? MODES.EDIT : MODES.PLAY;
@@ -255,7 +255,7 @@ export default function DocumentSheetV2Mixin(Base) {
         this._expanded.delete(item.id);
       } else {
         const context = await item.getChatData({ secrets: item.isOwner });
-        const content = await renderTemplate("systems/dnd5etools/templates/items/parts/item-summary.hbs", context);
+        const content = await renderTemplate("systems/dnd5r/templates/items/parts/item-summary.hbs", context);
         summary.querySelectorAll(".item-summary").forEach(el => el.remove());
         summary.insertAdjacentHTML("beforeend", content);
         await new Promise(resolve => requestAnimationFrame(resolve));

@@ -37,23 +37,23 @@ export default class EquipmentData extends ItemDataModel.mixin(
   /* -------------------------------------------- */
 
   /** @override */
-  static LOCALIZATION_PREFIXES = ["DND5E.SOURCE"];
+  static LOCALIZATION_PREFIXES = ["DND5R.SOURCE"];
 
   /* -------------------------------------------- */
 
   /** @inheritDoc */
   static defineSchema() {
     return this.mergeSchema(super.defineSchema(), {
-      type: new ItemTypeField({ subtype: false }, { label: "DND5E.ItemEquipmentType" }),
+      type: new ItemTypeField({ subtype: false }, { label: "DND5R.ItemEquipmentType" }),
       armor: new SchemaField({
-        value: new NumberField({ required: true, integer: true, min: 0, label: "DND5E.ArmorClass" }),
-        magicalBonus: new NumberField({ min: 0, integer: true, label: "DND5E.MagicalBonus" }),
-        dex: new NumberField({ required: true, integer: true, label: "DND5E.ItemEquipmentDexMod" })
+        value: new NumberField({ required: true, integer: true, min: 0, label: "DND5R.ArmorClass" }),
+        magicalBonus: new NumberField({ min: 0, integer: true, label: "DND5R.MagicalBonus" }),
+        dex: new NumberField({ required: true, integer: true, label: "DND5R.ItemEquipmentDexMod" })
       }),
-      properties: new SetField(new StringField(), { label: "DND5E.ItemEquipmentProperties" }),
-      strength: new NumberField({ required: true, integer: true, min: 0, label: "DND5E.ItemRequiredStr" }),
+      properties: new SetField(new StringField(), { label: "DND5R.ItemEquipmentProperties" }),
+      strength: new NumberField({ required: true, integer: true, min: 0, label: "DND5R.ItemRequiredStr" }),
       proficient: new NumberField({
-        required: true, min: 0, max: 1, integer: true, initial: null, label: "DND5E.ProficiencyLevel"
+        required: true, min: 0, max: 1, integer: true, initial: null, label: "DND5R.ProficiencyLevel"
       })
     });
   }
@@ -73,10 +73,10 @@ export default class EquipmentData extends ItemDataModel.mixin(
   static get compendiumBrowserFilters() {
     return new Map([
       ["type", {
-        label: "DND5E.ItemEquipmentType",
+        label: "DND5R.ItemEquipmentType",
         type: "set",
         config: {
-          choices: CONFIG.DND5E.equipmentTypes,
+          choices: CONFIG.DND5R.equipmentTypes,
           keyPath: "system.type.value"
         }
       }],
@@ -147,7 +147,7 @@ export default class EquipmentData extends ItemDataModel.mixin(
    */
   static _migrateStealth(source) {
     if ( foundry.utils.getProperty(source, "system.stealth") === true ) {
-      foundry.utils.setProperty(source, "flags.dnd5e.migratedProperties", ["stealthDisadvantage"]);
+      foundry.utils.setProperty(source, "flags.dnd5r.migratedProperties", ["stealthDisadvantage"]);
     }
   }
 
@@ -174,14 +174,14 @@ export default class EquipmentData extends ItemDataModel.mixin(
     this.preparePhysicalData();
     this.armor.base = this._source.armor.value ?? 0;
     this.armor.value = this.armor.base + (this.magicAvailable ? (this.armor.magicalBonus ?? 0) : 0);
-    this.type.label = CONFIG.DND5E.equipmentTypes[this.type.value]
+    this.type.label = CONFIG.DND5R.equipmentTypes[this.type.value]
       ?? game.i18n.localize(CONFIG.Item.typeLabels.equipment);
     this.type.identifier = this.type.value === "shield"
-      ? CONFIG.DND5E.shieldIds[this.type.baseItem]
-      : CONFIG.DND5E.armorIds[this.type.baseItem];
+      ? CONFIG.DND5R.shieldIds[this.type.baseItem]
+      : CONFIG.DND5R.armorIds[this.type.baseItem];
 
     const labels = this.parent.labels ??= {};
-    labels.armor = this.armor.value ? `${this.armor.value} ${game.i18n.localize("DND5E.AC")}` : "";
+    labels.armor = this.armor.value ? `${this.armor.value} ${game.i18n.localize("DND5R.AC")}` : "";
   }
 
   /* -------------------------------------------- */
@@ -213,12 +213,12 @@ export default class EquipmentData extends ItemDataModel.mixin(
     if ( this.armor.value && (this.isArmor || (this.type.value === "shield")) ) {
       context.properties.active.shift();
       context.info = [{
-        label: "DND5E.ArmorClass",
+        label: "DND5R.ArmorClass",
         classes: "info-lg",
-        value: this.type.value === "shield" ? dnd5e.utils.formatModifier(this.armor.value) : this.armor.value
+        value: this.type.value === "shield" ? dnd5r.utils.formatModifier(this.armor.value) : this.armor.value
       }];
     }
-    context.parts = ["dnd5e.details-equipment", "dnd5e.field-uses"];
+    context.parts = ["dnd5r.details-equipment", "dnd5r.field-uses"];
   }
 
   /* -------------------------------------------- */
@@ -233,7 +233,7 @@ export default class EquipmentData extends ItemDataModel.mixin(
     return [
       this.type.label,
       (this.isArmor || this.isMountable) ? (this.parent.labels?.armor ?? null) : null,
-      this.properties.has("stealthDisadvantage") ? game.i18n.localize("DND5E.Item.Property.StealthDisadvantage") : null
+      this.properties.has("stealthDisadvantage") ? game.i18n.localize("DND5R.Item.Property.StealthDisadvantage") : null
     ];
   }
 
@@ -246,7 +246,7 @@ export default class EquipmentData extends ItemDataModel.mixin(
   get cardProperties() {
     return [
       (this.isArmor || this.isMountable) ? (this.parent.labels?.armor ?? null) : null,
-      this.properties.has("stealthDisadvantage") ? game.i18n.localize("DND5E.Item.Property.StealthDisadvantage") : null
+      this.properties.has("stealthDisadvantage") ? game.i18n.localize("DND5R.Item.Property.StealthDisadvantage") : null
     ];
   }
 
@@ -257,7 +257,7 @@ export default class EquipmentData extends ItemDataModel.mixin(
    * @type {boolean}
    */
   get isArmor() {
-    return this.type.value in CONFIG.DND5E.armorTypes;
+    return this.type.value in CONFIG.DND5R.armorTypes;
   }
 
   /* -------------------------------------------- */
@@ -275,7 +275,7 @@ export default class EquipmentData extends ItemDataModel.mixin(
 
   /** @override */
   static get itemCategories() {
-    return CONFIG.DND5E.equipmentTypes;
+    return CONFIG.DND5R.equipmentTypes;
   }
 
   /* -------------------------------------------- */
@@ -289,7 +289,7 @@ export default class EquipmentData extends ItemDataModel.mixin(
     const actor = this.parent.actor;
     if ( !actor ) return 0;
     if ( actor.type === "npc" ) return 1; // NPCs are always considered proficient with any armor in their stat block.
-    const config = CONFIG.DND5E.armorProficienciesMap;
+    const config = CONFIG.DND5R.armorProficienciesMap;
     const itemProf = config[this.type.value];
     const actorProfs = actor.system.traits?.armorProf?.value ?? new Set();
     const isProficient = (itemProf === true) || actorProfs.has(itemProf) || actorProfs.has(this.type.baseItem);

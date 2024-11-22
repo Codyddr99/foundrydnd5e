@@ -5,7 +5,7 @@
   "img": "icons/consumables/potions/potion-tube-corked-glowing-red.webp",
   "system": {
     "description": {
-      "value": "<p><em>The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it.  Shaking the bottle fails to interrupt this process.</em></p>\n<p>When you drink this potion, you gain the \"reduce\" effect of the @UUID[Compendium.dnd5e.spells.Item.WahI41a3goVUg0x1]{Enlarge/Reduce} spell for 1d4 hours (no concentration required). </p>\n<p> </p>\n<p> </p>\n<p> </p>",
+      "value": "<p><em>The red in the potion's liquid continuously contracts to a tiny bead and then expands to color the clear liquid around it.  Shaking the bottle fails to interrupt this process.</em></p>\n<p>When you drink this potion, you gain the \"reduce\" effect of the @UUID[Compendium.dnd5r.spells.Item.WahI41a3goVUg0x1]{Enlarge/Reduce} spell for 1d4 hours (no concentration required). </p>\n<p> </p>\n<p> </p>\n<p> </p>",
       "chat": ""
     },
     "source": {
@@ -61,8 +61,8 @@
     ],
     "magicalBonus": null,
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "utility",
         "activation": {
           "type": "action",
@@ -149,11 +149,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037150875,
     "modifiedTime": 1725992500827,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!HY8duCwmvlXOruTG"
 }

@@ -5,7 +5,7 @@
   "img": "icons/skills/melee/hand-grip-staff-blue.webp",
   "system": {
     "description": {
-      "value": "<p>As a monk, you gain the following class features.</p><h3>Hit Points</h3><p><strong>Hit Dice:</strong> 1d8 per monk level<br /><strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier<br /><strong>Hit Points at Higher Levels:</strong> 1d8 (or 5) + your Constitution modifier per monk level after 1st</p><h3>Proficiencies</h3><p><strong>Armor:</strong> None<br /><strong>Weapons:</strong> Simple weapons, shortswords<br /><strong>Tools:</strong> Choose one type of artisan's tools or one musical instrument<br /><strong>Saving Throws:</strong> Strength, Dexterity<br /><strong>Skills:</strong> Choose two from Acrobatics, Athletics, History, Insight, Religion, and Stealth</p><h1>Monk Advancement</h1><table><thead><tr><td>Level</td><td>Proficiency Bonus</td><td>Martial Arts</td><td>Ki Points</td><td>Unarmored Movement</td><td>Features</td></tr></thead><tbody><tr><td>1st</td><td>+2</td><td>1d4</td><td>—</td><td>—</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.UAvV7N7T4zJhxdfI]{Unarmored Defense}, @UUID[Compendium.dnd5e.classfeatures.Item.l50hjTxO2r0iecKw]{Martial Arts}</td></tr><tr><td>2nd</td><td>+2</td><td>1d4</td><td>2</td><td>+10 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.10b6z2W1txNkrGP7]{Ki}, @UUID[Compendium.dnd5e.classfeatures.Item.zCeqyQ8uIPNdYJSW]{Unarmored Movement}</td></tr><tr><td>3rd</td><td>+2</td><td>1d4</td><td>3</td><td>+10 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.rtpQdX77dYWbDIOH]{Monastic Tradition}, @UUID[Compendium.dnd5e.classfeatures.Item.mzweVbnsJPQiVkAe]{Deflect Missiles}</td></tr><tr><td>4th</td><td>+2</td><td>1d4</td><td>4</td><td>+10 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}, @UUID[Compendium.dnd5e.classfeatures.Item.KQz9bqxVkXjDl8gK]{Slow Fall}</td></tr><tr><td>5th</td><td>+3</td><td>1d6</td><td>5</td><td>+10 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.XogoBnFWmCAHXppo]{Extra Attack}, @UUID[Compendium.dnd5e.classfeatures.Item.pvRc6GAu1ok6zihC]{Stunning Strike}</td></tr><tr><td>6th</td><td>+3</td><td>1d6</td><td>6</td><td>+15 ft.</td><td><p>@UUID[Compendium.dnd5e.classfeatures.Item.7flZKruSSu6dHg6D]{Ki-Empowered Strikes},</p><p>Monastic Tradition feature</p></td></tr><tr><td>7th</td><td>+3</td><td>1d6</td><td>7</td><td>+15 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.a4P4DNMmH8CqSNkC]{Evasion}, @UUID[Compendium.dnd5e.classfeatures.Item.ZmC31XKS4YNENnoc]{Stillness of Mind}</td></tr><tr><td>8th</td><td>+3</td><td>1d6</td><td>8</td><td>+15 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>9th</td><td>+4</td><td>1d6</td><td>9</td><td>+15 ft.</td><td>Unarmored Movement improvement</td></tr><tr><td>10th</td><td>+4</td><td>1d6</td><td>10</td><td>+20 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.bqWA7t9pDELbNRkp]{Purity of Body}</td></tr><tr><td>11th</td><td>+4</td><td>1d8</td><td>11</td><td>+20 ft.</td><td>Monastic Tradition feature</td></tr><tr><td>12th</td><td>+4</td><td>1d8</td><td>12</td><td>+20 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>13th</td><td>+5</td><td>1d8</td><td>13</td><td>+20 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.XjuGBeB8Y0C3A5D4]{Tongue of the Sun and Moon}</td></tr><tr><td>14th</td><td>+5</td><td>1d8</td><td>14</td><td>+25 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.7D2EkLdISwShEDlN]{Diamond Soul}</td></tr><tr><td>15th</td><td>+5</td><td>1d8</td><td>15</td><td>+25 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.gDH8PMrKvLHaNmEI]{Timeless Body}</td></tr><tr><td>16th</td><td>+5</td><td>1d8</td><td>16</td><td>+25 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>17th</td><td>+6</td><td>1d10</td><td>17</td><td>+25 ft.</td><td>Monastic Tradition feature</td></tr><tr><td>18th</td><td>+6</td><td>1d10</td><td>18</td><td>+30 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.3jwFt3hSqDswBlOH]{Empty Body}</td></tr><tr><td>19th</td><td>+6</td><td>1d10</td><td>19</td><td>+30 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>20th</td><td>+6</td><td>1d10</td><td>20</td><td>+30 ft.</td><td>@UUID[Compendium.dnd5e.classfeatures.Item.mQNPg89YIs7g5tG4]{Perfect Self}</td></tr></tbody></table><h1>Monastic Traditions</h1><p>Three traditions of monastic pursuit are common in the monasteries scattered across the multiverse. Most monasteries practice one tradition exclusively, but a few honor the three traditions and instruct each monk according to his or her aptitude and interest. All three traditions rely on the same basic techniques, diverging as the student grows more adept. Thus, a monk need choose a tradition only upon reaching 3rd level.</p><p>@UUID[Compendium.dnd5e.subclasses.Item.IvlpKMXX3PmW1NY2]{Way of the Open Hand}</p>",
+      "value": "<p>As a monk, you gain the following class features.</p><h3>Hit Points</h3><p><strong>Hit Dice:</strong> 1d8 per monk level<br /><strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier<br /><strong>Hit Points at Higher Levels:</strong> 1d8 (or 5) + your Constitution modifier per monk level after 1st</p><h3>Proficiencies</h3><p><strong>Armor:</strong> None<br /><strong>Weapons:</strong> Simple weapons, shortswords<br /><strong>Tools:</strong> Choose one type of artisan's tools or one musical instrument<br /><strong>Saving Throws:</strong> Strength, Dexterity<br /><strong>Skills:</strong> Choose two from Acrobatics, Athletics, History, Insight, Religion, and Stealth</p><h1>Monk Advancement</h1><table><thead><tr><td>Level</td><td>Proficiency Bonus</td><td>Martial Arts</td><td>Ki Points</td><td>Unarmored Movement</td><td>Features</td></tr></thead><tbody><tr><td>1st</td><td>+2</td><td>1d4</td><td>—</td><td>—</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.UAvV7N7T4zJhxdfI]{Unarmored Defense}, @UUID[Compendium.dnd5r.classfeatures.Item.l50hjTxO2r0iecKw]{Martial Arts}</td></tr><tr><td>2nd</td><td>+2</td><td>1d4</td><td>2</td><td>+10 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.10b6z2W1txNkrGP7]{Ki}, @UUID[Compendium.dnd5r.classfeatures.Item.zCeqyQ8uIPNdYJSW]{Unarmored Movement}</td></tr><tr><td>3rd</td><td>+2</td><td>1d4</td><td>3</td><td>+10 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.rtpQdX77dYWbDIOH]{Monastic Tradition}, @UUID[Compendium.dnd5r.classfeatures.Item.mzweVbnsJPQiVkAe]{Deflect Missiles}</td></tr><tr><td>4th</td><td>+2</td><td>1d4</td><td>4</td><td>+10 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}, @UUID[Compendium.dnd5r.classfeatures.Item.KQz9bqxVkXjDl8gK]{Slow Fall}</td></tr><tr><td>5th</td><td>+3</td><td>1d6</td><td>5</td><td>+10 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.XogoBnFWmCAHXppo]{Extra Attack}, @UUID[Compendium.dnd5r.classfeatures.Item.pvRc6GAu1ok6zihC]{Stunning Strike}</td></tr><tr><td>6th</td><td>+3</td><td>1d6</td><td>6</td><td>+15 ft.</td><td><p>@UUID[Compendium.dnd5r.classfeatures.Item.7flZKruSSu6dHg6D]{Ki-Empowered Strikes},</p><p>Monastic Tradition feature</p></td></tr><tr><td>7th</td><td>+3</td><td>1d6</td><td>7</td><td>+15 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.a4P4DNMmH8CqSNkC]{Evasion}, @UUID[Compendium.dnd5r.classfeatures.Item.ZmC31XKS4YNENnoc]{Stillness of Mind}</td></tr><tr><td>8th</td><td>+3</td><td>1d6</td><td>8</td><td>+15 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>9th</td><td>+4</td><td>1d6</td><td>9</td><td>+15 ft.</td><td>Unarmored Movement improvement</td></tr><tr><td>10th</td><td>+4</td><td>1d6</td><td>10</td><td>+20 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.bqWA7t9pDELbNRkp]{Purity of Body}</td></tr><tr><td>11th</td><td>+4</td><td>1d8</td><td>11</td><td>+20 ft.</td><td>Monastic Tradition feature</td></tr><tr><td>12th</td><td>+4</td><td>1d8</td><td>12</td><td>+20 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>13th</td><td>+5</td><td>1d8</td><td>13</td><td>+20 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.XjuGBeB8Y0C3A5D4]{Tongue of the Sun and Moon}</td></tr><tr><td>14th</td><td>+5</td><td>1d8</td><td>14</td><td>+25 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.7D2EkLdISwShEDlN]{Diamond Soul}</td></tr><tr><td>15th</td><td>+5</td><td>1d8</td><td>15</td><td>+25 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.gDH8PMrKvLHaNmEI]{Timeless Body}</td></tr><tr><td>16th</td><td>+5</td><td>1d8</td><td>16</td><td>+25 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>17th</td><td>+6</td><td>1d10</td><td>17</td><td>+25 ft.</td><td>Monastic Tradition feature</td></tr><tr><td>18th</td><td>+6</td><td>1d10</td><td>18</td><td>+30 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.3jwFt3hSqDswBlOH]{Empty Body}</td></tr><tr><td>19th</td><td>+6</td><td>1d10</td><td>19</td><td>+30 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.s0Cc2zcX0JzIgam5]{Ability Score Improvement}</td></tr><tr><td>20th</td><td>+6</td><td>1d10</td><td>20</td><td>+30 ft.</td><td>@UUID[Compendium.dnd5r.classfeatures.Item.mQNPg89YIs7g5tG4]{Perfect Self}</td></tr></tbody></table><h1>Monastic Traditions</h1><p>Three traditions of monastic pursuit are common in the monasteries scattered across the multiverse. Most monasteries practice one tradition exclusively, but a few honor the three traditions and instruct each monk according to his or her aptitude and interest. All three traditions rely on the same basic techniques, diverging as the student grows more adept. Thus, a monk need choose a tradition only upon reaching 3rd level.</p><p>@UUID[Compendium.dnd5r.subclasses.Item.IvlpKMXX3PmW1NY2]{Way of the Open Hand}</p>",
       "chat": ""
     },
     "source": {
@@ -25,7 +25,7 @@
         "configuration": {},
         "value": {},
         "title": "Hit Points",
-        "icon": "systems/dnd5etools/icons/svg/hit-points.svg",
+        "icon": "systems/dnd5r/icons/svg/hit-points.svg",
         "_id": "ocxNtDFJ7YDaYaK7"
       },
       {
@@ -142,15 +142,15 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.UAvV7N7T4zJhxdfI",
+              "uuid": "Compendium.dnd5r.classfeatures.UAvV7N7T4zJhxdfI",
               "optional": false
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.l50hjTxO2r0iecKw",
+              "uuid": "Compendium.dnd5r.classfeatures.l50hjTxO2r0iecKw",
               "optional": false
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.eGxoNmSMWKNzChCO",
+              "uuid": "Compendium.dnd5r.classfeatures.eGxoNmSMWKNzChCO",
               "optional": false
             }
           ],
@@ -174,23 +174,23 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.10b6z2W1txNkrGP7",
+              "uuid": "Compendium.dnd5r.classfeatures.10b6z2W1txNkrGP7",
               "optional": false
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.5MwNlVZK7m6VolOH",
+              "uuid": "Compendium.dnd5r.classfeatures.5MwNlVZK7m6VolOH",
               "optional": false
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.TDglPcxIVEzvVSgK",
+              "uuid": "Compendium.dnd5r.classfeatures.TDglPcxIVEzvVSgK",
               "optional": false
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.yrSFIGTaQOH2PFRI",
+              "uuid": "Compendium.dnd5r.classfeatures.yrSFIGTaQOH2PFRI",
               "optional": false
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.zCeqyQ8uIPNdYJSW",
+              "uuid": "Compendium.dnd5r.classfeatures.zCeqyQ8uIPNdYJSW",
               "optional": false
             }
           ],
@@ -214,11 +214,11 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.rtpQdX77dYWbDIOH",
+              "uuid": "Compendium.dnd5r.classfeatures.rtpQdX77dYWbDIOH",
               "optional": false
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.mzweVbnsJPQiVkAe",
+              "uuid": "Compendium.dnd5r.classfeatures.mzweVbnsJPQiVkAe",
               "optional": false
             }
           ],
@@ -242,7 +242,7 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.KQz9bqxVkXjDl8gK",
+              "uuid": "Compendium.dnd5r.classfeatures.KQz9bqxVkXjDl8gK",
               "optional": false
             }
           ],
@@ -266,11 +266,11 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.XogoBnFWmCAHXppo",
+              "uuid": "Compendium.dnd5r.classfeatures.XogoBnFWmCAHXppo",
               "optional": false
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.pvRc6GAu1ok6zihC",
+              "uuid": "Compendium.dnd5r.classfeatures.pvRc6GAu1ok6zihC",
               "optional": false
             }
           ],
@@ -294,7 +294,7 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.7flZKruSSu6dHg6D",
+              "uuid": "Compendium.dnd5r.classfeatures.7flZKruSSu6dHg6D",
               "optional": false
             }
           ],
@@ -318,11 +318,11 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.a4P4DNMmH8CqSNkC",
+              "uuid": "Compendium.dnd5r.classfeatures.a4P4DNMmH8CqSNkC",
               "optional": false
             },
             {
-              "uuid": "Compendium.dnd5e.classfeatures.ZmC31XKS4YNENnoc",
+              "uuid": "Compendium.dnd5r.classfeatures.ZmC31XKS4YNENnoc",
               "optional": false
             }
           ],
@@ -346,7 +346,7 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.bqWA7t9pDELbNRkp",
+              "uuid": "Compendium.dnd5r.classfeatures.bqWA7t9pDELbNRkp",
               "optional": false
             }
           ],
@@ -370,7 +370,7 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.XjuGBeB8Y0C3A5D4",
+              "uuid": "Compendium.dnd5r.classfeatures.XjuGBeB8Y0C3A5D4",
               "optional": false
             }
           ],
@@ -394,7 +394,7 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.7D2EkLdISwShEDlN",
+              "uuid": "Compendium.dnd5r.classfeatures.7D2EkLdISwShEDlN",
               "optional": false
             }
           ],
@@ -418,7 +418,7 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.gDH8PMrKvLHaNmEI",
+              "uuid": "Compendium.dnd5r.classfeatures.gDH8PMrKvLHaNmEI",
               "optional": false
             }
           ],
@@ -442,7 +442,7 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.3jwFt3hSqDswBlOH",
+              "uuid": "Compendium.dnd5r.classfeatures.3jwFt3hSqDswBlOH",
               "optional": false
             }
           ],
@@ -466,7 +466,7 @@
         "configuration": {
           "items": [
             {
-              "uuid": "Compendium.dnd5e.classfeatures.mQNPg89YIs7g5tG4",
+              "uuid": "Compendium.dnd5r.classfeatures.mQNPg89YIs7g5tG4",
               "optional": false
             }
           ],
@@ -685,7 +685,7 @@
       {
         "type": "linked",
         "count": null,
-        "key": "Compendium.dnd5e.items.Item.osLzOwQdPtrK3rQH",
+        "key": "Compendium.dnd5r.items.Item.osLzOwQdPtrK3rQH",
         "_id": "R5tuRtaPonfjQCVU",
         "group": "5yj0P4r9teJDnDtd",
         "sort": 200000,
@@ -710,7 +710,7 @@
       {
         "type": "linked",
         "count": null,
-        "key": "Compendium.dnd5e.items.Item.XY8b594Dn7plACLL",
+        "key": "Compendium.dnd5r.items.Item.XY8b594Dn7plACLL",
         "_id": "AvDYtl0uvQsDuhnb",
         "group": "3TbVLmLPtjVaSh5O",
         "sort": 500000,
@@ -719,7 +719,7 @@
       {
         "type": "linked",
         "count": null,
-        "key": "Compendium.dnd5e.items.Item.8KWz5DJbWUpNWniP",
+        "key": "Compendium.dnd5r.items.Item.8KWz5DJbWUpNWniP",
         "_id": "4QKQURCmIurbTAzp",
         "group": "3TbVLmLPtjVaSh5O",
         "sort": 600000,
@@ -728,7 +728,7 @@
       {
         "type": "linked",
         "count": 10,
-        "key": "Compendium.dnd5e.items.Item.3rCO8MTIdPGSW6IJ",
+        "key": "Compendium.dnd5r.items.Item.3rCO8MTIdPGSW6IJ",
         "_id": "AOYuulsULvsHbSLO",
         "group": "",
         "sort": 700000,
@@ -751,11 +751,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037370616,
     "modifiedTime": 1725992280386,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!6VoZrWxhOEKGYhnq"
 }

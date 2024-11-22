@@ -45,16 +45,16 @@ export default class ActivityUsageDialog extends Dialog5e {
   /** @override */
   static PARTS = {
     scaling: {
-      template: "systems/dnd5etools/templates/activity/activity-usage-scaling.hbs"
+      template: "systems/dnd5r/templates/activity/activity-usage-scaling.hbs"
     },
     concentration: {
-      template: "systems/dnd5etools/templates/activity/activity-usage-concentration.hbs"
+      template: "systems/dnd5r/templates/activity/activity-usage-concentration.hbs"
     },
     consumption: {
-      template: "systems/dnd5etools/templates/activity/activity-usage-consumption.hbs"
+      template: "systems/dnd5r/templates/activity/activity-usage-consumption.hbs"
     },
     creation: {
-      template: "systems/dnd5etools/templates/activity/activity-usage-creation.hbs"
+      template: "systems/dnd5r/templates/activity/activity-usage-creation.hbs"
     },
     footer: {
       template: "templates/generic/form-footer.hbs"
@@ -153,7 +153,7 @@ export default class ActivityUsageDialog extends Dialog5e {
 
   /** @inheritDoc */
   async _prepareContext(options) {
-    if ( "scaling" in this.config ) this.#item = this.#item.clone({ "flags.dnd5e.scaling": this.config.scaling });
+    if ( "scaling" in this.config ) this.#item = this.#item.clone({ "flags.dnd5r.scaling": this.config.scaling });
     return {
       ...await super._prepareContext(options),
       activity: this.activity,
@@ -185,40 +185,40 @@ export default class ActivityUsageDialog extends Dialog5e {
    * @protected
    */
   async _prepareConcentrationContext(context, options) {
-    if ( !this.activity.requiresConcentration || game.settings.get("dnd5e", "disableConcentration")
+    if ( !this.activity.requiresConcentration || game.settings.get("dnd5r", "disableConcentration")
       || !this._shouldDisplay("concentration") ) return context;
     context.hasConcentration = true;
     context.notes = [];
 
     context.fields = [{
-      field: new BooleanField({ label: game.i18n.localize("DND5E.Concentration") }),
+      field: new BooleanField({ label: game.i18n.localize("DND5R.Concentration") }),
       name: "concentration.begin",
       value: this.config.concentration?.begin,
       input: context.inputs.createCheckboxInput
     }];
     if ( this.config.concentration?.begin ) {
       const existingConcentration = Array.from(this.actor.concentration.effects).map(effect => {
-        const data = effect.getFlag("dnd5e", "item");
+        const data = effect.getFlag("dnd5r", "item");
         return {
           value: effect.id,
           label: data?.data?.name ?? this.actor.items.get(data?.id)?.name
-            ?? game.i18n.localize("DND5E.ConcentratingItemless")
+            ?? game.i18n.localize("DND5R.ConcentratingItemless")
         };
       });
       if ( existingConcentration.length ) {
         const optional = existingConcentration.length < (this.actor.system.attributes?.concentration?.limit ?? 0);
         context.fields.push({
-          field: new StringField({ label: game.i18n.localize("DND5E.ConcentratingEnd") }),
+          field: new StringField({ label: game.i18n.localize("DND5R.ConcentratingEnd") }),
           name: "concentration.end",
           value: this.config.concentration?.end,
           options: optional ? [{ value: "", label: "—" }, ...existingConcentration] : existingConcentration
         });
         context.notes.push({
-          type: "info", message: game.i18n.localize(`DND5E.ConcentratingWarnLimit${optional ? "Optional" : ""}`)
+          type: "info", message: game.i18n.localize(`DND5R.ConcentratingWarnLimit${optional ? "Optional" : ""}`)
         });
       } else if ( !this.actor.system.attributes?.concentration?.limit ) {
         context.notes.push({
-          type: "warn", message: game.i18n.localize("DND5E.ConcentratingWarnLimitZero")
+          type: "warn", message: game.i18n.localize("DND5R.ConcentratingWarnLimitZero")
         });
       }
     }
@@ -241,7 +241,7 @@ export default class ActivityUsageDialog extends Dialog5e {
 
     if ( this.activity.requiresSpellSlot && this.activity.consumption.spellSlot
       && this._shouldDisplay("consume.spellSlot") && !this.config.cause ) context.spellSlot = {
-      field: new BooleanField({ label: game.i18n.localize("DND5E.SpellCastConsume") }),
+      field: new BooleanField({ label: game.i18n.localize("DND5R.SpellCastConsume") }),
       name: "consume.spellSlot",
       value: this.config.consume?.spellSlot
     };
@@ -288,7 +288,7 @@ export default class ActivityUsageDialog extends Dialog5e {
     if ( this.activity.target?.template?.type && this._shouldDisplay("create.measuredTemplate") ) {
       context.hasCreation = true;
       context.template = {
-        field: new BooleanField({ label: game.i18n.localize("DND5E.TARGET.Action.PlaceTemplate") }),
+        field: new BooleanField({ label: game.i18n.localize("DND5R.TARGET.Action.PlaceTemplate") }),
         name: "create.measuredTemplate",
         value: this.config.create?.measuredTemplate
       };
@@ -309,7 +309,7 @@ export default class ActivityUsageDialog extends Dialog5e {
     context.buttons = [{
       action: "use",
       icon: this.options.button.icon ?? `fa-solid fa-${this.activity.isSpell ? "magic" : "fist-raised"}`,
-      label: this.options.button.label ?? `DND5E.AbilityUse${this.activity.isSpell ? "Cast" : "Use"}`,
+      label: this.options.button.label ?? `DND5R.AbilityUse${this.activity.isSpell ? "Cast" : "Use"}`,
       type: "button"
     }];
     return context;
@@ -339,12 +339,12 @@ export default class ActivityUsageDialog extends Dialog5e {
       const max = simplifyBonus(scale.max, rollData);
       const minimumLevel = context.linkedActivity.spell?.level ?? this.item.system.level ?? 1;
       const maximumLevel = scale.allowed ? scale.max ? minimumLevel + max - 1 : Infinity : minimumLevel;
-      const spellSlotOptions = Object.entries(CONFIG.DND5E.spellLevels).map(([level, label]) => {
+      const spellSlotOptions = Object.entries(CONFIG.DND5R.spellLevels).map(([level, label]) => {
         if ( (Number(level) < minimumLevel) || (Number(level) > maximumLevel) ) return null;
         return { value: `spell${level}`, label };
       }).filter(_ => _);
       context.spellSlots = {
-        field: new StringField({ label: game.i18n.localize("DND5E.SpellCastUpcast") }),
+        field: new StringField({ label: game.i18n.localize("DND5R.SpellCastUpcast") }),
         name: "spell.slot",
         value: this.config.spell?.slot,
         options: spellSlotOptions
@@ -363,9 +363,9 @@ export default class ActivityUsageDialog extends Dialog5e {
         if ( (slot.level < minimumLevel) || (slot.level > maximumLevel) || !slot.type ) return null;
         let label;
         if ( slot.type === "leveled" ) {
-          label = game.i18n.format("DND5E.SpellLevelSlot", { level: slot.label, n: slot.value });
+          label = game.i18n.format("DND5R.SpellLevelSlot", { level: slot.label, n: slot.value });
         } else {
-          label = game.i18n.format(`DND5E.SpellLevel${slot.type.capitalize()}`, { level: slot.level, n: slot.value });
+          label = game.i18n.format(`DND5R.SpellLevel${slot.type.capitalize()}`, { level: slot.level, n: slot.value });
         }
         // Set current value if applicable.
         const disabled = (slot.value === 0) && consumeSlot;
@@ -374,14 +374,14 @@ export default class ActivityUsageDialog extends Dialog5e {
       }).filter(_ => _);
 
       context.spellSlots = {
-        field: new StringField({ label: game.i18n.localize("DND5E.SpellCastUpcast") }),
+        field: new StringField({ label: game.i18n.localize("DND5R.SpellCastUpcast") }),
         name: "spell.slot",
         value: spellSlotValue,
         options: spellSlotOptions
       };
 
       if ( !spellSlotOptions.some(o => !o.disabled) ) context.notes.push({
-        type: "warn", message: game.i18n.format("DND5E.SpellCastNoSlotsLeft", {
+        type: "warn", message: game.i18n.format("DND5R.SpellCastNoSlotsLeft", {
           name: this.item.name
         })
       });
@@ -390,7 +390,7 @@ export default class ActivityUsageDialog extends Dialog5e {
     else if ( scale.allowed && (this.config.scaling !== false) ) {
       const max = scale.max ? simplifyBonus(scale.max, rollData) : Infinity;
       if ( max > 1 ) context.scaling = {
-        field: new NumberField({ min: 1, max, label: game.i18n.localize("DND5E.ScalingValue") }),
+        field: new NumberField({ min: 1, max, label: game.i18n.localize("DND5R.ScalingValue") }),
         name: "scalingValue",
         // Config stores the scaling increase, but scaling value (increase + 1) is easier to understand in the UI
         value: Math.clamp((this.config.scaling ?? 0) + 1, 1, max),

@@ -10,7 +10,7 @@ export default class ActorSheet5eNPC extends ActorSheet5e {
   /** @inheritDoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      classes: ["dnd5e", "sheet", "actor", "npc"],
+      classes: ["dnd5r", "sheet", "actor", "npc"],
       width: 600
     });
   }
@@ -46,16 +46,16 @@ export default class ActorSheet5eNPC extends ActorSheet5e {
 
     // Categorize Items as Features and Spells
     const features = {
-      weapons: { label: game.i18n.localize("DND5E.AttackPl"), items: [], hasActions: true,
+      weapons: { label: game.i18n.localize("DND5R.AttackPl"), items: [], hasActions: true,
         dataset: {type: "weapon", "weapon-type": "natural"} },
-      actions: { label: game.i18n.localize("DND5E.ActionPl"), items: [], hasActions: true,
+      actions: { label: game.i18n.localize("DND5R.ActionPl"), items: [], hasActions: true,
         dataset: {type: "feat", "activation.type": "action"} },
-      passive: { label: game.i18n.localize("DND5E.Features"), items: [], dataset: {type: "feat"} },
-      equipment: { label: game.i18n.localize("DND5E.Inventory"), items: [], dataset: {type: "loot"}}
+      passive: { label: game.i18n.localize("DND5R.Features"), items: [], dataset: {type: "feat"} },
+      equipment: { label: game.i18n.localize("DND5R.Inventory"), items: [], dataset: {type: "loot"}}
     };
 
     // Start by classifying items into groups for rendering
-    const maxLevelDelta = CONFIG.DND5E.maxLevel - (this.actor.system.details.level ?? 0);
+    const maxLevelDelta = CONFIG.DND5R.maxLevel - (this.actor.system.details.level ?? 0);
     const [spells, other] = context.items.reduce((arr, item) => {
       const { quantity } = item.system;
       const ctx = context.itemContext[item.id] ??= {};
@@ -73,7 +73,7 @@ export default class ActorSheet5eNPC extends ActorSheet5e {
       if ( ctx.group === "passive" ) ctx.ungroup = "passive";
       // Individual item preparation
       this._prepareItem(item, ctx);
-      if ( item.type === "class" ) ctx.availableLevels = Array.fromRange(CONFIG.DND5E.maxLevel, 1).map(level => {
+      if ( item.type === "class" ) ctx.availableLevels = Array.fromRange(CONFIG.DND5R.maxLevel, 1).map(level => {
         const delta = level - item.system.levels;
         let label = `${level}`;
         if ( delta ) label = `${label} (${formatNumber(delta, { signDisplay: "always" })})`;
@@ -112,8 +112,8 @@ export default class ActorSheet5eNPC extends ActorSheet5e {
   getArmorLabel() {
     const ac = this.actor.system.attributes.ac;
     const label = [];
-    if ( ac.calc === "default" ) label.push(this.actor.armor?.name || game.i18n.localize("DND5E.ArmorClassUnarmored"));
-    else label.push(game.i18n.localize(CONFIG.DND5E.armorClasses[ac.calc].label));
+    if ( ac.calc === "default" ) label.push(this.actor.armor?.name || game.i18n.localize("DND5R.ArmorClassUnarmored"));
+    else label.push(game.i18n.localize(CONFIG.DND5R.armorClasses[ac.calc].label));
     if ( this.actor.shield ) label.push(this.actor.shield.name);
     return label.filterJoin(", ");
   }

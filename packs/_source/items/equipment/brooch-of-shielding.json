@@ -5,7 +5,7 @@
   "img": "icons/equipment/neck/pendant-bronze-gem-blue.webp",
   "system": {
     "description": {
-      "value": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>While wearing this brooch, you have resistance to force damage, and you have immunity to damage from the <em>@UUID[Compendium.dnd5e.spells.Item.41JIhpDyM9Anm7cs]{Magic Missile}</em> spell.</p>",
+      "value": "<p><em>Wondrous item, (requires attunement)</em></p>\n<p>While wearing this brooch, you have resistance to force damage, and you have immunity to damage from the <em>@UUID[Compendium.dnd5r.spells.Item.41JIhpDyM9Anm7cs]{Magic Missile}</em> spell.</p>",
       "chat": ""
     },
     "source": {
@@ -77,11 +77,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037218812,
     "modifiedTime": 1725992523671,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!ZdcEtbtU3VkuxIFE"
 }

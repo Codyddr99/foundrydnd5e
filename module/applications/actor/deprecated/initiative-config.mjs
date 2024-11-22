@@ -7,7 +7,7 @@ export default class ActorInitiativeConfig extends InitiativeConfig {
   constructor(actor, options, abilityId) {
     foundry.utils.logCompatibilityWarning(
       "The `ActorInitiativeConfig` application has been deprecated and replaced with `InitiativeConfig`.",
-      { since: "DnD5e 4.1", until: "DnD5e 4.3" }
+      { since: "DnD5r 4.1", until: "DnD5r 4.3" }
     );
     super({ ...options, document: actor });
   }

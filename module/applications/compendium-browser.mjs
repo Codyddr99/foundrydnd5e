@@ -75,10 +75,10 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
   /** @override */
   static DEFAULT_OPTIONS = {
     id: "compendium-browser-{id}",
-    classes: ["dnd5e2", "compendium-browser", "vertical-tabs"],
+    classes: ["dnd5r2", "compendium-browser", "vertical-tabs"],
     tag: "form",
     window: {
-      title: "DND5E.CompendiumBrowser.Title",
+      title: "DND5R.CompendiumBrowser.Title",
       minimizable: true,
       resizable: true
     },
@@ -120,40 +120,40 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     header: {
       id: "header",
       classes: ["header"],
-      template: "systems/dnd5etools/templates/compendium/browser-header.hbs"
+      template: "systems/dnd5r/templates/compendium/browser-header.hbs"
     },
     search: {
       id: "sidebar-search",
       classes: ["sidebar-part", "filter-element"],
-      template: "systems/dnd5etools/templates/compendium/browser-sidebar-search.hbs"
+      template: "systems/dnd5r/templates/compendium/browser-sidebar-search.hbs"
     },
     types: {
       id: "sidebar-types",
       classes: ["sidebar-part"],
-      template: "systems/dnd5etools/templates/compendium/browser-sidebar-types.hbs"
+      template: "systems/dnd5r/templates/compendium/browser-sidebar-types.hbs"
     },
     filters: {
       id: "sidebar-filters",
       classes: ["sidebar-part"],
-      template: "systems/dnd5etools/templates/compendium/browser-sidebar-filters.hbs",
-      templates: ["systems/dnd5etools/templates/compendium/browser-sidebar-filter-set.hbs"]
+      template: "systems/dnd5r/templates/compendium/browser-sidebar-filters.hbs",
+      templates: ["systems/dnd5r/templates/compendium/browser-sidebar-filter-set.hbs"]
     },
     results: {
       id: "results",
       classes: ["results"],
-      template: "systems/dnd5etools/templates/compendium/browser-results.hbs",
-      templates: ["systems/dnd5etools/templates/compendium/browser-entry.hbs"],
+      template: "systems/dnd5r/templates/compendium/browser-results.hbs",
+      templates: ["systems/dnd5r/templates/compendium/browser-entry.hbs"],
       scrollable: [""]
     },
     footer: {
       id: "footer",
       classes: ["footer"],
-      template: "systems/dnd5etools/templates/compendium/browser-footer.hbs"
+      template: "systems/dnd5r/templates/compendium/browser-footer.hbs"
     },
     tabs: {
       id: "tabs",
       classes: ["tabs", "tabs-left"],
-      template: "systems/dnd5etools/templates/compendium/browser-tabs.hbs"
+      template: "systems/dnd5r/templates/compendium/browser-tabs.hbs"
     }
   };
 
@@ -175,27 +175,27 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     {
       tab: "classes",
       label: "TYPES.Item.classPl",
-      svg: "systems/dnd5etools/icons/svg/items/class.svg",
+      svg: "systems/dnd5r/icons/svg/items/class.svg",
       documentClass: "Item",
       types: ["class"]
     },
     {
       tab: "subclasses",
       label: "TYPES.Item.subclassPl",
-      svg: "systems/dnd5etools/icons/svg/items/subclass.svg",
+      svg: "systems/dnd5r/icons/svg/items/subclass.svg",
       documentClass: "Item",
       types: ["subclass"]
     },
     {
       tab: "races",
       label: "TYPES.Item.racePl",
-      svg: "systems/dnd5etools/icons/svg/items/race.svg",
+      svg: "systems/dnd5r/icons/svg/items/race.svg",
       documentClass: "Item",
       types: ["race"]
     },
     {
       tab: "feats",
-      label: "DND5E.CompendiumBrowser.Tabs.Feat.other",
+      label: "DND5R.CompendiumBrowser.Tabs.Feat.other",
       icon: "fas fa-star",
       documentClass: "Item",
       types: ["feat"]
@@ -203,14 +203,14 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     {
       tab: "backgrounds",
       label: "TYPES.Item.backgroundPl",
-      svg: "systems/dnd5etools/icons/svg/items/background.svg",
+      svg: "systems/dnd5r/icons/svg/items/background.svg",
       documentClass: "Item",
       types: ["background"]
     },
     {
       tab: "physical",
-      label: "DND5E.CompendiumBrowser.Tabs.Item.other",
-      svg: "systems/dnd5etools/icons/svg/backpack.svg",
+      label: "DND5R.CompendiumBrowser.Tabs.Item.other",
+      svg: "systems/dnd5r/icons/svg/backpack.svg",
       documentClass: "Item",
       types: ["physical"]
     },
@@ -223,29 +223,29 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     },
     {
       tab: "monsters",
-      label: "DND5E.CompendiumBrowser.Tabs.Monster.other",
-      svg: "systems/dnd5etools/icons/svg/monster.svg",
+      label: "DND5R.CompendiumBrowser.Tabs.Monster.other",
+      svg: "systems/dnd5r/icons/svg/monster.svg",
       documentClass: "Actor",
       types: ["npc"]
     },
     {
       tab: "vehicles",
       label: "TYPES.Actor.vehiclePl",
-      svg: "systems/dnd5etools/icons/svg/vehicle.svg",
+      svg: "systems/dnd5r/icons/svg/vehicle.svg",
       documentClass: "Actor",
       types: ["vehicle"]
     },
     {
       tab: "actors",
       label: "DOCUMENT.Actors",
-      svg: "systems/dnd5etools/icons/svg/monster.svg",
+      svg: "systems/dnd5r/icons/svg/monster.svg",
       documentClass: "Actor",
       advanced: true
     },
     {
       tab: "items",
       label: "DOCUMENT.Items",
-      svg: "systems/dnd5etools/icons/svg/backpack.svg",
+      svg: "systems/dnd5r/icons/svg/backpack.svg",
       documentClass: "Item",
       advanced: true
     }
@@ -412,7 +412,7 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     super._configureRenderOptions(options);
     if ( options.isFirstRender ) {
       const tab = this.constructor.TABS.find(t => t.tab === this.options.tab);
-      if ( tab ) foundry.utils.setProperty(options, "dnd5e.browser.types", tab.types);
+      if ( tab ) foundry.utils.setProperty(options, "dnd5r.browser.types", tab.types);
     }
   }
 
@@ -442,14 +442,14 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
         return CompendiumBrowser.intersectFilters(first, second);
       }, null) ?? new Map();
     context.filterDefinitions.set("source", {
-      label: "DND5E.SOURCE.FIELDS.source.label",
+      label: "DND5R.SOURCE.FIELDS.source.label",
       type: "set",
       config: {
         keyPath: "system.source.slug",
         choices: foundry.utils.mergeObject(
           this.#sources ?? {},
           Object.fromEntries(Object.keys(this.options.filters?.locked?.additional?.source ?? {}).map(k => {
-            return [k.slugify({ strict: true }), CONFIG.DND5E.sourceBooks[k] ?? k];
+            return [k.slugify({ strict: true }), CONFIG.DND5R.sourceBooks[k] ?? k];
           })), { inplace: false }
         )
       }
@@ -491,7 +491,7 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     context.invalid = (value < (min || -Infinity)) || (value > (max || Infinity)) ? "invalid" : "";
     const suffix = this.#selectionLocalizationSuffix;
     context.summary = suffix ? game.i18n.format(
-      `DND5E.CompendiumBrowser.Selection.Summary.${suffix}`, { max, min, value }
+      `DND5R.CompendiumBrowser.Selection.Summary.${suffix}`, { max, min, value }
     ) : value;
     return context;
   }
@@ -526,7 +526,7 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     context.isLocked.filters = ("additional" in this.options.filters.locked);
     context.isLocked.types = ("types" in this.options.filters.locked) || context.isLocked.filters;
     context.isLocked.documentClass = ("documentClass" in this.options.filters.locked) || context.isLocked.types;
-    const types = foundry.utils.getProperty(options, "dnd5e.browser.types") ?? [];
+    const types = foundry.utils.getProperty(options, "dnd5r.browser.types") ?? [];
 
     if ( partId === "types" ) {
       context.showTypes = (types.length !== 1) || (types[0] === "physical");
@@ -633,8 +633,8 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     if ( game.user.isGM ) {
       frame.querySelector('[data-action="close"]').insertAdjacentHTML("beforebegin", `
         <button type="button" class="header-control fas fa-cog icon" data-action="configureSources"
-                data-tooltip="DND5E.CompendiumBrowser.Sources.Label"
-                aria-label="${game.i18n.localize("DND5E.CompendiumBrowser.Sources.Label")}"></button>
+                data-tooltip="DND5R.CompendiumBrowser.Sources.Label"
+                aria-label="${game.i18n.localize("DND5R.CompendiumBrowser.Sources.Label")}"></button>
       `);
     }
     return frame;
@@ -659,7 +659,7 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
       displaySelection: this.displaySelection,
       selected: this.#selected.has(uuid)
     };
-    const html = await renderTemplate("systems/dnd5etools/templates/compendium/browser-entry.hbs", context);
+    const html = await renderTemplate("systems/dnd5r/templates/compendium/browser-entry.hbs", context);
     const template = document.createElement("template");
     template.innerHTML = html;
     const element = template.content.firstElementChild;
@@ -669,7 +669,7 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
         <i class="fa-solid fa-spinner fa-spin-pulse" inert></i>
       </section>
     `;
-    element.dataset.tooltipClass = "dnd5e2 dnd5e-tooltip item-tooltip";
+    element.dataset.tooltipClass = "dnd5r2 dnd5r-tooltip item-tooltip";
     element.dataset.tooltipDirection ??= "RIGHT";
     return element;
   }
@@ -707,7 +707,7 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
       const source = foundry.utils.getProperty(result, "system.source");
       if ( foundry.utils.getType(source) !== "Object" ) continue;
       const { slug, value } = source;
-      sources.push({ slug, value: CONFIG.DND5E.sourceBooks[value] ?? value });
+      sources.push({ slug, value: CONFIG.DND5R.sourceBooks[value] ?? value });
     }
     sources.sort((a, b) => a.value.localeCompare(b.value, game.i18n.lang));
     this.#sources = Object.fromEntries(sources.map(({ slug, value }) => [slug, value]));
@@ -718,11 +718,11 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
       obj[k.slugify({ strict: true })] = v;
       return obj;
     }, {});
-    const filter = await renderTemplate("systems/dnd5etools/templates/compendium/browser-sidebar-filter-set.hbs", {
+    const filter = await renderTemplate("systems/dnd5r/templates/compendium/browser-sidebar-filter-set.hbs", {
       locked,
       value: locked,
       key: "source",
-      label: "DND5E.SOURCE.FIELDS.source.label",
+      label: "DND5R.SOURCE.FIELDS.source.label",
       config: { choices: this.#sources }
     });
     filters.insertAdjacentHTML("beforeend", filter);
@@ -739,7 +739,7 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     let { types } = target.dataset;
     types = types ? types.split(",") : [];
     this._applyTabFilters(tab);
-    this.render({ parts: ["results", "filters", "types"], dnd5e: { browser: { types } }, changedTab: true });
+    this.render({ parts: ["results", "filters", "types"], dnd5r: { browser: { types } }, changedTab: true });
   }
 
   /* -------------------------------------------- */
@@ -820,8 +820,8 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
    */
   #adjustCheckboxStates(htmlElement) {
     for ( const groupArea of htmlElement.querySelectorAll(".type-group") ) {
-      const group = groupArea.querySelector(".type-group-header dnd5e-checkbox");
-      const children = groupArea.querySelectorAll(".wrapper dnd5e-checkbox");
+      const group = groupArea.querySelector(".type-group-header dnd5r-checkbox");
+      const children = groupArea.querySelectorAll(".wrapper dnd5r-checkbox");
       if ( Array.from(children).every(e => e.checked) ) {
         group.checked = true;
         group.indeterminate = false;
@@ -954,20 +954,20 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     if ( (value < (min || -Infinity)) || (value > (max || Infinity)) ) {
       const suffix = this.#selectionLocalizationSuffix;
       const pr = new Intl.PluralRules(game.i18n.lang);
-      throw new Error(game.i18n.format(`DND5E.CompendiumBrowser.Selection.Warning.${suffix}`, {
+      throw new Error(game.i18n.format(`DND5R.CompendiumBrowser.Selection.Warning.${suffix}`, {
         max, min, value,
-        document: game.i18n.localize(`DND5E.CompendiumBrowser.Selection.Warning.Document.${pr.select(max || min)}`)
+        document: game.i18n.localize(`DND5R.CompendiumBrowser.Selection.Warning.Document.${pr.select(max || min)}`)
       }));
     }
 
     /**
      * Hook event that calls when a compendium browser is submitted with selected items.
-     * @function dnd5e.compendiumBrowserSelection
+     * @function dnd5r.compendiumBrowserSelection
      * @memberof hookEvents
      * @param {CompendiumBrowser} browser  Compendium Browser application being submitted.
      * @param {Set<string>} selected       Set of document UUIDs that are selected.
      */
-    Hooks.callAll("dnd5e.compendiumBrowserSelection", this, this.#selected);
+    Hooks.callAll("dnd5r.compendiumBrowserSelection", this, this.#selected);
   }
 
   /* -------------------------------------------- */
@@ -1023,7 +1023,7 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
 
     else {
       target.indeterminate = false;
-      for ( const child of target.closest(".type-group").querySelectorAll("dnd5e-checkbox[value]") ) {
+      for ( const child of target.closest(".type-group").querySelectorAll("dnd5r-checkbox[value]") ) {
         child.checked = target.checked;
         if ( target.checked ) this.#filters.types.add(child.defaultValue);
         else this.#filters.types.delete(child.defaultValue);
@@ -1061,7 +1061,7 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     const types = target.checked ? [] : (activeTab?.types ?? ["class"]);
     this._applyModeFilters(this._mode);
     this._applyTabFilters(activeTab?.tab);
-    this.render({ parts: ["results", "filters", "types", "tabs"], dnd5e: { browser: { types } }, changedTab: true });
+    this.render({ parts: ["results", "filters", "types", "tabs"], dnd5r: { browser: { types } }, changedTab: true });
   }
 
   /* -------------------------------------------- */
@@ -1107,13 +1107,13 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
         && sources.has(p.collection)
 
         // If types are set and specified in compendium flag, only include those that include the correct types
-        && (!types.size || !p.metadata.flags.dnd5e?.types || new Set(p.metadata.flags.dnd5e.types).intersects(types)))
+        && (!types.size || !p.metadata.flags.dnd5r?.types || new Set(p.metadata.flags.dnd5r.types).intersects(types)))
 
       // Generate an index based on the needed fields
       .map(async p => await Promise.all((await p.getIndex({ fields: Array.from(indexFields) })
 
         // Apply module art to the new index
-        .then(index => game.dnd5e.moduleArt.apply(index)))
+        .then(index => game.dnd5r.moduleArt.apply(index)))
 
         // Derive source values
         .map(i => {
@@ -1243,7 +1243,7 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     button.classList.add("open-compendium-browser");
     button.innerHTML = `
       <i class="fa-solid fa-book-open-reader" inert></i>
-      ${game.i18n.localize("DND5E.CompendiumBrowser.Action.Open")}
+      ${game.i18n.localize("DND5R.CompendiumBrowser.Action.Open")}
     `;
     button.addEventListener("click", event => (new CompendiumBrowser()).render({ force: true }));
 

@@ -5,7 +5,7 @@
   "img": "icons/commodities/treasure/trinket-wing-white.webp",
   "system": {
     "description": {
-      "value": "<p><em>Wondrous item</em></p>\n<p>While holding this fan, you can use an action to cast the @UUID[Compendium.dnd5e.spells.Item.FSMy6VAjDnXY9vWz]{Gust of Wind} spell (save DC 13) from it. Once used, the fan shouldn't be used again until the next dawn. Each time it is used again before then, it has a cumulative 20 percent chance of not working and tearing into useless, nonmagical tatters.</p>",
+      "value": "<p><em>Wondrous item</em></p>\n<p>While holding this fan, you can use an action to cast the @UUID[Compendium.dnd5r.spells.Item.FSMy6VAjDnXY9vWz]{Gust of Wind} spell (save DC 13) from it. Once used, the fan shouldn't be used again until the next dawn. Each time it is used again before then, it has a cumulative 20 percent chance of not working and tearing into useless, nonmagical tatters.</p>",
       "chat": ""
     },
     "source": {
@@ -61,8 +61,8 @@
     ],
     "magicalBonus": null,
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "save",
         "activation": {
           "type": "action",
@@ -140,8 +140,8 @@
         },
         "sort": 0
       },
-      "dnd5eactivity200": {
-        "_id": "dnd5eactivity200",
+      "dnd5ractivity200": {
+        "_id": "dnd5ractivity200",
         "type": "damage",
         "activation": {
           "type": "action",
@@ -231,8 +231,8 @@
         },
         "sort": 0
       },
-      "dnd5eactivity300": {
-        "_id": "dnd5eactivity300",
+      "dnd5ractivity300": {
+        "_id": "dnd5ractivity300",
         "type": "utility",
         "activation": {
           "type": "action",
@@ -319,11 +319,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037278778,
     "modifiedTime": 1725992543615,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!mYFfH24uzuKh4IPS"
 }

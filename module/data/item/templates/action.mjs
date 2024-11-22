@@ -14,33 +14,33 @@ export default class ActionTemplate extends ItemDataModel {
   static defineSchema() {
     foundry.utils.logCompatibilityWarning(
       "The `ActionTemplate` data model has been deprecated in favor of `ActivitiesTemplate`.",
-      { since: "DnD5e 4.0", until: "DnD5e 4.4", once: true }
+      { since: "DnD5r 4.0", until: "DnD5r 4.4", once: true }
     );
     return {
-      ability: new StringField({required: true, nullable: true, initial: null, label: "DND5E.AbilityModifier"}),
-      actionType: new StringField({required: true, nullable: true, initial: null, label: "DND5E.ItemActionType"}),
+      ability: new StringField({required: true, nullable: true, initial: null, label: "DND5R.AbilityModifier"}),
+      actionType: new StringField({required: true, nullable: true, initial: null, label: "DND5R.ItemActionType"}),
       attack: new SchemaField({
-        bonus: new FormulaField({required: true, label: "DND5E.ItemAttackBonus"}),
-        flat: new BooleanField({label: "DND5E.ItemAttackFlat"})
+        bonus: new FormulaField({required: true, label: "DND5R.ItemAttackBonus"}),
+        flat: new BooleanField({label: "DND5R.ItemAttackFlat"})
       }),
-      chatFlavor: new StringField({required: true, label: "DND5E.ChatFlavor"}),
+      chatFlavor: new StringField({required: true, label: "DND5R.ChatFlavor"}),
       critical: new SchemaField({
         threshold: new NumberField({
-          required: true, integer: true, initial: null, positive: true, label: "DND5E.ItemCritThreshold"
+          required: true, integer: true, initial: null, positive: true, label: "DND5R.ItemCritThreshold"
         }),
-        damage: new FormulaField({required: true, label: "DND5E.ItemCritExtraDamage"})
+        damage: new FormulaField({required: true, label: "DND5R.ItemCritExtraDamage"})
       }),
       damage: new SchemaField({
         parts: new ArrayField(new ArrayField(new StringField({nullable: true})), {required: true}),
-        versatile: new FormulaField({required: true, label: "DND5E.VersatileDamage"})
-      }, {label: "DND5E.Damage"}),
+        versatile: new FormulaField({required: true, label: "DND5R.VersatileDamage"})
+      }, {label: "DND5R.Damage"}),
       enchantment: new EnchantmentField(),
-      formula: new FormulaField({required: true, label: "DND5E.OtherFormula"}),
+      formula: new FormulaField({required: true, label: "DND5R.OtherFormula"}),
       save: new SchemaField({
-        ability: new StringField({required: true, blank: true, label: "DND5E.Ability"}),
-        dc: new NumberField({required: true, min: 0, integer: true, label: "DND5E.AbbreviationDC"}),
-        scaling: new StringField({required: true, blank: false, initial: "spell", label: "DND5E.ScalingFormula"})
-      }, {label: "DND5E.SavingThrow"}),
+        ability: new StringField({required: true, blank: true, label: "DND5R.Ability"}),
+        dc: new NumberField({required: true, min: 0, integer: true, label: "DND5R.AbbreviationDC"}),
+        scaling: new StringField({required: true, blank: false, initial: "spell", label: "DND5R.ScalingFormula"})
+      }, {label: "DND5R.SavingThrow"}),
       summons: new SummonsField()
     };
   }

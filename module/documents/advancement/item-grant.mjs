@@ -18,9 +18,9 @@ export default class ItemGrantAdvancement extends Advancement {
       },
       order: 40,
       icon: "icons/sundries/books/book-open-purple.webp",
-      typeIcon: "systems/dnd5etools/icons/svg/item-grant.svg",
-      title: game.i18n.localize("DND5E.AdvancementItemGrantTitle"),
-      hint: game.i18n.localize("DND5E.AdvancementItemGrantHint"),
+      typeIcon: "systems/dnd5r/icons/svg/item-grant.svg",
+      title: game.i18n.localize("DND5R.AdvancementItemGrantTitle"),
+      hint: game.i18n.localize("DND5R.AdvancementItemGrantHint"),
       apps: {
         config: ItemGrantConfig,
         flow: ItemGrantFlow
@@ -51,7 +51,7 @@ export default class ItemGrantAdvancement extends Advancement {
   summaryForLevel(level, { configMode=false }={}) {
     // Link to compendium items
     if ( !this.value.added || configMode ) return this.configuration.items.filter(i => fromUuidSync(i.uuid))
-      .reduce((html, i) => html + dnd5e.utils.linkForUuid(i.uuid), "");
+      .reduce((html, i) => html + dnd5r.utils.linkForUuid(i.uuid), "");
 
     // Link to items on the actor
     else {
@@ -118,7 +118,7 @@ export default class ItemGrantAdvancement extends Advancement {
     const updates = {};
     for ( const item of data.items ) {
       this.actor.updateSource({items: [item]});
-      updates[item._id] = item.flags.dnd5e.sourceId;
+      updates[item._id] = item.flags.dnd5r.sourceId;
     }
     this.updateSource({
       "value.ability": data.ability,
@@ -155,7 +155,7 @@ export default class ItemGrantAdvancement extends Advancement {
     if ( !item ) return false;
     if ( this.constructor.VALID_TYPES.has(item.type) ) return true;
     const type = game.i18n.localize(CONFIG.Item.typeLabels[item.type]);
-    if ( strict ) throw new Error(game.i18n.format("DND5E.AdvancementItemTypeInvalidWarning", {type}));
+    if ( strict ) throw new Error(game.i18n.format("DND5R.AdvancementItemTypeInvalidWarning", {type}));
     return false;
   }
 }

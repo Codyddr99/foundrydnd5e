@@ -29,8 +29,8 @@
     "requirements": "Monk 5",
     "properties": [],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "save",
         "activation": {
           "type": "special",
@@ -42,7 +42,7 @@
           "targets": [
             {
               "type": "itemUses",
-              "target": "Compendium.dnd5e.classfeatures.Item.10b6z2W1txNkrGP7",
+              "target": "Compendium.dnd5r.classfeatures.Item.10b6z2W1txNkrGP7",
               "value": "1",
               "scaling": {
                 "mode": "",
@@ -125,7 +125,7 @@
   "effects": [
     {
       "name": "Stunning Strike",
-      "origin": "Compendium.dnd5e.classfeatures.Item.pvRc6GAu1ok6zihC",
+      "origin": "Compendium.dnd5r.classfeatures.Item.pvRc6GAu1ok6zihC",
       "duration": {
         "startTime": null,
         "seconds": null,
@@ -148,7 +148,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -167,11 +167,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037388762,
     "modifiedTime": 1725992290024,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!pvRc6GAu1ok6zihC"
 }

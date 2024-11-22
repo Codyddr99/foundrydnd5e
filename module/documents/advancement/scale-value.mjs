@@ -16,9 +16,9 @@ export default class ScaleValueAdvancement extends Advancement {
       },
       order: 60,
       icon: "icons/sundries/gaming/dice-pair-white-green.webp",
-      typeIcon: "systems/dnd5etools/icons/svg/scale-value.svg",
-      title: game.i18n.localize("DND5E.AdvancementScaleValueTitle"),
-      hint: game.i18n.localize("DND5E.AdvancementScaleValueHint"),
+      typeIcon: "systems/dnd5r/icons/svg/scale-value.svg",
+      title: game.i18n.localize("DND5R.AdvancementScaleValueTitle"),
+      hint: game.i18n.localize("DND5R.AdvancementScaleValueHint"),
       multiLevel: true,
       apps: {
         config: ScaleValueConfig,

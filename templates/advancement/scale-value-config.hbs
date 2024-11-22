@@ -1,8 +1,8 @@
 <form autocomplete="off">
     <div class="left-column">
-        {{> "dnd5e.advancement-controls"}}
+        {{> "dnd5r.advancement-controls"}}
         <div class="form-group">
-            <label>{{localize "DND5E.AdvancementScaleValueTypeLabel"}}</label>
+            <label>{{localize "DND5R.AdvancementScaleValueTypeLabel"}}</label>
             <div class="form-fields">
                 <select name="configuration.type">
                     {{selectOptions types selected=configuration.type}}
@@ -20,17 +20,17 @@
         <hr>
 
         <div class="form-group">
-            <label>{{ localize "DND5E.Identifier" }}</label>
+            <label>{{ localize "DND5R.Identifier" }}</label>
             <div class="form-fields">
                 <input name="configuration.identifier" type="text" value="{{ configuration.identifier }}"
                        placeholder="{{ previewIdentifier }}">
             </div>
             <p class="hint identifier-hint">
                 {{#if (eq configuration.type "dice")}}
-                {{{ localize "DND5E.AdvancementScaleValueIdentifierDiceHint" class=classIdentifier
+                {{{ localize "DND5R.AdvancementScaleValueIdentifierDiceHint" class=classIdentifier
                              identifier=previewIdentifier }}}
                 {{else}}
-                {{{ localize "DND5E.AdvancementScaleValueIdentifierHint" class=classIdentifier
+                {{{ localize "DND5R.AdvancementScaleValueIdentifierHint" class=classIdentifier
                              identifier=previewIdentifier }}}
                 {{/if}}
             </p>

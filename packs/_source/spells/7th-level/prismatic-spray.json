@@ -62,8 +62,8 @@
       "somatic"
     ],
     "activities": {
-      "dnd5eactivity000": {
-        "_id": "dnd5eactivity000",
+      "dnd5ractivity000": {
+        "_id": "dnd5ractivity000",
         "type": "save",
         "activation": {
           "type": "action",
@@ -152,7 +152,7 @@
   "effects": [
     {
       "name": "Prismatic Spray (indigo)",
-      "origin": "Compendium.dnd5e.spells.Item.eGMhwmuleAM46C6L",
+      "origin": "Compendium.dnd5r.spells.Item.eGMhwmuleAM46C6L",
       "duration": {
         "startTime": null,
         "seconds": null,
@@ -176,7 +176,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -190,7 +190,7 @@
     },
     {
       "name": "Prismatic Spray (violet)",
-      "origin": "Compendium.dnd5e.spells.Item.eGMhwmuleAM46C6L",
+      "origin": "Compendium.dnd5r.spells.Item.eGMhwmuleAM46C6L",
       "duration": {
         "startTime": null,
         "seconds": null,
@@ -214,7 +214,7 @@
         "compendiumSource": null,
         "duplicateSource": null,
         "coreVersion": "12.331",
-        "systemId": "dnd5e",
+        "systemId": "dnd5r",
         "systemVersion": "4.0.0",
         "createdTime": null,
         "modifiedTime": null,
@@ -231,11 +231,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1725037361670,
     "modifiedTime": 1725992721644,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!items!eGMhwmuleAM46C6L"
 }

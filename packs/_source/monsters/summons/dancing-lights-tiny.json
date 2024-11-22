@@ -577,7 +577,7 @@
     },
     "detectionModes": [],
     "flags": {
-      "dnd5e": {}
+      "dnd5r": {}
     },
     "randomImg": false,
     "ring": {
@@ -607,11 +607,11 @@
   "_stats": {
     "duplicateSource": null,
     "coreVersion": "12.331",
-    "systemId": "dnd5e",
+    "systemId": "dnd5r",
     "systemVersion": "4.0.0",
     "createdTime": 1726171235021,
     "modifiedTime": 1726171445417,
-    "lastModifiedBy": "dnd5ebuilder0000"
+    "lastModifiedBy": "dnd5rbuilder0000"
   },
   "_key": "!actors!UrXp9O9N7DvdH9nL"
 }
