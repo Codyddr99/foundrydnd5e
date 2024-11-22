@@ -14,7 +14,7 @@ export default class AbilityConfig extends BaseProficiencyConfig {
   /** @override */
   static PARTS = {
     config: {
-      template: "systems/dnd5etools/templates/actors/config/ability-config.hbs"
+      template: "systems/dnd5r/templates/actors/config/ability-config.hbs"
     }
   };
 

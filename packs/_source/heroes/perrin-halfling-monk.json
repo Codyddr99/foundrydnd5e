@@ -3484,7 +3484,7 @@
             },
             "value": {},
             "title": "Martial Arts Die",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "HC3Vfbq48VlD7axp"
           },
           {
@@ -3515,7 +3515,7 @@
             },
             "value": {},
             "title": "Unarmored Movement",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "t6SOqiBtpw0OG5z2"
           },
           {
@@ -3538,7 +3538,7 @@
             },
             "level": 4,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "9Xe0WAjYctJkKvPJ"
           },
           {
@@ -3561,7 +3561,7 @@
             },
             "level": 8,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "HQCl6JtoovumbpGT"
           },
           {
@@ -3584,7 +3584,7 @@
             },
             "level": 12,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "EujtBfzqpRexJo2t"
           },
           {
@@ -3607,7 +3607,7 @@
             },
             "level": 16,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "4xT99qK8dYQG95qn"
           },
           {

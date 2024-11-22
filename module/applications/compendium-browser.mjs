@@ -120,40 +120,40 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     header: {
       id: "header",
       classes: ["header"],
-      template: "systems/dnd5etools/templates/compendium/browser-header.hbs"
+      template: "systems/dnd5r/templates/compendium/browser-header.hbs"
     },
     search: {
       id: "sidebar-search",
       classes: ["sidebar-part", "filter-element"],
-      template: "systems/dnd5etools/templates/compendium/browser-sidebar-search.hbs"
+      template: "systems/dnd5r/templates/compendium/browser-sidebar-search.hbs"
     },
     types: {
       id: "sidebar-types",
       classes: ["sidebar-part"],
-      template: "systems/dnd5etools/templates/compendium/browser-sidebar-types.hbs"
+      template: "systems/dnd5r/templates/compendium/browser-sidebar-types.hbs"
     },
     filters: {
       id: "sidebar-filters",
       classes: ["sidebar-part"],
-      template: "systems/dnd5etools/templates/compendium/browser-sidebar-filters.hbs",
-      templates: ["systems/dnd5etools/templates/compendium/browser-sidebar-filter-set.hbs"]
+      template: "systems/dnd5r/templates/compendium/browser-sidebar-filters.hbs",
+      templates: ["systems/dnd5r/templates/compendium/browser-sidebar-filter-set.hbs"]
     },
     results: {
       id: "results",
       classes: ["results"],
-      template: "systems/dnd5etools/templates/compendium/browser-results.hbs",
-      templates: ["systems/dnd5etools/templates/compendium/browser-entry.hbs"],
+      template: "systems/dnd5r/templates/compendium/browser-results.hbs",
+      templates: ["systems/dnd5r/templates/compendium/browser-entry.hbs"],
       scrollable: [""]
     },
     footer: {
       id: "footer",
       classes: ["footer"],
-      template: "systems/dnd5etools/templates/compendium/browser-footer.hbs"
+      template: "systems/dnd5r/templates/compendium/browser-footer.hbs"
     },
     tabs: {
       id: "tabs",
       classes: ["tabs", "tabs-left"],
-      template: "systems/dnd5etools/templates/compendium/browser-tabs.hbs"
+      template: "systems/dnd5r/templates/compendium/browser-tabs.hbs"
     }
   };
 
@@ -175,21 +175,21 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     {
       tab: "classes",
       label: "TYPES.Item.classPl",
-      svg: "systems/dnd5etools/icons/svg/items/class.svg",
+      svg: "systems/dnd5r/icons/svg/items/class.svg",
       documentClass: "Item",
       types: ["class"]
     },
     {
       tab: "subclasses",
       label: "TYPES.Item.subclassPl",
-      svg: "systems/dnd5etools/icons/svg/items/subclass.svg",
+      svg: "systems/dnd5r/icons/svg/items/subclass.svg",
       documentClass: "Item",
       types: ["subclass"]
     },
     {
       tab: "races",
       label: "TYPES.Item.racePl",
-      svg: "systems/dnd5etools/icons/svg/items/race.svg",
+      svg: "systems/dnd5r/icons/svg/items/race.svg",
       documentClass: "Item",
       types: ["race"]
     },
@@ -203,14 +203,14 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     {
       tab: "backgrounds",
       label: "TYPES.Item.backgroundPl",
-      svg: "systems/dnd5etools/icons/svg/items/background.svg",
+      svg: "systems/dnd5r/icons/svg/items/background.svg",
       documentClass: "Item",
       types: ["background"]
     },
     {
       tab: "physical",
       label: "DND5E.CompendiumBrowser.Tabs.Item.other",
-      svg: "systems/dnd5etools/icons/svg/backpack.svg",
+      svg: "systems/dnd5r/icons/svg/backpack.svg",
       documentClass: "Item",
       types: ["physical"]
     },
@@ -224,28 +224,28 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
     {
       tab: "monsters",
       label: "DND5E.CompendiumBrowser.Tabs.Monster.other",
-      svg: "systems/dnd5etools/icons/svg/monster.svg",
+      svg: "systems/dnd5r/icons/svg/monster.svg",
       documentClass: "Actor",
       types: ["npc"]
     },
     {
       tab: "vehicles",
       label: "TYPES.Actor.vehiclePl",
-      svg: "systems/dnd5etools/icons/svg/vehicle.svg",
+      svg: "systems/dnd5r/icons/svg/vehicle.svg",
       documentClass: "Actor",
       types: ["vehicle"]
     },
     {
       tab: "actors",
       label: "DOCUMENT.Actors",
-      svg: "systems/dnd5etools/icons/svg/monster.svg",
+      svg: "systems/dnd5r/icons/svg/monster.svg",
       documentClass: "Actor",
       advanced: true
     },
     {
       tab: "items",
       label: "DOCUMENT.Items",
-      svg: "systems/dnd5etools/icons/svg/backpack.svg",
+      svg: "systems/dnd5r/icons/svg/backpack.svg",
       documentClass: "Item",
       advanced: true
     }
@@ -659,7 +659,7 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
       displaySelection: this.displaySelection,
       selected: this.#selected.has(uuid)
     };
-    const html = await renderTemplate("systems/dnd5etools/templates/compendium/browser-entry.hbs", context);
+    const html = await renderTemplate("systems/dnd5r/templates/compendium/browser-entry.hbs", context);
     const template = document.createElement("template");
     template.innerHTML = html;
     const element = template.content.firstElementChild;
@@ -718,7 +718,7 @@ export default class CompendiumBrowser extends foundry.applications.api.Handleba
       obj[k.slugify({ strict: true })] = v;
       return obj;
     }, {});
-    const filter = await renderTemplate("systems/dnd5etools/templates/compendium/browser-sidebar-filter-set.hbs", {
+    const filter = await renderTemplate("systems/dnd5r/templates/compendium/browser-sidebar-filter-set.hbs", {
       locked,
       value: locked,
       key: "source",

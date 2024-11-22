@@ -56,7 +56,7 @@ export default function ActorSheetV2Mixin(Base) {
         item.dataset.tooltip = label;
         item.setAttribute("aria-label", label);
         if ( icon ) item.innerHTML = `<i class="${icon}"></i>`;
-        else if ( svg ) item.innerHTML = `<dnd5e-icon src="systems/dnd5etools/icons/svg/${svg}.svg"></dnd5e-icon>`;
+        else if ( svg ) item.innerHTML = `<dnd5e-icon src="systems/dnd5r/icons/svg/${svg}.svg"></dnd5e-icon>`;
         return item;
       }));
       html[0].insertAdjacentElement("afterbegin", nav);

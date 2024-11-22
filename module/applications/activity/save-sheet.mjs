@@ -16,14 +16,14 @@ export default class SaveSheet extends ActivitySheet {
   static PARTS = {
     ...super.PARTS,
     effect: {
-      template: "systems/dnd5etools/templates/activity/save-effect.hbs",
+      template: "systems/dnd5r/templates/activity/save-effect.hbs",
       templates: [
         ...super.PARTS.effect.templates,
-        "systems/dnd5etools/templates/activity/parts/damage-part.hbs",
-        "systems/dnd5etools/templates/activity/parts/damage-parts.hbs",
-        "systems/dnd5etools/templates/activity/parts/save-damage.hbs",
-        "systems/dnd5etools/templates/activity/parts/save-details.hbs",
-        "systems/dnd5etools/templates/activity/parts/save-effect-settings.hbs"
+        "systems/dnd5r/templates/activity/parts/damage-part.hbs",
+        "systems/dnd5r/templates/activity/parts/damage-parts.hbs",
+        "systems/dnd5r/templates/activity/parts/save-damage.hbs",
+        "systems/dnd5r/templates/activity/parts/save-details.hbs",
+        "systems/dnd5r/templates/activity/parts/save-effect-settings.hbs"
       ]
     }
   };
@@ -34,7 +34,7 @@ export default class SaveSheet extends ActivitySheet {
 
   /** @override */
   _prepareAppliedEffectContext(context, effect) {
-    effect.additionalSettings = "systems/dnd5etools/templates/activity/parts/save-effect-settings.hbs";
+    effect.additionalSettings = "systems/dnd5r/templates/activity/parts/save-effect-settings.hbs";
     return effect;
   }
 

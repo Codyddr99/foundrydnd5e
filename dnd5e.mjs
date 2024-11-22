@@ -68,7 +68,7 @@ Hooks.once("init", function() {
   CONFIG.Token.objectClass = canvas.Token5e;
   CONFIG.User.documentClass = documents.User5e;
   CONFIG.time.roundTime = 6;
-  Roll.TOOLTIP_TEMPLATE = "systems/dnd5etools/templates/chat/roll-breakdown.hbs";
+  Roll.TOOLTIP_TEMPLATE = "systems/dnd5r/templates/chat/roll-breakdown.hbs";
   CONFIG.Dice.BasicRoll = dice.BasicRoll;
   CONFIG.Dice.DamageRoll = dice.DamageRoll;
   CONFIG.Dice.D20Die = dice.D20Die;
@@ -313,20 +313,20 @@ function _configureFonts() {
     Roboto: {
       editor: true,
       fonts: [
-        { urls: ["systems/dnd5etools/fonts/roboto/Roboto-Regular.woff2"] },
-        { urls: ["systems/dnd5etools/fonts/roboto/Roboto-Bold.woff2"], weight: "bold" },
-        { urls: ["systems/dnd5etools/fonts/roboto/Roboto-Italic.woff2"], style: "italic" },
-        { urls: ["systems/dnd5etools/fonts/roboto/Roboto-BoldItalic.woff2"], weight: "bold", style: "italic" }
+        { urls: ["systems/dnd5r/fonts/roboto/Roboto-Regular.woff2"] },
+        { urls: ["systems/dnd5r/fonts/roboto/Roboto-Bold.woff2"], weight: "bold" },
+        { urls: ["systems/dnd5r/fonts/roboto/Roboto-Italic.woff2"], style: "italic" },
+        { urls: ["systems/dnd5r/fonts/roboto/Roboto-BoldItalic.woff2"], weight: "bold", style: "italic" }
       ]
     },
     "Roboto Condensed": {
       editor: true,
       fonts: [
-        { urls: ["systems/dnd5etools/fonts/roboto-condensed/RobotoCondensed-Regular.woff2"] },
-        { urls: ["systems/dnd5etools/fonts/roboto-condensed/RobotoCondensed-Bold.woff2"], weight: "bold" },
-        { urls: ["systems/dnd5etools/fonts/roboto-condensed/RobotoCondensed-Italic.woff2"], style: "italic" },
+        { urls: ["systems/dnd5r/fonts/roboto-condensed/RobotoCondensed-Regular.woff2"] },
+        { urls: ["systems/dnd5r/fonts/roboto-condensed/RobotoCondensed-Bold.woff2"], weight: "bold" },
+        { urls: ["systems/dnd5r/fonts/roboto-condensed/RobotoCondensed-Italic.woff2"], style: "italic" },
         {
-          urls: ["systems/dnd5etools/fonts/roboto-condensed/RobotoCondensed-BoldItalic.woff2"], weight: "bold",
+          urls: ["systems/dnd5r/fonts/roboto-condensed/RobotoCondensed-BoldItalic.woff2"], weight: "bold",
           style: "italic"
         }
       ]
@@ -334,8 +334,8 @@ function _configureFonts() {
     "Roboto Slab": {
       editor: true,
       fonts: [
-        { urls: ["systems/dnd5etools/fonts/roboto-slab/RobotoSlab-Regular.ttf"] },
-        { urls: ["systems/dnd5etools/fonts/roboto-slab/RobotoSlab-Bold.ttf"], weight: "bold" }
+        { urls: ["systems/dnd5r/fonts/roboto-slab/RobotoSlab-Regular.ttf"] },
+        { urls: ["systems/dnd5r/fonts/roboto-slab/RobotoSlab-Bold.ttf"], weight: "bold" }
       ]
     }
   });
@@ -509,7 +509,7 @@ Hooks.once("ready", function() {
 Hooks.on("renderPause", (app, [html]) => {
   html.classList.add("dnd5e2");
   const img = html.querySelector("img");
-  img.src = "systems/dnd5etools/ui/official/ampersand.svg";
+  img.src = "systems/dnd5r/ui/official/ampersand.svg";
   img.className = "";
 });
 
@@ -546,7 +546,7 @@ Hooks.on("renderSettings", (app, [html]) => {
   const badge = document.createElement("div");
   badge.classList.add("dnd5e2", "system-badge");
   badge.innerHTML = `
-    <img src="systems/dnd5etools/ui/official/dnd-badge-32.webp" data-tooltip="${dnd5e.title}" alt="${dnd5e.title}">
+    <img src="systems/dnd5r/ui/official/dnd-badge-32.webp" data-tooltip="${dnd5e.title}" alt="${dnd5e.title}">
     <span class="system-info">${dnd5e.version}</span>
   `;
   if ( pip ) badge.querySelector(".system-info").insertAdjacentElement("beforeend", pip);

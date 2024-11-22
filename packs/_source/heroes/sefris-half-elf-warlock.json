@@ -2,7 +2,7 @@
   "_id": "Jw8DeuPjt1qpusdB",
   "name": "Sefris (Half-Elf Warlock)",
   "type": "character",
-  "img": "systems/dnd5etools/tokens/heroes/WarlockStaff.webp",
+  "img": "systems/dnd5r/tokens/heroes/WarlockStaff.webp",
   "system": {
     "abilities": {
       "str": {
@@ -610,7 +610,7 @@
       "priority": 0
     },
     "texture": {
-      "src": "systems/dnd5etools/tokens/heroes/WarlockStaff.webp",
+      "src": "systems/dnd5r/tokens/heroes/WarlockStaff.webp",
       "tint": "#ffffff",
       "scaleX": 1,
       "scaleY": 1,
@@ -4448,7 +4448,7 @@
             },
             "value": {},
             "title": "Cantrips Known",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "OcM7blwWM7CgNbMS"
           },
           {
@@ -4506,7 +4506,7 @@
             },
             "value": {},
             "title": "Spells Known",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "rdzbe2Dv8SaD3YUS"
           },
           {
@@ -4529,7 +4529,7 @@
             },
             "level": 4,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "X6UIWFe7JZzFry7f"
           },
           {
@@ -4552,7 +4552,7 @@
             },
             "level": 8,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "C4uqRD1mSOxKF11n"
           },
           {
@@ -4575,7 +4575,7 @@
             },
             "level": 12,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "unXUZVn2otlBmtvI"
           },
           {
@@ -4598,7 +4598,7 @@
             },
             "level": 16,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "EZfVebBnXF8yILKN"
           },
           {

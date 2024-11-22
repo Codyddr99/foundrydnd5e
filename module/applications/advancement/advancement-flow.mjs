@@ -43,7 +43,7 @@ export default class AdvancementFlow extends FormApplication {
   /** @inheritDoc */
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
-      template: "systems/dnd5etools/templates/advancement/advancement-flow.hbs",
+      template: "systems/dnd5r/templates/advancement/advancement-flow.hbs",
       popOut: false
     });
   }

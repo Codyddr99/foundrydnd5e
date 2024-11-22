@@ -19,7 +19,7 @@ export default class HealActivity extends ActivityMixin(HealActivityData) {
   static metadata = Object.freeze(
     foundry.utils.mergeObject(super.metadata, {
       type: "heal",
-      img: "systems/dnd5etools/icons/svg/activity/heal.svg",
+      img: "systems/dnd5r/icons/svg/activity/heal.svg",
       title: "DND5E.HEAL.Title",
       sheetClass: HealSheet,
       usage: {
@@ -48,7 +48,7 @@ export default class HealActivity extends ActivityMixin(HealActivityData) {
     if ( !this.healing.formula ) return super._usageChatButtons(message);
     return [{
       label: game.i18n.localize("DND5E.Healing"),
-      icon: '<i class="dnd5e-icon" data-src="systems/dnd5etools/icons/svg/damage/healing.svg"></i>',
+      icon: '<i class="dnd5e-icon" data-src="systems/dnd5r/icons/svg/damage/healing.svg"></i>',
       dataset: {
         action: "rollHealing"
       }

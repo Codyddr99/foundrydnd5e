@@ -44,8 +44,8 @@ export default class JournalSpellListPageSheet extends JournalPageSheet {
 
   /** @inheritDoc */
   get template() {
-    if ( this.options.displayAsTable ) return "systems/dnd5etools/templates/journal/page-spell-list-table.hbs";
-    return `systems/dnd5etools/templates/journal/page-spell-list-${this.isEditable ? "edit" : "view"}.hbs`;
+    if ( this.options.displayAsTable ) return "systems/dnd5r/templates/journal/page-spell-list-table.hbs";
+    return `systems/dnd5r/templates/journal/page-spell-list-${this.isEditable ? "edit" : "view"}.hbs`;
   }
 
   /* -------------------------------------------- */

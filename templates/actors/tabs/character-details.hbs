@@ -26,7 +26,7 @@
 {{#*inline "ability-prof"}}
     <li data-ability="{{ @key }}" class="{{ class }}">
         {{#if isConcentration}}
-        <dnd5e-icon src="systems/dnd5etools/icons/svg/statuses/concentrating.svg"></dnd5e-icon>
+        <dnd5e-icon src="systems/dnd5r/icons/svg/statuses/concentrating.svg"></dnd5e-icon>
         {{else}}
         <proficiency-cycle type="ability" name="{{ path }}.proficient" data-tooltip="{{ hover }}"
                            value="{{#if @root.editable}}{{ baseProf }}{{else}}{{ proficient }}{{/if}}"

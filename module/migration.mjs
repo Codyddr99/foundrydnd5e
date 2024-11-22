@@ -677,8 +677,8 @@ export const migrateSceneData = function(scene, migrationData) {
 export const getMigrationData = async function() {
   const data = {};
   try {
-    const icons = await fetch("systems/dnd5etools/json/icon-migration.json");
-    const spellIcons = await fetch("systems/dnd5etools/json/spell-icon-migration.json");
+    const icons = await fetch("systems/dnd5r/json/icon-migration.json");
+    const spellIcons = await fetch("systems/dnd5r/json/spell-icon-migration.json");
     data.iconMap = {...await icons.json(), ...await spellIcons.json()};
   } catch(err) {
     console.warn(`Failed to retrieve icon migration data: ${err.message}`);
@@ -791,7 +791,7 @@ function _migrateTokenImage(actorData, updateData) {
     const v = foundry.utils.getProperty(actorData, path);
     if ( oldSystemPNG.test(v) ) {
       const [type, fileName] = v.match(oldSystemPNG).slice(1);
-      updateData[path] = `systems/dnd5etools/tokens/${type}/${fileName}.webp`;
+      updateData[path] = `systems/dnd5r/tokens/${type}/${fileName}.webp`;
     }
   }
   return updateData;

@@ -11,7 +11,7 @@ export default class ItemGrantConfig extends AdvancementConfig {
       classes: ["dnd5e", "advancement", "item-grant"],
       dragDrop: [{ dropSelector: ".drop-target" }],
       dropKeyPath: "items",
-      template: "systems/dnd5etools/templates/advancement/item-grant-config.hbs"
+      template: "systems/dnd5r/templates/advancement/item-grant-config.hbs"
     });
   }
 

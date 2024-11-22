@@ -255,7 +255,7 @@ export default function DocumentSheetV2Mixin(Base) {
         this._expanded.delete(item.id);
       } else {
         const context = await item.getChatData({ secrets: item.isOwner });
-        const content = await renderTemplate("systems/dnd5etools/templates/items/parts/item-summary.hbs", context);
+        const content = await renderTemplate("systems/dnd5r/templates/items/parts/item-summary.hbs", context);
         summary.querySelectorAll(".item-summary").forEach(el => el.remove());
         summary.insertAdjacentHTML("beforeend", content);
         await new Promise(resolve => requestAnimationFrame(resolve));

@@ -70,7 +70,7 @@ export default class ItemSheet5e extends ItemSheet {
 
   /** @inheritDoc */
   get template() {
-    return `systems/dnd5etools/templates/items/${this.item.type}.hbs`;
+    return `systems/dnd5r/templates/items/${this.item.type}.hbs`;
   }
 
   /* -------------------------------------------- */

@@ -1,7 +1,7 @@
 {
   "name": "Quillathe (Elf Ranger)",
   "type": "character",
-  "img": "systems/dnd5etools/tokens/heroes/RangerBow.webp",
+  "img": "systems/dnd5r/tokens/heroes/RangerBow.webp",
   "system": {
     "abilities": {
       "str": {
@@ -604,7 +604,7 @@
       "priority": 0
     },
     "texture": {
-      "src": "systems/dnd5etools/tokens/heroes/RangerBow.webp",
+      "src": "systems/dnd5r/tokens/heroes/RangerBow.webp",
       "tint": "#ffffff",
       "scaleX": 0.9,
       "scaleY": 0.9,
@@ -3035,7 +3035,7 @@
             },
             "value": {},
             "title": "Spells Known",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "ICcYTdeBoPcYsSTb"
           },
           {
@@ -3058,7 +3058,7 @@
             },
             "level": 4,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "EH25FmaNCnf9jK9c"
           },
           {
@@ -3081,7 +3081,7 @@
             },
             "level": 8,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "ugN9LCjVqQJaHfoq"
           },
           {
@@ -3104,7 +3104,7 @@
             },
             "level": 12,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "5OzCatRi7tbcXdeX"
           },
           {
@@ -3127,7 +3127,7 @@
             },
             "level": 16,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "ddOTz5cri6De4Vqa"
           },
           {

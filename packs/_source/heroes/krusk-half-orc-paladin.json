@@ -1,7 +1,7 @@
 {
   "name": "Krusk (Half-Orc Paladin)",
   "type": "character",
-  "img": "systems/dnd5etools/tokens/heroes/PaladinHammer.webp",
+  "img": "systems/dnd5r/tokens/heroes/PaladinHammer.webp",
   "system": {
     "abilities": {
       "str": {
@@ -614,7 +614,7 @@
       "priority": 0
     },
     "texture": {
-      "src": "systems/dnd5etools/tokens/heroes/PaladinHammer.webp",
+      "src": "systems/dnd5r/tokens/heroes/PaladinHammer.webp",
       "tint": "#ffffff",
       "scaleX": 1,
       "scaleY": 1,
@@ -3304,7 +3304,7 @@
             },
             "level": 4,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "BkgGiRIfeGzmeGmm"
           },
           {
@@ -3327,7 +3327,7 @@
             },
             "level": 8,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "901TAV4Ee61mIfcE"
           },
           {
@@ -3350,7 +3350,7 @@
             },
             "level": 12,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "9chByJPN7zbZVAtt"
           },
           {
@@ -3373,7 +3373,7 @@
             },
             "level": 16,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "uPourLT0DP2QTtHk"
           },
           {

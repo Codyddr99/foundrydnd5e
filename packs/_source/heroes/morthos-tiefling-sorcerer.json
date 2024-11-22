@@ -2,7 +2,7 @@
   "_id": "xT2C2Itv2XambDYp",
   "name": "Morthos (Tiefling Sorcerer)",
   "type": "character",
-  "img": "systems/dnd5etools/tokens/heroes/SorcererTiefling.webp",
+  "img": "systems/dnd5r/tokens/heroes/SorcererTiefling.webp",
   "system": {
     "abilities": {
       "str": {
@@ -589,7 +589,7 @@
       "priority": 0
     },
     "texture": {
-      "src": "systems/dnd5etools/tokens/heroes/SorcererTiefling.webp",
+      "src": "systems/dnd5r/tokens/heroes/SorcererTiefling.webp",
       "tint": "#ffffff",
       "scaleX": 1,
       "scaleY": 1,
@@ -4276,7 +4276,7 @@
             },
             "value": {},
             "title": "Cantrips Known",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "msOSJINvKQaCLmfM"
           },
           {
@@ -4334,7 +4334,7 @@
             },
             "value": {},
             "title": "Spells Known",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "PhRvVmP2BpNCBfUy"
           },
           {
@@ -4357,7 +4357,7 @@
             },
             "level": 4,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "BPdfOtpBTKQcxJCl"
           },
           {
@@ -4380,7 +4380,7 @@
             },
             "level": 8,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "mVm5NO21p7Le9XRQ"
           },
           {
@@ -4403,7 +4403,7 @@
             },
             "level": 12,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "oQc3e4xSTKM3LJfr"
           },
           {
@@ -4426,7 +4426,7 @@
             },
             "level": 16,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "idqBSjclkmTGLcoH"
           },
           {

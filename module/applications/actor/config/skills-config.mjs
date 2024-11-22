@@ -19,7 +19,7 @@ export default class SkillsConfig extends TraitsConfig {
   /** @override */
   static PARTS = {
     traits: {
-      template: "systems/dnd5etools/templates/actors/config/skills-config.hbs"
+      template: "systems/dnd5r/templates/actors/config/skills-config.hbs"
     }
   };
 

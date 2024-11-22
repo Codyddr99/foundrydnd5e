@@ -2,7 +2,7 @@
   "_id": "kfzBL0q1Y7LgGs2x",
   "name": "Akra (Dragonborn Cleric)",
   "type": "character",
-  "img": "systems/dnd5etools/tokens/heroes/ClericDragonborn.webp",
+  "img": "systems/dnd5r/tokens/heroes/ClericDragonborn.webp",
   "system": {
     "abilities": {
       "str": {
@@ -591,7 +591,7 @@
       "priority": 0
     },
     "texture": {
-      "src": "systems/dnd5etools/tokens/heroes/ClericDragonborn.webp",
+      "src": "systems/dnd5r/tokens/heroes/ClericDragonborn.webp",
       "tint": "#ffffff",
       "scaleX": 1,
       "scaleY": 1,
@@ -6296,7 +6296,7 @@
             },
             "value": {},
             "title": "Channel Divinity Uses",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "oP3vRPEVl4dirav7"
           },
           {
@@ -6327,7 +6327,7 @@
             },
             "value": {},
             "title": "Destroy Undead CR",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "hPf0ds98CQX40MXV"
           },
           {
@@ -6352,7 +6352,7 @@
             },
             "value": {},
             "title": "Cantrips Known",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "xh6rfAUPRt6XpPw5"
           },
           {
@@ -6375,7 +6375,7 @@
             },
             "level": 4,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "EzCBypwpeyzy6ZvT"
           },
           {
@@ -6398,7 +6398,7 @@
             },
             "level": 8,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "CI1mqwkI5bbFu9cU"
           },
           {
@@ -6421,7 +6421,7 @@
             },
             "level": 12,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "tQRur0s1v19kA0va"
           },
           {
@@ -6444,7 +6444,7 @@
             },
             "level": 16,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "C2T1oSCDApFPx15B"
           },
           {

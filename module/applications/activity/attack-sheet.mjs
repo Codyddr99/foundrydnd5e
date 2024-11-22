@@ -17,20 +17,20 @@ export default class AttackSheet extends ActivitySheet {
   static PARTS = {
     ...super.PARTS,
     identity: {
-      template: "systems/dnd5etools/templates/activity/attack-identity.hbs",
+      template: "systems/dnd5r/templates/activity/attack-identity.hbs",
       templates: [
         ...super.PARTS.identity.templates,
-        "systems/dnd5etools/templates/activity/parts/attack-identity.hbs"
+        "systems/dnd5r/templates/activity/parts/attack-identity.hbs"
       ]
     },
     effect: {
-      template: "systems/dnd5etools/templates/activity/attack-effect.hbs",
+      template: "systems/dnd5r/templates/activity/attack-effect.hbs",
       templates: [
         ...super.PARTS.effect.templates,
-        "systems/dnd5etools/templates/activity/parts/attack-damage.hbs",
-        "systems/dnd5etools/templates/activity/parts/attack-details.hbs",
-        "systems/dnd5etools/templates/activity/parts/damage-part.hbs",
-        "systems/dnd5etools/templates/activity/parts/damage-parts.hbs"
+        "systems/dnd5r/templates/activity/parts/attack-damage.hbs",
+        "systems/dnd5r/templates/activity/parts/attack-details.hbs",
+        "systems/dnd5r/templates/activity/parts/damage-part.hbs",
+        "systems/dnd5r/templates/activity/parts/damage-parts.hbs"
       ]
     }
   };

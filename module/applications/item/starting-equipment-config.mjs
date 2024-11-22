@@ -11,7 +11,7 @@ export default class StartingEquipmentConfig extends DocumentSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["dnd5e", "starting-equipment"],
       dragDrop: [{ dragSelector: ".drag-bar", dropSelector: "form" }],
-      template: "systems/dnd5etools/templates/apps/starting-equipment-config.hbs",
+      template: "systems/dnd5r/templates/apps/starting-equipment-config.hbs",
       width: 480,
       height: "auto",
       sheetConfig: false,

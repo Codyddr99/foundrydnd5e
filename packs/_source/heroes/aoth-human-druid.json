@@ -1,7 +1,7 @@
 {
   "name": "Aoth (Human Druid)",
   "type": "character",
-  "img": "systems/dnd5etools/tokens/heroes/DruidStaff.webp",
+  "img": "systems/dnd5r/tokens/heroes/DruidStaff.webp",
   "system": {
     "abilities": {
       "str": {
@@ -608,7 +608,7 @@
       "priority": 0
     },
     "texture": {
-      "src": "systems/dnd5etools/tokens/heroes/DruidStaff.webp",
+      "src": "systems/dnd5r/tokens/heroes/DruidStaff.webp",
       "tint": "#ffffff",
       "scaleX": 1,
       "scaleY": 1,
@@ -5486,7 +5486,7 @@
             },
             "value": {},
             "title": "Wild Shape CR",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "1QhHZI6jSvld160r"
           },
           {
@@ -5511,7 +5511,7 @@
             },
             "value": {},
             "title": "Cantrips Known",
-            "icon": "systems/dnd5etools/icons/svg/scale-value.svg",
+            "icon": "systems/dnd5r/icons/svg/scale-value.svg",
             "_id": "YNXUUmku0b96ssgn"
           },
           {
@@ -5534,7 +5534,7 @@
             },
             "level": 4,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "IpPkoQHqKQLHlUU3"
           },
           {
@@ -5557,7 +5557,7 @@
             },
             "level": 8,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "rJFXsnndXMZWrHvk"
           },
           {
@@ -5580,7 +5580,7 @@
             },
             "level": 12,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "qNTlxRMRAOdeUFJs"
           },
           {
@@ -5603,7 +5603,7 @@
             },
             "level": 16,
             "title": "Ability Score Improvement",
-            "icon": "systems/dnd5etools/icons/svg/ability-score-improvement.svg",
+            "icon": "systems/dnd5r/icons/svg/ability-score-improvement.svg",
             "_id": "9NliZ0Lrp32zOjQc"
           },
           {

@@ -34,7 +34,7 @@ export default Base => class extends PseudoDocumentMixin(Base) {
     sheetClass: ActivitySheet,
     usage: {
       actions: {},
-      chatCard: "systems/dnd5etools/templates/chat/activity-card.hbs",
+      chatCard: "systems/dnd5r/templates/chat/activity-card.hbs",
       dialog: ActivityUsageDialog
     }
   });

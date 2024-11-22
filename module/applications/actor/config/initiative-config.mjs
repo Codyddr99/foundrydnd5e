@@ -19,7 +19,7 @@ export default class InitiativeConfig extends BaseConfigSheet {
   /** @override */
   static PARTS = {
     config: {
-      template: "systems/dnd5etools/templates/actors/config/initiative-config.hbs"
+      template: "systems/dnd5r/templates/actors/config/initiative-config.hbs"
     }
   };
 

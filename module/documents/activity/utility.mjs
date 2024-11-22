@@ -19,7 +19,7 @@ export default class UtilityActivity extends ActivityMixin(UtilityActivityData) 
   static metadata = Object.freeze(
     foundry.utils.mergeObject(super.metadata, {
       type: "utility",
-      img: "systems/dnd5etools/icons/svg/activity/utility.svg",
+      img: "systems/dnd5r/icons/svg/activity/utility.svg",
       title: "DND5E.UTILITY.Title",
       sheetClass: UtilitySheet,
       usage: {

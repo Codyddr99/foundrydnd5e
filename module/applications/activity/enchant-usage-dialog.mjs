@@ -11,7 +11,7 @@ export default class EnchantUsageDialog extends ActivityUsageDialog {
   static PARTS = {
     ...super.PARTS,
     creation: {
-      template: "systems/dnd5etools/templates/activity/enchant-usage-creation.hbs"
+      template: "systems/dnd5r/templates/activity/enchant-usage-creation.hbs"
     }
   };
 

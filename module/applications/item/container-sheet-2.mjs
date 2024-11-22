@@ -23,7 +23,7 @@ export default class ContainerSheet2 extends ItemSheetV2Mixin(ContainerSheet) {
 
   /** @override */
   get template() {
-    return "systems/dnd5etools/templates/items/item-sheet-2.hbs";
+    return "systems/dnd5r/templates/items/item-sheet-2.hbs";
   }
 
   /* -------------------------------------------- */

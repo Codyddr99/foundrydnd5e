@@ -62,7 +62,7 @@ export default class AdvancementManager extends Application {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["dnd5e", "advancement", "flow"],
-      template: "systems/dnd5etools/templates/advancement/advancement-manager.hbs",
+      template: "systems/dnd5r/templates/advancement/advancement-manager.hbs",
       width: 460,
       height: "auto"
     });

@@ -13,7 +13,7 @@ export default class SpellsUnlinkedConfig extends DocumentSheet {
   static get defaultOptions() {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["dnd5e", "unlinked-spell-config"],
-      template: "systems/dnd5etools/templates/journal/page-spell-list-unlinked-config.hbs",
+      template: "systems/dnd5r/templates/journal/page-spell-list-unlinked-config.hbs",
       width: 400,
       height: "auto",
       sheetConfig: false

@@ -23,7 +23,7 @@ export default class SummonActivity extends ActivityMixin(SummonActivityData) {
   static metadata = Object.freeze(
     foundry.utils.mergeObject(super.metadata, {
       type: "summon",
-      img: "systems/dnd5etools/icons/svg/activity/summon.svg",
+      img: "systems/dnd5r/icons/svg/activity/summon.svg",
       title: "DND5E.SUMMON.Title",
       sheetClass: SummonSheet,
       usage: {

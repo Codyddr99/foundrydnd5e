@@ -17,7 +17,7 @@ export default class OrderUsageDialog extends ActivityUsageDialog {
   /** @override */
   static PARTS = {
     order: {
-      template: "systems/dnd5etools/templates/activity/order-usage.hbs"
+      template: "systems/dnd5r/templates/activity/order-usage.hbs"
     },
     footer: {
       template: "templates/generic/form-footer.hbs"

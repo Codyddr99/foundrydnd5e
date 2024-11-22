@@ -80,11 +80,11 @@ export default class CompendiumBrowserSourceConfig extends Application5e {
   static PARTS = {
     sidebar: {
       id: "sidebar",
-      template: "systems/dnd5etools/templates/compendium/sources-sidebar.hbs"
+      template: "systems/dnd5r/templates/compendium/sources-sidebar.hbs"
     },
     packs: {
       id: "packs",
-      template: "systems/dnd5etools/templates/compendium/sources-packs.hbs"
+      template: "systems/dnd5r/templates/compendium/sources-packs.hbs"
     }
   };
 

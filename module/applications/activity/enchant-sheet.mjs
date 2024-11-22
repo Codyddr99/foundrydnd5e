@@ -16,10 +16,10 @@ export default class EnchantSheet extends ActivitySheet {
   static PARTS = {
     ...super.PARTS,
     effect: {
-      template: "systems/dnd5etools/templates/activity/enchant-effect.hbs",
+      template: "systems/dnd5r/templates/activity/enchant-effect.hbs",
       templates: [
-        "systems/dnd5etools/templates/activity/parts/enchant-enchantments.hbs",
-        "systems/dnd5etools/templates/activity/parts/enchant-restrictions.hbs"
+        "systems/dnd5r/templates/activity/parts/enchant-enchantments.hbs",
+        "systems/dnd5r/templates/activity/parts/enchant-restrictions.hbs"
       ]
     }
   };

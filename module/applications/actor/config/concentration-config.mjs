@@ -17,7 +17,7 @@ export default class ConcentrationConfig extends BaseConfigSheet {
   /** @override */
   static PARTS = {
     config: {
-      template: "systems/dnd5etools/templates/actors/config/concentration-config.hbs"
+      template: "systems/dnd5r/templates/actors/config/concentration-config.hbs"
     }
   };
 

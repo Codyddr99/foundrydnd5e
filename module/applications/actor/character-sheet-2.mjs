@@ -68,8 +68,8 @@ export default class ActorSheet5eCharacter2 extends ActorSheetV2Mixin(ActorSheet
 
   /** @override */
   get template() {
-    if ( !game.user.isGM && this.actor.limited ) return "systems/dnd5etools/templates/actors/limited-sheet-2.hbs";
-    return "systems/dnd5etools/templates/actors/character-sheet-2.hbs";
+    if ( !game.user.isGM && this.actor.limited ) return "systems/dnd5r/templates/actors/limited-sheet-2.hbs";
+    return "systems/dnd5r/templates/actors/character-sheet-2.hbs";
   }
 
   /* -------------------------------------------- */

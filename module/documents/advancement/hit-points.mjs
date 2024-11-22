@@ -15,7 +15,7 @@ export default class HitPointsAdvancement extends Advancement {
     return foundry.utils.mergeObject(super.metadata, {
       order: 10,
       icon: "icons/magic/life/heart-pink.webp",
-      typeIcon: "systems/dnd5etools/icons/svg/hit-points.svg",
+      typeIcon: "systems/dnd5r/icons/svg/hit-points.svg",
       title: game.i18n.localize("DND5E.AdvancementHitPointsTitle"),
       hint: game.i18n.localize("DND5E.AdvancementHitPointsHint"),
       multiLevel: true,
